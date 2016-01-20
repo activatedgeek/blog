@@ -1,12 +1,13 @@
-build:
-	@hugo
-
 publish:
-	@make build
+	@git branch -D gh-pages; true
 	@git checkout --orphan gh-pages
-	@git rm -rf .
-	@git add public/
-	@git commit -am "add generated content"
+	@hugo
+	@git rm -rf ./
+	@mv public/* ./; rm -r public/
+	@git add -A
+	@git commit -am "site generated @ $(date)"
+	@git push --force origin gh-pages
+	@git checkout master
 
 debug:
 	@hugo server -D
