@@ -1,0 +1,23 @@
+baseurl = "http://activatedgeek.github.io/"
+languageCode = "en-us"
+title = "@activatedgeek"
+canonifyurls = true
+theme = "cactus"
+disqusShortname = "activatedgeek"
+
+[params]
+  name = "Sanyam Kapoor"
+  description = "Programmer - Blogger - DevOps"
+  bio = "Programmer - Blogger - DevOps"
+  twitter = "1sanyamk"
+  enableRSS = true
+  readMore = ""
+  copyright = "&copy; Sanyam Kapoor"
+  socialIconStyle = "circle"
+
+[social]
+  twitterbird = "https://www.twitter.com/1sanyamk"
+  githubalt = "https://www.github.com/activatedgeek"
+  stackoverflow = "http://stackoverflow.com/users/2425365/activatedgeek"
+  linkedin = "https://in.linkedin.com/in/sanyamkapoor"
+  quora = "https://www.quora.com/profile/Sanyam-Kapoor"
