@@ -1,4 +1,4 @@
-baseurl = "http://activatedgeek.github.io/"
+baseurl = "http://activatedgeek.github.io/blog"
 languageCode = "en-us"
 title = "@activatedgeek"
 canonifyurls = true
