@@ -1,0 +1,4 @@
+script: make publish-ci
+env:
+  global:
+    - GH_REF: github.com/activatedgeek/blog.git
