@@ -1,5 +1,7 @@
 ## Blog
 
+[![Build Status](https://travis-ci.org/activatedgeek/blog.svg?branch=master)](https://travis-ci.org/activatedgeek/blog)
+
 Source for Github Pages site available at
 @[devblog.sanyamkapoor.com](http://devblog.sanyamkapoor.com)
 and [activatedgeek.github.io](http://activatedgeek.github.io).
