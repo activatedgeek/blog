@@ -1,6 +1,6 @@
 baseurl = "http://devblog.sanyamkapoor.com/"
 languageCode = "en-us"
-title = "@activatedgeek"
+title = "Sanyam Kapoor"
 canonifyurls = true
 theme = "cactus"
 disqusShortname = "activatedgeek"
