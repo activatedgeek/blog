@@ -3,6 +3,9 @@ go:
   - 1.4
 install:
   - go get -v github.com/spf13/hugo
+before_script:
+  - git config --global user.email "1sanyamkapoor@gmail.com"
+  - git config --global user.name "activatedgeek"
 script:
   - make publish-ci
 branches:
