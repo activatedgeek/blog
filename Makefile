@@ -1,7 +1,7 @@
 debug:
 	@hugo server -D
 
-publish:
+build:
 	@hugo
 	@git checkout --orphan gh-pages
 	@git rm -rf ./
@@ -9,18 +9,14 @@ publish:
 	@echo 'devblog.sanyamkapoor.com' > CNAME
 	@git add -A
 	@git commit -am "site generated @ $(date)"
-	@git push --force origin gh-pages
 	@git checkout master
-	@git branch -D gh-pages
+
+publish:
+	@git push -f origin gh-pages
 
 publish-ci:
-	@hugo
-	@git checkout --orphan gh-pages
-	@git rm -rf ./
-	@mv public/* ./; rm -r public/
-	@echo 'devblog.sanyamkapoor.com' > CNAME
-	@git add -A
-	@git commit -am "site generated @ $(date)"
+	@git push -f https://activatedgeek:${GH_ACCESS_TOKEN}@github.com/activatedgeek/blog gh-pages
 
 clean:
 	@rm -r public/
+	@git branch -D gh-pages
