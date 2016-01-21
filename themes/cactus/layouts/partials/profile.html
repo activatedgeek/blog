@@ -7,6 +7,11 @@
             {{ if .Site.Social }}
               {{ partial "social.html" . }}
             {{ end }}
+            {{ if .Site.Params.travisbadgeurl }}
+            <div style="position:relative;width:100%;height:1.2em;margin-top:1em">
+              <img style="position:relative;height:100%" src="{{ .Site.Params.travisbadgeurl }}"/>
+            </div>
+            {{ end }}
         </header>
     </section>
 </div>
