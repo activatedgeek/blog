@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.4
+install:
+  - go get -v github.com/spf13/hugo
+script:
+  - make publish-ci
+branches:
+  only:
+    - master
