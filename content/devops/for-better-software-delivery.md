@@ -1,9 +1,10 @@
 ---
 date: 2016-01-03T01:00:09+05:30
-title: 'For better software delivery'
+description: Building the swiss-knife for DevOps
+title: For better software delivery
 tags:
   - devops
-menu: main
+  - oss
 ---
 
 For the past couple years, I have been working as the Dev and the Ops for my team
