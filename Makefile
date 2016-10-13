@@ -1,3 +1,6 @@
+##
+# gh-pages has been DEPRECATED. DONOT use.
+#
 debug:
 	@hugo server -D
 

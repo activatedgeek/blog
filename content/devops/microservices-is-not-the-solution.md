@@ -35,9 +35,9 @@ on the popularity of the term **"microservices"**.
 Interestingly, if we dig deeper into data here, it turns out that the
 hubs for new age internet companies are the ones that are most infatuating
 with this term. Now juxtaposed to the above graph, have a look at the following
-stats from the [Global Startup Ecosystem Ranking 2015](http://startup-ecosystem.compass.co/ser2015/):
+stats from the [Global Startup Ecosystem Ranking 2015](https://startup-ecosystem.compass.co/ser2015/):
 
-<img src="http://ec2-50-17-15-93.compute-1.amazonaws.com/wp-content/uploads/2015/08/SER_2015_ranking_table_Final.png"></img>
+<img src="https://ec2-50-17-15-93.compute-1.amazonaws.com/wp-content/uploads/2015/08/SER_2015_ranking_table_Final.png"></img>
 
 If you have a look at the **top half of the countries trending** with this search
 term versus **the bottom half of the Ecosystem Ranking** above, you will find a

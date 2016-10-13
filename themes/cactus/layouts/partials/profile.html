@@ -4,20 +4,15 @@
             <img id="avatar" class="2x" src="{{ .Site.BaseURL }}images/avatar.png"/>
             <h1>{{ .Site.Params.name }}</h1>
             <h2>{{ .Site.Params.bio | markdownify }}</h2>
-            <a href="http://stackoverflow.com/users/2425365/activatedgeek">
+            <a href="//stackoverflow.com/users/2425365/activatedgeek">
               <img
-                src="http://stackoverflow.com/users/flair/2425365.png?theme=clean"
+                src="//stackoverflow.com/users/flair/2425365.png?theme=clean"
                 style="margin-top:1em;width:40%;border:solid rgba(0,0,0,0.1) 1px"
                 alt="profile for activatedgeek at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
                 title="profile for activatedgeek at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
             </a>
             {{ if .Site.Social }}
               {{ partial "social.html" . }}
-            {{ end }}
-            {{ if .Site.Params.travisbadgeurl }}
-            <div style="position:relative;width:100%;height:1.2em;margin-top:1em">
-              <img style="position:relative;height:100%" src="{{ .Site.Params.travisbadgeurl }}"/>
-            </div>
             {{ end }}
         </header>
     </section>

@@ -1,4 +1,4 @@
-baseurl = "http://devblog.sanyamkapoor.com/"
+baseurl = "https://devblog.sanyamkapoor.com/"
 languageCode = "en-us"
 title = "Sanyam Kapoor"
 canonifyurls = true
@@ -14,7 +14,6 @@ disqusShortname = "activatedgeek"
   readMore = ""
   copyright = "&copy; Sanyam Kapoor"
   socialIconStyle = "circle"
-  travisbadgeurl = "https://travis-ci.org/activatedgeek/blog.svg?branch=master"
 
 [social]
   twitterbird = "https://www.twitter.com/1sanyamk"
