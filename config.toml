@@ -1,4 +1,4 @@
-baseurl = "https://devblog.sanyamkapoor.com/"
+baseurl = "https://blog.sanyamkapoor.com/"
 languageCode = "en-us"
 title = "Sanyam Kapoor"
 canonifyurls = true
