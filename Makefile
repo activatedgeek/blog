@@ -9,7 +9,7 @@ build:
 	@git checkout --orphan gh-pages
 	@git rm -rf ./
 	@mv public/* ./; rm -r public/
-	@echo 'devblog.sanyamkapoor.com' > CNAME
+	@echo 'blog.sanyamkapoor.com' > CNAME
 	@git add -A
 	@git commit -am "site generated @ $(date)"
 	@git checkout master
