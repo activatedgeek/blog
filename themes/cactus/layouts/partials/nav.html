@@ -8,6 +8,8 @@
 		<a href='{{ .Site.BaseURL }}about'>{{ with .Site.Params.about }}{{ . }}{{ else }}About{{ end }}</a>
 	{{ end }}
 
+	<a target='_blank' href='https://www.dropbox.com/s/v8ts6z4u1wik5h7/CV.pdf?dl=0'>CV</a>
+
 	{{ if .Site.Params.enableRSS }}
 	<a class="cta" href="{{ .Site.RSSLink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}Subscribe{{ end }}</a>
 	{{ end }}
