@@ -1,4 +1,3 @@
 [build]
-  base = "blog"
   command = "hugo"
-  publish = "blog/public"
+  publish = "public"
