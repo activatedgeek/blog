@@ -16,6 +16,7 @@ before_deploy:
   - npm i netlify-cli -g
 
 deploy:
+  # Deploy to Github Releases
   provider: releases
   api_key: '$GITHUB_ACCESS_TOKEN'
   file:
@@ -25,5 +26,5 @@ deploy:
     tags: true
 
 after_deploy:
-  # deploy to Netlify
+  # Deploy to Netlify
   - netlify deploy -t $NETLIFY_ACCESS_TOKEN -s $NETLIFY_SITE_ID -p blog/public
