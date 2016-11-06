@@ -1,9 +1,11 @@
-## Blog
+## Website
 
-Blog hosted on [Netlify](https://www.netlify.com/) at [https://blog.sanyamkapoor.com](https://blog.sanyamkapoor.com).
-This blog is based on [Hugo](https://gohugo.io/).
+[![Build Status](https://travis-ci.org/activatedgeek/website.svg?branch=master)](https://travis-ci.org/activatedgeek/website)
 
-### Deploy to Github Pages
+Website hosted on [Netlify](https://www.netlify.com/) at [https://blog.sanyamkapoor.com](https://blog.sanyamkapoor.com).
+It is based on [Hugo](https://gohugo.io/).
+
+### Deploy to Github Pages (older method)
 
 To deploy to Github Pages via the `gh-pages` branch, have a look
 at the [Makefile](./Makefile) which performs the following steps:
