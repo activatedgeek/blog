@@ -5,6 +5,8 @@
 Website hosted on [Netlify](https://www.netlify.com/) at [https://blog.sanyamkapoor.com](https://blog.sanyamkapoor.com).
 It is based on [Hugo](https://gohugo.io/).
 
+The CV is hosted at [https://blog.sanyamkapoor.com/cv](https://blog.sanyamkapoor.com/cv).
+
 ### Deploy to Github Pages (older method)
 
 To deploy to Github Pages via the `gh-pages` branch, have a look
