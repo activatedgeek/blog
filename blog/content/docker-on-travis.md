@@ -27,7 +27,7 @@ services:
 
 env:
   # IMPORTANT! Add your docker slug here (commit once)
-  - DOCKER_REPO_SLUG=activatedgeek/ansible-ubuntu
+  - DOCKER_REPO_SLUG=activatedgeek/mariadb
 
 script:
   # build latest image always
@@ -54,10 +54,10 @@ Here is how the build behaves under different scenarios:
 
 ## Notes
 As a reference project, have a look at
-[https://github.com/activatedgeek/docker-ansible-ubuntu](https://github.com/activatedgeek/docker-ansible-ubuntu).
+[https://github.com/activatedgeek/docker-mariadb](https://github.com/activatedgeek/docker-mariadb).
 
 The corresponding Travis builds are available publicly at
-[https://travis-ci.org/activatedgeek/docker-ansible-ubuntu](https://travis-ci.org/activatedgeek/docker-ansible-ubuntu).
+[https://travis-ci.org/activatedgeek/docker-mariadb](https://travis-ci.org/activatedgeek/docker-mariadb).
 
 ## Assumptions
 
