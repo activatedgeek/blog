@@ -1,5 +1,5 @@
 ---
-baseurl: ''
+baseurl: '/'
 relativeURLs: true
 canonifyurls: true
 enableRobotsTXT: true
@@ -19,10 +19,9 @@ params:
   bio: Programmer - Blogger - DevOps
   twitter: activatedgeek
   enableRSS: true
-  readMore: Continue Reading
   copyright: '&copy; Sanyam Kapoor'
   socialIconStyle: circle
-  version: 1.0.5
+  version: 1.0.6
 
 social:
   twitterbird: https://www.twitter.com/activatedgeek
