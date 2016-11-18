@@ -14,7 +14,7 @@ disqusShortname = "activatedgeek"
   readMore = ""
   copyright = "&copy; Sanyam Kapoor"
   socialIconStyle = "circle"
-  version = "1.0.2"
+  version = "1.0.4"
 
 [social]
   twitterbird = "https://www.twitter.com/activatedgeek"
