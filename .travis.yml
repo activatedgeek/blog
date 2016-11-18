@@ -1,9 +1,11 @@
+language: go
+
 sudo: required
 
 dist: trusty
 
 install:
-  - go get -v github.com/spf13/hugo
+  - curl -LO https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb && sudo dpkg -i hugo_0.17-64bit.deb
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 script:
@@ -12,7 +14,7 @@ script:
   # Add CV to static content
   - mkdir -p static/files && mv cv/build/CV.pdf static/files/cv_latest.pdf
   # Build blog
-  - hugo
+  - hugo version && hugo -v
 
 # deploy:
 #   # Deploy to Github Releases
