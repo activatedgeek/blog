@@ -1,8 +1,0 @@
-{{ $iconStyle := .Site.Params.socialIconStyle }}
-<div id="social" style="margin-top: 0.5em;">
-    {{ range $key, $val := .Site.Social }}
-    <a class="symbol" href="{{$val}}" target="_blank">
-        {{ $iconStyle }}{{ $key }}
-    </a>
-    {{ end }}
-</div>

@@ -3,28 +3,44 @@ baseurl: '/'
 relativeURLs: true
 canonifyurls: true
 enableRobotsTXT: true
-googleAnalytics: UA-87707145-1
 languageCode: en-us
 metaDataFormat: yaml
 
-title: Sanyam Kapoor
-theme: cactus
 disqusShortname: sanyamkapoor
+googleAnalytics: UA-87707145-1
+
+author: Sanyam Kapoor
+title: Sanyam Kapoor
+theme: goa
 
 blackfriday:
   hrefTargetBlank: true
 
 params:
-  name: Sanyam Kapoor
-  description: Programmer - Blogger - DevOps
-  bio: Programmer - Blogger - DevOps
-  twitter: activatedgeek
+  author: Sanyam Kapoor
+  intro: Engineer, Cognitive Systems Enthusiast
+  # description:
+  authorImage: headshot.jpg
   enableRSS: true
-  copyright: '&copy; Sanyam Kapoor'
-  socialIconStyle: circle
-
-social:
-  twitterbird: https://www.twitter.com/activatedgeek
-  githubalt: https://www.github.com/activatedgeek
-  linkedin: https://in.linkedin.com/in/sanyamkapoor
-  quora: https://www.quora.com/profile/Sanyam-Kapoor
+  dateFormat: 'Jan 2, 2006'
+  travisRepo: activatedgeek/website
+  extra:
+    copyright: '&copy; 2016. Sanyam Kapoor.'
+    poweredBy: true
+    highlightJS: true
+  social:
+    github: activatedgeek
+    stackoverflow: 2425365
+    hackernews: activatedgeek
+    # quora: Sanyam-Kapoor
+    linkedIn: sanyamkapoor
+    twitter: activatedgeek
+    facebook: activatedgeek
+    email: hello@sanyamkapoor.com
+  menu:
+    main:
+      - name: blog
+        identifier: posts
+        url: /blog
+      - name: cv
+        url: /files/cv_latest.pdf

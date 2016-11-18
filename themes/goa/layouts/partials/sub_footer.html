@@ -1,0 +1,20 @@
+<footer class="row text-center footer">
+  <hr style="margin-bottom:5px;"/>
+  {{ with .Site.Params.travisRepo }}
+  <a target="_blank" href="//github.com/{{.}}">
+    <img
+      src="//travis-ci.org/{{.}}.svg?branch=master"
+      style="height:1em;display:inline;"
+      alt="Build Status"
+    >
+  </a>
+  {{ end }}
+  {{ with .Site.Params.extra }}
+  <h6 class="text-center copyright">
+    {{ .copyright | markdownify }}
+  </h6>
+  {{ if ne .poweredBy false }}
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  {{ end }}
+  {{ end }}
+</footer>
