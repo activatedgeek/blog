@@ -10,9 +10,9 @@ script:
   # Build latest CV
   - cd cv && mkdir build && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build CV.tex && cd ..
   # Add CV to static content
-  - mkdir -p blog/static/files && mv cv/build/CV.pdf blog/static/files/cv_latest.pdf
+  - mkdir -p static/files && mv cv/build/CV.pdf static/files/cv_latest.pdf
   # Build blog
-  - cd blog && hugo && cd ..
+  - hugo
 
 # deploy:
 #   # Deploy to Github Releases
@@ -27,4 +27,4 @@ script:
 after_success:
   - npm i netlify-cli -g
   # Deploy to Netlify
-  - netlify deploy -t $NETLIFY_ACCESS_TOKEN -s $NETLIFY_SITE_ID -p blog/public
+  - netlify deploy -t $NETLIFY_ACCESS_TOKEN -s $NETLIFY_SITE_ID -p public
