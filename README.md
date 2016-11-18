@@ -2,10 +2,10 @@
 
 [![Build Status](https://travis-ci.org/activatedgeek/website.svg?branch=master)](https://travis-ci.org/activatedgeek/website)
 
-Website hosted on [Netlify](https://www.netlify.com/) at [https://blog.sanyamkapoor.com](https://blog.sanyamkapoor.com).
+Website hosted on [Netlify](https://www.netlify.com/) at [https://www.sanyamkapoor.com](https://www.sanyamkapoor.com).
 It is based on [Hugo](https://gohugo.io/).
 
-The CV is hosted at [https://blog.sanyamkapoor.com/cv](https://blog.sanyamkapoor.com/cv).
+The CV is hosted at [https://www.sanyamkapoor.com/cv](https://www.sanyamkapoor.com/cv).
 
 ### Deploy to Github Pages (older method)
 

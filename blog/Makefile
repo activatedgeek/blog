@@ -2,7 +2,7 @@
 # gh-pages has been DEPRECATED. DONOT use.
 #
 debug:
-	@hugo server -D
+	@hugo server -D -v
 
 build:
 	@hugo

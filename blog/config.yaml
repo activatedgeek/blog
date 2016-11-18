@@ -1,0 +1,31 @@
+---
+baseurl: ''
+relativeURLs: true
+canonifyurls: true
+enableRobotsTXT: true
+languageCode: en-us
+metaDataFormat: yaml
+
+title: Sanyam Kapoor
+theme: cactus
+disqusShortname: activatedgeek
+
+blackfriday:
+  hrefTargetBlank: true
+
+params:
+  name: Sanyam Kapoor
+  description: Programmer - Blogger - DevOps
+  bio: Programmer - Blogger - DevOps
+  twitter: activatedgeek
+  enableRSS: true
+  readMore: Continue Reading
+  copyright: '&copy; Sanyam Kapoor'
+  socialIconStyle: circle
+  version: 1.0.5
+
+social:
+  twitterbird: https://www.twitter.com/activatedgeek
+  githubalt: https://www.github.com/activatedgeek
+  linkedin: https://in.linkedin.com/in/sanyamkapoor
+  quora: https://www.quora.com/profile/Sanyam-Kapoor
