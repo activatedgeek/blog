@@ -3,12 +3,13 @@ baseurl: '/'
 relativeURLs: true
 canonifyurls: true
 enableRobotsTXT: true
+googleAnalytics: UA-87707145-1
 languageCode: en-us
 metaDataFormat: yaml
 
 title: Sanyam Kapoor
 theme: cactus
-disqusShortname: activatedgeek
+disqusShortname: sanyamkapoor
 
 blackfriday:
   hrefTargetBlank: true
@@ -21,7 +22,6 @@ params:
   enableRSS: true
   copyright: '&copy; Sanyam Kapoor'
   socialIconStyle: circle
-  version: 1.0.6
 
 social:
   twitterbird: https://www.twitter.com/activatedgeek

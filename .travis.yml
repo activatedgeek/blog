@@ -7,24 +7,24 @@ install:
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 script:
-  # build blog
-  - cd blog && hugo && cd ..
-  # build CV
+  # Build latest CV
   - cd cv && mkdir build && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build CV.tex && cd ..
+  # Add CV to static content
+  - mkdir -p blog/static/files && mv cv/build/CV.pdf blog/static/files/cv_latest.pdf
+  # Build blog
+  - cd blog && hugo && cd ..
 
-before_deploy:
+# deploy:
+#   # Deploy to Github Releases
+#   provider: releases
+#   api_key: '$GITHUB_ACCESS_TOKEN'
+#   file:
+#     - 'cv/build/CV.pdf'
+#   skip_cleanup: true
+#   on:
+#     tags: true
+
+after_success:
   - npm i netlify-cli -g
-
-deploy:
-  # Deploy to Github Releases
-  provider: releases
-  api_key: '$GITHUB_ACCESS_TOKEN'
-  file:
-    - 'cv/build/CV.pdf'
-  skip_cleanup: true
-  on:
-    tags: true
-
-after_deploy:
   # Deploy to Netlify
   - netlify deploy -t $NETLIFY_ACCESS_TOKEN -s $NETLIFY_SITE_ID -p blog/public
