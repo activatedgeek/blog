@@ -18,7 +18,7 @@ blackfriday:
 
 params:
   author: Sanyam Kapoor
-  intro: Engineer, Cognitive Systems Enthusiast
+  intro: Programming, Engineering, Cognitive Systems
   # description:
   authorImage: headshot.jpg
   enableRSS: true
@@ -40,7 +40,14 @@ params:
   menu:
     main:
       - name: blog
-        identifier: posts
+        identifier: blog
         url: /blog
+        weight: 1
+      - name: guides
+        identifier: guides
+        url: /guides
+        weight: 2
       - name: cv
-        url: /files/cv_latest.pdf
+        identifier: cv
+        url: /files/CV.pdf
+        weight: 4

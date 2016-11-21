@@ -12,7 +12,7 @@ script:
   # Build latest CV
   - cd cv && mkdir build && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build CV.tex && cd ..
   # Add CV to static content
-  - mkdir -p static/files && mv cv/build/CV.pdf static/files/cv_latest.pdf
+  - mkdir -p static/files && mv cv/build/CV.pdf static/files
   # Build blog
   - hugo version && hugo -v
 
