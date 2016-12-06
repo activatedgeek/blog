@@ -8,7 +8,10 @@
   {{ with .Site.Params.social.hackernews }}
   <a target="_blank" href="https://news.ycombinator.com/user?id={{.}}"><i class="fa fa-hacker-news" aria-hidden="true"></i></a>
   {{ end }}
-  {{ with .Site.Params.social.linkedIn }}
+  {{ with .Site.Params.social.angellist }}
+  <a target="_blank" href="https://angel.co/{{.}}"><i class="fa fa-angellist" aria-hidden="true"></i></a>
+  {{ end }}
+  {{ with .Site.Params.social.linkedin }}
   <a target="_blank" href="https://linkedin.com/in/{{.}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
   {{ end }}
   {{ with .Site.Params.social.twitter }}

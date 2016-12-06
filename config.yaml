@@ -18,7 +18,7 @@ blackfriday:
 
 params:
   author: Sanyam Kapoor
-  intro: Programming, Engineering, Cognitive Systems
+  intro: Engineer, Cognitive Systems Enthusiast, About Boring Technologies, Automation First
   # description:
   authorImage: headshot.jpg
   enableRSS: true
@@ -33,10 +33,11 @@ params:
     stackoverflow: 2425365
     hackernews: activatedgeek
     # quora: Sanyam-Kapoor
-    linkedIn: sanyamkapoor
+    angellist: sanyam-kapoor
+    linkedin: sanyamkapoor
     twitter: activatedgeek
     facebook: activatedgeek
-    email: hello@sanyamkapoor.com
+    email: 42@sanyamkapoor.com
   menu:
     main:
       - name: blog
