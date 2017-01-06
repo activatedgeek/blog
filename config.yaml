@@ -6,7 +6,7 @@ enableRobotsTXT: true
 languageCode: en-us
 metaDataFormat: yaml
 
-disqusShortname: sanyamkapoor
+#disqusShortname: sanyamkapoor
 googleAnalytics: UA-87707145-1
 
 author: Sanyam Kapoor
