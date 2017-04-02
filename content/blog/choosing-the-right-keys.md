@@ -1,12 +1,12 @@
 ---
-draft: true
-date: 2017-01-05T12:39:44+05:30
+date: 2017-04-03T01:57:44+05:30
 description: Learnings to choose better database keys
 title: Choosing the right keys
 categories: []
 tags:
   - database
   - design
+  - architecture
 ---
 
 Deciding the keys in an SQL table is one of the most important decisions in
@@ -33,7 +33,7 @@ Further, in case of a shortage of space on the main memory, the existing pages a
 **swapping** consume a huge amount of time, wasting many CPU cycles.
 
 The performance of a database is bottlenecked on the health of these indices and
-are the first-class citizens of any design discussions.
+are the first-class citizens of any database design discussions.
 
 ## Clustered and Non-clustered indices
 
@@ -49,8 +49,7 @@ to have one physical ordering on the disk. On the contrary, a table can have mul
 non-clustered indices. In other cases, it is also possible to not have any index
 on the table but we try and avoid that as much as possible. The only situation
 where having no key makes sense is the intermediate table defining *one-to-many*
-or *many-to-many* relations between two tables. We'll take up this important scenario
-in relational databases a little later.
+or *many-to-many* relations between two tables.
 
 ## Choosing the right keys
 
@@ -72,7 +71,12 @@ integers as primary keys which have an added benefit of compact storage. This
 doesn't necessarily make sense always and in places where it makes sense, overflow
 issues are bound to happen.
 
-@ADD non-integer keys and trade-offs
+I should mention that it is preferable to have integer values as your keys as
+the comparisons would be blazing fast as compared to strings. But again, this
+need not be a hard constraint and in some cases UUIDs work much better. For
+instance, consider a database system which tracks a huge number of ephemeral tasks
+by ids. Integers would increment just too fast in such a flexible environment
+and cause integer overflow soon.
 
 Now is the right time to think about whether you want a natural key or a surrogate
 key. One doesn't necessarily win over the other and must be analyzed on a case by
@@ -99,20 +103,22 @@ most part.
 
 ### *UNIQUE* Keys
 
-
+By default, Unique keys are non-clustered which means only references to the
+original disk locations are stored. As you might have already guessed, the
+lesser the non-clustered unique keys, the better.
 
 ### *FOREIGN* Keys
 
-Foreign keys are not partition tolerant and hence I will not be discussing them.
-As a thumb rule,
+Foreign keys are not partition tolerant. As a thumb rule,
 
 > In case of a network partition, each logical unit
 > should self-suffice to conform to integrity constraints.
 
 More simply put, data across shards should be organized in such a way that all
-foreign key checks never need to cross over machines.
+foreign key checks never need to cross over machines (because they simply can't).
 
 ---
 
-While the methodology to decide keys remains simple, answering the aforementioned
-intermediate questions is something that remains the hardest piece of the puzzle.
+Data is a already a hard thing to deal with. Databases are even harder considering
+the fact that there's no panacea. Defining the purpose of data helps making
+the decision of **choosing the right keys** saner.

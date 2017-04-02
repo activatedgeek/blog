@@ -24,7 +24,7 @@ params:
   dateFormat: 'Jan 2, 2006'
   travisRepo: activatedgeek/website
   extra:
-    copyright: '&copy; 2016. Sanyam Kapoor.'
+    copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
     highlightJS: true
   social:
