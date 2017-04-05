@@ -18,4 +18,4 @@ after_success:
   - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.1/netlifyctl-linux-amd64-v0.1.1.tar.gz
   - tar -xzvf netlifyctl-linux-amd64-v0.1.1.tar.gz
   - ./netlifyctl version
-  - ./netlifyctl deploy -D -A $NETLIFY_ACCESS_TOKEN
+  - ./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN
