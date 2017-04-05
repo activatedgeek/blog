@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2017-04-05T09:04:45+05:30
 description: 'Solution to Codeforces Problem 484A: Bits'
 title: Codeforces 484A
