@@ -2,7 +2,7 @@ language: go
 
 sudo: required
 
-dist: xenial
+dist: trusty
 
 install:
   - curl -LO https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb && sudo dpkg -i hugo_0.19-64bit.deb
@@ -28,6 +28,7 @@ script:
 #     tags: true
 
 after_success:
+  - nvm install stable
   - npm i netlify-cli -g
   # Deploy to Netlify
   - netlify deploy -t $NETLIFY_ACCESS_TOKEN -s $NETLIFY_SITE_ID -p public
