@@ -5,6 +5,8 @@ canonifyurls: true
 enableRobotsTXT: true
 languageCode: en-us
 metaDataFormat: yaml
+PygmentsCodeFences: true
+PygmentsStyle: emacs
 
 #disqusShortname: sanyamkapoor
 googleAnalytics: UA-87707145-1
@@ -47,6 +49,10 @@ params:
         identifier: guides
         url: /guides
         weight: 2
+      - name: problems
+        url: /problems
+        identifier: problems
+        weight: 3
       - name: cv
         identifier: cv
         url: /files/CV.pdf

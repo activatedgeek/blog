@@ -2,11 +2,12 @@ language: go
 
 sudo: required
 
-dist: trusty
+dist: xenial
 
 install:
   - curl -LO https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb && sudo dpkg -i hugo_0.19-64bit.deb
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+  - sudo apt -qq update && sudo apt install -y --no-install-recommends python python-pip texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+  - sudo pip install Pygments
 
 script:
   # Build latest CV
