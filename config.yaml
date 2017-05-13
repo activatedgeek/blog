@@ -25,6 +25,7 @@ params:
   enableRSS: true
   dateFormat: 'Jan 2, 2006'
   travisRepo: activatedgeek/website
+  disqusShortname: sanyamkapoor
   extra:
     copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
