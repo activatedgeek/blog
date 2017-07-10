@@ -21,7 +21,7 @@ blackfriday:
 params:
   intro: Sanyam Kapoor
   description: Engineer, Cognitive Systems Enthusiast, About Boring Technologies, Automation First
-  authorImage: headshot.jpg
+  authorImage: https://graph.facebook.com/10203983748456800/picture?type=large
   enableRSS: true
   dateFormat: 'Jan 2, 2006'
   travisRepo: activatedgeek/website
