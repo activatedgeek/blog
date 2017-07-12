@@ -1,14 +1,13 @@
 ---
-baseurl: '/'
+baseURL: '/'
 relativeURLs: true
 canonifyurls: true
 enableRobotsTXT: true
 languageCode: en-us
 metaDataFormat: yaml
-PygmentsCodeFences: true
-PygmentsStyle: emacs
+pygmentsCodeFences: true
+pygmentsStyle: emacs
 
-#disqusShortname: sanyamkapoor
 googleAnalytics: UA-87707145-1
 
 author: Sanyam Kapoor
@@ -25,7 +24,6 @@ params:
   enableRSS: true
   dateFormat: 'Jan 2, 2006'
   travisRepo: activatedgeek/website
-  disqusShortname: sanyamkapoor
   extra:
     copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
@@ -40,6 +38,8 @@ params:
     twitter: activatedgeek
     facebook: activatedgeek
     email: 42@sanyamkapoor.com
+  assetVersions:
+    highlightJS: 9.12.0
   menu:
     main:
       - name: blog

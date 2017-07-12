@@ -22,4 +22,3 @@ publish-ci:
 
 clean:
 	@rm -r public/
-	@git branch -D gh-pages
