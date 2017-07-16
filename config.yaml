@@ -27,7 +27,6 @@ params:
   extra:
     copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
-    highlightJS: true
   social:
     github: activatedgeek
     stackoverflow: 2425365
@@ -38,8 +37,6 @@ params:
     twitter: activatedgeek
     facebook: activatedgeek
     email: 42@sanyamkapoor.com
-  assetVersions:
-    highlightJS: 9.12.0
   menu:
     main:
       - name: blog

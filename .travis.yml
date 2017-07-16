@@ -5,7 +5,7 @@ sudo: required
 dist: trusty
 
 install:
-  - curl -LO https://github.com/spf13/hugo/releases/download/v0.20/hugo_0.20-64bit.deb && sudo dpkg -i hugo_0.20-64bit.deb
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.25.1/hugo_0.25.1_Linux-64bit.deb && sudo dpkg -i hugo_0.25.1_Linux-64bit.deb
   - sudo apt -qq update && sudo apt install -y --no-install-recommends python python-pip texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
   - sudo pip install Pygments
 
