@@ -19,7 +19,7 @@ blackfriday:
 
 params:
   intro: Sanyam Kapoor
-  description: Engineer, Cognitive Systems Enthusiast, About Boring Technologies, Automation First
+  description: Computer Vision Researcher, About Boring Technologies, Automation First
   authorImage: https://graph.facebook.com/10203983748456800/picture?type=large
   enableRSS: true
   dateFormat: 'Jan 2, 2006'
@@ -43,15 +43,19 @@ params:
         identifier: blog
         url: /blog
         weight: 1
+      - name: computer vision
+        identifier: computer-vision
+        url: /cv
+        weight: 2
       - name: guides
         identifier: guides
         url: /guides
-        weight: 2
+        weight: 3
       - name: problems
         url: /problems
         identifier: problems
-        weight: 3
+        weight: 4
       - name: cv
         identifier: cv
         url: /files/CV.pdf
-        weight: 4
+        weight: 5
