@@ -1,5 +1,5 @@
 ---
-baseURL: '/'
+baseURL: 'https://www.sanyamkapoor.com'
 relativeURLs: true
 canonifyurls: true
 enableRobotsTXT: true

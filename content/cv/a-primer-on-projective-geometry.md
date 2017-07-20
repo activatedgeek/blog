@@ -241,5 +241,3 @@ The above discussion introduces the basic matrices and invariant properties whic
 we look for while processing images for geometric scene understanding. A more
 practical approach to the rectification problem above and more complex problems
 like *2D Homography* and *Stereo Matching* will be discussed in another post.
-
-{{< fbcomments >}}
