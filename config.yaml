@@ -27,6 +27,7 @@ params:
   extra:
     copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
+    facebookAppId: 1115424195239714
   social:
     github: activatedgeek
     stackoverflow: 2425365

@@ -15,7 +15,7 @@ script:
   - hugo version && hugo -v
 
 after_success:
-  - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.3/netlifyctl-linux-amd64.tar.gz
+  - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.4/netlifyctl-linux-amd64.tar.gz
   - tar -xzvf netlifyctl-linux-amd64.tar.gz
   - ./netlifyctl version
   - ./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN
