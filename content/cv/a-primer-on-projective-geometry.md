@@ -7,6 +7,7 @@ markdown: mmark
 tags:
   - computer vision
   - geometry
+katex: true
 ---
 
 Projective Geometry is a term used to describe properties of projections of a given
