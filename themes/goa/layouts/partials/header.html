@@ -12,7 +12,7 @@
 
 <base href="{{ .Site.BaseURL }}">
 
-<title>{{ .Site.Title }}</title>
+<title>{{ .Site.Title }} | {{ .Page.Title | singularize | humanize | title }}</title>
 
 {{ .Hugo.Generator }}
 

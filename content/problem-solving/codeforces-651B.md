@@ -6,6 +6,8 @@ categories: []
 tags:
   - problem-solving
   - algorithms
+aliases:
+  - /problems/codeforces-651b
 ---
 
 I was recently solving this problem on Codeforces titled

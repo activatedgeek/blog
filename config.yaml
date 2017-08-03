@@ -45,18 +45,14 @@ params:
         url: /blog
         weight: 1
       - name: computer vision
-        identifier: computer-vision
-        url: /cv
+        identifier: computer vision
+        url: /computer-vision
         weight: 2
-      - name: guides
-        identifier: guides
-        url: /guides
+      - name: problem solving
+        url: /problem-solving
+        identifier: problem solving
         weight: 3
-      - name: problems
-        url: /problems
-        identifier: problems
-        weight: 4
       - name: cv
         identifier: cv
         url: /files/CV.pdf
-        weight: 5
+        weight: 4

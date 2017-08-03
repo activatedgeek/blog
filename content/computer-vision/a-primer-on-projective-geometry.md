@@ -7,6 +7,8 @@ markdown: mmark
 tags:
   - computer vision
   - geometry
+aliases:
+  - /cv/a-primer-on-projective-geometry
 katex: true
 ---
 
