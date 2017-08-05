@@ -17,7 +17,7 @@ a:link
 {
     text-decoration: none;
 
-    color: #526d7a;
+    color: rgb(51, 122, 183);
 }
 body
 {
@@ -117,6 +117,13 @@ div.content
     color: #555;
     margin-bottom: 20px;
 }
+.figure {
+  text-align: center;
+}
+.figure h4 {
+  font-size: 0.7em;
+  font-weight: 400;
+}
 .footer
 {
     margin-top: 10px;
@@ -212,7 +219,7 @@ h6.meta
     color: #bbb;
 }
 section.meta {
-    margin-top: 
+  margin-top:
 }
 .powered
 {
