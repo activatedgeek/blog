@@ -8,6 +8,7 @@ tags:
   - computer vision
   - geometry
 katex: true
+og_image: https://i.imgur.com/35kd5a7.jpg
 ---
 
 In this post we will take a look at how Camera Projections work. A demo at the

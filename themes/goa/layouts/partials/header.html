@@ -7,19 +7,14 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
-
-<base href="{{ .Site.BaseURL }}">
+{{ if .RSSLink }}
+<link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
 
 <title>{{ .Site.Title }} | {{ .Page.Title | singularize | humanize | title }}</title>
 
-{{ .Hugo.Generator }}
-
-{{ if .RSSLink }}
-  <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
+{{ partial "header_meta.html" . }}
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

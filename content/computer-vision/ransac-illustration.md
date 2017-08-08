@@ -9,6 +9,7 @@ tags:
   - ransac
   - algorithms
 katex: true
+og_image: https://i.imgur.com/2QpF5AX.png
 ---
 
 ## The Problem
