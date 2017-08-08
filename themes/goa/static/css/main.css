@@ -119,10 +119,14 @@ div.content
 }
 .figure {
   text-align: center;
+  padding: 1em;
 }
 .figure h4 {
   font-size: 0.7em;
   font-weight: 400;
+}
+.figure img {
+  width: 100%;
 }
 .footer
 {
