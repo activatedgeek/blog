@@ -29,7 +29,7 @@ origin of the Euclidean Coordinate System. Let \\( Z = f \\) be the plane of pro
 more simply the plane where the points in the 3D world space are projected. It is
 also called the *image plane* or the *focal plane*.
 
-{{< figure class="figure" src="http://i.imgur.com/mIBhDt8.png" title="A Simple Pinhole Camera Model" >}}
+{{< figure class="figure" src="//i.imgur.com/mIBhDt8.png" title="A Simple Pinhole Camera Model" >}}
 
 \\( C \\) is the *camera centre* and \\( p \\) is the *principal point*. By virtue of
 similar triangles, we can establish a relation between a point in 3D space at \\( (X,Y,Z) \\)
@@ -92,7 +92,7 @@ Now that we have established all the camera parameters, let us consider two *cam
 cameras project a point \\( X \\) in the world coordinate system to \\( x \\) and \\( x^\prime \\)
 in respective *image planes*. The plane formed by all these points is known as the **epipolar plane**.
 
-{{< figure class="figure" src="http://i.imgur.com/GbafZIY.png" title="Point Correspondence and Epipolar Geometry" >}}
+{{< figure class="figure" src="//i.imgur.com/GbafZIY.png" title="Point Correspondence and Epipolar Geometry" >}}
 
 The line joining the two camera centers is known as the **baseline** and intersects both planes at
 \\( e \\) and \\( e^\prime \\). These points are known as the **epipoles**, visualized on the right.
@@ -255,15 +255,15 @@ general sense of direction of both the camera centers. The *epipoles*
 (the point of intersection of the *epilines*) lie outside the visible *image planes*.
 
 <div style="display:flex;">
-{{< figure class="figure" src="http://i.imgur.com/1xT4Jfk.jpg" title="Left View Epilines (Chair)" >}}
+{{< figure class="figure" src="//i.imgur.com/1xT4Jfk.jpg" title="Left View Epilines (Chair)" >}}
 
-{{< figure class="figure" src="http://i.imgur.com/5nUmCLp.jpg" title="Right View Epilines (Chair)" >}}
+{{< figure class="figure" src="//i.imgur.com/5nUmCLp.jpg" title="Right View Epilines (Chair)" >}}
 </div>
 
 <div style="display:flex;">
-{{< figure class="figure" src="http://i.imgur.com/mtCpCMJ.jpg" title="Left View Epilines (Room)" >}}
+{{< figure class="figure" src="//i.imgur.com/mtCpCMJ.jpg" title="Left View Epilines (Room)" >}}
 
-{{< figure class="figure" src="http://i.imgur.com/35kd5a7.jpg" title="Right View Epilines (Room)" >}}
+{{< figure class="figure" src="//i.imgur.com/35kd5a7.jpg" title="Right View Epilines (Room)" >}}
 </div>
 
 It goes without saying that the epilines constructed are only as good as the \\( x \leftrightarrow x^\prime \\)
@@ -274,4 +274,4 @@ our keypoint detection algorithm works.
 
 1. [Sanyam Kapoor - Introduction to RANSAC, {{< ref "ransac-illustration.md" >}}]({{< relref "ransac-illustration.md" >}})
 1. [Sanyam Kapoor - A Primer on Projective Geometry, {{< ref "a-primer-on-projective-geometry.md" >}}]({{< relref "a-primer-on-projective-geometry.md" >}})
-1. [Hartley and Zisserman - Multiple View Geometry in Computer Vision, Cambridge University Press, 2004](http://www.robots.ox.ac.uk/~vgg/hzbook/)
+1. [Hartley and Zisserman - Multiple View Geometry in Computer Vision, Cambridge University Press, 2004](//www.robots.ox.ac.uk/~vgg/hzbook/)

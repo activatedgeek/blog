@@ -85,7 +85,7 @@ plt.legend([original_data_plot, noisy_data_ploy], ['Original Data', 'Noisy Data'
 plt.show()
 ```
 
-{{< figure class="figure" src="http://i.imgur.com/2QpF5AX.png" title="Original Data v/s Noisy Data" >}}
+{{< figure class="figure" src="//i.imgur.com/2QpF5AX.png" title="Original Data v/s Noisy Data" >}}
 
 
 ## Training a Linear Model
@@ -123,7 +123,7 @@ plt.annotate('outliers', xy=(400, 1600), xytext=(270,1400), arrowprops=dict(line
 plt.show()
 ```
 
-{{< figure class="figure" src="http://i.imgur.com/Ntphfvr.png" title="Original Data v/s Trained Data via Simple Linear Regression" >}}
+{{< figure class="figure" src="//i.imgur.com/Ntphfvr.png" title="Original Data v/s Trained Data via Simple Linear Regression" >}}
 
 Oops! That is an awfully skewed line and will not be an accurate predictor of the
 data we started with. As you might have guessed already, this problem aries because
@@ -161,7 +161,7 @@ predicted_data_plot, *pd = plt.plot(x, x * rlm.estimator_.coef_ + rlm.estimator_
 plt.legend([original_data_plot, predicted_data_plot], ['Original Data', 'Predicted Data (RANSAC)'])
 plt.show()
 ```
-{{< figure class="figure" src="http://i.imgur.com/d0ITBFS.png" title="Original Data v/s Trained Data via Simple Linear Regression Augmented with RANSAC" >}}
+{{< figure class="figure" src="//i.imgur.com/d0ITBFS.png" title="Original Data v/s Trained Data via Simple Linear Regression Augmented with RANSAC" >}}
 
 Wow! That looks way better than the previous result and is generally moving in a
 correct direction. In essence, RANSAC works because it tries out different model
@@ -230,6 +230,6 @@ I'll leave to be explored in further reading below.
 
 ## Readings & References
 
-1. [Fischler, Bolles - Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography, 1981](http://dl.acm.org/citation.cfm?id=358692)
+1. [Fischler, Bolles - Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography, 1981](//dl.acm.org/citation.cfm?id=358692)
 
-2. [Choi, Kim, Yu - Performance Evaluation of RANSAC Family, 2009](http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
+2. [Choi, Kim, Yu - Performance Evaluation of RANSAC Family, 2009](//www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
