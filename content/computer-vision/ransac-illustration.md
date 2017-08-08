@@ -228,7 +228,7 @@ of the final model.
 To solve the above problems, a family of RANSAC algorithms have been proposed which
 I'll leave to be explored in further reading below.
 
-## References and Further Readings
+## Readings & References
 
 1. [Fischler, Bolles - Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography, 1981](http://dl.acm.org/citation.cfm?id=358692)
 
