@@ -5,7 +5,7 @@ sudo: required
 dist: trusty
 
 install:
-  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.25.1/hugo_0.25.1_Linux-64bit.deb && sudo dpkg -i hugo_0.25.1_Linux-64bit.deb
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb && sudo dpkg -i hugo_0.26_Linux-64bit.deb
   - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.4/netlifyctl-linux-amd64.tar.gz && tar -xzvf netlifyctl-linux-amd64.tar.gz
   # - sudo apt-get install textlive-full
   - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
