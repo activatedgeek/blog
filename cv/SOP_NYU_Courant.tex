@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage[none]{hyphenat}
+
+\linespread{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \parindent=0pt
+  \centering
+  {\Large \bfseries\textsc{\@title}}
+  \HRule\par
+}
+\makeatother
+
+\title{Statement of Purpose}
+
+\begin{document}
+
+\maketitle
+
+\textit{Sanyam Kapoor \hfill MS in Computer Science Applicant} \\
+\textit{sanyam@nyu.edu \hfill Computer Science Department at NYU Courant}
+
+\justify
+During my sophomore year, I co-founded a video startup called {\it StoryXpress} motivated by a strong interest to improve
+video creation technology at scale. I was responsible for building the Video Rendering Engine from scratch on top of
+{\it OpenGL}, a low-level graphics API specification. This included creation of 1D and 2D shapes compounded with the
+animation engine to produce visually compelling videos. The challenge was rendering videos on-demand in real-time. With
+memory overflows and runtime errors occurring often, I started investigating more efficient algorithms and data structures.
+After much research, I built the in-memory caching system to hold reusable data and invented heuristics to improve runtime.
+In one particular case, using triangle strips to generate shapes instead of quadrilaterals gave huge efficiency gains as
+lesser vertices were now needed to generate a mesh. The engine peaked at 150 High Definition videos per hour per machine
+sans hardware acceleration with error rate down to 1 in 400. {\it StoryXpress} was recognized as {\it NASSCOM Emerge 50}
+and also awarded the {\it Best Software Product in Student Innovation}.
+
+\justify
+Among interactions with many customers from the industry, one strikingly suggested the use of visual context from various
+media sources to generate relevant videos. This idea has since kept me engaged and been the source of my motivation to
+conduct research in {\it Computer Vision}.
+
+\justify
+Henceforth, I decided to pursue research work under Dr. Vineeth Balasubramanian at IIT Hyderabad. One of my first problems
+was {\it Partial Face Recognition} which aimed to improve object recognition in natural environments where performance gets
+affected by extraneous factors like shadows, illumination variations, and occlusions. I investigated and implemented a method
+which modeled images as graphs and the spatial similarity analysis of the same allowed grouping different pixels together
+to detect the face.
+
+\justify
+I extended this research in face recognition towards a project titled {\it eDrishti, Engagement Level Detection in Videos}.
+This demanded finer facial feature extraction to classify engagement levels of a MOOC video viewer. My model predicted two
+out of every three instances correctly. I discovered that predictions were failing because of unaccounted head movements
+leading to sub-optimal facial features. This led me to investigate object recognition in videos via the project titled
+{\it Sports Recognition via Dense Trajectory Features}. I used methods like {\it Histogram of Oriented Flows} and
+{\it Motion Body Histogram} for the optical flow analysis and trained the model to predict the sport being played.
+
+\justify
+These experiences have exposed me to interesting methodologies and new challenges have kept me captivated. An MS in Computer
+Science at New York University is my logical next step to carry this momentum forward.
+
+\justify
+My choice in coursework has been a conscious decision to supplement these research goals with strong theoretical foundations,
+the most integral being {\it Computer Vision}, {\it Numerical Linear Algebra}, {\it Soft Computing} and
+{\it Predictive Analytics \& Knowledge Discovery}. Laboratory courses have complemented my theory. I was part of the team
+that automated the {\it Timetable Management System - QuickSlots} for the Computer Science Department at IIT Hyderabad.
+Since most scheduling problems are {\it NP-hard}, we modeled the problem as a graph and built a set of constraints to allow
+for practical usage including semi-automated conflict resolution. This successful execution boosted my confidence in the
+ability to apply theory to challenging problems.
+
+\justify
+Ideas from the courses {\it Operating Systems} and {\it Compiler Design} have profoundly influenced me as well. One of
+the most powerful ideas to arise from the {\it UNIX} philosophy is the arrangement of all objects as a file. Finding synergy
+with my work at {\it StoryXpress}, I realized that the same design pattern could be effectively used for building applications.
+Since then, I maintain a blog series about engineering strategies I’ve learned while building production-level services.
+In one instance, I critiqued a deployment pattern called {\it Microservices} and suggested scenarios when one should migrate
+to such a pattern. This exercise has helped me achieve breadth of ideas and evolve as a pragmatic engineer.
+
+\justify
+Amid the same exercise, I came across a paper titled {\it Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center}
+which proposed primitives for task and resource isolation in data centers. Impressed by the idea, I eventually went on to
+become a valuable contributor to the {\it Mesos Framework Development SDK} where I added {\it container} support. This
+experience gave me the opportunity to widen my scope and learn about challenges in distributed systems. Since problems in
+{\it Computer Vision} require large computational resources, I am optimistic about {\it Mesos} as a platform to run distributed
+machine learning algorithms at scale.
+
+\justify
+These experiences of conducting motivated research and the ability to apply in practice put me in a unique position to
+learn and contribute ideas among other highly qualified members of the community. New York University provides me an
+excellent environment among seasoned researchers. In continuation of my previous work, I am excited about the research
+being done at the Vision Learning Lab. I am particularly interested in solving challenging problems in Object Recognition.
+The opportunity to learn from courses like {\it Computer Vision} by Rob Fergus and {\it Advanced Computer Vision} by Davi
+Geiger will provide me the necessary depth to contribute novel ideas towards the same.
+
+\justify
+After I graduate, I aim to continue my research in {\it Computer Vision} (objects and their relational representations)
+and culminate it as relevant products in governance and logistics. New York University provides me with just the right
+set of opportunities to achieve my vision.
+
+\end{document}

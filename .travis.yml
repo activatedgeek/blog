@@ -6,17 +6,21 @@ dist: trusty
 
 install:
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.25.1/hugo_0.25.1_Linux-64bit.deb && sudo dpkg -i hugo_0.25.1_Linux-64bit.deb
+  - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.4/netlifyctl-linux-amd64.tar.gz && tar -xzvf netlifyctl-linux-amd64.tar.gz
   # - sudo apt-get install textlive-full
   - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-  - sudo pip install Pygments
+  - sudo pip install -r requirements.txt
+
+before_script:
+  - pdflatex --version
+  - pygmentize -V
+  - hugo version
+  - ./netlifyctl version
 
 script:
-  - cd cv && mkdir build && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build CV.tex && cd ..
-  - mkdir -p static/files && mv cv/build/CV.pdf static/files
-  - hugo version && hugo -v
+  - cd cv && mkdir build && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build CV.tex SOP_NYU_Courant.tex && cd ..
+  - mkdir -p static/files && mv cv/build/*.pdf static/files
+  - hugo -v
 
 after_success:
-  - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.4/netlifyctl-linux-amd64.tar.gz
-  - tar -xzvf netlifyctl-linux-amd64.tar.gz
-  - ./netlifyctl version
   - ./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN
