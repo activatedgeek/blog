@@ -1,0 +1,5 @@
+##
+# This is a Netlify Redirects file. See https://www.netlify.com/docs/redirects/.
+#
+
+/files/cv.pdf   /files/resume.pdf   301
