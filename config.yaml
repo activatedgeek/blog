@@ -53,7 +53,7 @@ params:
         url: /problem-solving
         identifier: problem solving
         weight: 3
-      - name: cv
-        identifier: cv
-        url: /files/CV.pdf
+      - name: résumé
+        identifier: resume
+        url: /files/resume.pdf
         weight: 4
