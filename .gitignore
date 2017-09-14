@@ -4,5 +4,8 @@ build/
 
 .idea/
 *.iml
+*.log
+*.aux
+*.pdf
 
 !.gitkeep
