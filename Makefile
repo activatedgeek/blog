@@ -1,24 +1,21 @@
 ##
-# gh-pages has been DEPRECATED. DONOT use.
+# Makefile for linux based installations
 #
 debug:
 	@hugo server -D -v
 
-build:
-	@hugo
-	@git checkout --orphan gh-pages
-	@git rm -rf ./
-	@mv public/* ./; rm -r public/
-	@echo 'blog.sanyamkapoor.com' > CNAME
-	@git add -A
-	@git commit -am "site generated @ $(date)"
-	@git checkout master
+public:
+    @cd cv && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build resume.tex && cd ..
+    @cd cv && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build SOP_NYU_Courant.tex && cd ..
+    @mv cv/build/*.pdf static/files
+    @hugo -v
+    @cp _redirects public/
 
-publish:
-	@git push -f origin gh-pages
+install:
+    @curl -LO https://github.com/gohugoio/hugo/releases/download/v0.29/hugo_0.29_Linux-64bit.deb && sudo dpkg -i hugo_0.29_Linux-64bit.deb
+    @curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.1.4/netlifyctl-linux-amd64.tar.gz && tar -xzvf netlifyctl-linux-amd64.tar.gz
+    # @sudo apt-get install textlive-full
+    @sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+    @sudo pip install -r requirements.txt
 
-publish-ci:
-	@git push -f https://activatedgeek:${GH_ACCESS_TOKEN}@github.com/activatedgeek/blog gh-pages
-
-clean:
-	@rm -r public/
+.PHONY: debug install
