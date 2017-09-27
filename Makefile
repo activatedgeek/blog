@@ -7,7 +7,7 @@ debug:
 public:
 	@cd cv && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build resume.tex && cd ..
 	@cd cv && pdflatex -interaction=nonstopmode -halt-on-error -output-directory build SOP_NYU_Courant.tex && cd ..
-	@mv cv/build/\*.pdf static/files
+	@mv cv/build/*.pdf static/files
 	@hugo -v
 	@cp _redirects public/
 
