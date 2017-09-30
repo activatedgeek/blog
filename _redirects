@@ -2,7 +2,8 @@
 # This is a Netlify Redirects file. See https://www.netlify.com/docs/redirects/.
 #
 
-/problems       /problem-solving    301
-/cv/            /computer-vision/    301
+/problems               /problem-solving            301
+/cv/*                   /machine-learning/:splat    301
+/computer-vision/*      /machine-learning/:splat    301
 
-/files/cv.pdf   /files/resume.pdf   301
+/files/cv.pdf           /files/resume.pdf           301

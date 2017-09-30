@@ -45,9 +45,9 @@ params:
         identifier: blog
         url: /blog
         weight: 1
-      - name: computer vision
-        identifier: computer vision
-        url: /computer-vision
+      - name: machine learning
+        identifier: machine learning
+        url: /machine-learning
         weight: 2
       - name: problem solving
         url: /problem-solving
