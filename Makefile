@@ -19,6 +19,6 @@ install:
 	@sudo pip install -r requirements.txt
 
 deploy:
-	@./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN
+	@./netlifyctl deploy -A $(NETLIFY_ACCESS_TOKEN)
 
 .PHONY: debug install
