@@ -315,6 +315,19 @@ Neural Networks bursting into the scene and the huge amount of computations
 that needed to be done. Deep Learning frameworks like *Tensorflow* and
 *PyTorch* extensively use AD.
 
+#### Runtime Cost
+
+Let the total number of operations in a function
+\\( f: \mathbb{R}^m \to \mathbb{R}^n \\) be \\( ops(f) \\).
+
+To calculate the sensitivity of output with respect to each input parameter, 
+for the forward mode, we have total cost as \\( \Omega(m \times ops(f)) \\) because
+one forward pass will calculate the values for all outputs with respect to
+one parameter. Conversely, the backward pass will run in
+\\( \Omega(n \times ops(f)) \\) as it will calculate the derivative of one output
+with respect to all parameters. It is easy to see that when \\( n \ll m \\),
+the reverse mode AD performs roughly better overall.
+
 ## Sample Code
 
 Here is a toy neural network in *PyTorch* which uses Automatic Differentiation
