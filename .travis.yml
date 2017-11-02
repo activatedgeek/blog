@@ -14,10 +14,10 @@ before_script:
   - ./netlifyctl version
 
 script:
-  # Build Presentations from the ML Reading Group and add to website files
-  - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/ml-reading-group
-  - cd ml-reading-group && make all && cd ..
-  - mkdir -p static/mlrg-presentations && mv ml-reading-group/dist/* static/mlrg-presentations
+  # Build Resume and SOP
+  - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
+  - cd resume && make all && cd ..
+  - mv resume/dist/*.pdf static/files
   # Build Website
   - make public
 
