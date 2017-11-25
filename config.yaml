@@ -19,7 +19,7 @@ blackfriday:
 
 params:
   intro: Sanyam Kapoor
-  description: Computer Vision Researcher, About Boring Technologies, Automation First
+  description: Machine Learning Researcher, Automation First;
   authorImage: https://graph.facebook.com/10203983748456800/picture?type=large
   enableRSS: true
   dateFormat: 'Jan 2, 2006'
