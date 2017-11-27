@@ -9,6 +9,7 @@ pygmentsCodeFences: true
 pygmentsStyle: emacs
 
 googleAnalytics: UA-87707145-1
+disqusShortname: sanyamkapoor
 
 author: Sanyam Kapoor
 title: Sanyam Kapoor
@@ -28,7 +29,6 @@ params:
     copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
     facebookProfileId: 10203983748456800
-    facebookAppId: 1115424195239714
   social:
     github: activatedgeek
     stackoverflow: 2425365
