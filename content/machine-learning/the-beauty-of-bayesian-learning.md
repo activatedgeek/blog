@@ -9,8 +9,9 @@ tags:
   - bayesian learning
   - algorithms
 katex: true
-draft: true
 ---
+
+> This post has an accompanying Bayesian Learning Demo. See [here](https://bayesian-learning-demo.sanyamkapoor.com)!
 
 In this post, we will build intuitions behind Bayes theory via
 an interactive visualization and then realize certain properties
@@ -64,7 +65,7 @@ result in learning theory
 
 In plain words, the probability that "true risk" \\( R(h) \\) will be
 within the limits of a fixed positive constant \\( \epsilon \\) with a
-confidence of \\( 1-\delta \\). Risk in simple words just means how
+confidence of at least \\( 1-\delta \\). Risk in simple words measures how
 inaccurate was your learning with respect to new unseen data.
 
 The above equation is dense with knowledge and has various other
@@ -155,7 +156,7 @@ four set,
 This equation tells us that the likelihood of 16 being from a the set of powers of 4
 is considerably larger than it being from a set of even numbers. If we augment the
 dataset as \\( \mathcal{D}^\prime = [4,16] \\), it leads to a likelihood choice
-between \\( \frac{1}{50^2} \\) and \\( \frac{1}{3^2} \\). That escalated quickly!
+between \\( \frac{1}{50^2} \\) and \\( \frac{1}{3^2} \\). Those odds escalated quickly!
 
 This is in fact attributed to a principle known as the **Occam's Razor** which can
 be paraphrased as - given everything else same, a simpler (in this case the smaller)
@@ -265,10 +266,11 @@ to take a nice form in such situations to make sure previously unseen classes (p
 amounting to zero) don't always get nullified.
 
 * In a variety of high dimensional scenarios, problem generally tends to be intractable. This
-is where factorization into conditionally independent factors becomes imperative.
+is where factorization into conditionally independent factors becomes imperative. (Factor graphs)
 
 * It might happen that *MAP/MLE* objective cannot be expressed in a closed form. This is where a
-variety of solutions from convex optimization literature are invoked like the gradient descent.
+variety of solutions from convex optimization literature are invoked like the stochastic
+gradient descent.
 
 ## Conclusion
 
