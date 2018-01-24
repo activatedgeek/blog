@@ -26,7 +26,6 @@ params:
   dateFormat: 'Jan 2, 2006'
   travisRepo: activatedgeek/website
   extra:
-    copyright: '&copy; 2017. Sanyam Kapoor.'
     poweredBy: true
     facebookProfileId: 10203983748456800
   social:
@@ -38,7 +37,6 @@ params:
     linkedin: sanyamkapoor
     twitter: activatedgeek
     facebook: activatedgeek
-    email: 42@sanyamkapoor.com
   menu:
     main:
       - name: blog
