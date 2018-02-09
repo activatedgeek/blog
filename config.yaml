@@ -1,54 +1,110 @@
----
-baseURL: 'https://www.sanyamkapoor.com'
-relativeURLs: true
-canonifyurls: true
+baseURL: 'http://localhost:1313/'
+languageCode: en
+defaultContentLanguage: en
+title: Even - A super concise theme for Hugo
 enableRobotsTXT: true
-languageCode: en-us
-metaDataFormat: yaml
-pygmentsCodeFences: true
-pygmentsStyle: emacs
-
-googleAnalytics: UA-87707145-1
-disqusShortname: sanyamkapoor
-
-author: Sanyam Kapoor
-title: Sanyam Kapoor
-theme: goa
-
-blackfriday:
-  hrefTargetBlank: true
-
+enableEmoji: true
+theme: even
+hasCJKLanguage: true
+paginate: 3
+disqusShortname: ''
+googleAnalytics: ''
+copyright: ''
+author:
+  name: olOwOlo
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
+menu:
+  main:
+    - name: Home
+      weight: 10
+      identifier: home
+      url: /
+    - name: Archives
+      weight: 20
+      identifier: archives
+      url: /post/
+    - name: Tags
+      weight: 30
+      identifier: tags
+      url: /tags/
+    - name: Categories
+      weight: 40
+      identifier: categories
+      url: /categories/
 params:
-  intro: Sanyam Kapoor
-  description: do you generalize well?
-  authorImage: https://graph.facebook.com/10203983748456800/picture?type=large
-  enableRSS: true
-  dateFormat: 'Jan 2, 2006'
-  travisRepo: activatedgeek/website
-  extra:
-    poweredBy: true
-    facebookProfileId: 10203983748456800
+  version: 3.x
+  debug: false
+  since: '2017'
+  logoTitle: Even
+  keywords:
+    - Hugo
+    - theme
+    - even
+  description: Hugo theme even example site.
+  archivePaginate: 3
+  dateFormatToUse: '2006-01-02'
+  moreMeta: false
+  toc: true
+  autoCollapseToc: false
+  fancybox: true
+  mathjax: false
+  mathjaxEnableSingleDollar: false
+  postMetaInFooter: true
+  linkToMarkDown: false
+  contentCopyright: ''
+  changyanAppid: ''
+  changyanAppkey: ''
+  livereUID: ''
+  baidu_push: false
+  baidu_analytics: ''
+  baidu_verification: ''
+  google_verification: ''
+  customCSS: []
+  customJS: []
+  publicCDN:
+    enable: false
+    jquery: >-
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    slideout: >-
+      <script
+      src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js"
+      integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg="
+      crossorigin="anonymous"></script>
+    fancyboxJs: >-
+      <script
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js"
+      integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY="
+      crossorigin="anonymous"></script>
+    fancyboxCss: >-
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css"
+      integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY="
+      crossorigin="anonymous">
+  busuanzi:
+    enable: false
+    siteUV: true
+    sitePV: true
+    pagePV: true
+  reward:
+    enable: false
+    wechat: /path/to/your/wechat-qr-code.png
+    alipay: /path/to/your/alipay-qr-code.png
   social:
-    github: activatedgeek
-    stackoverflow: 2425365
-    hackernews: activatedgeek
-    quora: Sanyam-Kapoor
-    linkedin: sanyamkapoor
-    twitter: activatedgeek
-  menu:
-    - name: blog
-      identifier: blog
-      url: /blog
-      weight: 1
-    - name: machine learning
-      identifier: machine learning
-      url: /machine-learning
-      weight: 2
-    - name: problem solving
-      url: /problem-solving
-      identifier: problem solving
-      weight: 3
-    - name: résumé
-      identifier: resume
-      url: /files/resume.pdf
-      weight: 4
+    a-email: 'mailto:your@email.com'
+    b-stack-overflow: 'http://localhost:1313'
+    c-twitter: 'http://localhost:1313'
+    d-facebook: 'http://localhost:1313'
+    e-linkedin: 'http://localhost:1313'
+    f-google: 'http://localhost:1313'
+    g-github: 'http://localhost:1313'
+    h-weibo: 'http://localhost:1313'
+    i-zhihu: 'http://localhost:1313'
+    j-douban: 'http://localhost:1313'
+    k-pocket: 'http://localhost:1313'
+    l-tumblr: 'http://localhost:1313'
+    m-instagram: 'http://localhost:1313'
