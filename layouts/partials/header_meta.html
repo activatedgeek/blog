@@ -25,6 +25,10 @@
 <meta name="twitter:title" content="{{ .Page.Title }}">
 <meta name="twitter:description" content="{{ .Page.Description }}">
 <meta name="twitter:image" content="{{ .Page.Params.og_image }}">
+
+<title>{{ .Page.Title | singularize | humanize | title }} | {{ .Site.Title }} </title>
 {{ end }}
 
-
+{{ if .Page.IsHome }}
+<title>{{ .Site.Title }} </title>
+{{ end }}

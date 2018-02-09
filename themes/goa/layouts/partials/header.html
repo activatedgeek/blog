@@ -12,11 +12,6 @@
 <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 
-{{ if .Page.IsHome }}
-<title>{{ .Site.Title }} </title>
-{{ else }}
-<title>{{ .Page.Title | singularize | humanize | title }} | {{ .Site.Title }} </title>
-{{ end }}
 
 {{ partial "header_meta.html" . }}
 
