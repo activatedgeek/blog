@@ -8,7 +8,6 @@ tags:
   - algorithms
 katex: true
 og_image: https://i.imgur.com/GKP5Ubb.png
-draft: true
 ---
 
 *Stochastic Gradient Descent* (SGD) has turned out to be a workhorse for most
