@@ -36,20 +36,19 @@ params:
     linkedin: sanyamkapoor
     twitter: activatedgeek
   menu:
-    main:
-      - name: blog
-        identifier: blog
-        url: /blog
-        weight: 1
-      - name: machine learning
-        identifier: machine learning
-        url: /machine-learning
-        weight: 2
-      - name: problem solving
-        url: /problem-solving
-        identifier: problem solving
-        weight: 3
-      - name: résumé
-        identifier: resume
-        url: /files/resume.pdf
-        weight: 4
+    - name: blog
+      identifier: blog
+      url: /blog
+      weight: 1
+    - name: machine learning
+      identifier: machine learning
+      url: /machine-learning
+      weight: 2
+    - name: problem solving
+      url: /problem-solving
+      identifier: problem solving
+      weight: 3
+    - name: résumé
+      identifier: resume
+      url: /files/resume.pdf
+      weight: 4
