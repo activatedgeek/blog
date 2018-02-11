@@ -11,6 +11,8 @@ sitemap:
   changefreq: weekly
   priority: 0.5
   filename: sitemap.xml
+blackfriday:
+  hrefTargetBlank: true
 
 disqusShortname: sanyamkapoor
 googleAnalytics: UA-87707145-1
@@ -25,8 +27,16 @@ menu:
       weight: 10
       identifier: home
       url: /
-    - name: Résumé
+    - name: Tags
+      weight: 20
+      identifier: tags
+      url: /tags
+    - name: Categories
       weight: 30
+      identifier: categories
+      url: /categories
+    - name: Résumé
+      weight: 40
       identifier: resume
       url: /files/resume.pdf
 
@@ -41,7 +51,9 @@ params:
   customCSS: []
   customJS: []
   social:
-    b-stack-overflow: 'http://localhost:1313'
-    c-twitter: 'http://localhost:1313'
-    e-linkedin: 'http://localhost:1313'
-    g-github: 'http://localhost:1313'
+    a-github: 'https://github.com/activatedgeek'
+    b-hacker-news: 'https://news.ycombinator.com/user?id=activatedgeek'
+    c-linkedin: 'https://linkedin.com/in/sanyamkapoor'
+    d-quora: 'https://www.quora.com/profile/Sanyam-Kapoor'
+    e-stack-overflow: 'https://stackoverflow.com/users/2425365'
+    f-twitter: 'https://twitter.com/activatedgeek'
