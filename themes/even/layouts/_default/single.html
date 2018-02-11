@@ -32,11 +32,7 @@
       {{ .Content }}
     </div>
 
-    <!-- Copyright -->
-    {{ partial "post/copyright.html" . }}
-
-    <!-- Reward -->
-    {{ partial "post/reward.html" . }}
+    {{ partial "comments.html" . }}
 
     <footer class="post-footer">
       {{ with .Params.tags -}}

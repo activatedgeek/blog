@@ -28,8 +28,7 @@
   <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
 {{- end }}
 
-<!-- baidu & google verification  -->
-{{ with .Site.Params.baidu_verification }}<meta name="baidu-site-verification" content="{{.}}" />{{ end }}
+<!-- google verification  -->
 {{ with .Site.Params.google_verification }}<meta name="google-site-verification" content="{{.}}" />{{ end }}
 
 <!-- Site Generator -->
@@ -49,24 +48,8 @@
 <link rel="manifest" href="{{ "manifest.json" | relURL }}">
 <link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
 
-<!-- debug -->
-{{- if .Site.Params.debug }}
-<script src="https://cdn.jsdelivr.net/npm/eruda@1.2.6/eruda.min.js" integrity="sha256-Jmz4bc3kp+rRrXX2tGadNBKFLwtzMapr8kHABxSAAP8=" crossorigin="anonymous"></script>
-<script>eruda.init();</script>
-{{- end }}
-
-<!-- busuanzi -->
-{{ if .Site.Params.busuanzi.enable -}}
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-{{- end }}
-
 <!-- Styles -->
 <link href="{{ "dist/even.min.css?v=3.0.0" | relURL }}" rel="stylesheet">
-{{ if .Site.Params.publicCDN.enable -}}
-  {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCss | safeHTML }}{{ end }}
-{{- else -}}
-  {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
-{{- end }}
 
 <!-- custom css -->
 {{ range .Site.Params.customCSS }}
