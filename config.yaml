@@ -6,7 +6,7 @@ enableRobotsTXT: true
 languageCode: en-us
 metaDataFormat: yaml
 pygmentsCodeFences: true
-pygmentsStyle: emacs
+pygmentsStyle: friendly
 sitemap:
   changefreq: weekly
   priority: 0.5
@@ -37,19 +37,9 @@ params:
   dateFormatToUse: 'Mon, Jan 2 2006'
   moreMeta: true
   toc: true
+  highlightjs: true
   customCSS: []
   customJS: []
-  publicCDN:
-    enable: false
-    jquery: >-
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    slideout: >-
-      <script
-      src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js"
-      integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg="
-      crossorigin="anonymous"></script>
   social:
     b-stack-overflow: 'http://localhost:1313'
     c-twitter: 'http://localhost:1313'
