@@ -36,7 +36,7 @@
       {{ with .Params.tags -}}
         <div class="post-tags">
           {{ range . }}
-          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/" target="_blank" rel="noopener noreferrer">{{ . }}</a>
           {{ end }}
         </div>
       {{- end }}
