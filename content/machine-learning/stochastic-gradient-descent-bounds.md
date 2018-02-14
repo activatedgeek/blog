@@ -34,8 +34,8 @@ Concisely, we write this in a finite sum form
 where \\( f_i(\mathbf{w}) = f(\mathbf{w}, \xi_i) \\). For instance, \\( f_i \\) could represent
 the *Squared Loss* function. Having minimized the risk, we declare the system "learned".
 
-From elementary calculus, a closed form solution to a (strongly) convex minimization problem is to solve the
-system of linear equations after equating the derivative to zero. In other cases an analytic solution might
+From basic convex optimization theory, a closed form solution to a (strongly) convex minimization problem is to solve the
+system of linear equations after equating the derivative to zero. In other cases an analytical solution might
 not even be possible. It is well known that calculating the gradient over the complete sample becomes computationally
 prohibitive when the number of samples \\( n \\) become very large (which is typically the case). Therefore,
 we approximate the gradient step by considering a small batch of the samples (sometimes just one) which is what
@@ -63,7 +63,7 @@ Now that we have setup a quick background to realize the problem this work is tr
 here is the crux of the proposed results.
 
 > We can achieve fast convergence rates using Stochastic Gradient Descent for both convex and non-convex
-> cases, until some accuracy is reached. This can be done with a reasonably large step size without
+> cases, until some accuracy is reached. This can be done with a reasonably large fixed step size without
 > using variance reduction techniques.
 
 This claim is interesting because it is a step towards the theoretical understanding of why SGD
@@ -83,17 +83,23 @@ The main result from the work in [1] for convex objectives is paraphrased below
 > With \\( \eta_t = \eta < \frac{1}{L} \\), for any \\( \epsilon > 0 \\) we have
 > \\[ \mathbb{E}[F(\mathbf{w}_t) - F(\mathbf{w}\_\star)] \leq \frac{||\mathbf{w}\_0 - \mathbf{w}\_\star ||^2}{2\eta(1 - \eta L)t} + \frac{\eta}{1-\eta L} p\_{\epsilon}\epsilon + \frac{\eta M\_{\epsilon}}{1-\eta L} (1 - p\_{\epsilon}) \\]
 > where \\( \mathbf{w}\_\star \\) is any optimal solution of \\( F(\mathbf{w}) \\),
-> \\( w_0 \\) is the initial solution,
+> \\( \mathbf{w}_0 \\) is the initial solution,
 > \\( p\_\epsilon = P(|| g\_\star ||^2 \leq \epsilon) \\),
 > \\( M\_\epsilon = \mathbb{E}[|| g || \big| || g || > \epsilon ] \\) and
 > \\( g\_\star = \frac{1}{b} \sum\_{i=1}^b \nabla f(\mathbf{w}\_\star; \xi\_i) \\).
+
+where L-smoothness is defined as
+
+> A function \\( \phi \\) is \\( L \\)-Smooth if there exists a constant \\( L \\) such that
+> \\[ || \nabla \phi(\mathbf{w}) - \nabla \phi(\mathbf{w}^\prime) || \leq L || \mathbf{w} - \mathbf{w}^\prime || \text{   } \forall \mathbf{w}, \mathbf{w}^\prime \in \mathbb{R}^d \\]
 
 This result is quite dense with information. A few key definitions are important to understand this.
 
 From calculus, we know that the gradient vanishes at a stationary point but since we are now approximating
 gradients, we can only analyze how well it "concentrates" around the true optimum. In light of this, the
 quantity \\( p_\epsilon \\)  represents the probability of the gradient norm being less than a small positive
-value \\( \epsilon \\). \\( M\_\epsilon \\) represents the average bound for large gradients.
+value \\( \epsilon \\). \\( M\_\epsilon \\) represents the average bound for large gradients. Quite understandably, we
+also see that the initial solution \\( \mathbf{w}_0 \\) also affects the viability of this bound.
 
 It should be observed that as \\( \epsilon \\) decreases, \\( 1 - p_\epsilon \\) increases. Owing to this
 dynamic, if we hover around the region where \\( \epsilon \approx 1 - p\_\epsilon \\), then SGD uniformly converges
@@ -117,7 +123,8 @@ to hold for small values of \\( \epsilon \\) making the bounds even better. In t
 
 A similar analysis for non-convex objectives is also presented in [1]. Empirical results reported in the
 work show that SGD tends to be faster than other techniques like SVRG and L-BFGS which is quite
-fascinating.
+fascinating. It should also be noted there that the specific form of the objective function doesn't matter
+as long as it satisfies the smoothness property.
 
 # Conclusion
 
