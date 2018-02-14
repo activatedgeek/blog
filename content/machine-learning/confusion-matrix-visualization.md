@@ -2,7 +2,8 @@
 date: 2017-10-15T13:33:07-04:00
 description: Summary of terminologies in Confusion Matrix
 title: Visualizing the Confusion Matrix
-categories: []
+categories:
+  - machine learning
 markdown: mmark
 tags:
   - machine learning

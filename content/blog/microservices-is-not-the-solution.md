@@ -2,7 +2,8 @@
 date: "2016-02-24T23:50:16+05:30"
 description: A conservative take on adopting microservices
 title: Microservices is not the solution you think
-categories: []
+categories:
+  - blog
 tags:
   - devops
   - microservices

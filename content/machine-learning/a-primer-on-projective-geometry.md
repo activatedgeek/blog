@@ -2,7 +2,8 @@
 date: 2017-07-19T03:08:04+05:30
 description: Understanding the basics behind 2D projections
 title: A Primer on Projective Geometry
-categories: []
+categories:
+  - machine learning
 markdown: mmark
 tags:
   - computer vision

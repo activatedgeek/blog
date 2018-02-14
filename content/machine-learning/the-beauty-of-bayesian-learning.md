@@ -2,7 +2,8 @@
 date: 2017-12-04T02:25:07-05:00
 description: Understanding and visualizing Bayesian concepts
 title: The beauty of Bayesian Learning
-categories: []
+categories:
+  - machine learning
 markdown: mmark
 tags:
   - machine learning

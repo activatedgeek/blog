@@ -2,7 +2,8 @@
 date: 2016-01-03T01:00:09+05:30
 description: Building the swiss-knife for DevOps
 title: For better software delivery
-categories: []
+categories:
+  - blog
 tags:
   - devops
   - oss

@@ -15,7 +15,7 @@
       </div>
       <div class="categories-tags">
         {{ range $key, $value := $terms }}
-          <a class="category-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/" target="_blank" rel="noopener noreferrer">
+          <a class="category-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
             {{ $value.Term }}
             <span class="category-count">{{ len $value.Pages }}</span>
           </a>

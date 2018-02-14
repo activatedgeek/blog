@@ -2,7 +2,8 @@
 date: 2017-06-24T22:11:07+05:30
 description: An illustration on one of the celebrated algorithms in Computer Vision
 title: Introduction to RANSAC
-categories: []
+categories:
+  - machine learning
 markdown: mmark
 tags:
   - computer vision

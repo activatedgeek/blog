@@ -2,7 +2,8 @@
 date: 2018-02-06T09:48:58-05:00
 description: A summary of recent work on theoretical bounds for SGD
 title: When Does Stochastic Gradient Algorithm Work Well?
-categories: []
+categories:
+  - machine learning
 tags:
   - machine learning
   - algorithms

@@ -2,7 +2,8 @@
 date: 2017-05-13T20:59:06+05:30
 description: Adventures of using Nginx to proxy internal ELBs on AWS
 title: Understanding Nginx behavior with dynamic DNS upstreams
-categories: []
+categories:
+  - blog
 tags:
   - nginx
   - dns

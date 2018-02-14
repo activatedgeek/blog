@@ -2,7 +2,8 @@
 date: 2017-05-04T09:04:45+05:30
 description: 'Solution to Codeforces Problem 651B: Beautiful Paintings'
 title: Codeforces 651B
-categories: []
+categories:
+  - problem solving
 tags:
   - problem-solving
   - algorithms

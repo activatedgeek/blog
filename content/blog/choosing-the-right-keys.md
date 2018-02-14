@@ -2,7 +2,8 @@
 date: 2017-04-03T01:57:44+05:30
 description: Learnings to choose better database keys
 title: Choosing the right keys
-categories: []
+categories:
+  - blog
 tags:
   - database
   - design

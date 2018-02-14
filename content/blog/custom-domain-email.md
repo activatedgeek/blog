@@ -2,7 +2,8 @@
 date: 2016-10-17T13:20:40+05:30
 description: Using Mailgun's MX server with your custom domain for emails
 title: Setup custom email addresses
-categories: []
+categories:
+  - blog
 tags:
   - domain
   - email

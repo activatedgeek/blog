@@ -2,7 +2,8 @@
 date: 2017-11-25T01:59:07-04:00
 description: A quick introduction to writing your first data loader in PyTorch
 title: PyTorch Data Loaders are abstraction done right!
-categories: []
+categories:
+  - machine learning
 tags:
   - machine learning
   - pytorch

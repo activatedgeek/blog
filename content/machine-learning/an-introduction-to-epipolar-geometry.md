@@ -2,7 +2,8 @@
 date: 2017-08-08T16:01:07+05:30
 description: Understanding the intuition behind 3D to 2D mappings, the Fundamental Matrix with a demo
 title: An Introduction to Epipolar Geometry
-categories: []
+categories:
+  - machine learning
 markdown: mmark
 tags:
   - computer vision

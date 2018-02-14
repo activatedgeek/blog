@@ -2,7 +2,8 @@
 date: "2016-04-07T03:40:47+05:30"
 description: A reference Travis YAML for automated Docker builds
 title: Building Docker Images on Travis CI
-categories: []
+categories:
+  - blog
 tags:
   - docker
   - travis
