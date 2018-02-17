@@ -21,5 +21,8 @@
         <li class="mobile-menu-item">{{ .Name }}</li>
       </a>
     {{- end }}
+    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" title="rss">
+      <li class="mobile-menu-item">RSS</li>
+    </a>
   </ul>
 </nav>

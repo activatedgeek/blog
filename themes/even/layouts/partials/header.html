@@ -15,5 +15,8 @@
         <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
       </li>
     {{- end }}
+    <li class="menu-item">
+      <a class="menu-item-link" href="{{ .Site.RSSLink }}" type="application/rss+xml" title="rss">RSS</a>
+    </li>
   </ul>
 </nav>
