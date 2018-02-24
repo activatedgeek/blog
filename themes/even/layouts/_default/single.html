@@ -21,6 +21,14 @@
         {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
         <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
         {{- end }}
+
+        {{ with .Params.tags -}}
+        <div class="post-tags">
+          {{ range . }}
+          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/" target="_blank" rel="noopener noreferrer">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{- end }}
       </div>
     </header>
 
@@ -33,14 +41,6 @@
     </div>
 
     <footer class="post-footer">
-      {{ with .Params.tags -}}
-        <div class="post-tags">
-          {{ range . }}
-          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/" target="_blank" rel="noopener noreferrer">{{ . }}</a>
-          {{ end }}
-        </div>
-      {{- end }}
-
       <!-- Post Pagination -->
       <nav class="post-nav">
         {{ with .NextInSection }}
