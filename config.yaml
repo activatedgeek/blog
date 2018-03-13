@@ -23,10 +23,6 @@ author:
 
 menu:
   main:
-    - name: Home
-      weight: 10
-      identifier: home
-      url: /
     - name: Tags
       weight: 20
       identifier: tags

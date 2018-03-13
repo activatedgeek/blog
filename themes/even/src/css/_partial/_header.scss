@@ -7,7 +7,7 @@
   padding: $header-padding 0;
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  width: 100%;
 
   @import '_header/logo';
   @import '_header/menu';
