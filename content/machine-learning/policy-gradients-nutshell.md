@@ -1,5 +1,5 @@
 ---
-date: 2018-05-19
+date: 2018-05-21
 description: Everything you need to know to get started with Policy Gradient Algorithms for Reinforcement Learning
 title: Policy Gradients in a Nutshell
 categories:
