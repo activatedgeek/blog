@@ -47,9 +47,9 @@ params:
   customCSS: []
   customJS: []
   social:
-    a-github: 'https://github.com/activatedgeek'
-    b-hacker-news: 'https://news.ycombinator.com/user?id=activatedgeek'
-    c-linkedin: 'https://linkedin.com/in/sanyamkapoor'
-    d-quora: 'https://www.quora.com/profile/Sanyam-Kapoor'
-    e-stack-overflow: 'https://stackoverflow.com/users/2425365'
-    f-twitter: 'https://twitter.com/activatedgeek'
+    a.ai.google-scholar: 'https://scholar.google.com/citations?user=p0NMtgsAAAAJ'
+    b.fa.github: 'https://github.com/activatedgeek'
+    c.fa.hacker-news: 'https://news.ycombinator.com/user?id=activatedgeek'
+    d.fa.linkedin: 'https://linkedin.com/in/sanyamkapoor'
+    e.fa.stack-overflow: 'https://stackoverflow.com/users/2425365'
+    f.fa.twitter: 'https://twitter.com/activatedgeek'

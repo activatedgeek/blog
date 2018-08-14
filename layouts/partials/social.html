@@ -1,7 +1,7 @@
 {{- range $name, $path := .Site.Params.social }}
 {{- if $path }}
-{{- $realName := slicestr $name 2 }}
-<a target="_blank" href="{{ $path | safeURL }}"><i class="fa fa-{{ $realName }}" aria-hidden="true"></i></a>
+{{- $realName := split $name "." }}
+<a target="_blank" href="{{ $path | safeURL }}"><i class="{{ index $realName 1 }} {{ index $realName 1 }}-{{ index $realName 2 }}" aria-hidden="true"></i></a>
 {{- end }}
 {{- end }}
 {{ if .Site.LanguagePrefix -}}
