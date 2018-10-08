@@ -1,14 +1,26 @@
----
-date: 2017-04-03T01:57:44+05:30
-description: Learnings to choose better database keys
-title: Choosing the right keys
-categories:
-  - blog
-tags:
-  - database
-  - design
-  - architecture
----
++++
+title = "Choosing the right keys"
+description = "Learnings to choose better database keys"
+date = "2017-04-03T01:57:44+05:30"
+categories = [
+  "engineering",
+  "blog",
+]
+tags = [
+  "database",
+  "design",
+  "architecture"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 Deciding the keys in an SQL table is one of the most important decisions in
 the lifecycle of the database. The ramifications of this decision will last

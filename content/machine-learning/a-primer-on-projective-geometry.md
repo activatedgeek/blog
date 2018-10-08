@@ -1,15 +1,25 @@
----
-date: 2017-07-19T03:08:04+05:30
-description: Understanding the basics behind 2D projections
-title: A Primer on Projective Geometry
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - computer vision
-  - geometry
-katex: true
----
++++
+title = "A Primer on Projective Geometry"
+description = "Understanding the basics behind 2D projections"
+date = "2017-07-19T03:08:04+05:30"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "computer vision",
+  "geometry"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 Projective Geometry is a term used to describe properties of projections of a given
 geometric shape. When a shape is projected onto \\( \Bbb{R}^2 \\) (commonly known as

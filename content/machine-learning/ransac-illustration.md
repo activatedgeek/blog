@@ -1,17 +1,27 @@
----
-date: 2017-06-24T22:11:07+05:30
-description: An illustration on one of the celebrated algorithms in Computer Vision
-title: Introduction to RANSAC
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - computer vision
-  - ransac
-  - algorithms
-katex: true
-og_image: https://i.imgur.com/2QpF5AX.png
----
++++
+title = "Introduction to RANSAC"
+description = "An illustration on one of the celebrated algorithms in Computer Vision"
+date = "2017-06-24T22:11:07+05:30"
+thumbnail = "https://i.imgur.com/d0ITBFS.png"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "computer vision",
+  "ransac",
+  "algorithms"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 ## The Problem
 

@@ -4,26 +4,28 @@ sudo: required
 
 dist: trusty
 
+before_install:
+  - curl -LO https://github.com/activatedgeek/distillpub/tarball/0.1.0 && tar -xzvf 0.1.0 && mv *distillpub* themes/distillpub
+
 install:
-  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.46/hugo_0.46_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.49/hugo_0.49_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
   - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
-  #- sudo apt-get install textlive-full
-  - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-  #- sudo tlmgr update --all
   - sudo pip install -r requirements.txt
+  ### LaTeX related ###
+  - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 
 before_script:
-  - pdflatex --version
   - pygmentize -V
   - hugo version
   - ./netlifyctl version
+  ### LaTeX related ###
+  - pdflatex --version
 
 script:
-  # Build Resume and SOP
+  ### Build Resume ###
   - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
   - cd resume && make all && cd ..
   - mv resume/dist/*.pdf static/files
-  # Build Website
   - make public
 
 after_success:

@@ -1,14 +1,25 @@
----
-date: "2016-04-07T03:40:47+05:30"
-description: A reference Travis YAML for automated Docker builds
-title: Building Docker Images on Travis CI
-categories:
-  - blog
-tags:
-  - docker
-  - travis
-  - ci
----
++++
+title = "Building Docker Images on Travis CI"
+description = "A reference Travis YAML for automated Docker builds"
+date = "2016-04-07T03:40:47+05:30"
+categories = [
+  "blog"
+]
+tags = [
+  "docker",
+  "travis",
+  "ci"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 Docker has been the star of the recent times and I have recently been
 building a lot of Docker images, deploying them to both development and

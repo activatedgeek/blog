@@ -1,16 +1,26 @@
----
-date: 2017-10-15T13:33:07-04:00
-description: Summary of terminologies in Confusion Matrix
-title: Visualizing the Confusion Matrix
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - machine learning
-  - classification
-katex: true
-og_image: https://i.imgur.com/uipmEwt.png
----
++++
+title = "Visualizing the Confusion Matrix"
+description = "Summary of terminologies in Confusion Matrix"
+date = "2017-10-15T13:33:07-04:00"
+thumbnail = "https://i.imgur.com/uipmEwt.png"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "machine learning",
+  "calculus",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 *Confusion Matrix* is a matrix built for binary classification problems.
 It is an important starting tool in understanding how well a binary

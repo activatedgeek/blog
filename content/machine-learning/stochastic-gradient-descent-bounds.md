@@ -1,15 +1,25 @@
----
-date: 2018-02-06T09:48:58-05:00
-description: A summary of recent work on theoretical bounds for SGD
-title: When Does Stochastic Gradient Algorithm Work Well?
-categories:
-  - machine learning
-tags:
-  - machine learning
-  - algorithms
-katex: true
-og_image: https://i.imgur.com/GKP5Ubb.png
----
++++
+title = "When Does Stochastic Gradient Algorithm Work Well?"
+description = "A summary of recent work on theoretical bounds for SGD"
+date = "2018-02-06T09:48:58-05:00"
+thumbnail = "https://i.imgur.com/GKP5Ubb.png"
+categories = [
+  "machine learning",
+]
+tags = [
+  "machine learning",
+  "algorithms",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 *Stochastic Gradient Descent* (SGD) has turned out to be a workhorse for most
 gradient-based supervised learning algorithms today. But, why does that work? This post
