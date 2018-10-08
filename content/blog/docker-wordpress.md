@@ -1,16 +1,26 @@
----
-date: "2016-04-09T22:50:29+05:30"
-description: Using Wordpress and Docker, the five-minute install & deploy, seriously!
-title: Getting started with Compose and WordPress
-categories:
-  - blog
-tags:
-  - docker
-  - compose
-  - documentation
-  - containers
----
++++
+title = "Getting started with Compose and WordPress"
+description = "Using Wordpress and Docker, the five-minute install & deploy, seriously!"
+date = "2016-04-09T22:50:29+05:30"
+thumbnail = ""
+categories = [
+  "engineering",
+  "blog",
+]
+tags = [
+  "docker",
+  "documentation",
+]
 
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 ## Quickstart: Docker Compose and WordPress
 

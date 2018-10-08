@@ -1,13 +1,25 @@
----
-date: 2016-10-17T13:20:40+05:30
-description: Using Mailgun's MX server with your custom domain for emails
-title: Setup custom email addresses
-categories:
-  - blog
-tags:
-  - domain
-  - email
----
++++
+title = "Setup custom email addresses"
+description = "Using Mailgun's MX server with your custom domain for emails"
+date = "2016-10-17T13:20:40+05:30"
+thumbnail = ""
+categories = [
+  "blog",
+]
+tags = [
+  "email",
+  "domain"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 It had been a while that I owned my domain and was wondering if I could switch
 all my email communication to a custom email address [hello@sanyamkapoor.com](mailto:hello@sanyamkapoor.com).

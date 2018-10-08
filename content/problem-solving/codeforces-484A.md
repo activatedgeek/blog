@@ -1,13 +1,21 @@
----
-date: 2017-04-05T09:04:45+05:30
-description: 'Solution to Codeforces Problem 484A: Bits'
-title: Codeforces 484A
-categories:
-  - problem solving
-tags:
-  - problem-solving
-  - algorithms
----
++++
+title = "Codeforces 484A"
+description = "Solution to Codeforces Problem 484A: Bits"
+date = "2017-04-05T09:04:45+05:30"
+thumbnail = ""
+categories = [
+  "problem solving",
+]
+tags = [
+  "problem solving",
+  "algorithms"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
++++
 
 I was recently solving this problem on Codeforces titled
 [Bits](http://codeforces.com/problemset/problem/484/A). It was a fairly

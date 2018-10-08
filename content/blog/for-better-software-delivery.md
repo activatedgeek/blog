@@ -1,13 +1,25 @@
----
-date: 2016-01-03T01:00:09+05:30
-description: Building the swiss-knife for DevOps
-title: For better software delivery
-categories:
-  - blog
-tags:
-  - devops
-  - oss
----
++++
+title = "For better software delivery"
+description = "Building the swiss-knife for DevOps"
+date = "2016-01-03T01:00:09+05:30"
+thumbnail = ""
+categories = [
+  "blog"
+]
+tags = [
+  "devops",
+  "oss"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 For the past couple years, I have been working as the Dev and the Ops for my team
 at [StoryXpress](https://storyxpress.co). I promise you it has been an amazing

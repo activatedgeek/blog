@@ -1,13 +1,25 @@
----
-date: 2016-11-03T12:06:04+05:30
-description: A take on the much anticipated DiCaprio Documentary on Climate Change
-title: 'Before the Flood: A review'
-categories:
-  - blog
-tags:
-  - climate change
-  - documentary
----
++++
+title = "Before the Flood: A review"
+description = "A take on the much anticipated DiCaprio Documentary on Climate Change"
+date = "2016-11-03T12:06:04+05:30"
+thumbnail = ""
+categories = [
+  "opinion",
+]
+tags = [
+  "climate change",
+  "documentary",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "StoryXpress"
+    url = "https://storyxpress.co"
++++
 
 I’ve been reading about DiCaprio’s quest to push the agenda of Climate Change
 every now and then. It always came to me as ironic when I tried hard to look from

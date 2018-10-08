@@ -1,13 +1,26 @@
----
-date: 2017-05-13T20:59:06+05:30
-description: Adventures of using Nginx to proxy internal ELBs on AWS
-title: Understanding Nginx behavior with dynamic DNS upstreams
-categories:
-  - blog
-tags:
-  - nginx
-  - dns
----
++++
+title = "Understanding Nginx behavior with dynamic DNS upstreams"
+description = "Adventures of using Nginx to proxy internal ELBs on AWS"
+date = "2017-05-13T20:59:06+05:30"
+thumbnail = ""
+categories = [
+  "engineering",
+  "blog"
+]
+tags = [
+  "nginx",
+  "dns"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Headout"
+    url = "https://headout.com"
++++
 
 Recently, I was fiddling around with [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 to run our Nginx reverse proxy server at [Headout](https://www.headout.com) and
