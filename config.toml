@@ -12,7 +12,7 @@ theme = "distillpub"
   keywords = ["hugo", "distill", "theme"]
   sourcePrefix = "https://github.com/activatedgeek/website/blob/master"
 
-  color = "#c05b4d"
+  color = "#0f2e3d"
 
   [[params.social]]
   class = "fab fa-google"
@@ -40,12 +40,12 @@ theme = "distillpub"
 
 [menu]
 
-  [[menu.main]]
-  identifier = "about"
-  name = "About Hugo"
-  title = "about"
-  url = "/about"
-  weight = -10
+  # [[menu.main]]
+  # identifier = "about"
+  # name = "About Hugo"
+  # title = "about"
+  # url = "/about"
+  # weight = -10
 
   [[menu.main]]
   identifier = "resume"

@@ -2,7 +2,6 @@
 title = "Getting started with Compose and WordPress"
 description = "Using Wordpress and Docker, the five-minute install & deploy, seriously!"
 date = "2016-04-09T22:50:29+05:30"
-thumbnail = ""
 categories = [
   "engineering",
   "blog",

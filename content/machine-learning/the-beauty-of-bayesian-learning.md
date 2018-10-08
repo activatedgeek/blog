@@ -1,16 +1,26 @@
----
-date: 2017-12-04T02:25:07-05:00
-description: Understanding and visualizing Bayesian concepts
-title: The beauty of Bayesian Learning
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - machine learning
-  - bayesian learning
-  - algorithms
-katex: true
----
++++
+title = "The beauty of Bayesian Learning"
+description = "Understanding and visualizing Bayesian concepts"
+date = "2017-12-04T02:25:07-05:00"
+thumbnail = "https://i.imgur.com/4IMDpdk.png"
+categories = [
+  "machine learning",
+  "bayesian learning"
+]
+tags = [
+  "bayesian learning",
+  "algorithms",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 > This post has an accompanying Bayesian Learning Demo. See [here](https://bayesian-learning-demo.sanyamkapoor.com)!
 

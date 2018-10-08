@@ -2,7 +2,6 @@
 title = "Codeforces 484A"
 description = "Solution to Codeforces Problem 484A: Bits"
 date = "2017-04-05T09:04:45+05:30"
-thumbnail = ""
 categories = [
   "problem solving",
 ]

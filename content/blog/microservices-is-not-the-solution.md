@@ -2,7 +2,6 @@
 title = "Microservices is not the solution you think"
 description = "A conservative take on adopting microservices"
 date = "2016-02-24T23:50:16+05:30"
-thumbnail = ""
 categories = [
   "opinion",
   "blog"

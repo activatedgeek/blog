@@ -2,7 +2,6 @@
 title = "Codeforces 651B"
 description = "Solution to Codeforces Problem 651B: Beautiful Paintings"
 date = "2017-05-04T09:04:45+05:30"
-thumbnail = ""
 categories = [
   "problem solving",
 ]

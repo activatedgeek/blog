@@ -2,7 +2,6 @@
 title = "Choosing the right keys"
 description = "Learnings to choose better database keys"
 date = "2017-04-03T01:57:44+05:30"
-thumbnail = ""
 categories = [
   "engineering",
   "blog",

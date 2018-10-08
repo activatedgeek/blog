@@ -1,15 +1,26 @@
----
-date: 2018-05-21
-description: Everything you need to know to get started with Policy Gradient Algorithms for Reinforcement Learning
-title: Policy Gradients in a Nutshell
-categories:
-  - machine learning
-tags:
-  - reinforcement learning
-  - policy gradients
-katex: true
-og_image: https://i.imgur.com/K7Zjm95.png
----
++++
+title = "Policy Gradients in a Nutshell"
+description = "Everything you need to know to get started with Policy Gradient Algorithms for Reinforcement Learning"
+date = "2018-05-21"
+thumbnail = "https://i.imgur.com/K7Zjm95.png"
+categories = [
+  "RL",
+  "machine learning"
+]
+tags = [
+  "reinforcement learning",
+  "policy gradients",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 *This article aims to provide a concise yet comprehensive introduction to one of the most important
 class of control algorithms in Reinforcement Learning - Policy Gradients. I will discuss these

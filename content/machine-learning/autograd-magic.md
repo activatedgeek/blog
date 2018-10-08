@@ -1,17 +1,27 @@
----
-date: 2017-10-08T08:46:07-04:00
-description: Learn how to "mathemagically" compute derivates in Machine Learning
-title: The magic of Automatic Differentiation
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - machine learning
-  - neural networks
-  - calculus
-katex: true
-og_image: https://i.imgur.com/TiD3zYJ.jpg
----
++++
+title = "The magic of Automatic Differentiation"
+description = "Learn how to 'mathemagically' compute derivates in Machine Learning"
+date = "2017-10-08T08:46:07-04:00"
+thumbnail = "https://i.imgur.com/TiD3zYJ.jpg"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "machine learning",
+  "neural networks",
+  "calculus"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 Any machine learning problem is generally formulated as roughly the 
 following steps

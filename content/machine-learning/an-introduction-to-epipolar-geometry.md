@@ -1,16 +1,26 @@
----
-date: 2017-08-08T16:01:07+05:30
-description: Understanding the intuition behind 3D to 2D mappings, the Fundamental Matrix with a demo
-title: An Introduction to Epipolar Geometry
-categories:
-  - machine learning
-markdown: mmark
-tags:
-  - computer vision
-  - geometry
-katex: true
-og_image: https://i.imgur.com/35kd5a7.jpg
----
++++
+title = "An Introduction to Epipolar Geometry"
+description = "Understanding the intuition behind 3D to 2D mappings, the Fundamental Matrix with a demo"
+date = "2017-08-08T16:01:07+05:30"
+thumbnail = "https://i.imgur.com/35kd5a7.jpg"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "computer vision",
+  "geometry"
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 In this post we will take a look at how Camera Projections work. A demo at the
 end will illustrate the important segments of the theory. Prerequisites to

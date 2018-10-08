@@ -1,13 +1,25 @@
----
-date: 2017-11-25T01:59:07-04:00
-description: A quick introduction to writing your first data loader in PyTorch
-title: PyTorch Data Loaders are abstraction done right!
-categories:
-  - machine learning
-tags:
-  - machine learning
-  - pytorch
----
++++
+title = "PyTorch Data Loaders are abstraction done right!"
+description = "A quick introduction to writing your first data loader in PyTorch"
+date = "2017-11-25T01:59:07-04:00"
+categories = [
+  "machine learning",
+  "blog"
+]
+tags = [
+  "machine learning",
+  "pytorch",
+]
+
+[distill]
+  [[distill.authors]]
+  author = "Sanyam Kapoor"
+  authorURL = "http://www.sanyamkapoor.com/"
+
+    [[distill.authors.affiliations]]
+    name = "Courant Institute, NYU"
+    url = "https://cs.nyu.edu"
++++
 
 *PyTorch* is great fun. Seriously! It has only been a few weeks that I started
 working with it. It already is the least painful thing in the process, which,
