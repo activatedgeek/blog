@@ -8,21 +8,21 @@ install:
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.46/hugo_0.46_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
   - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
   #- sudo apt-get install textlive-full
-  - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+  # - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
   #- sudo tlmgr update --all
   - sudo pip install -r requirements.txt
 
 before_script:
-  - pdflatex --version
+  # - pdflatex --version
   - pygmentize -V
   - hugo version
   - ./netlifyctl version
 
 script:
   # Build Resume and SOP
-  - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
-  - cd resume && make all && cd ..
-  - mv resume/dist/*.pdf static/files
+  # - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
+  # - cd resume && make all && cd ..
+  # - mv resume/dist/*.pdf static/files
   # Build Website
   - make public
 
