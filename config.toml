@@ -4,6 +4,8 @@ author = "Sanyam Kapoor"
 canonifyurls = true
 theme = "distillpub"
 
+paginate = 7
+
 [taxonomies]
 # TODO: Taxonomies?
 

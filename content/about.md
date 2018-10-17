@@ -1,7 +1,7 @@
 +++
 title = "About"
-categories = ["about"]
 disableByline = true
+listrender = false
 +++
 
 I'm a Masters student at [NYU Courant](https://cs.nyu.edu) broadly interested
