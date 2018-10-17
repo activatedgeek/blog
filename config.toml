@@ -40,16 +40,9 @@ theme = "distillpub"
 
 [menu]
 
-  # [[menu.main]]
-  # identifier = "about"
-  # name = "About Hugo"
-  # title = "about"
-  # url = "/about"
-  # weight = -10
-
   [[menu.main]]
-  identifier = "resume"
-  name = "Résumé"
-  title = "resume"
-  url = "/files/resume.pdf"
-  weight = -20
+  identifier = "about"
+  name = "About"
+  title = "about"
+  url = "/about"
+  weight = -10

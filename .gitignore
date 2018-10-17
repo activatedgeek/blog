@@ -11,3 +11,6 @@ build/
 *.pdf
 
 !.gitkeep
+
+# Keep theme outside this repo, use on demand
+themes/distillpub
