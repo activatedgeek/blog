@@ -4,17 +4,16 @@ disableByline = true
 listrender = false
 +++
 
-I'm a Masters student at [NYU Courant](https://cs.nyu.edu) broadly interested
-in Machine Learning. I work with [Joan Bruna](https://cims.nyu.edu/~bruna/)
-and other researchers in the [CILVR](https://wp.nyu.edu/cilvr/) lab. I'm also
-interested in Variational Inference.
+I'm a Masters student at [NYU Courant](https://cs.nyu.edu) interested in 
+Reinforcement Learning and Variational Inference. I work with 
+[Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the 
+[CILVR](https://wp.nyu.edu/cilvr/) lab.
 
-I'm passionate about Reinforcement Learning which is arguably the most general 
-<d-footnote>... and perhaps the closest to human</d-footnote> formulation of a
-learning problem. Safe and efficient exploration in RL is a critical piece 
-to minimizing uncertainty and surpise. Recently, I've been investigating 
-techniques to improve efficiency of Monte Carlo algorithms so that exploring 
-high density regions becomes easier.
+Reinforcement Learning is arguably the most general <d-footnote>... and perhaps 
+the closest to human</d-footnote> formulation of a learning problem. Safe and 
+efficient exploration in RL is a critical piece to minimizing uncertainty and 
+surpise. Recently, I've been investigating techniques to improve efficiency of 
+Monte Carlo algorithms so that exploring high density regions becomes easier.
 
 I take healthy code and clear expositions very seriously. [This blog](/) is an
 attempt to contribute my learnings back to the community (especially for newcomers).
