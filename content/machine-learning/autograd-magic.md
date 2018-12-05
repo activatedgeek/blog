@@ -223,7 +223,7 @@ multiplying two dual numbers
 <div>
 \[\begin{aligned}
 (u + \dot{u}\epsilon) + (v + \dot{v}\epsilon) &= (u+v) + (\dot{u} + \dot{v})\epsilon \\
-(u + \dot{u}\epsilon) + (v + \dot{v}\epsilon) &= (uv) + (u\dot{v}+\dot{u}v)\epsilon
+(u + \dot{u}\epsilon)(v + \dot{v}\epsilon) &= (uv) + (u\dot{v}+\dot{u}v)\epsilon
 \end{aligned}\]
 </div>
 
@@ -310,14 +310,14 @@ is the accumulation of both adjoints. Intuitively, observe from the
 computational graph that the input variable \\( v\_{-1} \\) can influence
 the output via two paths (indirectly via \\( v\_3 \\) and directly via
 \\( v\_6 \\)) and this accumulation of the value twice is
-symbolic of that. Consequently, *Reverse Mode* is also known as the
+reflective of that. Consequently, *Reverse Mode* is also known as the
 *Reverse Accumulation Mode*.
 
 From a computational standpoint, we must again observe that we only
-care about the local derivative flow at the gate and rest everything
-falls into place itself. This property comes from the chain rule of
+care about the local derivative flow at the gate and the rest
+falls into place. This property comes from the chain rule of
 derivatives and makes computations extremely efficient and accurate
-(of course only upto the floating point error).
+(of course only up to the floating point error).
 
 This technique has been independently invented multiple times in history
 and perhaps one of the most influential research outputs from 20th Century
