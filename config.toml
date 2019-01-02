@@ -44,7 +44,14 @@ paginate = 7
 
   [[menu.main]]
   identifier = "about"
-  name = "About"
-  title = "about"
+  name = "about"
+  title = "About"
   url = "/about"
   weight = -10
+
+  [[menu.main]]
+  identifier = "wishlist"
+  name = "wishlist"
+  title = "Wishlist"
+  url = "/wishlist"
+  weight = -20
