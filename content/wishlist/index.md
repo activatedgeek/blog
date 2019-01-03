@@ -36,5 +36,10 @@ readings.
 Most of these are gaps in my knowledge. Looking for resources and perspectives
 to improve my understanding. I hope to summarize answers to this as blog posts.
 
+* To my knowledge, there is no way to prove convergence in MCMC sampling
+  algorithms. All we have are diagnostics like *Effective Sample Size* and
+  *Gelman-Rubin Diagnostic* to show chains have diverged. What is the 
+  recommended way to verify convergence?
+
 * How do we scale Gaussian Processes to large data? Matrix computations involve
   operations of the order of \\( O(N^3) \\). Isn't this terribly slow?
