@@ -34,7 +34,7 @@ readings.
 # Questions
 
 Most of these are gaps in my knowledge. Looking for resources and perspectives
-to improve my understanding. I hope to summarize answers to this as blog posts.
+to improve my understanding. I hope to summarize answers to these as blog posts.
 
 * To my knowledge, there is no way to prove convergence in MCMC sampling
   algorithms. All we have are diagnostics like *Effective Sample Size* and
