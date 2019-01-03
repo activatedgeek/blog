@@ -27,8 +27,8 @@ for my readings.
 
 Kernels can be applied to almost any kind of data and provide a notion of
 "similarity". The famous Representer Theorem and its generalizations provide a
-powerful result many of which I don't fully understand. See references <d-cite key="scholkopf2001learning"></d-cite> for my
-readings.
+powerful list of results, many of which I don't fully understand. See references 
+<d-cite key="scholkopf2001learning"></d-cite> for my readings.
 
 
 # Questions
