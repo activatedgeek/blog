@@ -8,7 +8,7 @@ I'm a Master's student at [NYU Courant](https://cs.nyu.edu) interested in
 Reinforcement Learning and Bayesian Learning. I work with 
 [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the 
 [CILVR](https://wp.nyu.edu/cilvr/) lab. Recently, I've been investigating
-techniques to improve efficiency of Monte Carlo algorithms.
+techniques to improve efficiency of Monte Carlo sampling algorithms.
 
 In a previous life, I spent 3 years dabbling in the startup space, 
 building [StoryXpress](https://storyxpress.co/) with my
