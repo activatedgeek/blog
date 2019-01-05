@@ -15,20 +15,21 @@ install:
   - curl -LO https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
   - sudo pip install -r requirements.txt
   ### LaTeX related ###
-  - sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+  - if [[ $TRAVIS_BRANCH = "master" ]]; then sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra; fi
 
 before_script:
   - pygmentize -V
   - hugo version
   - ./netlifyctl version
   ### LaTeX related ###
-  - pdflatex --version
+  - if [[ $TRAVIS_BRANCH = "master" ]]; then pdflatex --version; fi
 
 script:
   ### Build Resume ###
   - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
-  - cd resume && make all && cd ..
-  - mv resume/dist/*.pdf static/files
+  - if [[ $TRAVIS_BRANCH = "master" ]]; then cd resume && make all && cd ..; fi
+  - if [[ $TRAVIS_BRANCH = "master" ]]; then mv resume/dist/*.pdf static/files; fi
+  ### Build Hugo Site ###
   - make public
 
 after_success:
