@@ -4,8 +4,11 @@ sudo: required
 
 dist: trusty
 
+env:
+  - DISTILLPUB_THEME_VERSION=0.2.2
+
 before_install:
-  - curl -LO https://github.com/activatedgeek/distillpub/tarball/0.2.1 && tar -xzvf 0.2.1 && mv *distillpub* themes/distillpub
+  - curl -LO https://github.com/activatedgeek/distillpub/tarball/$DISTILLPUB_THEME_VERSION && tar -xzvf $DISTILLPUB_THEME_VERSION && mv *distillpub* themes/distillpub
 
 install:
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.49/hugo_0.49_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
