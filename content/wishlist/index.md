@@ -31,6 +31,17 @@ powerful list of results, many of which I don't fully understand. See references
 <d-cite key="scholkopf2001learning"></d-cite> for my readings.
 
 
+### MCMC Diagnostics
+
+There's a comically truthful idea
+
+> any sample can come from any distribution
+
+How do we evaluate goodness-of-fit? How do we ascribe samples belong to a
+particular distribution? These are very interesting and hard questions. See
+reference <d-cite key="brooks2011handbook"></d-cite> for my readings.
+
+
 # Questions
 
 Most of these are gaps in my knowledge. Looking for resources and perspectives
