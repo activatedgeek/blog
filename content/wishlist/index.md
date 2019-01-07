@@ -33,13 +33,27 @@ powerful list of results, many of which I don't fully understand. See references
 
 ### MCMC Diagnostics
 
-There's a comically truthful idea
+There's a comically truthful idea <d-footnote>This is the idea behind 
+Importance Sampling</d-footnote>
 
 > any sample can come from any distribution
 
 How do we evaluate goodness-of-fit? How do we ascribe samples belong to a
 particular distribution? These are very interesting and hard questions. See
 reference <d-cite key="brooks2011handbook"></d-cite> for my readings.
+
+
+### Statistical Learning Theory
+
+For this topic, I don't have a particularly defined scope. My primary qualm with
+most treatment on this topic is the reliance on plenty of obscure sounding
+inqualities (except for a few popular ones like *Markov's*, 
+*Hoeffding's*, *Chebychev's*, *Azuma's*). Often times, I think this is more of 
+an art of posing the question **what to put a bound on?** and then put out
+some results in terms of a function of error tolerance $\epsilon$
+and confidence $\delta$. I might have a myopic view on this and still looking
+for big-picture treatment. See references<d-cite key="mohri2018foundations,shalev2014understanding"></d-cite> for my readings. I'm looking for a general
+attack recipe for such kind of bounds analysis.
 
 
 # Questions
