@@ -12,7 +12,7 @@ paginate = 7
 [params]
   description = "Sanyam Kapoor"
   keywords = ["hugo", "distill", "theme"]
-  sourcePrefix = "https://github.com/activatedgeek/website/blob/master"
+  sourcePrefix = "https://github.com/activatedgeek/salmanazarr/blob/master"
 
   color = "#0f2e3d"
 
@@ -22,7 +22,7 @@ paginate = 7
 
   [[params.social]]
   class = "fab fa-github"
-  url = "https://github.com/activatedgeek"
+  url = "https://github.com/salmanazarr"
 
   [[params.social]]
   class = "fab fa-hacker-news"
@@ -34,11 +34,11 @@ paginate = 7
 
   [[params.social]]
   class = "fab fa-stack-overflow"
-  url = "https://stackoverflow.com/users/2425365"
+  url = "https://stackoverflow.com/users/2425365/salmanazarr"
 
   [[params.social]]
   class = "fab fa-twitter"
-  url = "https://twitter.com/activatedgeek"
+  url = "https://twitter.com/salmanazarr"
 
 [menu]
 
