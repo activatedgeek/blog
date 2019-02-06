@@ -327,16 +327,16 @@ theoretical ideas. These have been taken out of the learning loop of real code.
 
 ## Policy Gradients (Synchronous Actor-Critic)
 
-{{< gist activatedgeek a173f6d6dd859e222b1728737b01d16d >}}
+{{< gist salmanazarr a173f6d6dd859e222b1728737b01d16d >}}
 
 ## Deep Deterministic Policy Gradients
 
-{{< gist activatedgeek a01ee0f778e7bdd2dc7b1923da1dce67 >}}
+{{< gist salmanazarr a01ee0f778e7bdd2dc7b1923da1dce67 >}}
 
 ## Complete Implementations
 
 Completed Modular implementations of the full pipeline can be viewed at
-[activatedgeek/torchrl](https://github.com/activatedgeek/torchrl).
+[salmanazarr/torchrl](https://github.com/salmanazarr/torchrl).
 
 # References
 

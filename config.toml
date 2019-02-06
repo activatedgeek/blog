@@ -12,7 +12,7 @@ paginate = 7
 [params]
   description = "Sanyam Kapoor"
   keywords = ["hugo", "distill", "theme"]
-  sourcePrefix = "https://github.com/activatedgeek/salmanazarr/blob/master"
+  sourcePrefix = "https://github.com/salmanazarr/website/blob/master"
 
   color = "#0f2e3d"
 
