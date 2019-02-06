@@ -8,7 +8,7 @@ env:
   - DISTILLPUB_THEME_VERSION=0.2.2
 
 before_install:
-  - curl -LO https://github.com/activatedgeek/distillpub/tarball/$DISTILLPUB_THEME_VERSION && tar -xzvf $DISTILLPUB_THEME_VERSION && mv *distillpub* themes/distillpub
+  - curl -LO https://github.com/salmanazarr/distillpub/tarball/$DISTILLPUB_THEME_VERSION && tar -xzvf $DISTILLPUB_THEME_VERSION && mv *distillpub* themes/distillpub
 
 install:
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.49/hugo_0.49_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
@@ -26,7 +26,7 @@ before_script:
 
 script:
   ### Build Resume ###
-  - git clone https://$GH_ACCESS_TOKEN@github.com/activatedgeek/resume
+  - git clone https://$GH_ACCESS_TOKEN@github.com/salmanazarr/resume
   - if [[ $TRAVIS_BRANCH = "master" ]]; then cd resume && make all && cd ..; fi
   - if [[ $TRAVIS_BRANCH = "master" ]]; then mv resume/dist/*.pdf static/files; fi
   ### Build Hugo Site ###
