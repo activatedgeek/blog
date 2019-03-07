@@ -16,4 +16,4 @@ co-founders from [IIT Hyderabad](https://www.iith.ac.in/)
 (who by the way are still killing it!).
 
 Have a look at my [resume](/files/resume.pdf)
-<d-footnote>Last updated {{< date >}}</d-footnote> for more!
+{{<footnote>}}Last updated {{<date>}}{{</footnote>}} for more!
