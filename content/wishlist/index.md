@@ -26,9 +26,10 @@ for my readings.
 ### Kernels
 
 Kernels can be applied to almost any kind of data and provide a notion of
-"similarity". The famous Representer Theorem and its generalizations provide a
-powerful list of results, many of which I don't fully understand. See references 
-{{<cite bib="scholkopf2001learning">}} for my readings.
+"similarity". They are like the *grand-old-daddy* of feature representation (and
+quite powerful at that). The famous Representer Theorem and its generalizations 
+provide a powerful list of results, many of which I don't fully understand. See
+references {{<cite bib="scholkopf2001learning">}} for my readings.
 
 
 ### MCMC Diagnostics
