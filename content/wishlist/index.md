@@ -20,7 +20,7 @@ in the future, I'd like to understand them better.
 
 GP priors are unusually interesting. They lead to smooth interpolators with 
 uncertainty estimates. Some parts of the inference are *embarrasingly*
-parallelizable. See references<d-cite key="Rasmussen2004,Duvenaud2014,damianou2013deep"></d-cite>
+parallelizable. See references {{<cite bib="Rasmussen2004,Duvenaud2014,damianou2013deep">}}
 for my readings.
 
 ### Kernels
@@ -28,20 +28,19 @@ for my readings.
 Kernels can be applied to almost any kind of data and provide a notion of
 "similarity". The famous Representer Theorem and its generalizations provide a
 powerful list of results, many of which I don't fully understand. See references 
-<d-cite key="scholkopf2001learning"></d-cite> for my readings.
+{{<cite bib="scholkopf2001learning">}} for my readings.
 
 
 ### MCMC Diagnostics
 
-There's a comically truthful idea <d-footnote>This is the idea behind 
-Importance Sampling</d-footnote>
+There's a comically truthful idea {{<footnote>}}This is the idea behind 
+Importance Sampling{{</footnote>}}
 
 > any sample can come from any distribution
 
 How do we evaluate goodness-of-fit? How do we ascribe samples belong to a
 particular distribution? These are very interesting and hard questions. See
-reference <d-cite key="brooks2011handbook"></d-cite> for my readings.
-
+reference {{<cite bib="brooks2011handbook">}} for my readings.
 
 ### Statistical Learning Theory
 
@@ -52,8 +51,9 @@ inqualities (except for a few popular ones like *Markov's*,
 an art of posing the question **what to put a bound on?** and then put out
 some results in terms of a function of error tolerance $\epsilon$
 and confidence $\delta$. I might have a myopic view on this and still looking
-for big-picture treatment. See references<d-cite key="mohri2018foundations,shalev2014understanding"></d-cite> for my readings. I'm looking for a general
-attack recipe for such kind of bounds analysis.
+for big-picture treatment. See references 
+{{<cite bib="mohri2018foundations,shalev2014understanding">}} for my readings.
+I'm looking for a general attack recipe for such kind of bounds analysis.
 
 
 # Questions
