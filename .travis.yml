@@ -6,9 +6,9 @@ dist: xenial
 
 env:
   global:
-    - DISTILLPUB_THEME_SEMVER=0.3.0
-    - NETLIFYCTL_SEMVER=0.4.0
-    - HUGO_SEMVER=0.54.0
+    - DISTILLPUB_THEME_VERSION=0.3.0
+    - NETLIFYCTL_VERSION=0.4.0
+    - HUGO_VERSION=0.54.0
 
 stages:
   - name: test
@@ -19,16 +19,24 @@ stages:
 jobs:
   include:
     - stage: test
+      addons:
+        apt:
+          packages:
+            - texlive-latex-base
+            - texlive-latex-extra
+            - texlive-fonts-recommended
+            - texlive-fonts-extra
       before_script:
-        - curl -LO https://github.com/salmanazarr/distillpub/tarball/$DISTILLPUB_THEME_SEMVER && tar -xzvf ${DISTILLPUB_THEME_SEMVER} && mv *distillpub* themes/distillpub
-        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_SEMVER}/netlifyctl-linux-amd64-${NETLIFYCTL_SEMVER}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
-        - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_SEMVER}/hugo_${HUGO_SEMVER}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
+        - curl -LO https://github.com/salmanazarr/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
+        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
+        - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
         - sudo pip install -r requirements.txt
         - hugo version && pygmentize -V && ./netlifyctl version
       script:
+        - git clone https://${GH_ACCESS_TOKEN}@github.com/salmanazarr/resume && cd resume && make all && cd .. && mv resume/dist/*.pdf static/files
         - make public
       after_success:
-        - ./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN -m "$TRAVIS_COMMIT_MESSAGE" -d
+        - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -m "${TRAVIS_COMMIT_MESSAGE}" -d
     
     - stage: deploy
       addons:
@@ -39,13 +47,13 @@ jobs:
             - texlive-fonts-recommended
             - texlive-fonts-extra
       before_script:
-        - curl -LO https://github.com/salmanazarr/distillpub/tarball/$DISTILLPUB_THEME_SEMVER && tar -xzvf ${DISTILLPUB_THEME_SEMVER} && mv *distillpub* themes/distillpub
-        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_SEMVER}/netlifyctl-linux-amd64-${NETLIFYCTL_SEMVER}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
-        - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_SEMVER}/hugo_${HUGO_SEMVER}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
+        - curl -LO https://github.com/salmanazarr/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
+        - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
+        - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
         - sudo pip install -r requirements.txt
         - pdflatex --version && hugo version && pygmentize -V && ./netlifyctl version
       script:
-        - git clone https://$GH_ACCESS_TOKEN@github.com/salmanazarr/resume && cd resume && make all && cd .. && mv resume/dist/*.pdf static/files
+        - git clone https://${GH_ACCESS_TOKEN}@github.com/salmanazarr/resume && cd resume && make all && cd .. && mv resume/dist/*.pdf static/files
         - make public
       after_success:
-        - ./netlifyctl deploy -A $NETLIFY_ACCESS_TOKEN -m "$TRAVIS_COMMIT_MESSAGE"
+        - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -m "${TRAVIS_COMMIT_MESSAGE}"
