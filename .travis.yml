@@ -28,7 +28,7 @@ jobs:
         - hugo version && pygmentize -V && ./netlifyctl version
       script:
         - git clone https://${GH_ACCESS_TOKEN}@github.com/salmanazarr/resume
-        - docker run --rm -it --entrypoint=sh -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest -c make all
+        - docker run --rm -u $(id -u):$(id -g) -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest sh -c make all
         - mv resume/dist/*.pdf static/files
         - make public
       after_success:
@@ -43,7 +43,7 @@ jobs:
         - hugo version && pygmentize -V && ./netlifyctl version
       script:
         - git clone https://${GH_ACCESS_TOKEN}@github.com/salmanazarr/resume
-        - docker run --rm -it --entrypoint=sh -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest -c make all
+        - docker run --rm -u $(id -u):$(id -g) -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest sh -c make all
         - mv resume/dist/*.pdf static/files
         - make public
       after_success:
