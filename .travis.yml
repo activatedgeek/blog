@@ -21,7 +21,7 @@ jobs:
   include:
     - stage: test
       before_script:
-        - curl -LO https://github.com/salmanazarr/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
+        - curl -LO https://github.com/activatedgeek/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
         - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
         - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
         - pip install --user -r requirements.txt
@@ -33,13 +33,13 @@ jobs:
     
     - stage: deploy
       before_script:
-        - curl -LO https://github.com/salmanazarr/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
+        - curl -LO https://github.com/activatedgeek/distillpub/tarball/${DISTILLPUB_THEME_VERSION} && tar -xzvf ${DISTILLPUB_THEME_VERSION} && mv *distillpub* themes/distillpub
         - curl -LO https://github.com/netlify/netlifyctl/releases/download/v${NETLIFYCTL_VERSION}/netlifyctl-linux-amd64-${NETLIFYCTL_VERSION}.tar.gz && tar -xzvf *.tar.gz && rm *.tar.gz
         - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && sudo dpkg -i *.deb && rm *.deb
         - pip install --user -r requirements.txt
         - hugo version && pygmentize -V && ./netlifyctl version
       script:
-        - git clone https://${GH_ACCESS_TOKEN}@github.com/salmanazarr/resume
+        - git clone https://${GH_ACCESS_TOKEN}@github.com/activatedgeek/resume
         - docker run --rm -u $(id -u):$(id -g) -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest sh -c make all
         - mv resume/dist/*.pdf static/files
         - make public
