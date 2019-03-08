@@ -76,7 +76,7 @@ for batch_idx, samples in enumerate(data_train_loader):
 
 For those interested in a real working example, I use a
 similar loader to train *LeNet-5*. The full source is available at
-[`salmanazarr/LeNet-5/run.py`](https://github.com/salmanazarr/LeNet-5/blob/master/run.py#L24).
+[`activatedgeek/LeNet-5/run.py`](https://github.com/activatedgeek/LeNet-5/blob/master/run.py#L24).
 
 The ones familiar with a standard batch machine learning pipeline should be able to
 relate to this and understand how terrifically simple this abstraction has made the whole

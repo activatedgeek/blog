@@ -258,12 +258,12 @@ For the readers familiar with Python, these code snippets are meant to be a more
 
 ### Policy Gradients (Synchronous Actor-Critic)
 
-{{<gist salmanazarr a173f6d6dd859e222b1728737b01d16d>}}
+{{<gist activatedgeek a173f6d6dd859e222b1728737b01d16d>}}
 
 ### Deep Deterministic Policy Gradients
 
-{{<gist salmanazarr a01ee0f778e7bdd2dc7b1923da1dce67>}}
+{{<gist activatedgeek a01ee0f778e7bdd2dc7b1923da1dce67>}}
 
 ## Complete Implementations
 
-Completed Modular implementations of the full pipeline can be viewed at [salmanazarr/torchrl](https://github.com/salmanazarr/torchrl). {{<footnote>}}https://github.com/salmanazarr/torchrl{{</footnote>}}
+Completed Modular implementations of the full pipeline can be viewed at [activatedgeek/torchrl](https://github.com/activatedgeek/torchrl). {{<footnote>}}https://github.com/activatedgeek/torchrl{{</footnote>}}
