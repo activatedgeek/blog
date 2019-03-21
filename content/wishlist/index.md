@@ -21,7 +21,8 @@ in the future, I'd like to understand them better.
 GP priors are unusually interesting. They lead to smooth interpolators with 
 uncertainty estimates. Some parts of the inference are *embarrasingly*
 parallelizable. See references {{<cite bib="Rasmussen2004,Duvenaud2014,damianou2013deep">}}
-for my readings.
+for my readings. The background section of *Exact GPs on a Million Points*
+{{<cite bib="2019arXiv190308114W">}} is also full of great references.
 
 ### Kernels
 
