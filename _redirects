@@ -2,5 +2,7 @@
 # This is a Netlify Redirects file. See https://www.netlify.com/docs/redirects/.
 #
 
+/files/resume.pdf /files/cv.pdf 301
+
 # Redirect Netlify link to custom domain
 https://sanyamkapoor.netlify.com/* https://www.sanyamkapoor.com/:splat 301!

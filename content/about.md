@@ -5,7 +5,7 @@ listrender = false
 +++
 
 I'm a Master's student at [NYU Courant](https://cs.nyu.edu) interested in 
-Reinforcement Learning and Bayesian Learning. I work with 
+Multi-Agent Reinforcement Learning and Bayesian Learning. I work with 
 [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the 
 [CILVR](https://wp.nyu.edu/cilvr/) lab. Recently, I've been investigating
 techniques to improve efficiency of Monte Carlo sampling algorithms.
@@ -15,5 +15,5 @@ building [StoryXpress](https://storyxpress.co/) with my
 co-founders from [IIT Hyderabad](https://www.iith.ac.in/)
 (who by the way are still killing it!).
 
-Have a look at my [resume](/files/resume.pdf)
+Have a look at my [CV](/files/cv.pdf)
 {{<footnote>}}Last updated {{<date>}}{{</footnote>}} for more!
