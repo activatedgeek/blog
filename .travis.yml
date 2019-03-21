@@ -7,7 +7,7 @@ dist: xenial
 
 env:
   global:
-    - DISTILLPUB_THEME_VERSION=0.3.0
+    - DISTILLPUB_THEME_VERSION=0.4.0
     - NETLIFYCTL_VERSION=0.4.0
     - HUGO_VERSION=0.54.0
 
@@ -39,9 +39,9 @@ jobs:
         - pip install --user -r requirements.txt
         - hugo version && pygmentize -V && ./netlifyctl version
       script:
-        - git clone https://${GH_ACCESS_TOKEN}@github.com/activatedgeek/resume
-        - docker run --rm -u $(id -u):$(id -g) -v$(pwd)/resume:/resume -w /resume jgoldfar/latex-docker:alpine-minplus-latest sh -c make all
-        - mv resume/dist/*.pdf static/files
+        - git clone https://${GH_ACCESS_TOKEN}@github.com/activatedgeek/cv
+        - docker run --rm -u $(id -u):$(id -g) -v$(pwd)/cv:/cv -w /cv jgoldfar/latex-docker:alpine-minplus-latest sh -c make all
+        - mv cv/dist/*.pdf static/files
         - make public
       after_success:
         - ./netlifyctl deploy -A ${NETLIFY_ACCESS_TOKEN} -m "${TRAVIS_COMMIT_MESSAGE}"
