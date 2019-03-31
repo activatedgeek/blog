@@ -149,9 +149,9 @@ The experiments can be run via the Jupyter notebook. Click the badge above. Here
 
 {{< figure class="figure" src="//i.imgur.com/z2oKUan.png" title="Stein particles on Mixture of Six Gaussians" >}}
 
-{{< figure class="figure" src="//i.imgur.com/ddTxK5p.png" title="MAP behavior with one particle on a Mixture of Six Gaussians" >}}
+{{< figure class="figure" src="//i.imgur.com/ddTxK5p.png" title="MAP behavior with one particle on a Mixture of Six Gaussians (the particle may fall into any of the modes depending on initial position)" >}}
 
-All these results use the *rbf* kernel with the median bandwidth heuristic for a total of 1000 gradient steps using Adagrad. See the notebook for more details.
+All these results use the *rbf* kernel with the median bandwidth heuristic for a total of 1000 gradient steps using Adam (the original work{{<cite bib="liu2016stein">}} uses *Adagrad* but it should be noted we can use any adaptive gradient descent scheme). See the notebook for more details.
 
 # Conclusion
 
