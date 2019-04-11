@@ -13,7 +13,7 @@ techniques to improve efficiency of Monte Carlo sampling algorithms.
 In a previous life, I spent 3 years dabbling in the startup space, 
 building [StoryXpress](https://storyxpress.co/) with my
 co-founders from [IIT Hyderabad](https://www.iith.ac.in/)
-(who by the way are still killing it!).
+(who by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85))!
 
 Have a look at my [CV](/files/cv.pdf)
 {{<footnote>}}Last updated {{<date>}}{{</footnote>}} for more!
