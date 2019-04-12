@@ -5,10 +5,9 @@ listrender = false
 +++
 
 I'm a Master's student at [NYU Courant](https://cs.nyu.edu) interested in 
-Multi-Agent Reinforcement Learning and Bayesian Learning. I work with 
+Probabilistic Modeling and Multi-Agent Reinforcement Learning. I work with 
 [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the 
-[CILVR](https://wp.nyu.edu/cilvr/) lab. Recently, I've been investigating
-techniques to improve efficiency of Monte Carlo sampling algorithms.
+[CILVR](https://wp.nyu.edu/cilvr/) lab.
 
 In a previous life, I spent 3 years dabbling in the startup space, 
 building [StoryXpress](https://storyxpress.co/) with my
