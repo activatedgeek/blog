@@ -32,18 +32,6 @@ quite powerful at that). The famous Representer Theorem and its generalizations
 provide a powerful list of results, many of which I don't fully understand. See
 references {{<cite bib="scholkopf2001learning">}} for my readings.
 
-
-### MCMC Diagnostics
-
-There's a comically truthful idea {{<footnote>}}This is the idea behind 
-Importance Sampling{{</footnote>}}
-
-> any sample can come from any distribution
-
-How do we evaluate goodness-of-fit? How do we ascribe samples belong to a
-particular distribution? These are very interesting and hard questions. See
-reference {{<cite bib="brooks2011handbook">}} for my readings.
-
 ### Statistical Learning Theory
 
 For this topic, I don't have a particularly defined scope. My primary qualm with
@@ -58,7 +46,7 @@ for big-picture treatment. See references
 I'm looking for a general attack recipe for such kind of bounds analysis.
 
 
-# Questions
+# Technical
 
 Most of these are gaps in my knowledge. Looking for resources and perspectives
 to improve my understanding. I hope to summarize answers to these as blog posts.
@@ -70,3 +58,21 @@ to improve my understanding. I hope to summarize answers to these as blog posts.
 
 * How do we scale Gaussian Processes to large data? Matrix computations involve
   operations of the order of \\( O(N^3) \\). Isn't this terribly slow?
+
+# Philosophical
+
+* "Deep" Neural Networks are in principle really shallow learners (or at least in the way used so far)?
+  How do we go from integrating isolated expert components for tasks like vision, language and planning
+  to a unified module? What would be the objective we optimize? Are we just lacking in
+  multi-modal datasets and current methods can take us further without major breakthroughs?
+
+* Humans understanding from multi-modal data - we see, touch, hear, smell, taste.
+  What are the right questions to start making incremental improvements in leveraging
+  multi-modal data? Is it just one big feature vector?
+
+* How do we embed concepts? How do we devise a calculus of concepts? Is learning over knowledge graphs
+  the path to singularity (if that exists)?
+
+* Humans are clearly not the benchmark of general intelligence (however broad scoped
+  that term may be). Humans are just beings specialized in narrow skills. Do we really
+  need "*one system to rule them all*"?
