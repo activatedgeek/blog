@@ -46,6 +46,17 @@ for big-picture treatment. See references
 I'm looking for a general attack recipe for such kind of bounds analysis.
 
 
+### Bayesian Monte Carlo
+
+MCMC methods have been perhaps the most popular methods to solve intractable
+probabilistic models, however it has its fair share of criticism {{<cite bib="o1987monte">}}. I kind of
+share the same feelings (which I spent a lot of time with in my Masters thesis) though I
+wouldn't rule it out just yet. There's another family of work called the
+Bayesian Monte Carlo {{<cite bib="ghahramani2003bayesian">}}. I believe variants are also known as Adaptive Bayesian
+Quadrature {{<cite bib="o1991bayes">}} which in principle allows us to encode smoothness priors into the
+algorithm for sample efficieny, albeit at a computational cost. Quite frankly, I have not found enough friendly resources to dig enough into this topic but it definitely is an exciting direction to pursue.
+
+
 # Technical
 
 Most of these are gaps in my knowledge. Looking for resources and perspectives
