@@ -9,7 +9,7 @@ env:
   global:
     - DISTILLPUB_THEME_VERSION=0.4.0
     - NETLIFYCTL_VERSION=0.4.0
-    - HUGO_VERSION=0.54.0
+    - HUGO_VERSION=0.55.6
 
 stages:
   - name: test
