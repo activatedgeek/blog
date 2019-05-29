@@ -16,3 +16,6 @@ co-founders from [IIT Hyderabad](https://www.iith.ac.in/)
 
 Have a look at my [CV](/files/cv.pdf)
 {{<footnote>}}Last updated {{<date>}}{{</footnote>}} for more!
+
+I like to think of myself as a budding oenophile. Check out my wines and notes
+on the [world map](https://wine.sanyamkapoor.com).
