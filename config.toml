@@ -55,3 +55,10 @@ paginate = 7
   title = "Wishlist"
   url = "/wishlist"
   weight = -20
+
+  [[menu.main]]
+  identifier = "wine-map"
+  name = "wine-map"
+  title = "My Wine Map"
+  url = "https://wine.sanyamkapoor.com"
+  weight = -30
