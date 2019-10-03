@@ -50,7 +50,7 @@ frameworks like Tensorflow and Torch, use AD as a first-class citizen.
 Let us take an example which can be calculated by hand but non-trivial
 enough for the purpose of this post. Off the top of my head
 
-\\[ f(x_1,y_2) = x_1\sqrt{log \frac{x_1}{sin(x_2^2)}} \\]
+\\[ f(x_1,x_2) = x_1\sqrt{log \frac{x_1}{sin(x_2^2)}} \\]
 
 That is an absolutely nutty equation and any resemblance to something
 meaningful is purely coincidental. The aim here is to include all the
