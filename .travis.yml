@@ -7,9 +7,9 @@ dist: xenial
 
 env:
   global:
-    - DISTILLPUB_THEME_VERSION=0.4.0
+    - DISTILLPUB_THEME_VERSION=0.6.0
     - NETLIFYCTL_VERSION=0.4.0
-    - HUGO_VERSION=0.55.6
+    - HUGO_VERSION=0.58.3
 
 stages:
   - name: test

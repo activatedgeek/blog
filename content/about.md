@@ -4,6 +4,11 @@ disableByline = true
 listrender = false
 +++
 
+I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working
+with a [host](https://twitter.com/tkaraletsos?lang=en) of [amazing](https://people.orie.cornell.edu/mup3/) [people](https://ashedwards.github.io/), spending most of my time on
+probabilistic reinforcement learning with [Thang Bui](http://mlg.eng.cam.ac.uk/thang/)
+and representation learning with [Jeff Clune](http://jeffclune.com/).
+
 I completed my Masters in Computer Science at [NYU Courant](https://cs.nyu.edu) 
 with [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the 
 [CILVR](https://wp.nyu.edu/cilvr/) lab. My thesis investigated how to [leverage
