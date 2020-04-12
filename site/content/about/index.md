@@ -18,7 +18,7 @@ Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
 with my co-founders from [IIT Hyderabad](https://www.iith.ac.in/)
 (who by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85))!
 
-Have a look at my [CV](/files/cv.pdf) for more!
+Have a look at my [CV](https://files.sanyamkapoor.com/cv.pdf) for more!
 
 I also like to think of myself as a budding oenophile. Check out my wines and notes
 on the [world map](https://wine.sanyamkapoor.com).
