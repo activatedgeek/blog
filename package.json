@@ -1,0 +1,50 @@
+{
+  "name": "kb",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Sanyam Kapoor <1sanymakpoor@gmail.com>",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@mdx-js/mdx": "^1.5.8",
+    "@mdx-js/react": "^1.5.8",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "citation-js": "^0.5.0-alpha.5",
+    "deepmerge": "^4.2.2",
+    "gatsby": "^2.20.12",
+    "gatsby-plugin-mdx": "^1.1.6",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-remark-autolink-headers": "^2.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "katex": "^0.11.1",
+    "prismjs": "^1.20.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.7",
+    "remark-emoji": "^2.1.0",
+    "remark-html-katex": "^2.0.1",
+    "remark-math": "^2.0.1",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build && cp _redirects public/",
+    "dev": "gatsby develop",
+    "debug": "node --nolazy --inspect-brk node_modules/gatsby/dist/bin/gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
