@@ -24,6 +24,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
           width: "100vw",
           left: "50%",
           ml: "-50vw",
+          mt: "-3em",
           position: "relative",
           textAlign: "center",
         }}
