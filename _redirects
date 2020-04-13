@@ -1,2 +1,3 @@
 /                     /about
 /machine-learning/*   /blog/ml/:splat
+/files/*              https://files.sanyamkapoor.com/:splat
