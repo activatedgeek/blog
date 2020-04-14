@@ -96,6 +96,7 @@ export default ({ children }) => {
                 {label}{" "}
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
+                  style={{ fontSize: '0.875em' }}
                   sx={{ fontSize: 0 }}
                 />
               </Styled.a>

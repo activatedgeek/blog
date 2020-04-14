@@ -1,6 +1,6 @@
 # Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a4d150b7-d5c7-4c6f-ba4b-5eccc2b14fa2/deploy-status)](https://app.netlify.com/sites/sk-kb/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fce83868-4b4f-419a-b6f2-9d29f21062c6/deploy-status)](https://app.netlify.com/sites/sanyamkapoor/deploys)
 
 My website built on top of [Gatsby](https://www.gatsbyjs.org) and [Remark](https://remark.js.org)+[MDX](https://mdxjs.com) hosted on [Netlify](https://www.netlify.com) at sanyamkapoor.com.
 
