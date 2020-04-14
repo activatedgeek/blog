@@ -5,7 +5,6 @@ import { Flex, Box } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
-  faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -81,7 +80,7 @@ export default ({ children }) => {
         </h1>
         <Flex justifyContent="flex-end" flexGrow={1} flexWrap="wrap">
           {extMenu.map(({ label, url }, i) => (
-            <h4 key={i} sx={{ fontWeight: "normal", m: "0 0.5em" }}>
+            <h4 key={i} sx={{ fontWeight: "normal", m: "0 0.5em" }} style={{ fontSize: '1em' }}>
               <Styled.a
                 href={url}
                 target="_blank"
@@ -93,12 +92,7 @@ export default ({ children }) => {
                   },
                 }}
               >
-                {label}{" "}
-                <FontAwesomeIcon
-                  icon={faExternalLinkAlt}
-                  style={{ fontSize: '0.875em' }}
-                  sx={{ fontSize: 0 }}
-                />
+                {label}
               </Styled.a>
             </h4>
           ))}
