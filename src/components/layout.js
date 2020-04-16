@@ -3,9 +3,7 @@ import { Helmet } from "react-helmet"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Flex, Box } from "rebass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faUserGraduate,
-} from "@fortawesome/free-solid-svg-icons"
+import { faUserGraduate } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faYCombinator,
@@ -80,7 +78,11 @@ export default ({ children }) => {
         </h1>
         <Flex justifyContent="flex-end" flexGrow={1} flexWrap="wrap">
           {extMenu.map(({ label, url }, i) => (
-            <h4 key={i} sx={{ fontWeight: "normal", m: "0 0.5em" }} style={{ fontSize: '1em' }}>
+            <h4
+              key={i}
+              sx={{ fontWeight: "normal", m: "0 0.5em" }}
+              style={{ fontSize: "1em" }}
+            >
               <Styled.a
                 href={url}
                 target="_blank"

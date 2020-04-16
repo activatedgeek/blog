@@ -1,4 +1,3 @@
-const { createFilePath } = require("gatsby-source-filesystem")
 const path = require("path")
 const fs = require("fs")
 
@@ -71,6 +70,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           edges {
             node {
               id
+              frontmatter {
+                draft
+              }
               fields {
                 slug
               }
@@ -84,13 +86,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       reporter.panicOnBuild('🚨  ERROR: Loading "createSubcontent" query')
     }
 
-    result.data.allMdx.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(componentPath),
-        context: { id: node.id },
-      })
-    })
+    result.data.allMdx.edges.forEach(
+      ({ node: { id, fields, frontmatter } }) => {
+        if (process.env.NODE_ENV === "production") {
+          if (frontmatter.draft === true) {
+            return
+          }
+        }
+        createPage({
+          path: fields.slug,
+          component: path.resolve(componentPath),
+          context: { id },
+        })
+      }
+    )
   }
 
   createPage({
