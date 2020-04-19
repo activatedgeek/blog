@@ -94,7 +94,7 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   {
-    allMdx(filter: { fields: { subcontent: { eq: "blog" } } }) {
+    allMdx(filter: { fields: { subcontent: { eq: "blog" }, index: { eq: true } } }) {
       edges {
         node {
           frontmatter {

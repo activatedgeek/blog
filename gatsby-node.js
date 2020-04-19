@@ -7,6 +7,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === "Mdx") {
     let slug
     let createdMs
+    let draft = false
 
     if (node.hasOwnProperty("frontmatter")) {
       if (node.frontmatter.hasOwnProperty("slug")) {
@@ -14,6 +15,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
       if (node.frontmatter.hasOwnProperty("date")) {
         createdMs = new Date(node.frontmatter.date).getTime()
+      }
+      if (node.frontmatter.hasOwnProperty("draft")) {
+        draft = node.frontmatter.draft
       }
     }
 
@@ -26,11 +30,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       .split(" ")[0]
 
     if (slug === undefined) {
-      if (parsedFilePath.dir !== "") {
-        slug = `/${parsedFilePath.dir}`
-      }
+      slug = `/${parsedFilePath.dir}`
       if (parsedFilePath.name !== "index") {
-        slug = `${slug}/${parsedFilePath.name}/`
+        slug = `${slug}/${parsedFilePath.name}`
       }
     }
 
@@ -40,7 +42,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: "subcontent",
       node,
-      value: subcontent,
+      value: subcontent || "default",
+    })
+    createNodeField({
+      name: "index",
+      node,
+      value: process.env.NODE_ENV === "production" ? !draft : true,
     })
     createNodeField({
       name: "slug",
@@ -63,10 +70,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const createSubcontent = async function(subcontent, componentPath) {
+  const createSubcontent = async function(componentPath) {
     const result = await graphql(`
       {
-        allMdx (filter: {fields: {subcontent: {eq: "${subcontent}"}}}) {
+        allMdx {
           edges {
             node {
               id
@@ -104,10 +111,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   createPage({
     path: `/blog`,
-    component: path.resolve(`./src/components/blog.js`),
+    component: path.resolve(`./src/components/blog_index.js`),
   })
 
-  createSubcontent(`blog`, `./src/components/blog_page.js`)
-  createSubcontent(`about`, `./src/components/blog_page.js`)
-  createSubcontent(`kb`, `./src/components/blog_page.js`)
+  createSubcontent(`./src/components/blog_page.js`)
 }

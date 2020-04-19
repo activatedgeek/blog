@@ -7,14 +7,6 @@ module.exports = {
       label: "Blog",
       url: "/blog",
     },
-    // {
-    //   label: "Knowledge Base",
-    //   url: "/kb",
-    // },
-    {
-      label: "About",
-      url: "/about",
-    },
   ],
   extMenu: [
     {
