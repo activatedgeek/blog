@@ -1,25 +1,23 @@
 const path = require("path")
 const fs = require("fs")
 
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MdxFrontmatter {
+      slug: String
+      draft: Boolean
+      date: Date
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let slug
-    let createdMs
-    let draft = false
-
-    if (node.hasOwnProperty("frontmatter")) {
-      if (node.frontmatter.hasOwnProperty("slug")) {
-        slug = node.frontmatter.slug
-      }
-      if (node.frontmatter.hasOwnProperty("date")) {
-        createdMs = new Date(node.frontmatter.date).getTime()
-      }
-      if (node.frontmatter.hasOwnProperty("draft")) {
-        draft = node.frontmatter.draft
-      }
-    }
+    let { slug, date, draft } = node.frontmatter
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
@@ -36,8 +34,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
 
-    const { birthtimeMs, mtimeMs } = fs.statSync(node.fileAbsolutePath)
-    createdMs = createdMs || birthtimeMs
+    if (date === undefined) {
+      const { birthtimeMs } = fs.statSync(node.fileAbsolutePath)
+      date = birthtimeMs
+    }
+    const createdMs = new Date(date).getTime()
+
+    if (isNaN(createdMs)) {
+      console.warn(`Unable to parse date in "${node.fileAbsolutePath}"`)
+    }
+
+    if (draft === undefined) {
+      draft = false
+    }
 
     createNodeField({
       name: "subcontent",
@@ -58,11 +67,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: "createdMs",
       node,
       value: createdMs,
-    })
-    createNodeField({
-      name: "modifiedMs",
-      node,
-      value: mtimeMs,
     })
   }
 }
@@ -94,14 +98,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     result.data.allMdx.edges.forEach(
-      ({ node: { id, fields, frontmatter } }) => {
+      ({ node: { id, fields: { slug }, frontmatter: { draft } } }) => {
         if (process.env.NODE_ENV === "production") {
-          if (frontmatter.draft === true) {
+          if (draft === true) {
             return
           }
         }
         createPage({
-          path: fields.slug,
+          path: slug,
           component: path.resolve(componentPath),
           context: { id },
         })

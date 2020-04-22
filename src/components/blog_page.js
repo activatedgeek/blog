@@ -13,7 +13,7 @@ import shortcodes from "./shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
   const { body, frontmatter, fields } = mdx
-  const { createdMs, modifiedMs } = fields
+  const { createdMs } = fields
 
   let staleDiv
   if (frontmatter.stale === true) {
@@ -48,14 +48,6 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         <meta
           property="article:published_time"
           content={new Date(createdMs).toISOString()}
-        />
-        <meta
-          property="article:modified_time"
-          content={new Date(modifiedMs).toISOString()}
-        />
-        <meta
-          property="article:modified_time"
-          content={new Date(modifiedMs).toISOString()}
         />
         <meta
           property="article:tag"
@@ -99,7 +91,6 @@ export const pageQuery = graphql`
       fields {
         slug
         createdMs
-        modifiedMs
       }
     }
   }
