@@ -4,7 +4,6 @@ date: 2020-04-19-7:00
 tags:
   - machine learning
   - probability
-draft: true
 ---
 
 # The Gaussian Cheatsheet

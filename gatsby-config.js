@@ -13,10 +13,6 @@ module.exports = {
             options: { icon: false },
           },
           {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: { tight: true },
-          },
-          {
             resolve: require.resolve(`./src/plugins/gatsby-remark-bibtex`),
           },
         ],
@@ -34,5 +30,18 @@ module.exports = {
         name: `content`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Sanyam Kapoor`,
+        short_name: `Sanyam Kapoor`,
+        start_url: `/`,
+        background_color: `#e2e8f0`,
+        theme_color: `#2b6cb0`,
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`
   ],
 }
