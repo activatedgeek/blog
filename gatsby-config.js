@@ -13,6 +13,10 @@ module.exports = {
             options: { icon: false },
           },
           {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: { tight: true },
+          },
+          {
             resolve: require.resolve(`./src/plugins/gatsby-remark-bibtex`),
           },
         ],
