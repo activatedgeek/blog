@@ -47,7 +47,7 @@ export default ({ children }) => {
 
   const { title, menu, extMenu, social, author } = site.siteMetadata
 
-  const iconStyle = { margin: "0 0.2em", fontSize: 2 }
+  const iconStyle = { margin: "0 0.2em", fontSize: 3 }
 
   return (
     <>
