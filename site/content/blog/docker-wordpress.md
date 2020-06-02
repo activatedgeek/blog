@@ -5,7 +5,7 @@ date: 2016-04-09T22:50:29+05:30
 tags:
   - docker
   - documentation
-stale: true
+archive: true
 ---
 
 # Getting started with Compose and WordPress

@@ -5,7 +5,7 @@ date: 2016-01-03T01:00:09+05:30
 tags:
   - devops
   - oss
-stale: true
+archive: true
 ---
 
 # For better software delivery

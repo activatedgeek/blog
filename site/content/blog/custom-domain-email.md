@@ -5,7 +5,7 @@ date: 2016-10-17T13:20:40+05:30
 tags:
   - email
   - domain
-stale: true
+archive: true
 ---
 
 # Setup custom email addresses

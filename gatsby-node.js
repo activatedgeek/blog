@@ -5,33 +5,37 @@ exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type MdxFrontmatter {
-      slug: String
       draft: Boolean
+      archive: Boolean
       date: Date
+      category: [String!]
     }
   `
   createTypes(typeDefs)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  // const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let { slug, date, draft } = node.frontmatter
+    let { date, draft, category } = node.frontmatter
+    category = category || []
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
 
-    const subcontent = parsedFilePath.dir
+    // Assign default category to the root folder.
+    const defaultcategory = parsedFilePath.dir
       .replace(/\//g, " ")
       .trim()
       .split(" ")[0]
+    if (defaultcategory.length) {
+      category.push(defaultcategory)
+    }
 
-    if (slug === undefined) {
-      slug = `/${parsedFilePath.dir}`
-      if (parsedFilePath.name !== "index") {
-        slug = `${slug}/${parsedFilePath.name}`
-      }
+    let slug = `/${parsedFilePath.dir}`
+    if (parsedFilePath.name !== "index") {
+      slug = `${slug}/${parsedFilePath.name}`
     }
 
     if (date === undefined) {
@@ -48,26 +52,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       draft = false
     }
 
-    createNodeField({
-      name: "subcontent",
-      node,
-      value: subcontent || "default",
-    })
-    createNodeField({
-      name: "index",
-      node,
-      value: process.env.NODE_ENV === "production" ? !draft : true,
-    })
-    createNodeField({
-      name: "slug",
-      node,
-      value: slug,
-    })
-    createNodeField({
-      name: "createdMs",
-      node,
-      value: createdMs,
-    })
+    node.frontmatter.slug = slug
+    node.frontmatter.createdMs = createdMs
+    node.frontmatter.category = category
   }
 }
 
@@ -82,10 +69,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               frontmatter {
-                draft
-              }
-              fields {
                 slug
+                draft
               }
             }
           }
@@ -101,8 +86,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ({
         node: {
           id,
-          fields: { slug },
-          frontmatter: { draft },
+          frontmatter: { slug, draft },
         },
       }) => {
         if (process.env.NODE_ENV === "production") {
@@ -122,6 +106,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPage({
     path: `/blog`,
     component: path.resolve(`./src/components/blog_index.js`),
+    context: { c: "blog" },
   })
 
   createSubcontent(`./src/components/blog_page.js`)

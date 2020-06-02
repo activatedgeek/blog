@@ -12,12 +12,12 @@ import Layout from "./layout"
 import shortcodes from "./shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, fields } = mdx
-  const { createdMs } = fields
+  const { body, frontmatter } = mdx
+  const { title, description, tags, slug, createdMs, archive } = frontmatter
 
-  let staleDiv
-  if (frontmatter.stale === true) {
-    staleDiv = (
+  let archiveDiv
+  if (archive === true) {
+    archiveDiv = (
       <div
         sx={{
           bg: "yellow.3",
@@ -29,7 +29,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
           textAlign: "center",
         }}
       >
-        <FontAwesomeIcon icon={faExclamationTriangle} /> This is an old post.
+        <FontAwesomeIcon icon={faExclamationTriangle} /> This post is archived.
         Some text may be inaccurate or content may not render!
       </div>
     )
@@ -38,35 +38,29 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.title}</title>
-        <link
-          rel="canonical"
-          href={`https://www.sanyamkapoor.com${fields.slug}`}
-        />
-        <meta name="description" content={frontmatter.description} />
+        <title>{title}</title>
+        <link rel="canonical" href={`https://www.sanyamkapoor.com${slug}`} />
+        <meta name="description" content={description} />
         <meta property="og:type" content="article" />
         <meta
           property="article:published_time"
           content={new Date(createdMs).toISOString()}
         />
-        <meta
-          property="article:tag"
-          content={(frontmatter.tags || []).join(", ")}
-        />
+        <meta property="article:tag" content={(tags || []).join(", ")} />
         <meta
           property="og:url"
-          content={`https://www.sanyamkapoor.com${fields.slug}`}
+          content={`https://www.sanyamkapoor.com${slug}`}
         />
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:description" content={frontmatter.description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta
           name="twitter:url"
-          content={`https://www.sanyamkapoor.com${fields.slug}`}
+          content={`https://www.sanyamkapoor.com${slug}`}
         />
-        <meta name="twitter:title" content={frontmatter.title} />
-        <meta name="twitter:description" content={frontmatter.description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
       </Helmet>
-      {staleDiv}
+      {archiveDiv}
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
@@ -88,11 +82,9 @@ export const pageQuery = graphql`
         title
         description
         tags
-        stale
-      }
-      fields {
         slug
         createdMs
+        archive
       }
     }
   }

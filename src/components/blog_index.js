@@ -4,6 +4,8 @@ import { graphql, Link } from "gatsby"
 import emoji from "node-emoji"
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "./layout"
 
@@ -15,7 +17,7 @@ const BlogIndex = ({
   let yearIndex = edges.reduce((acc, x) => {
     const {
       node: {
-        fields: { createdMs },
+        frontmatter: { createdMs },
       },
     } = x
     const year = new Date(createdMs).getFullYear()
@@ -33,12 +35,12 @@ const BlogIndex = ({
     yearIndex[year].sort(function(x, y) {
       const {
         node: {
-          fields: { createdMs: c1 },
+          frontmatter: { createdMs: c1 },
         },
       } = x
       const {
         node: {
-          fields: { createdMs: c2 },
+          frontmatter: { createdMs: c2 },
         },
       } = y
       return new Date(c1) < new Date(c2) ? 1 : -1
@@ -48,20 +50,19 @@ const BlogIndex = ({
   return (
     <Layout>
       <Helmet>
-        <title>Blog Archive</title>
-        <meta name="description" content="Blog Archive" />
+        <title>Blog Index</title>
+        <meta name="description" content="Blog Index" />
       </Helmet>
-      <Styled.h1>Blog Archive {emoji.get(`:pencil:`)}</Styled.h1>
+      <Styled.h2>Blog Index {emoji.get(`:pencil:`)}</Styled.h2>
       {yearList.map((year, i) => (
         <React.Fragment key={i}>
-          <Styled.h2>{year}</Styled.h2>
+          <Styled.h3>{year}</Styled.h3>
           <Styled.ul>
             {yearIndex[year].map(
               (
                 {
                   node: {
-                    frontmatter: { title, stale },
-                    fields: { slug, createdMs },
+                    frontmatter: { title, slug, createdMs, archive, draft },
                   },
                 },
                 j
@@ -70,7 +71,7 @@ const BlogIndex = ({
                   <Styled.a
                     as={Link}
                     to={slug}
-                    sx={{ opacity: stale === true ? 0.6 : 1 }}
+                    sx={{ opacity: archive === true ? 0.6 : 1 }}
                   >
                     {title}
                   </Styled.a>
@@ -80,6 +81,20 @@ const BlogIndex = ({
                     })}{" "}
                     {new Date(createdMs).getDate()}
                   </span>
+                  {archive === true ? (
+                    <FontAwesomeIcon
+                      icon={faArchive}
+                      title="This post is archived."
+                      sx={{ opacity: 0.6 }}
+                    />
+                  ) : null}
+                  {draft === true ? (
+                    <FontAwesomeIcon
+                      icon={faEdit}
+                      title="This post is a working draft."
+                      sx={{ opacity: 0.6 }}
+                    />
+                  ) : null}
                 </Styled.li>
               )
             )}
@@ -93,19 +108,17 @@ const BlogIndex = ({
 export default BlogIndex
 
 export const pageQuery = graphql`
-  {
-    allMdx(
-      filter: { fields: { subcontent: { eq: "blog" }, index: { eq: true } } }
-    ) {
+  query($c: [String!]) {
+    allMdx(filter: { frontmatter: { category: { in: $c } } }) {
       edges {
         node {
           frontmatter {
             title
-            stale
-          }
-          fields {
             slug
             createdMs
+            category
+            archive
+            draft
           }
         }
       }

@@ -5,7 +5,7 @@ date: 2017-05-13T20:59:06+05:30
 tags:
   - nginx
   - dns
-stale: true
+archive: true
 ---
 
 # Understanding Nginx behavior with dynamic DNS upstreams

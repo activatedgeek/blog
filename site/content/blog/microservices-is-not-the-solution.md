@@ -5,7 +5,7 @@ date: 2016-02-24T23:50:16+05:30
 tags:
   - devops
   - microservices
-stale: true
+archive: true
 ---
 
 # Microservices is not the solution you think
