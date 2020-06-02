@@ -26,7 +26,7 @@ $$
 \mathcal{J}(\tau_{1:H}) = \mathbb{E}\left[ r(\tau_{1:H}) \right]
 $$
 
-We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we *want* - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$ [^1]. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
+We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we _want_ - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$ [^1]. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
 
 $$
 p(\tau_{1:H}, \mathcal{O}_{1:H}) = p(s_0)\prod_{h=0}^{H-1} f(s_{h+1} | s_h, a_h) p(a_h) p(\mathcal{O}_h | s_h, a_h)
@@ -38,7 +38,7 @@ $p(a_h)$, the prior over actions, is assumed to be a constant. As a natural cons
 
 We turn to variational inference (VI) \cite{jordan1999introduction} in light of the intractability of
 the posterior. We now posit a variational distribution over the trajectory by letting the dynamics
-function remain the same as the ground truth but make a change to the *joint* distribution of actions over the horizon
+function remain the same as the ground truth but make a change to the _joint_ distribution of actions over the horizon
 
 $$
 q(\tau_{1:H}) = q(a_{0:H-1}) \prod_{h=0}^{H-1} f(s_{h+1} | s_h, a_h)

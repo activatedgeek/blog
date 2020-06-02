@@ -70,7 +70,9 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
-      <p sx={{ color: "secondary" }}>Created: {new Date(createdMs).toDateString()}</p>
+      <p sx={{ color: "secondary" }}>
+        Created: {new Date(createdMs).toDateString()}
+      </p>
     </Layout>
   )
 }

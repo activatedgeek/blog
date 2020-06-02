@@ -98,7 +98,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     result.data.allMdx.edges.forEach(
-      ({ node: { id, fields: { slug }, frontmatter: { draft } } }) => {
+      ({
+        node: {
+          id,
+          fields: { slug },
+          frontmatter: { draft },
+        },
+      }) => {
         if (process.env.NODE_ENV === "production") {
           if (draft === true) {
             return

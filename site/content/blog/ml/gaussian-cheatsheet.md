@@ -24,11 +24,13 @@ To derive the normalizing constant for this density, consider the following inte
 $$
 \text{I} = \int_{-\infty}^{\infty} \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\} dx
 $$
+
 $$
 \text{I}^2 = \int_{-\infty}^{\infty} \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\} \exp\left\{ - \frac{(y - \mu)^2}{2\sigma^2} \right\} dx dy
 $$
 
 First using change of variables $u = x - \mu$ and $v = y - \mu$, we have
+
 $$
 \text{I}^2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp\left\{ - \frac{u^2 + v^2}{2\sigma^2} \right\} du dv
 $$
@@ -84,6 +86,7 @@ The complete objective becomes
 $$
 -\int_{-\infty}^{\infty} p(x) \log{p(x)} dx +
 $$
+
 $$
 \lambda_1 \left( \int_{-\infty}^{\infty} p(x) dx - 1 \right) + \lambda_2 \left( \int_{-\infty}^{\infty} x p(x) dx - \mu \right) + \lambda_3 \left( \int_{-\infty}^{\infty} (x - \mu)^2 p(x) dx - \sigma^2 \right)
 $$
@@ -93,6 +96,7 @@ Setting the functional derivative [^1] $\frac{d [f(p(x))] }{d p(x)} = 0$, we get
 $$
 -\log{p(x)} + 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = 0
 $$
+
 $$
 p(x) = \exp{ \left\{ 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 \right\} }
 $$
@@ -104,6 +108,7 @@ completing the squares [^2] which will allow us to re-use results from the [prev
 $$
 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = \underbrace{\lambda_3}_{=\alpha} x^2 - \underbrace{(2\mu\lambda_3 - \lambda_2)}_{=\beta} x + \underbrace{(1 + \lambda_1 + \lambda_3 \mu^2)}_{=\gamma}
 $$
+
 $$
 p(x) = \exp{ \left\{ \alpha\left(x - \frac{\beta}{2\alpha} \right)^2  \right\} }\exp{ \left\{ -\underbrace{\frac{1}{2}\frac{\beta^2 - 4\alpha \gamma}{2\alpha}}_{= \delta}  \right\} }
 $$
@@ -137,6 +142,7 @@ $$
 
 Combining (1) with (2), we get $\beta = 2\mu\alpha$. Substituting $\alpha$ and $\beta$
 as defined earlier, we get
+
 $$
 \lambda_2 = 0
 $$
