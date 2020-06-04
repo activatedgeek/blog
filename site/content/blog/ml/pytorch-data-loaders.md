@@ -3,8 +3,8 @@ title: PyTorch Data Loaders are abstraction done right!
 description: A quick introduction to writing your first data loader in PyTorch
 date: 2017-11-25T01:59:07-04:00
 tags:
-  - machine learning
-  - pytorch
+  - ML
+  - oss
 ---
 
 # PyTorch Data Loaders are abstraction done right!

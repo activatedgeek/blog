@@ -4,7 +4,7 @@ description: Understanding the intuition behind 3D to 2D mappings, the Fundament
 date: 2017-08-08T16:01:07+05:30
 thumbnail: https://i.imgur.com/35kd5a7.jpg
 tags:
-  - computer vision
+  - CV
   - geometry
 ---
 

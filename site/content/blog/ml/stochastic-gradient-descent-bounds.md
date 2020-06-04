@@ -4,8 +4,8 @@ description: A summary of recent work on theoretical bounds for SGD
 date: 2018-02-06T09:48:58-05:00
 thumbnail: https://i.imgur.com/GKP5Ubb.png
 tags:
-  - machine learning
-  - algorithms
+  - ML
+  - theory
 ---
 
 # When Does Stochastic Gradient Algorithm Work Well?

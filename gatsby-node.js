@@ -9,6 +9,7 @@ exports.sourceNodes = ({ actions }) => {
       archive: Boolean
       date: Date
       category: [String!]
+      tags: [String!]
     }
   `
   createTypes(typeDefs)
@@ -18,8 +19,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let { date, draft, category } = node.frontmatter
+    let { date, draft, category, tags } = node.frontmatter
     category = category || []
+    tags = tags || []
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
@@ -55,13 +57,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.frontmatter.slug = slug
     node.frontmatter.createdMs = createdMs
     node.frontmatter.category = category
+    node.frontmatter.tags = tags
   }
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const createSubcontent = async function(componentPath) {
+  const createAllPages = async function(componentPath) {
     const result = await graphql(`
       {
         allMdx {
@@ -79,7 +82,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `)
 
     if (result.errors) {
-      reporter.panicOnBuild('🚨  ERROR: Loading "createSubcontent" query')
+      reporter.panicOnBuild('🚨  ERROR: Loading "createAllPages" query')
     }
 
     result.data.allMdx.edges.forEach(
@@ -103,11 +106,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
   }
 
-  createPage({
-    path: `/blog`,
-    component: path.resolve(`./src/components/blog_index.js`),
-    context: { c: "blog" },
-  })
+  const createAllTagPages = async function(componentPath) {
+    const result = await graphql(`
+      {
+        allMdx(filter: { frontmatter: { category: { eq: "blog" } } }) {
+          group(field: frontmatter___tags) {
+            tag: fieldValue
+            totalCount
+          }
+        }
+      }
+    `)
 
-  createSubcontent(`./src/components/blog_page.js`)
+    if (result.errors) {
+      reporter.panicOnBuild('🚨  ERROR: Loading "createAllTagPages" query')
+    }
+
+    result.data.allMdx.group.forEach(({ tag }) => {
+      createPage({
+        path: `/blog/tags/${encodeURIComponent(tag)}`,
+        component: path.resolve(componentPath),
+        context: { tag },
+      })
+    })
+  }
+
+  createAllPages(`./src/templates/single.js`)
+  createAllTagPages(`./src/templates/year_index.js`)
 }

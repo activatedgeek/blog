@@ -120,10 +120,21 @@ export default ({ children }) => {
       <Flex
         alignItems="center"
         flexDirection="column"
-        p="3em 2%"
+        p="2em 2%"
         bg="muted"
-        height="5em"
+        // height="5em"
       >
+        <Flex alignItems="center" justifyContent="center" w="100vw">
+          <Styled.a as={Link} to="/" sx={{ m: "1em" }}>
+            Home
+          </Styled.a>
+          <Styled.a as={Link} to="/blog" sx={{ m: "1em" }}>
+            Blog
+          </Styled.a>
+          <Styled.a as={Link} to="/blog/tags" sx={{ m: "1em" }}>
+            Tags
+          </Styled.a>
+        </Flex>
         <Flex alignItems="center" justifyContent="center" w="100vw">
           <Styled.a
             href={social.scholar}

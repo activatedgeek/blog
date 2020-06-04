@@ -7,9 +7,9 @@ import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "./layout"
+import Layout from "../components/layout"
 
-const BlogIndex = ({
+const YearIndex = ({
   data: {
     allMdx: { edges },
   },
@@ -53,7 +53,12 @@ const BlogIndex = ({
         <title>Blog Index</title>
         <meta name="description" content="Blog Index" />
       </Helmet>
-      <Styled.h2>Blog Index {emoji.get(`:pencil:`)}</Styled.h2>
+      <Styled.h2>
+        <Styled.a as={Link} to="/blog">
+          Blog Index
+        </Styled.a>{" "}
+        {emoji.get(`:pencil:`)}
+      </Styled.h2>
       {yearList.map((year, i) => (
         <React.Fragment key={i}>
           <Styled.h3>{year}</Styled.h3>
@@ -62,39 +67,68 @@ const BlogIndex = ({
               (
                 {
                   node: {
-                    frontmatter: { title, slug, createdMs, archive, draft },
+                    frontmatter: {
+                      title,
+                      slug,
+                      createdMs,
+                      archive,
+                      draft,
+                      tags,
+                    },
                   },
                 },
                 j
               ) => (
                 <Styled.li key={j}>
-                  <Styled.a
-                    as={Link}
-                    to={slug}
-                    sx={{ opacity: archive === true ? 0.6 : 1 }}
-                  >
+                  <Styled.a as={Link} to={slug}>
                     {title}
                   </Styled.a>
-                  <span sx={{ color: "secondary", m: "0 .5em", fontSize: 0 }}>
-                    {new Date(createdMs).toLocaleString("default", {
-                      month: "long",
-                    })}{" "}
-                    {new Date(createdMs).getDate()}
-                  </span>
                   {archive === true ? (
                     <FontAwesomeIcon
                       icon={faArchive}
                       title="This post is archived."
-                      sx={{ opacity: 0.6 }}
+                      sx={{ ml: "0.5em", fontSize: 0 }}
                     />
                   ) : null}
                   {draft === true ? (
                     <FontAwesomeIcon
                       icon={faEdit}
                       title="This post is a working draft."
-                      sx={{ opacity: 0.6 }}
+                      sx={{ ml: "0.5em", fontSize: 0 }}
                     />
                   ) : null}
+                  <span sx={{ color: "secondary", m: "0 .5em", fontSize: 0 }}>
+                    {new Date(createdMs).toLocaleString("default", {
+                      month: "long",
+                    })}{" "}
+                    {new Date(createdMs).getDate()}
+                  </span>
+                  <br />
+                  {tags.map((t, k) => (
+                    <Styled.a
+                      key={k}
+                      as={Link}
+                      to={`/blog/tags/${encodeURIComponent(t)}`}
+                      sx={{
+                        "&:hover": {
+                          textDecoration: "none",
+                        },
+                      }}
+                    >
+                      <span
+                        sx={{
+                          m: "0.5em 0.5em 0.5em 0",
+                          borderStyle: "solid",
+                          borderWidth: "1px",
+                          p: "0.2em",
+                          borderRadius: "0.2em",
+                          fontSize: 0,
+                        }}
+                      >
+                        {t}
+                      </span>
+                    </Styled.a>
+                  ))}
                 </Styled.li>
               )
             )}
@@ -105,18 +139,20 @@ const BlogIndex = ({
   )
 }
 
-export default BlogIndex
+export default YearIndex
 
 export const pageQuery = graphql`
-  query($c: [String!]) {
-    allMdx(filter: { frontmatter: { category: { in: $c } } }) {
+  query($tag: [String!]) {
+    allMdx(
+      filter: { frontmatter: { category: { in: "blog" }, tags: { in: $tag } } }
+    ) {
       edges {
         node {
           frontmatter {
             title
+            tags
             slug
             createdMs
-            category
             archive
             draft
           }

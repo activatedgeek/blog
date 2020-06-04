@@ -4,8 +4,8 @@ description: Everything you need to know to get started with Policy Gradient Alg
 date: 2018-05-21
 thumbnail: https://i.imgur.com/K7Zjm95.png
 tags:
-  - reinforcement learning
-  - policy gradients
+  - ML
+  - RL
 ---
 
 # Policy Gradients in a Nutshell

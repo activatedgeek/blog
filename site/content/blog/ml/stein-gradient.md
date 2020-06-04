@@ -4,8 +4,8 @@ description: Visualizing the simple yet powerful Stein gradient for sampling (wi
 date: 2019-03-17
 thumbnail: https://i.imgur.com/eXeOKWn.png
 tags:
-  - sampling
-  - machine learning
+  - ML
+  - ABC
 ---
 
 # The Stein Gradient

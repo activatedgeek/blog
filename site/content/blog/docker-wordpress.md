@@ -4,7 +4,8 @@ description: Using Wordpress and Docker, the five-minute install & deploy, serio
 date: 2016-04-09T22:50:29+05:30
 tags:
   - docker
-  - documentation
+  - oss
+  - wordpress
 archive: true
 ---
 

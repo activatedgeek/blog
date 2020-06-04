@@ -3,9 +3,8 @@ title: Choosing the right keys
 description: Learnings to choose better database keys
 date: 2017-04-03T01:57:44+05:30
 tags:
-  - database
-  - design
-  - architecture
+  - systems
+  - databases
 ---
 
 # Choosing the right keys

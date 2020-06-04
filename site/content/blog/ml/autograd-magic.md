@@ -4,9 +4,8 @@ description: Learn how to 'mathemagically' compute derivates in Machine Learning
 date: 2017-10-08T08:46:07-04:00
 thumbnail: https://i.imgur.com/TiD3zYJ.jpg
 tags:
-  - machine learning
-  - neural networks
-  - calculus
+  - ML
+  - optimization
 ---
 
 # The magic of Automatic Differentiation

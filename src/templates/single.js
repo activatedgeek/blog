@@ -1,15 +1,15 @@
 import React from "react" // eslint-disable-line no-unused-vars
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 
-import Layout from "./layout"
-import shortcodes from "./shortcodes"
+import Layout from "../components/layout"
+import shortcodes from "../components/shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
   const { body, frontmatter } = mdx
@@ -64,6 +64,31 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
+      <Styled.hr />
+      <p sx={{ color: "secondary" }}>
+        {tags.length ? "Tags:" : ""}
+        {tags.map((t, k) => (
+          <Styled.a
+            key={k}
+            as={Link}
+            to={`/blog/tags/${encodeURIComponent(t)}`}
+            sx={{ "&:hover": { textDecoration: "none" } }}
+          >
+            <span
+              sx={{
+                m: "0.25em",
+                borderStyle: "solid",
+                borderWidth: "1px",
+                p: "0.2em",
+                borderRadius: "0.2em",
+                fontSize: 0,
+              }}
+            >
+              {t}
+            </span>
+          </Styled.a>
+        ))}
+      </p>
       <p sx={{ color: "secondary" }}>
         Created: {new Date(createdMs).toDateString()}
       </p>

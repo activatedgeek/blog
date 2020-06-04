@@ -4,9 +4,8 @@ description: An illustration on one of the celebrated algorithms in Computer Vis
 date: 2017-06-24T22:11:07+05:30
 thumbnail: https://i.imgur.com/d0ITBFS.png
 tags:
-  - computer vision
-  - ransac
-  - algorithms
+  - CV
+  - ML
 ---
 
 # Introduction to RANSAC

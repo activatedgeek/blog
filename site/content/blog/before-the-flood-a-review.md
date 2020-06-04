@@ -4,8 +4,7 @@ description: A take on the much anticipated DiCaprio Documentary on Climate Chan
 date: 2016-11-03T12:06:04+05:30
 tags:
   - opinion
-  - climate change
-  - documentary
+  - film
 ---
 
 # Before the Flood: A review

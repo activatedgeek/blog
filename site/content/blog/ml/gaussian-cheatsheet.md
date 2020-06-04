@@ -2,8 +2,8 @@
 title: The Gaussian Cheatsheet
 date: 2020-04-22T12:30:00-7:00
 tags:
-  - machine learning
-  - probability
+  - ML
+  - probs
 ---
 
 # The Gaussian Cheatsheet
