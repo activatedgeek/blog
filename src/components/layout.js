@@ -50,7 +50,7 @@ export default ({ children }) => {
   const iconStyle = { margin: "0 0.2em", fontSize: 3 }
 
   return (
-    <>
+    <Flex minHeight="100vh" flexDirection="column">
       <Helmet>
         <title>{title}</title>
         <meta property="og:type" content="website" />
@@ -116,26 +116,27 @@ export default ({ children }) => {
           ))}
         </Flex>
       </Flex>
-      <Box sx={{ maxWidth: "50rem", m: "auto", p: "3em 2%" }}>{children}</Box>
-      <Flex
-        alignItems="center"
-        flexDirection="column"
-        p="2em 2%"
-        bg="muted"
-        // height="5em"
+      <Box
+        minWidth={[null, null, "50rem", "50rem"]}
+        maxWidth="50rem"
+        m="auto"
+        p="3em 2%"
       >
-        <Flex alignItems="center" justifyContent="center" w="100vw">
-          <Styled.a as={Link} to="/" sx={{ m: "1em" }}>
+        {children}
+      </Box>
+      <Flex alignItems="center" flexDirection="column" p="2em 2%" bg="muted">
+        <Flex w="100vw" m="0.5em 0">
+          <Styled.a as={Link} to="/" sx={{ m: "0 1em" }}>
             Home
           </Styled.a>
-          <Styled.a as={Link} to="/blog" sx={{ m: "1em" }}>
+          <Styled.a as={Link} to="/blog" sx={{ m: "0 1em" }}>
             Blog
           </Styled.a>
-          <Styled.a as={Link} to="/blog/tags" sx={{ m: "1em" }}>
+          <Styled.a as={Link} to="/blog/tags" sx={{ m: "0 1em" }}>
             Tags
           </Styled.a>
         </Flex>
-        <Flex alignItems="center" justifyContent="center" w="100vw">
+        <Flex w="100vw" m="0.5em 0">
           <Styled.a
             href={social.scholar}
             target="_blank"
@@ -175,10 +176,18 @@ export default ({ children }) => {
             <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
           </Styled.a>
         </Flex>
-        <h5 sx={{ color: "secondary", fontWeight: "light" }}>
+        <Styled.p
+          sx={{
+            fontSize: 0,
+            m: "0.5em 0",
+            color: "secondary",
+            fontWeight: "light",
+          }}
+          mt={0}
+        >
           © {new Date().getFullYear()} {title}
-        </h5>
+        </Styled.p>
       </Flex>
-    </>
+    </Flex>
   )
 }

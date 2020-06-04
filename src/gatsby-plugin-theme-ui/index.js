@@ -1,8 +1,8 @@
 import merge from "deepmerge"
-import { tailwind as preset } from "@theme-ui/presets"
+import tailwind from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/github.json"
 
-const theme = merge(preset, {
+const theme = merge(tailwind, {
   styles: {
     pre: {
       ...prism,

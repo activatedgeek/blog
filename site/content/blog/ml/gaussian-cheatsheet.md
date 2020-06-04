@@ -200,7 +200,7 @@ $$
 \end{aligned}
 $$
 
-Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$.
+Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$ [^4].
 
 ## References
 
@@ -225,3 +225,4 @@ Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form 
 [^1]: See Appendix D in \cite{bishop2006pattern}
 [^2]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$
 [^3]: $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function.
+[^4]: For maximum entropy distributions under other constraints, see examples on [this](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples) Wikipedia entry.
