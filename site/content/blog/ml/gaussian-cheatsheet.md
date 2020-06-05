@@ -6,8 +6,6 @@ tags:
   - probs
 ---
 
-# The Gaussian Cheatsheet
-
 This is a collection of key derivations involving Gaussian distributions
 which commonly arise almost everywhere in Machine Learning.
 

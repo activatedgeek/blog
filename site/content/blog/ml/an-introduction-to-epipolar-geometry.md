@@ -8,8 +8,6 @@ tags:
   - geometry
 ---
 
-# An Introduction to Epipolar Geometry
-
 In this post we will take a look at how Camera Projections work. A demo at the
 end will illustrate the important segments of the theory. Prerequisites to
 understand the material are available in the _Readings & References_ section below.

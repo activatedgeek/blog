@@ -8,10 +8,6 @@ tags:
   - probs
 ---
 
-# The beauty of Bayesian Learning
-
-> This post has an accompanying Bayesian Learning Demo. See [here](https://bayesian-learning-demo.sanyamkapoor.com)!
-
 In this post, we will build intuitions behind Bayes theory via
 an interactive visualization and then realize certain properties
 of such a probabilistic formulation of Machine Learning. It turns
@@ -22,6 +18,8 @@ Probability theory is ubiquitous in Machine Learning and perhaps will be
 the most important tools for future breakthroughs. By the end of this post,
 the hope is that you will have gained just enough insight into the Bayesian
 world-view.
+
+> This post has an accompanying Bayesian Learning Demo. See [here](https://bayesian-learning-demo.sanyamkapoor.com)!
 
 ## Learning Theory
 

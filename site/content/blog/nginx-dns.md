@@ -8,8 +8,6 @@ tags:
 archive: true
 ---
 
-# Understanding Nginx behavior with dynamic DNS upstreams
-
 Recently, I was fiddling around with [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 to run our Nginx reverse proxy server at [Headout](https://www.headout.com) and
 observed an interesting behavior with regards to DNS resolution in Nginx.

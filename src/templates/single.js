@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
+import emoji from "node-emoji"
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 
@@ -12,28 +13,15 @@ import Layout from "../components/layout"
 import shortcodes from "../components/shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter } = mdx
-  const { title, description, tags, slug, createdMs, archive } = frontmatter
-
-  let archiveDiv
-  if (archive === true) {
-    archiveDiv = (
-      <div
-        sx={{
-          bg: "yellow.3",
-          width: "100vw",
-          left: "50%",
-          ml: "-50vw",
-          mt: "-3em",
-          position: "relative",
-          textAlign: "center",
-        }}
-      >
-        <FontAwesomeIcon icon={faExclamationTriangle} /> This post is archived.
-        Some text may be inaccurate or content may not render!
-      </div>
-    )
-  }
+  const { body, frontmatter, timeToRead } = mdx
+  const {
+    title,
+    description,
+    tags,
+    slug,
+    createdMs,
+    archive,
+  } = frontmatter
 
   return (
     <Layout>
@@ -60,13 +48,53 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Helmet>
-      {archiveDiv}
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
-      <Styled.hr />
-      <p sx={{ color: "secondary" }}>
-        {tags.length ? "Tags:" : ""}
+      {archive ? (
+        <div
+          sx={{
+            bg: "yellow.3",
+            width: "100vw",
+            left: "50%",
+            ml: "-50vw",
+            mt: "-3em",
+            position: "relative",
+            textAlign: "center",
+          }}
+        >
+          <FontAwesomeIcon icon={faExclamationTriangle} /> This post is
+          archived. Some content may render incorrectly.
+        </div>
+      ) : null}
+      <Styled.h1>{title}</Styled.h1>
+      <p
+        sx={{
+          color: "secondary",
+          display: "flex",
+          alignItems: "center",
+          fontSize: 0,
+        }}
+      >
+        {emoji.get(":writing_hand:")}
+        {`   ${new Date(createdMs).toDateString()}`}
+        <Styled.hr
+          sx={{
+            width: "1px",
+            height: "2em",
+            display: "inline-block",
+            m: "0 0.5em"
+          }}
+        />
+        {emoji.get(":hourglass_flowing_sand:")}{`   ${timeToRead}`} min
+        {tags.length ? (
+          <Styled.hr
+            sx={{
+              width: "1px",
+              height: "2em",
+              display: "inline-block",
+              m: "0 0.5em"
+            }}
+          />
+        ) : null}
+        {tags.length ? emoji.get(":label:") : null}
         {tags.map((t, k) => (
           <Styled.a
             key={k}
@@ -89,9 +117,10 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
           </Styled.a>
         ))}
       </p>
-      <p sx={{ color: "secondary" }}>
-        Created: {new Date(createdMs).toDateString()}
-      </p>
+      <Styled.hr />
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   )
 }
@@ -103,6 +132,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      timeToRead
       frontmatter {
         title
         description

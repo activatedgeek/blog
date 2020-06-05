@@ -7,8 +7,6 @@ tags:
   - film
 ---
 
-# Before the Flood: A review
-
 I’ve been reading about DiCaprio’s quest to push the agenda of Climate Change
 every now and then. It always came to me as ironic when I tried hard to look from
 the perspective of a concerned citizen. DiCaprio is an entertainer and with this

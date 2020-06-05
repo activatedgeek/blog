@@ -8,8 +8,6 @@ tags:
   - optimization
 ---
 
-# The magic of Automatic Differentiation
-
 Any machine learning problem is generally formulated as roughly the
 following steps
 

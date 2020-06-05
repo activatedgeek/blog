@@ -2,9 +2,7 @@
 title: Sanyam Kapoor
 ---
 
-# Hey! :wave:
-
-I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working
+Hey! :wave:, I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working
 with a [host](https://twitter.com/tkaraletsos?lang=en) of [amazing](https://people.orie.cornell.edu/mup3/) people, spending most of my time on approximate inference with [Thang Bui](http://mlg.eng.cam.ac.uk/thang/). I also spent some time developing representation learning for Go-Explore with [Jeff Clune](http://jeffclune.com/).
 
 I completed my Masters in Computer Science at [NYU Courant](https://cs.nyu.edu)

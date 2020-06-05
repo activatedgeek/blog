@@ -9,8 +9,6 @@ tags:
 archive: true
 ---
 
-# Getting started with Compose and WordPress
-
 ## Quickstart: Docker Compose and WordPress
 
 You can use Docker Compose to easily run WordPress in an isolated environment built

@@ -8,8 +8,6 @@ tags:
   - ci
 ---
 
-# Building Docker Images on Travis CI
-
 Docker has been the star of the recent times and I have recently been
 building a lot of Docker images, deploying them to both development and
 production (luckily yes!).

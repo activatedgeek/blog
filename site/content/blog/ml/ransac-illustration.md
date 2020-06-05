@@ -8,8 +8,6 @@ tags:
   - ML
 ---
 
-# Introduction to RANSAC
-
 ## The Problem
 
 Given a data set and a question to be answered, one generally tends to solve the

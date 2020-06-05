@@ -8,8 +8,6 @@ tags:
   - theory
 ---
 
-# When Does Stochastic Gradient Algorithm Work Well?
-
 _Stochastic Gradient Descent_ (SGD) has turned out to be a workhorse for most
 gradient-based supervised learning algorithms today. But, why does that work? This post
 presents an understanding from recent \cite{nguyen2018does} theoretical results which gives insights

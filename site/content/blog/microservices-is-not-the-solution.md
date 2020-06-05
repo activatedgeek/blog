@@ -8,8 +8,6 @@ tags:
 archive: true
 ---
 
-# Microservices is not the solution you think
-
 **_Microservices_** have suddenly become the hip thing to do. While
 it would be imbecile to question the potential of microservices,
 what I am surprised at why wasn't it popular enough pre-2014. While

@@ -7,8 +7,6 @@ tags:
   - RL
 ---
 
-# Deriving the Cross Entropy Method
-
 The Cross Entropy method (CEM) is one of the most popular optimization algorithms,
 particularly in optimal control. It was originally proposed for rare event simulation but has since
 been repurposed for a broad spectrum of problems \cite{de2005tutorial}.

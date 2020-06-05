@@ -7,8 +7,6 @@ tags:
   - oss
 ---
 
-# PyTorch Data Loaders are abstraction done right!
-
 _PyTorch_ is great fun. Seriously! It has only been a few weeks that I started
 working with it. It already is the least painful thing in the process, which,
 is kind of the point of having such a library.

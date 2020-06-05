@@ -8,8 +8,6 @@ tags:
   - RL
 ---
 
-# Policy Gradients in a Nutshell
-
 _This article aims to provide a concise yet comprehensive introduction to one of the most important
 class of control algorithms in Reinforcement Learning - Policy Gradients. I will discuss these
 algorithms in progression, arriving at well-known results from the ground up. It is aimed at readers

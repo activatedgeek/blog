@@ -8,8 +8,6 @@ tags:
   - viz
 ---
 
-# Visualizing the Confusion Matrix
-
 _Confusion Matrix_ is a matrix built for binary classification problems.
 It is an important starting tool in understanding how well a binary
 classifier is performing and provides a whole bunch of metrics to be

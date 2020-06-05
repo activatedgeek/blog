@@ -7,8 +7,6 @@ tags:
   - geometry
 ---
 
-# A Primer on Projective Geometry
-
 Projective Geometry is a term used to describe properties of projections of a given
 geometric shape. When a shape is projected onto $\mathbb{R}^2$(commonly known as
 the 2D real space), it is called a Planar Projection. This idea can be extended to

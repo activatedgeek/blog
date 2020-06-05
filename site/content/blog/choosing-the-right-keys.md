@@ -7,8 +7,6 @@ tags:
   - databases
 ---
 
-# Choosing the right keys
-
 Deciding the keys in an SQL table is one of the most important decisions in
 the lifecycle of the database. The ramifications of this decision will last
 as long as the database is alive and serving. Therefore, much thought needs to be

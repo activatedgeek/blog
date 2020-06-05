@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "debug": "node --nolazy --inspect-brk node_modules/gatsby/dist/bin/gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "fmt": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"

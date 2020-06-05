@@ -1,4 +1,5 @@
 import { StaticQuery, graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
 /** @jsx jsx */
 import { jsx, Styled, Flex } from "theme-ui"
 import emoji from "node-emoji"
@@ -12,6 +13,9 @@ const TagList = ({
 }) => {
   return (
     <Layout>
+      <Helmet>
+        <title>Tags</title>
+      </Helmet>
       <Styled.h2 sx={{ mb: "0.5em" }}>Tags {emoji.get(`:label:`)}</Styled.h2>
       <Flex sx={{ flexFlow: "row wrap" }}>
         {group.map(({ tag, totalCount }, i) => (

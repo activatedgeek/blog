@@ -8,8 +8,6 @@ tags:
 archive: true
 ---
 
-# Setup custom email addresses
-
 It had been a while that I owned my domain and was wondering if I could switch
 all my email communication to a custom email address [hello@sanyamkapoor.com](mailto:hello@sanyamkapoor.com).
 Apart from owning the domain, the only requirement which remains is the that of an

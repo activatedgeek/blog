@@ -8,8 +8,6 @@ tags:
 archive: true
 ---
 
-# For better software delivery
-
 For the past couple years, I have been working as the Dev and the Ops for my team
 at [StoryXpress](https://storyxpress.co). I promise you it has been an amazing
 learning ride but for all that matters, it has been an exhaustive one. We have
