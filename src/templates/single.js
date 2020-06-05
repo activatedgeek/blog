@@ -1,5 +1,4 @@
 import React from "react" // eslint-disable-line no-unused-vars
-import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -14,40 +13,10 @@ import shortcodes from "../components/shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
   const { body, frontmatter, timeToRead } = mdx
-  const {
-    title,
-    description,
-    tags,
-    slug,
-    createdMs,
-    archive,
-  } = frontmatter
+  const { title, tags, createdMs, archive } = frontmatter
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{title}</title>
-        <link rel="canonical" href={`https://www.sanyamkapoor.com${slug}`} />
-        <meta name="description" content={description} />
-        <meta property="og:type" content="article" />
-        <meta
-          property="article:published_time"
-          content={new Date(createdMs).toISOString()}
-        />
-        <meta property="article:tag" content={(tags || []).join(", ")} />
-        <meta
-          property="og:url"
-          content={`https://www.sanyamkapoor.com${slug}`}
-        />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta
-          name="twitter:url"
-          content={`https://www.sanyamkapoor.com${slug}`}
-        />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-      </Helmet>
+    <Layout frontmatter={frontmatter}>
       {archive ? (
         <div
           sx={{
@@ -65,7 +34,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         </div>
       ) : null}
       <Styled.h1>{title}</Styled.h1>
-      <p
+      <div
         sx={{
           color: "secondary",
           display: "flex",
@@ -80,17 +49,18 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
             width: "1px",
             height: "2em",
             display: "inline-block",
-            m: "0 0.5em"
+            m: "0 0.5em",
           }}
         />
-        {emoji.get(":hourglass_flowing_sand:")}{`   ${timeToRead}`} min
+        {emoji.get(":hourglass_flowing_sand:")}
+        {`   ${timeToRead}`} min
         {tags.length ? (
           <Styled.hr
             sx={{
               width: "1px",
               height: "2em",
               display: "inline-block",
-              m: "0 0.5em"
+              m: "0 0.5em",
             }}
           />
         ) : null}
@@ -116,7 +86,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
             </span>
           </Styled.a>
         ))}
-      </p>
+      </div>
       <Styled.hr />
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>

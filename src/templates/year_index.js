@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import emoji from "node-emoji"
 /** @jsx jsx */
@@ -48,14 +47,15 @@ const YearIndex = ({
   })
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Blog Index</title>
-        <meta name="description" content="Blog Index" />
-      </Helmet>
+    <Layout
+      frontmatter={{
+        title: "Blog Posts",
+        description: "Index of all blog posts.",
+      }}
+    >
       <Styled.h2>
         <Styled.a as={Link} to="/blog">
-          Blog Index
+          Blog Posts
         </Styled.a>{" "}
         {emoji.get(`:pencil:`)}
       </Styled.h2>

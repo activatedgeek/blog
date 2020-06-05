@@ -4,16 +4,16 @@ import { Styled } from "theme-ui"
 
 import Layout from "../components/layout"
 
-const IndexPage = () => (
-  <Layout>
-    <h1>You are lost!</h1>
-    <p>
+const LostPage = () => (
+  <Layout frontmatter={{ title: "You are lost!" }}>
+    <Styled.h1>You are lost!</Styled.h1>
+    <Styled.p>
       Go back{" "}
       <Styled.a to="/" as={Link}>
         home
       </Styled.a>
-    </p>
+    </Styled.p>
   </Layout>
 )
 
-export default IndexPage
+export default LostPage

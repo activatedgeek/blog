@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Sanyam Kapoor`,
+  name: `Sanyam Kapoor`,
   description: `Knowledge Base.`,
   author: `Sanyam Kapoor`,
   menu: [
