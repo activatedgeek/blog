@@ -12,6 +12,8 @@ const YearIndex = ({
   data: {
     allMdx: { edges },
   },
+  title,
+  titleLink,
 }) => {
   let yearIndex = edges.reduce((acc, x) => {
     const {
@@ -49,13 +51,13 @@ const YearIndex = ({
   return (
     <Layout
       frontmatter={{
-        title: "Blog Posts",
+        title: title || "Index",
         description: "Index of all blog posts.",
       }}
     >
       <Styled.h2>
-        <Styled.a as={Link} to="/blog">
-          Blog Posts
+        <Styled.a as={Link} to={titleLink || "/blog"}>
+          {title || "Index"}
         </Styled.a>{" "}
         {emoji.get(`:pencil:`)}
       </Styled.h2>

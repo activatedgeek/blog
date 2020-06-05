@@ -22,6 +22,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     let { date, draft, category, tags } = node.frontmatter
     category = category || []
     tags = tags || []
+    draft = draft || false
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
@@ -38,6 +39,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     let slug = `/${parsedFilePath.dir}`
     if (parsedFilePath.name !== "index") {
       slug = `${slug}/${parsedFilePath.name}`
+    }
+    if (draft === true) {
+      slug = `${slug}/draft`
     }
 
     if (date === undefined) {
@@ -58,6 +62,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.frontmatter.createdMs = createdMs
     node.frontmatter.category = category
     node.frontmatter.tags = tags
+    node.frontmatter.draft = draft
   }
 }
 
@@ -73,7 +78,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               id
               frontmatter {
                 slug
-                draft
               }
             }
           }
@@ -89,14 +93,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ({
         node: {
           id,
-          frontmatter: { slug, draft },
+          frontmatter: { slug },
         },
       }) => {
-        if (process.env.NODE_ENV === "production") {
-          if (draft === true) {
-            return
-          }
-        }
         createPage({
           path: slug,
           component: path.resolve(componentPath),

@@ -1,12 +1,16 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import YearIndex from "../templates/year_index"
+import YearIndex from "../../templates/year_index"
 
 const BlogIndex = () => (
   <StaticQuery
     query={graphql`
       {
-        allMdx(filter: { frontmatter: { category: { in: "blog" } } }) {
+        allMdx(
+          filter: {
+            frontmatter: { category: { in: "blog" }, draft: { ne: true } }
+          }
+        ) {
           edges {
             node {
               frontmatter {
@@ -22,7 +26,9 @@ const BlogIndex = () => (
         }
       }
     `}
-    render={data => <YearIndex data={data} />}
+    render={data => (
+      <YearIndex data={data} title="Blog Posts" titleLink="/blog" />
+    )}
   />
 )
 

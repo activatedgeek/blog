@@ -3,7 +3,10 @@ import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
+import {
+  faExclamationTriangle,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import emoji from "node-emoji"
 /** @jsx jsx */
 import { jsx, Styled, Flex } from "theme-ui"
@@ -14,7 +17,7 @@ import shortcodes from "../components/shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
   const { body, frontmatter, timeToRead, tableOfContents } = mdx
-  const { title, tags, createdMs, archive } = frontmatter
+  const { title, tags, createdMs, archive, draft } = frontmatter
 
   return (
     <Layout frontmatter={frontmatter}>
@@ -87,6 +90,17 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         </Styled.p>
       ) : null}
 
+      {draft ? (
+        <Styled.p
+          display="flex"
+          alignItems="center"
+          sx={{ bg: "blue.2", p: "1em" }}
+        >
+          <FontAwesomeIcon icon={faInfoCircle} /> This post is a work in
+          progress.
+        </Styled.p>
+      ) : null}
+
       {tableOfContents.items ? <TableOfContents toc={tableOfContents} /> : null}
 
       <MDXProvider components={shortcodes}>
@@ -112,6 +126,7 @@ export const pageQuery = graphql`
         slug
         createdMs
         archive
+        draft
       }
     }
   }
