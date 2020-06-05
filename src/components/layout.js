@@ -111,7 +111,7 @@ export default ({ children, frontmatter }) => {
         </Flex>
         <Box
           minWidth={[null, null, "50rem", "50rem"]}
-          maxWidth="50rem"
+          maxWidth={["100vw", "100vw", "50rem", "50rem"]}
           m="auto"
           p="3em 2%"
         >

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
 import emoji from "node-emoji"
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled, Flex } from "theme-ui"
 
 import Layout from "../components/layout"
 import shortcodes from "../components/shortcodes"
@@ -17,29 +17,14 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
 
   return (
     <Layout frontmatter={frontmatter}>
-      {archive ? (
-        <div
-          sx={{
-            bg: "yellow.3",
-            width: "100vw",
-            left: "50%",
-            ml: "-50vw",
-            mt: "-3em",
-            position: "relative",
-            textAlign: "center",
-          }}
-        >
-          <FontAwesomeIcon icon={faExclamationTriangle} /> This post is
-          archived. Some content may render incorrectly.
-        </div>
-      ) : null}
       <Styled.h1>{title}</Styled.h1>
-      <div
+
+      <Flex
         sx={{
           color: "secondary",
-          display: "flex",
-          alignItems: "center",
           fontSize: 0,
+          flexWrap: "wrap",
+          alignItems: "center",
         }}
       >
         {emoji.get(":writing_hand:")}
@@ -86,8 +71,21 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
             </span>
           </Styled.a>
         ))}
-      </div>
+      </Flex>
+
       <Styled.hr />
+
+      {archive ? (
+        <Styled.p
+          display="flex"
+          alignItems="center"
+          sx={{ bg: "yellow.2", p: "1em" }}
+        >
+          <FontAwesomeIcon icon={faExclamationTriangle} /> This post is
+          archived. Some content may be out of date or render incorrectly.
+        </Styled.p>
+      ) : null}
+
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
