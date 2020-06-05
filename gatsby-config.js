@@ -43,5 +43,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-goatcounter`,
+      options: {
+        code: 'sanyamkapoor',
+        exclude: [],
+        pageTransitionDelay: 0,
+        head: false,
+        pixel: false,
+        allowLocal: false,
+        localStorageKey: 'skipgc',
+      }
+    }
   ],
 }
