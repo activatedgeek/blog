@@ -223,7 +223,7 @@ $$
 \end{aligned}
 $$
 
-However, for most practical purposes, this maximization operation is computationally infeasible (as there is no other way than to search the entire space for a given action-value function). Instead, what we can aspire to do is, build a function approximator to approximate this $argmax$ and therefore called the _Deterministic Policy Gradient_ (DPG) \cite{silver2014deterministic,DBLP:journals/corr/LillicrapHPHETS15}.
+However, for most practical purposes, this maximization operation is computationally infeasible (as there is no other way than to search the entire space for a given action-value function). Instead, what we can aspire to do is, build a function approximator to approximate this $argmax$ and therefore called the _Deterministic Policy Gradient_ (DPG) \cite{silver2014deterministic,LillicrapHPHETS15}.
 
 We sum this up with the following equations.
 
@@ -362,7 +362,7 @@ Completed Modular implementations of the full pipeline can be viewed at [activat
   year={2016}
 }
 
-@article{DBLP:journals/corr/LillicrapHPHETS15,
+@article{LillicrapHPHETS15,
   author    = {Timothy P. Lillicrap and
                Jonathan J. Hunt and
                Alexander Pritzel and
@@ -397,6 +397,6 @@ Completed Modular implementations of the full pipeline can be viewed at [activat
 
 ## Footnotes
 
-[^1]: See https://deepmind.com/blog/alphago-zero-learning-scratch/
-[^2]: See https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/
-[^3]: See https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/
+[^1]: See [AlphaGo Zero: Starting from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)
+[^2]: See [DeepMind AI Reduces Google Data Centre Cooling Bill by 40%](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/)
+[^3]: See [Playing Atari with Deep Reinforcement Learning](https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/)

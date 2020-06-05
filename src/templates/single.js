@@ -9,10 +9,11 @@ import emoji from "node-emoji"
 import { jsx, Styled, Flex } from "theme-ui"
 
 import Layout from "../components/layout"
+import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, timeToRead } = mdx
+  const { body, frontmatter, timeToRead, tableOfContents } = mdx
   const { title, tags, createdMs, archive } = frontmatter
 
   return (
@@ -86,6 +87,8 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         </Styled.p>
       ) : null}
 
+      {tableOfContents.items ? <TableOfContents toc={tableOfContents} /> : null}
+
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
@@ -101,6 +104,7 @@ export const pageQuery = graphql`
       id
       body
       timeToRead
+      tableOfContents
       frontmatter {
         title
         description
