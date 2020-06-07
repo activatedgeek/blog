@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import YearIndex from "../../templates/year_index"
+import PostIndex from "../../templates/post_index"
 
 const BlogIndex = () => (
   <StaticQuery
@@ -26,9 +26,7 @@ const BlogIndex = () => (
         }
       }
     `}
-    render={data => (
-      <YearIndex data={data} title="Blog Posts" titleLink="/blog" />
-    )}
+    render={data => <PostIndex data={data} title="Posts" titleLink="/blog" />}
   />
 )
 

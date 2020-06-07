@@ -130,6 +130,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  createAllPages(`./src/templates/single.js`)
-  createAllTagPages(`./src/templates/year_index.js`)
+  createAllPages(`./src/templates/post.js`)
+  createAllTagPages(`./src/templates/post_index.js`)
 }
