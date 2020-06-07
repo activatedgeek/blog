@@ -1,6 +1,12 @@
 const path = require("path")
 const fs = require("fs")
 
+const templatesDir = "./src/templates"
+const categoryTemplateMap = {
+  blog: "post",
+  kb: "kb_post",
+}
+
 exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
@@ -16,7 +22,7 @@ exports.sourceNodes = ({ actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  // const { createNodeField } = actions
+  const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
     let { date, draft, category, tags } = node.frontmatter
@@ -32,6 +38,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       .replace(/\//g, " ")
       .trim()
       .split(" ")[0]
+
     if (defaultcategory.length) {
       category.push(defaultcategory)
     }
@@ -63,6 +70,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.frontmatter.category = category
     node.frontmatter.tags = tags
     node.frontmatter.draft = draft
+
+    createNodeField({
+      node,
+      name: "template",
+      value: defaultcategory || "blog",
+    })
   }
 }
 
@@ -76,6 +89,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           edges {
             node {
               id
+              fields {
+                template
+              }
               frontmatter {
                 slug
               }
@@ -93,19 +109,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ({
         node: {
           id,
+          fields: { template },
           frontmatter: { slug },
         },
       }) => {
         createPage({
           path: slug,
-          component: path.resolve(componentPath),
+          component: path.resolve(
+            `${templatesDir}/${categoryTemplateMap[template]}.js`
+          ),
           context: { id },
         })
       }
     )
   }
 
-  const createAllTagPages = async function(componentPath) {
+  const createAllTagPages = async function() {
     const result = await graphql(`
       {
         allMdx(filter: { frontmatter: { category: { eq: "blog" } } }) {
@@ -124,12 +143,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     result.data.allMdx.group.forEach(({ tag }) => {
       createPage({
         path: `/blog/tags/${encodeURIComponent(tag)}`,
-        component: path.resolve(componentPath),
+        component: path.resolve(`${templatesDir}/post_index.js`),
         context: { tag },
       })
     })
   }
 
-  createAllPages(`./src/templates/post.js`)
-  createAllTagPages(`./src/templates/post_index.js`)
+  createAllPages()
+  createAllTagPages()
 }

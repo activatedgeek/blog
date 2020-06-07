@@ -33,7 +33,7 @@ const Head = ({ frontmatter }) => {
     `
   )
 
-  const allMeta = Object.assign(site.siteMetadata, frontmatter)
+  const allMeta = { ...site.siteMetadata, ...frontmatter }
   const {
     name,
     title,
@@ -48,7 +48,7 @@ const Head = ({ frontmatter }) => {
   return (
     <Helmet>
       <title>
-        {title ? `${title} - ` : ""}
+        {title ? `${title} | ` : ""}
         {name}
       </title>
 

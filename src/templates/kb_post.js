@@ -7,9 +7,9 @@ import { jsx, Styled, Flex, Box } from "theme-ui"
 
 import Layout from "../components/layout"
 import Tags from "../components/tags"
-import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
+import KBList from "../components/kb_list"
 
 const PostInfo = ({ timeToRead, tags, createdMs }) => (
   <Flex
@@ -47,13 +47,22 @@ const PostInfo = ({ timeToRead, tags, createdMs }) => (
   </Flex>
 )
 
-const BlogPageTemplate = ({ data: { mdx } }) => {
+const KBPageTemplate = ({ data: { mdx } }) => {
   const { body, frontmatter, timeToRead, tableOfContents } = mdx
-  const { title, tags, createdMs, archive, draft } = frontmatter
+  const { title, tags, createdMs } = frontmatter
 
   return (
-    <Layout frontmatter={{ ...frontmatter, title: `${title} - Blog` }}>
+    <Layout frontmatter={{ ...frontmatter, title: `${title} - KB` }}>
       <Flex>
+        <Box
+          sx={{
+            bg: "gray.1",
+            overflow: "auto",
+            display: ["none", "none", "block", "block"],
+          }}
+        >
+          <KBList />
+        </Box>
         <Box
           sx={{
             p: "1em",
@@ -73,15 +82,6 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
               <Styled.hr />
             </Box>
           ) : null}
-
-          {archive ? (
-            <Warn>
-              This post is archived. Some content may be out of date or render
-              incorrectly.
-            </Warn>
-          ) : null}
-
-          {draft ? <Info>This post is a work in progress.</Info> : null}
 
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{body}</MDXRenderer>
@@ -104,7 +104,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
   )
 }
 
-export default BlogPageTemplate
+export default KBPageTemplate
 
 export const pageQuery = graphql`
   query($id: String) {
@@ -119,8 +119,6 @@ export const pageQuery = graphql`
         tags
         slug
         createdMs
-        archive
-        draft
       }
     }
   }

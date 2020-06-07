@@ -1,18 +1,18 @@
 module.exports = {
   name: `Sanyam Kapoor`,
-  description: `Knowledge Base.`,
+  description: `Website and knowledge base.`,
   author: `Sanyam Kapoor`,
   menu: [
+    {
+      label: "Knowledge Base",
+      url: "/kb",
+    },
     {
       label: "Blog",
       url: "/blog",
     },
   ],
   extMenu: [
-    {
-      label: "Knowledge Base",
-      url: "https://one.sanyamkapoor.com",
-    },
     {
       label: "Wine Map",
       url: "https://wine.sanyamkapoor.com",

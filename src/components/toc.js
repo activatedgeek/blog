@@ -19,14 +19,14 @@ const TableOfContents = ({ toc: { items } }) => {
   return (
     <Box
       sx={{
-        bg: "gray.2",
+        bg: "gray.1",
         p: "1em",
         position: "sticky",
         top: "1em",
         overflow: "auto",
       }}
     >
-      <Styled.h4>Contents</Styled.h4>
+      <Styled.h4>Table of Contents</Styled.h4>
       <NestedList toc={items} depth={0} />
     </Box>
   )
