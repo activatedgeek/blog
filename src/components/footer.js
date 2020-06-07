@@ -21,17 +21,18 @@ const Footer = ({ name, social }) => {
         flexDirection: "column",
         p: "2em 2%",
         bg: "muted",
+        mt: "auto"
       }}
     >
       <Flex w="100vw" m="0.5em 0">
-        <Styled.a as={Link} to="/" sx={{ m: "0 1em" }}>
-          Home
-        </Styled.a>
         <Styled.a as={Link} to="/blog" sx={{ m: "0 1em" }}>
           Blog
         </Styled.a>
         <Styled.a as={Link} to="/blog/tags" sx={{ m: "0 1em" }}>
           Tags
+        </Styled.a>
+        <Styled.a as={Link} to="/blog/drafts" sx={{ m: "0 1em" }}>
+          Drafts
         </Styled.a>
       </Flex>
       <Flex w="100vw" m="0.5em 0">
