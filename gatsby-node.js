@@ -47,9 +47,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (parsedFilePath.name !== "index") {
       slug = `${slug}/${parsedFilePath.name}`
     }
-    if (draft === true) {
-      slug = `${slug}/draft`
-    }
 
     if (date === undefined) {
       const { birthtimeMs } = fs.statSync(node.fileAbsolutePath)
@@ -82,7 +79,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const createAllPages = async function(componentPath) {
+  const createAllPages = async function() {
     const result = await graphql(`
       {
         allMdx {

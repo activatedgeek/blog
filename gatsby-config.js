@@ -47,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
         code: "sanyamkapoor",
-        exclude: ["^(.+)/(draft)/?$"],
+        exclude: [],
         pageTransitionDelay: 0,
         head: false,
         pixel: false,
