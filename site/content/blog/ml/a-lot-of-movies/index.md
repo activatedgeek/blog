@@ -15,22 +15,22 @@ seems natural to put that data to good use, at least academically. This
 post is written, in expectation, to mainly serve three purposes -
 
 1. a way for me to ask as many questions as possible on a simple dataset to keep
-the creative juices flowing
+   the creative juices flowing
 
 2. to keep thinking about informative ways to visualize data ubiquitous around us
 
 3. a quick reference for [Altair](https://altair-viz.github.io), a declarative
-charting library
+   charting library
 
 ## Data
 
 IMDb allows users to rate every movie or a TV show on a scale of 1 to 10,
-restricted to integer ratings. Conveniently, it also collects them into a 
+restricted to integer ratings. Conveniently, it also collects them into a
 [list](https://www.imdb.com/user/ur34765497/ratings) which I have made public.
 
 I wrote a tiny web spider using [Playwright](https://playwright.dev) which
 collects some basic information - title, release year, genres, ratings (including
-mine) and total number of votes, into a CSV file [^1]. It is a pretty 
+mine) and total number of votes, into a CSV file [^1]. It is a pretty
 straightforward set of CSS path selectors. I do some further organization in
 a [Jupyter notebook](https://github.com/activatedgeek/imdb-ratings/blob/master/notebooks/IMDb%20Analysis.ipynb)
 using [Pandas](https://pandas.pydata.org) `DataFrames` to make charting easier.

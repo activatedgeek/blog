@@ -21,7 +21,7 @@ const Footer = ({ name, social }) => {
         flexDirection: "column",
         p: "2em 2%",
         bg: "muted",
-        mt: "auto"
+        mt: "auto",
       }}
     >
       <Flex w="100vw" m="0.5em 0">

@@ -11,9 +11,9 @@ exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type MdxFrontmatter {
+      slug: String
       draft: Boolean
       archive: Boolean
-      date: Date
       category: [String!]
       tags: [String!]
     }
@@ -25,7 +25,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let { date, draft, category, tags } = node.frontmatter
+    let { date, updated, draft, category, tags } = node.frontmatter
     category = category || []
     tags = tags || []
     draft = draft || false
@@ -53,6 +53,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       date = birthtimeMs
     }
     const createdMs = new Date(date).getTime()
+    const updatedMs = updated !== undefined ? new Date(updated).getTime() : null
 
     if (isNaN(createdMs)) {
       console.warn(`Unable to parse date in "${node.fileAbsolutePath}"`)
@@ -63,7 +64,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
 
     node.frontmatter.slug = slug
-    node.frontmatter.createdMs = createdMs
     node.frontmatter.category = category
     node.frontmatter.tags = tags
     node.frontmatter.draft = draft
@@ -72,6 +72,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       name: "template",
       value: defaultcategory || "blog",
+    })
+    createNodeField({
+      node,
+      name: "createdMs",
+      value: createdMs,
+    })
+    createNodeField({
+      node,
+      name: "updatedMs",
+      value: updatedMs,
     })
   }
 }

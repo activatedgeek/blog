@@ -48,11 +48,12 @@ const PostInfo = ({ timeToRead, tags, createdMs }) => (
 )
 
 const KBPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, timeToRead, tableOfContents } = mdx
-  const { title, tags, createdMs } = frontmatter
+  const { body, frontmatter, fields, timeToRead, tableOfContents } = mdx
+  const { title, tags } = frontmatter
+  const { createdMs } = fields
 
   return (
-    <Layout frontmatter={{ ...frontmatter, title: `${title} - KB` }}>
+    <Layout frontmatter={{ ...frontmatter, createdMs, title: `${title} - KB` }}>
       <Flex>
         <Box
           sx={{
@@ -118,6 +119,8 @@ export const pageQuery = graphql`
         description
         tags
         slug
+      }
+      fields {
         createdMs
       }
     }

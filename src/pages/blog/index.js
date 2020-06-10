@@ -17,9 +17,11 @@ const BlogIndex = () => (
                 title
                 tags
                 slug
-                createdMs
                 archive
                 draft
+              }
+              fields {
+                createdMs
               }
             }
           }

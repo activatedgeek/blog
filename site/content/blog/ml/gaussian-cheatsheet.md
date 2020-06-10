@@ -1,6 +1,7 @@
 ---
 title: The Gaussian Cheatsheet
 date: 2020-04-22T12:30:00-7:00
+updated: 2020-06-09T5:30:00-7:00
 tags:
   - ML
   - probs
@@ -11,16 +12,12 @@ which commonly arise almost everywhere in Machine Learning.
 
 ## Normalizing Constant
 
-A Gaussian distribution with mean $\mu$ and variance $\sigma^2$ is given by
-
-$$
-p(x) \propto \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\}
-$$
+A Gaussian distribution with mean $\mu$ and variance $\sigma^2$ is given by $p(x) \propto \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\}$
 
 To derive the normalizing constant for this density, consider the following integral
 
 $$
-\text{I} = \int_{-\infty}^{\infty} \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\} dx
+\tag{1} \text{I} = \int_{-\infty}^{\infty} \exp\left\{ - \frac{(x - \mu)^2}{2\sigma^2} \right\} dx
 $$
 
 $$
@@ -200,6 +197,167 @@ $$
 
 Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$ [^4].
 
+## Gaussian Conditionals
+
+Conditional Gaussian distributions are common in machine learning - common
+examples being Gaussian Processes and Gaussian Linear dynamical systems. Here
+we discuss the algebraic manipulations on a joint Gaussian distribution. Consider
+a joint distribution on two random variables p(x, y) where both x,y may be vectors.
+
+$$
+\begin{aligned}
+p(y, x) = \mathcal{N} \left(
+\begin{bmatrix} \mu_y \\ \mu_x \end{bmatrix}
+, \begin{bmatrix} \mathbf{\Sigma}_{yy} & \mathbf{\Sigma}_{yx} \\ \mathbf{\Sigma}_{xy} & \mathbf{\Sigma}_{xx} \end{bmatrix} \right)
+\end{aligned}
+$$
+
+We are interested in $p(y | x)$ ($x$ and $y$ are exchangeable throughout). Noting
+by the chain rule of probabilities that $p(y,x) = p(x)p(y|x)$ we focus on quadratic
+part of the exponent.
+
+$$
+\begin{aligned}
+\begin{bmatrix} y - \mu_y \\ x - \mu_x \end{bmatrix}^{T} \begin{bmatrix} \mathbf{\Sigma}_{yy} & \mathbf{\Sigma}_{yx} \\ \mathbf{\Sigma}_{xy} & \mathbf{\Sigma}_{xx} \end{bmatrix}^{-1}\begin{bmatrix} y - \mu_y \\ x - \mu_x \end{bmatrix}
+\end{aligned}
+$$
+
+---
+
+### The Schur complement
+
+We take a digression and discuss the **Schur complement** \cite{murphy2012machine}.
+Consider a matrix decomposed into blocks
+
+$$
+\begin{aligned}
+\mathbf{M} = \begin{bmatrix}\mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D}\end{bmatrix}
+\end{aligned}
+$$
+
+We want to (block) diagonalize this so that inversion is easy.
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+\mathbf{I} & -\mathbf{BD}^{-1} \\ \mathbf{0} & \mathbf{I}
+\end{bmatrix}
+\begin{bmatrix}\mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D}\end{bmatrix}
+\begin{bmatrix}
+\mathbf{I} & \mathbf{0} \\ -\mathbf{D}^{-1}\mathbf{C} & \mathbf{I}
+\end{bmatrix} =
+\begin{bmatrix}
+\mathbf{A} - \mathbf{B}\mathbf{D}^{-1}\mathbf{C} & \mathbf{0} \\
+\mathbf{0} & \mathbf{D}
+\end{bmatrix}
+\end{aligned}
+$$
+
+The inverse is now easy to compute by using the property that the inverse of a
+block diagonal matrix is the inverse of each of the diagonal blocks. We also define
+$\mathbf{M} / \mathbf{D} = \mathbf{A} - \mathbf{B}\mathbf{D}^{-1}\mathbf{C}$.
+
+$$
+\begin{aligned}
+\begin{bmatrix}\mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D}\end{bmatrix}^{-1} =
+\begin{bmatrix}
+\mathbf{I} & \mathbf{0} \\ -\mathbf{D}^{-1}\mathbf{C} & \mathbf{I}
+\end{bmatrix}
+\begin{bmatrix}
+(\mathbf{M} / \mathbf{D})^{-1} & \mathbf{0} \\
+\mathbf{0} & \mathbf{D}^{-1}
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{I} & -\mathbf{BD}^{-1} \\ \mathbf{0} & \mathbf{I}
+\end{bmatrix}
+\end{aligned}
+$$
+
+$\mathbf{M}/\mathbf{D}$ is called the **Schur complement** of $\mathbf{M}$ with respect to $\mathbf{D}$.
+
+---
+
+Getting back to our original equation, we can now utilize this result.
+
+$$
+\begin{aligned}
+\begin{bmatrix} y - \mu_y \\ x - \mu_x \end{bmatrix}^{T}
+\begin{bmatrix}
+\mathbf{I} & \mathbf{0} \\ -\mathbf{\Sigma}_{xx}^{-1}\mathbf{\Sigma}_{xy} & \mathbf{I}
+\end{bmatrix}
+\begin{bmatrix}
+(\mathbf{\Sigma} / \mathbf{\Sigma}_{xx})^{-1} & \mathbf{0} \\
+\mathbf{0} & \mathbf{\Sigma}_{yy}^{-1}
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{I} & -\mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1} \\ \mathbf{0} & \mathbf{I}
+\end{bmatrix}
+\begin{bmatrix} y - \mu_y \\ x - \mu_x \end{bmatrix}
+\end{aligned}
+$$
+
+Let's start by resolving the first and last two terms. Remember
+that we are working with block vectors and matrices. Transpose operators must be
+preserved and block matrix algebra works like the usual matrix multiplications.
+
+$$
+\begin{aligned}
+\begin{bmatrix} y - \mu_y - \mathbf{\Sigma}_{xy}\mathbf{\Sigma}_{xx}^{-1} (x - \mu_x) \\ x - \mu_x \end{bmatrix}^{T}
+\begin{bmatrix}
+(\mathbf{\Sigma} / \mathbf{\Sigma}_{xx})^{-1} & \mathbf{0} \\
+\mathbf{0} & \mathbf{\Sigma}_{xx}^{-1}
+\end{bmatrix}
+\begin{bmatrix} y - \mu_y - \mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1} (x - \mu_x) \\ x - \mu_x \end{bmatrix}
+\end{aligned}
+$$
+
+We are already seeing a pattern. This can be finalize into two separate terms because
+the central matrix is already block diagonalized.
+
+$$
+\begin{aligned}
+\left( y - \mu_y - \mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1} (x - \mu_x) \right)^{T}(\mathbf{\Sigma} / \mathbf{\Sigma}_{xx})^{-1}\left( y - \mu_y - \mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1} (x - \mu_x) \right) \\
++ \left(x - \mu_x \right)^T\mathbf{\Sigma}_{xx}^{-1}\left(x - \mu_x \right)
+\end{aligned}
+$$
+
+We recover the familiar pattern of quadratic terms in the Gaussian exponent. The
+exponent can now be written as the product of two exponents such that
+
+$$
+\begin{aligned}
+p(y,x) = \mathcal{N}\left( \mu_y + \mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1} (x - \mu_x), \mathbf{\Sigma} / \mathbf{\Sigma}_{xx} \right) \mathcal{N}\left(x, \mathbf{\Sigma}_{xx}\right)
+\end{aligned}
+$$
+
+where $\mathbf{\Sigma} / \mathbf{\Sigma}_{xx} = \mathbf{\Sigma}_{yy} - \mathbf{\Sigma}_{yx}\mathbf{\Sigma}_{xx}^{-1}\mathbf{\Sigma}_{xy}$
+
+### Linear Dynamical Systems
+
+The classic results on a linear dynamical system defined by
+
+$$
+\begin{aligned}
+p(x) &= \mathcal{N}(x; \mu_x, \mathbf{\Sigma}_x) \\
+p(y|x) &= \mathcal{N}(y; \mathbf{A}x + \mathbf{b}, \mathbf{\Sigma}_y)
+\end{aligned}
+$$
+
+can be derived pretty easily now by reverse engineering the above equations. For
+instance, the full joint of this linear dynamical system $p(x,y)$ is given by
+
+$$
+p(x,y) = \mathcal{N}\left(\begin{bmatrix}
+\mu_x \\ \mathbf{A}\mu_x + \mathbf{b}
+\end{bmatrix}, \begin{bmatrix}
+\mathbf{\Sigma}_x & \mathbf{\Sigma}_x\mathbf{A}^T \\
+\mathbf{A}\mathbf{\Sigma}_x & \mathbf{\Sigma}_y + \mathbf{A}\mathbf{\Sigma}_x\mathbf{A}^T
+\end{bmatrix} \right)
+$$
+
+Computing the joint, marginals and other conditionals now should be a matter of
+plugging in the right values.
+
 ## References
 
 ```bib
@@ -208,6 +366,13 @@ Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form 
   author={Bishop, Christopher M},
   year={2006},
   publisher={springer}
+}
+
+@book{murphy2012machine,
+  title={Machine learning: a probabilistic perspective},
+  author={Murphy, Kevin P},
+  year={2012},
+  publisher={MIT press}
 }
 
 @book{boyd2004convex,
@@ -220,7 +385,7 @@ Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form 
 
 ## Footnotes
 
-[^1]: See Appendix D in \cite{bishop2006pattern}
-[^2]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$
+[^1]: See Appendix D in \cite{bishop2006pattern}.
+[^2]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$.
 [^3]: $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function.
-[^4]: For maximum entropy distributions under other constraints, see examples on [this](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples) Wikipedia entry.
+[^4]: For maximum entropy distributions under other constraints, see examples on [this Wikipedia entry](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples).

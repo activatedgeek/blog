@@ -18,7 +18,7 @@ const PostIndex = ({
   let yearIndex = edges.reduce((acc, x) => {
     const {
       node: {
-        frontmatter: { createdMs },
+        fields: { createdMs },
       },
     } = x
     const year = new Date(createdMs).getFullYear()
@@ -36,12 +36,12 @@ const PostIndex = ({
     yearIndex[year].sort(function(x, y) {
       const {
         node: {
-          frontmatter: { createdMs: c1 },
+          fields: { createdMs: c1 },
         },
       } = x
       const {
         node: {
-          frontmatter: { createdMs: c2 },
+          fields: { createdMs: c2 },
         },
       } = y
       return new Date(c1) < new Date(c2) ? 1 : -1
@@ -76,14 +76,8 @@ const PostIndex = ({
                 (
                   {
                     node: {
-                      frontmatter: {
-                        title,
-                        slug,
-                        createdMs,
-                        archive,
-                        draft,
-                        tags,
-                      },
+                      frontmatter: { title, slug, archive, draft, tags },
+                      fields: { createdMs },
                     },
                   },
                   j
@@ -138,9 +132,11 @@ export const pageQuery = graphql`
             title
             tags
             slug
-            createdMs
             archive
             draft
+          }
+          fields {
+            createdMs
           }
         }
       }

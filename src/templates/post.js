@@ -11,7 +11,7 @@ import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 
-const PostInfo = ({ timeToRead, tags, createdMs }) => (
+const PostInfo = ({ timeToRead, tags, createdMs, updatedMs }) => (
   <Flex
     sx={{
       color: "secondary",
@@ -22,6 +22,7 @@ const PostInfo = ({ timeToRead, tags, createdMs }) => (
   >
     {emoji.get(":writing_hand:")}
     {`   ${new Date(createdMs).toDateString()}`}
+    {updatedMs ? ` (Updated: ${new Date(updatedMs).toDateString()})` : null}
     <Styled.hr
       sx={{
         width: "1px",
@@ -48,11 +49,14 @@ const PostInfo = ({ timeToRead, tags, createdMs }) => (
 )
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, timeToRead, tableOfContents } = mdx
-  const { title, tags, createdMs, archive, draft } = frontmatter
+  const { body, frontmatter, fields, timeToRead, tableOfContents } = mdx
+  const { title, tags, archive, draft } = frontmatter
+  const { createdMs, updatedMs } = fields
 
   return (
-    <Layout frontmatter={{ ...frontmatter, title: `${title} - Blog` }}>
+    <Layout
+      frontmatter={{ ...frontmatter, createdMs, title: `${title} - Blog` }}
+    >
       <Flex>
         <Box
           sx={{
@@ -63,7 +67,12 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         >
           <Styled.h1>{title}</Styled.h1>
 
-          <PostInfo timeToRead={timeToRead} tags={tags} createdMs={createdMs} />
+          <PostInfo
+            timeToRead={timeToRead}
+            tags={tags}
+            createdMs={createdMs}
+            updatedMs={updatedMs}
+          />
 
           <Styled.hr />
 
@@ -118,9 +127,12 @@ export const pageQuery = graphql`
         description
         tags
         slug
-        createdMs
         archive
         draft
+      }
+      fields {
+        createdMs
+        updatedMs
       }
     }
   }

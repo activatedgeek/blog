@@ -51,3 +51,8 @@ $$
 
 - What sort of structured variational approximations can improve stochastic variational inference for GPs?
   - [Sparse Orthogonal Variational Inference for Gaussian Processes](https://arxiv.org/abs/1910.10596) - Jiaxin Shi, Michalis K. Titsias, Andriy Mnih
+
+### Implicit Distributions
+
+- [Variational Inference using Implicit Distributions](https://arxiv.org/abs/1702.08235) - Ferenc Huszár
+- [Adversarial Variational Bayes: Unifying Variational Autoencoders and Generative Adversarial Networks](https://arxiv.org/abs/1701.04722) - Lars Mescheder, Sebastian Nowozin, Andreas Geiger
