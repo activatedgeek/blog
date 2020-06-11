@@ -5,6 +5,7 @@ date: 2020-02-02T03:48:00-7:00
 tags:
   - ML
   - RL
+  - bayes
 ---
 
 The Cross Entropy method (CEM) is one of the most popular optimization algorithms,

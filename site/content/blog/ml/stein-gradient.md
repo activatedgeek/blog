@@ -5,7 +5,7 @@ date: 2019-03-17
 thumbnail: https://i.imgur.com/eXeOKWn.png
 tags:
   - ML
-  - probs
+  - bayes
   - ABC
 ---
 

@@ -59,10 +59,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       console.warn(`Unable to parse date in "${node.fileAbsolutePath}"`)
     }
 
-    if (draft === undefined) {
-      draft = false
-    }
-
     node.frontmatter.slug = slug
     node.frontmatter.category = category
     node.frontmatter.tags = tags

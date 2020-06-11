@@ -5,7 +5,7 @@ date: 2017-12-04T02:25:07-05:00
 thumbnail: https://i.imgur.com/4IMDpdk.png
 tags:
   - ML
-  - probs
+  - bayes
 ---
 
 In this post, we will build intuitions behind Bayes theory via

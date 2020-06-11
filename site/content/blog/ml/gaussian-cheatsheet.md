@@ -4,7 +4,7 @@ date: 2020-04-22T12:30:00-7:00
 updated: 2020-06-09T5:30:00-7:00
 tags:
   - ML
-  - probs
+  - bayes
 ---
 
 This is a collection of key derivations involving Gaussian distributions

@@ -16,4 +16,4 @@ with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/)
 
 I occassionally write on the [blog](/blog) and maintain a [knowledge base](//one.sanyamkapoor.com). I also like to think of myself as a budding oenophile. Check out my wines and notes on the [world map](//wine.sanyamkapoor.com).
 
-My CV is available at [files.sanyamkapoor.com/cv.pdf](//files.sanyamkapoor.com/cv.pdf) for more details.
+See my [CV](https://files.sanyamkapoor.com/cv.pdf) for more details.

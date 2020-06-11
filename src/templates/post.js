@@ -11,7 +11,7 @@ import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 
-const PostInfo = ({ timeToRead, tags, createdMs, updatedMs }) => (
+export const PostInfo = ({ tags, createdMs, updatedMs }) => (
   <Flex
     sx={{
       color: "secondary",
@@ -20,19 +20,8 @@ const PostInfo = ({ timeToRead, tags, createdMs, updatedMs }) => (
       alignItems: "center",
     }}
   >
-    {emoji.get(":writing_hand:")}
-    {`   ${new Date(createdMs).toDateString()}`}
+    {createdMs ? `${emoji.get(":writing_hand:")} ${new Date(createdMs).toDateString()}` : null}
     {updatedMs ? ` (Updated: ${new Date(updatedMs).toDateString()})` : null}
-    <Styled.hr
-      sx={{
-        width: "1px",
-        height: "2em",
-        display: "inline-block",
-        m: "0 0.5em",
-      }}
-    />
-    {emoji.get(":hourglass_flowing_sand:")}
-    {`   ${timeToRead}`} min
     {tags.length ? (
       <Styled.hr
         sx={{
@@ -49,7 +38,7 @@ const PostInfo = ({ timeToRead, tags, createdMs, updatedMs }) => (
 )
 
 const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, fields, timeToRead, tableOfContents } = mdx
+  const { body, frontmatter, fields, tableOfContents } = mdx
   const { title, tags, archive, draft } = frontmatter
   const { createdMs, updatedMs } = fields
 
@@ -68,7 +57,6 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
           <Styled.h1>{title}</Styled.h1>
 
           <PostInfo
-            timeToRead={timeToRead}
             tags={tags}
             createdMs={createdMs}
             updatedMs={updatedMs}
@@ -120,7 +108,6 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
-      timeToRead
       tableOfContents
       frontmatter {
         title
