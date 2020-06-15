@@ -1,24 +1,16 @@
-import React from "react" // eslint-disable-line no-unused-vars
-/** @jsx jsx */
-import { jsx, Styled, Box, Image as TImage } from "theme-ui" // eslint-disable-line no-unused-vars
-import { Vega } from "react-vega"
+import React from "react"
 
-const Image = ({ alt, ...props }) => {
-  return (
-    <span sx={{ display: "block", textAlign: "center" }}>
-      <TImage alt={alt} {...props} />
-      {alt ? (
-        <span
-          sx={{ display: "block", color: "secondary", textAlign: "center" }}
-        >
-          {alt}
-        </span>
-      ) : null}
-    </span>
-  )
-}
+
+const asLazy = (ipath, defaultProps) => ((props) => {
+  const [Component, setComponent] = React.useState(() => () => null)
+  React.useEffect(() => {
+    ipath.then(Comp => setComponent(() => Comp.default))
+  }, [])
+  return <Component {...defaultProps} {...props} />
+})
+
 
 export default {
-  Image,
-  Vega,
+  LazyImage: asLazy(import("./image.js")),
+  LazyVega: asLazy(import("../../node_modules/react-vega/lib/Vega"), { actions: false }),
 }

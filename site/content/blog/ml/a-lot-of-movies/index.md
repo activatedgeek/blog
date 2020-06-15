@@ -48,11 +48,11 @@ inspection of the statistics.
 
 #### Movies watched by release year
 
-<Vega spec={hist_year} actions={false} />
+<LazyVega spec={hist_year} />
 
 #### Genre heatmap by release year
 
-<Vega spec={heatmap_genre} actions={false} />
+<LazyVega spec={heatmap_genre} />
 
 ## Footnotes
 

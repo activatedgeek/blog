@@ -7,8 +7,9 @@ module.exports = _ref => {
     const { url, title, alt } = node
 
     node.type = "jsx"
-    node.value = `<Image src="${url}" alt="${alt || title}" title="${title ||
-      alt}" />`
+    node.value = `<LazyImage src="${url}" ${alt ? `alt="${alt}"` : ""} ${
+      title ? `title="${title}"` : ""
+    } />`
   })
 
   return markdownAST
