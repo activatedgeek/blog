@@ -6,11 +6,10 @@ tags:
 draft: true
 ---
 
-import { Vega } from 'react-vega'
 import hist_year from "./hist_year.alt.json"
 import heatmap_genre from "./heatmap_genre.alt.json"
 
-For better or for worse, I have watched [a lot of movies](/kb/movies). It
+For better or for worse, I have watched [over 780 movies](/kb/movies). It
 seems natural to put that data to good use, at least academically. This
 post is written, in expectation, to mainly serve three purposes -
 

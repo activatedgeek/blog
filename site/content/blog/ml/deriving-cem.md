@@ -20,7 +20,7 @@ A general problem setup goes like this - consider the finite horizon planning pr
 
 The first step is to exactly specify our control problem as an inference problem in a probabilistic graphical model. The model is presented in the figure below \cite{piche2018probabilistic}.
 
-<Image src="//i.imgur.com/nuZUnSi.png" alt="Control-as-Inference Model" />
+![Control-as-Inference Model](//i.imgur.com/nuZUnSi.png)
 
 As with a typical Markov Decision Process, we require state space $\mathcal{S}$, action space $\mathcal{A}$, forward dynamics $f(s^\prime|s,a)$, initial state distribution $p(s_0)$ and the reward function $\mathcal{R}$. A planner's objective is to find the best action plan to maximize the reward over the horizon. Note that we skip the discount factor as we exclusively consider finite horizons.
 

@@ -54,7 +54,7 @@ descent). $\eta_t$ represents the step size in that direction. Make it too small
 time to converge to the solution. Make it too large, SGD will most likely never find a solution. $\eta_t$
 is typically a constant value with respect to time steps in vanilla SGD.
 
-<Image src="//i.imgur.com/GKP5Ubb.png" alt="Contour Plots for SGD Path. Left: Low Variance; Right: High Variance" />
+![Contour Plots for SGD Path. Left: Low Variance; Right: High Variance](//i.imgur.com/GKP5Ubb.png)
 
 It has been observed that when the components of $f_i$ are far from the optimal solution, SGD wanders
 erratically around the optimum causing high variance in the descent path (see graph on the right above).

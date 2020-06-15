@@ -84,7 +84,7 @@ plt.legend([original_data_plot, noisy_data_ploy], ['Original Data', 'Noisy Data'
 plt.show()
 ```
 
-<Image src="//i.imgur.com/2QpF5AX.png" alt="Original Data v/s Noisy Data" />
+![Original Data v/s Noisy Data](//i.imgur.com/2QpF5AX.png)
 
 ## Training a Linear Model
 
@@ -123,7 +123,7 @@ plt.annotate('outliers', xy=(400, 1600), xytext=(270,1400), arrowprops=dict(line
 plt.show()
 ```
 
-<Image src="//i.imgur.com/Ntphfvr.png" alt="Original Data v/s Trained Data via Simple Linear Regression" />
+![Original Data v/s Trained Data via Simple Linear Regression](//i.imgur.com/Ntphfvr.png)
 
 Oops! That is an awfully skewed line and will not be an accurate predictor of the
 data we started with. As you might have guessed already, this problem aries because
@@ -162,7 +162,7 @@ plt.legend([original_data_plot, predicted_data_plot], ['Original Data', 'Predict
 plt.show()
 ```
 
-<Image src="//i.imgur.com/d0ITBFS.png" alt="Original Data v/s Trained Data via Simple Linear Regression Augmented with RANSAC" />
+![Original Data v/s Trained Data via Simple Linear Regression Augmented with RANSAC](//i.imgur.com/d0ITBFS.png)
 
 Wow! That looks way better than the previous result and is generally moving in a
 correct direction. In essence, RANSAC works because it tries out different model

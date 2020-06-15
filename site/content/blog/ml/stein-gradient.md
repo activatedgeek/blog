@@ -133,10 +133,10 @@ If we consider just one particle $n = 1$ and all kernels where $\nabla_xk(x,x) =
 
 The experiments can be run via the Jupyter notebook. Click the badge above. Here are some results to show you the power of Stein Gradient.
 
-<Image src="//i.imgur.com/eXeOKWn.png" alt="Stein particles on Gaussian Distribution" />
-<Image src="//i.imgur.com/NeTz52s.png" alt="Stein particles on Mixture of Two Gaussians" />
-<Image src="//i.imgur.com/z2oKUan.png" alt="Stein particles on Mixture of Six Gaussians" />
-<Image src="//i.imgur.com/ddTxK5p.png" alt="MAP behavior with one particle on a Mixture of Six Gaussians (the particle may fall into any of the modes depending on initial position)" />
+![Stein particles on Gaussian Distribution](//i.imgur.com/eXeOKWn.png)
+![Stein particles on Mixture of Two Gaussians](//i.imgur.com/NeTz52s.png)
+![Stein particles on Mixture of Six Gaussians](//i.imgur.com/z2oKUan.png)
+![MAP behavior with one particle on a Mixture of Six Gaussians (the particle may fall into any of the modes depending on initial position)](//i.imgur.com/ddTxK5p.png)
 
 All these results use the _rbf_ kernel with the median bandwidth heuristic for a total of 1000 gradient steps using Adam (the original work \cite{liu2016stein} uses _Adagrad_ but it should be noted we can use any adaptive gradient descent scheme). See the notebook for more details.
 

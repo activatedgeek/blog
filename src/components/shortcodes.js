@@ -1,19 +1,24 @@
 import React from "react" // eslint-disable-line no-unused-vars
-import { Flex, Box, Image as RImage } from "rebass"
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui" // eslint-disable-line no-unused-vars
+import { jsx, Styled, Box, Image as TImage } from "theme-ui" // eslint-disable-line no-unused-vars
+import { Vega } from "react-vega"
 
 const Image = ({ alt, ...props }) => {
   return (
-    <div sx={{ textAlign: "center" }}>
-      <RImage alt={alt} {...props} />
-      <p sx={{ color: "secondary", textAlign: "center" }}>{alt}</p>
-    </div>
+    <span sx={{ display: "block", textAlign: "center" }}>
+      <TImage alt={alt} {...props} />
+      {alt ? (
+        <span
+          sx={{ display: "block", color: "secondary", textAlign: "center" }}
+        >
+          {alt}
+        </span>
+      ) : null}
+    </span>
   )
 }
 
 export default {
-  Flex,
-  Box,
   Image,
+  Vega,
 }

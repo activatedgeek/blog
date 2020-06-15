@@ -2,7 +2,7 @@ const visit = require("unist-util-visit")
 const Cite = require("citation-js")
 
 module.exports = _ref => {
-  var markdownAST = _ref.markdownAST
+  let markdownAST = _ref.markdownAST
 
   let bibmap = {}
 

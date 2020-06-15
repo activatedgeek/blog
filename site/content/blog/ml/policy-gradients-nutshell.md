@@ -22,7 +22,7 @@ world champions of Go [^1], helped operate datacenters better [^2] and mastered 
 
 Reinforcement Learning is the most general description of the learning problem where the aim is to maximize a long-term objective. The system description consists of an _agent_ which interacts with the _environment_ via its actions at discrete timesteps and receives a _reward_. This transitions the agent into a new _state_. A canonical agent-environment feedback loop is depicted by the figure below \cite{sutton2018reinforcement}.
 
-<Image src="//i.imgur.com/K7Zjm95.png" alt="The Canonical Agent-Environment Feedback Loop" />
+![The Canonical Agent-Environment Feedback Loop](//i.imgur.com/K7Zjm95.png)
 
 The Reinforcement Learning flavor of the learning problem is strikingly similar to how humans effectively behave - experience the world, accumulate knowledge and use the learnings to handle novel situations. Like many people, this attractive nature (although a harder formulation) of the problem is what excites me and hope it does you as well.
 

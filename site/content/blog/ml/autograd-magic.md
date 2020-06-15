@@ -122,7 +122,7 @@ propagated along each path in the graph compound on top of each other to
 reach the final value. (Does that remind you of Neural Networks? Hold on
 to that thought). Consider the graph for our function $f$.
 
-<Image src="//i.imgur.com/TiD3zYJ.png" alt="Computational graph for f Forward Mode" />
+![Computational graph for f Forward Mode](//i.imgur.com/TiD3zYJ.png)
 
 Intuitively, think of each node as a special gate function that we have
 implemented. For instance, we have a gate which just passes the incoming

@@ -10,7 +10,12 @@ import shortcodes from "../components/shortcodes"
 import KBList from "../components/kb_list"
 import { PostInfo } from "./post"
 
-const KBPageTemplate = ({ data: { mdx, allMdx: { edges } } }) => {
+const KBPageTemplate = ({
+  data: {
+    mdx,
+    allMdx: { edges },
+  },
+}) => {
   const { body, frontmatter, fields, tableOfContents } = mdx
   const { title, tags } = frontmatter
   const { createdMs } = fields
@@ -73,9 +78,7 @@ export default KBPageTemplate
 export const pageQuery = graphql`
   query($id: String) {
     allMdx(
-      filter: {
-        frontmatter: { category: { in: "kb" }, list: { ne: false } }
-      }
+      filter: { frontmatter: { category: { in: "kb" }, list: { ne: false } } }
       sort: { order: ASC, fields: frontmatter___title }
     ) {
       edges {

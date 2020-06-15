@@ -13,7 +13,10 @@ module.exports = {
             options: { icon: false },
           },
           {
-            resolve: require.resolve(`./src/plugins/gatsby-remark-bibtex`),
+            resolve: require.resolve(`./plugins/gatsby-remark-image`),
+          },
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-bibtex`),
           },
         ],
         remarkPlugins: [
@@ -39,7 +42,7 @@ module.exports = {
         background_color: `#e2e8f0`,
         theme_color: `#2b6cb0`,
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

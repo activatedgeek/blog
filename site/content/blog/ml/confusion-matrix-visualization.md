@@ -16,7 +16,7 @@ analysed and compared.
 Here, I present an intuitive visualization given that most of the times
 the definition gets confusing.
 
-<Image src="//i.imgur.com/uipmEwt.png" alt="The Confusion Matrix" />
+![The Confusion Matrix](//i.imgur.com/uipmEwt.png)
 
 ## How to read the visualization?
 
@@ -58,13 +58,13 @@ classification problem.
 For instance, a popular trade-off is the _precision-recall trade-off_ which
 is realized in the graph below. Precision tends to be more wriggly by nature.
 
-<Image src="//i.imgur.com/bUqbFXU.png" />
+![](//i.imgur.com/bUqbFXU.png)
 
 More simply we might just choose a _Precision v/s Recall Curve_. This curve
 shows that we still have scope for improvement towards the right as it
 suddenly shows a dip in precision with increase in recall.
 
-<Image src="//i.imgur.com/7TIpZUb.png" />
+![](//i.imgur.com/7TIpZUb.png)
 
 Or another popular curve called the ROC-Curve which maps between the
 _True Positive Rate_ and _False Positive Rate_. It can also be seen
@@ -73,7 +73,7 @@ to the left-top corner, the better the classifier. Or alternatively,
 the closer the curve is to the center line, the more likely it is to be
 just as good as a random classifier.
 
-<Image src="//i.imgur.com/vtdW5sh.png" />
+![](//i.imgur.com/vtdW5sh.png)
 
 The scope of what is useful when is more sample dependent but these
 curves should be a good starting point in the analysis of the first

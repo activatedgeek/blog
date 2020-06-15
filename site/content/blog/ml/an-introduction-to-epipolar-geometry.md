@@ -27,7 +27,7 @@ origin of the Euclidean Coordinate System. Let $Z = f$ be the plane of projectio
 more simply the plane where the points in the 3D world space are projected. It is
 also called the _image plane_ or the _focal plane_.
 
-<Image src="//i.imgur.com/mIBhDt8.png" alt="A Simple Pinhole Camera Model" />
+![A Simple Pinhole Camera Model](//i.imgur.com/mIBhDt8.png)
 
 $C$ is the _camera centre_ and $p$ is the _principal point_. By virtue of
 similar triangles, we can establish a relation between a point in 3D space at $(X,Y,Z)$
@@ -112,7 +112,7 @@ $C$ and $C^\prime$ with both _image planes_ shown in the figure below. These
 cameras project a point $ X $ in the world coordinate system to $x$ and $x^\prime$
 in respective _image planes_. The plane formed by all these points is known as the **epipolar plane**.
 
-<Image src="//i.imgur.com/GbafZIY.png" alt="Point Correspondence and Epipolar Geometry" />
+![Point Correspondence and Epipolar Geometry](//i.imgur.com/GbafZIY.png)
 
 The line joining the two camera centers is known as the **baseline** and intersects both planes at
 $e$ and $e^\prime$. These points are known as the **epipoles**, visualized on the right.
@@ -294,23 +294,10 @@ Take a look at the following resulting images from the above code which show a
 general sense of direction of both the camera centers. The _epipoles_
 (the point of intersection of the _epilines_) lie outside the visible _image planes_.
 
-<Flex>
-<Flex flexDirection="column" p="0.2em">
-<Image src="//i.imgur.com/1xT4Jfk.jpg" alt="Left View Epilines (Chair)" />
-</Flex>
-<Flex flexDirection="column" p="0.2em">
-<Image src="//i.imgur.com/5nUmCLp.jpg" alt="Right View Epilines (Chair)" />
-</Flex>
-</Flex>
-
-<Flex>
-<Flex flexDirection="column" p="0.2em">
-<Image src="//i.imgur.com/mtCpCMJ.jpg" alt="Left View Epilines (Room)" />
-</Flex>
-<Flex flexDirection="column" p="0.2em">
-<Image src="//i.imgur.com/35kd5a7.jpg" alt="Right View Epilines (Room)" />
-</Flex>
-</Flex>
+|                                                          |                                                           |
+| -------------------------------------------------------- | --------------------------------------------------------- |
+| ![Left View Epilines (Chair)](//i.imgur.com/1xT4Jfk.jpg) | ![Right View Epilines (Chair)](//i.imgur.com/5nUmCLp.jpg) |
+| ![Left View Epilines (Room)](//i.imgur.com/mtCpCMJ.jpg)  | ![Right View Epilines (Room)](//i.imgur.com/35kd5a7.jpg)  |
 
 It goes without saying that the epilines constructed are only as good as the $x \leftrightarrow x^\prime$
 point correspondences. The robustness of the point correspondences is dependent on how well

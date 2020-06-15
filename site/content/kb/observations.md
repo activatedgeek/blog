@@ -9,7 +9,7 @@ This is a collection of recurring themes from human society on how we as a commu
 
 Ben Thompson discusses "information types" in a [cool post](https://stratechery.com/2020/defining-information/). Here's two-by-two that puts it in perspective
 
-<Image src="https://stratechery.com/wp-content/uploads/2020/03/Stratechery-Information-7.png" />
+![Information Types](https://stratechery.com/wp-content/uploads/2020/03/Stratechery-Information-7.png)
 
 The publishing model of absolute authority endowed by "books" needs to be rethought in this era of rapidly evolving information. It may be too late before a "book" with false information is retracted when the information contained was mission critical.
 
