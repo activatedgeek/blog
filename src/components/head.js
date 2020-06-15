@@ -1,39 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 
-const Head = ({ frontmatter }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            name
-            description
-            author
-            menu {
-              label
-              url
-            }
-            extMenu {
-              label
-              url
-            }
-            social {
-              scholar
-              github
-              yc
-              linkedin
-              stackoverflow
-              twitter
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const allMeta = { ...site.siteMetadata, ...frontmatter }
+const Head = ({ siteMetadata, frontmatter }) => {
+  const allMeta = { ...siteMetadata, ...frontmatter }
   const {
     name,
     title,
@@ -84,4 +54,37 @@ const Head = ({ frontmatter }) => {
   )
 }
 
-export default Head
+export default ({ frontmatter }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            name
+            description
+            author
+            menu {
+              label
+              url
+            }
+            extMenu {
+              label
+              url
+            }
+            social {
+              scholar
+              github
+              yc
+              linkedin
+              stackoverflow
+              twitter
+            }
+          }
+        }
+      }
+    `}
+    render={({ site: { siteMetadata } }) => (
+      <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
+    )}
+  />
+)

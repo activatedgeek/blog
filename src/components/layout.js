@@ -1,14 +1,31 @@
 import React from "react" // eslint-disable-line no-unused-vars
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import { Flex } from "rebass"
 
 import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
 
-export default ({ children, frontmatter }) => {
-  const { site } = useStaticQuery(
-    graphql`
+const Layout = ({ children, frontmatter, siteMetadata }) => {
+  const { name, menu, extMenu, social } = siteMetadata
+
+  return (
+    <>
+      <Head frontmatter={frontmatter} />
+      <Flex minHeight="100vh" flexDirection="column">
+        <Header name={name} menu={menu} extMenu={extMenu} />
+
+        {children}
+
+        <Footer name={name} social={social} />
+      </Flex>
+    </>
+  )
+}
+
+export default ({ children, frontmatter }) => (
+  <StaticQuery
+    query={graphql`
       query {
         site {
           siteMetadata {
@@ -34,21 +51,11 @@ export default ({ children, frontmatter }) => {
           }
         }
       }
-    `
-  )
-
-  const { name, menu, extMenu, social } = site.siteMetadata
-
-  return (
-    <>
-      <Head frontmatter={frontmatter} />
-      <Flex minHeight="100vh" flexDirection="column">
-        <Header name={name} menu={menu} extMenu={extMenu} />
-
+    `}
+    render={({ site: { siteMetadata } }) => (
+      <Layout frontmatter={frontmatter} siteMetadata={siteMetadata}>
         {children}
-
-        <Footer name={name} social={social} />
-      </Flex>
-    </>
-  )
-}
+      </Layout>
+    )}
+  />
+)

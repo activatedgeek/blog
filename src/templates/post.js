@@ -20,7 +20,9 @@ export const PostInfo = ({ tags, createdMs, updatedMs }) => (
       alignItems: "center",
     }}
   >
-    {createdMs ? `${emoji.get(":writing_hand:")} ${new Date(createdMs).toDateString()}` : null}
+    {createdMs
+      ? `${emoji.get(":writing_hand:")} ${new Date(createdMs).toDateString()}`
+      : null}
     {updatedMs ? ` (Updated: ${new Date(updatedMs).toDateString()})` : null}
     {tags.length ? (
       <Styled.hr
@@ -56,11 +58,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         >
           <Styled.h1>{title}</Styled.h1>
 
-          <PostInfo
-            tags={tags}
-            createdMs={createdMs}
-            updatedMs={updatedMs}
-          />
+          <PostInfo tags={tags} createdMs={createdMs} updatedMs={updatedMs} />
 
           <Styled.hr />
 

@@ -9,7 +9,7 @@ tags:
 
 The Gibbs distribution keeps coming up everywhere in machine learning. In this
 post, I'm going to focus on a general optimization problem and realize its
-various connections. Towards the end, I'm going to touch upon  _general Bayes_
+various connections. Towards the end, I'm going to touch upon _general Bayes_
 which goes beyond classic posterior inference.
 
 ## Optimization problem
@@ -20,7 +20,7 @@ $$
 \underset{q(\theta) \in \mathcal{P}}{\text{argmin}}{}~ \left\{ \mathcal{J}(q(\theta); \ell, \mathcal{D}, p(\theta)) = \mathbb{E}_{q(\theta)}\left[ \ell(\mathcal{D}; \theta) \right] + \mathcal{KL}\left[ q(\theta){}~ \big|\big|{}~ p(\theta) \right] \right\}
 $$
 
-We aim to find a distribution $q(\theta)$ that minimizes the function 
+We aim to find a distribution $q(\theta)$ that minimizes the function
 $\mathcal{J}$ over a family of distributions $\mathcal{P}$ regularized by the
 prior $p(\theta)$ via the $\mathcal{KL}$-divergence. $\ell$ is a _loss function_
 to our liking.
@@ -56,6 +56,7 @@ be equal to zero for a minimum.
 $$
 \ell(\mathcal{D}, \theta) + 1 + \log{q(\theta)} - \log{p(\theta)} + \lambda = 0
 $$
+
 $$
 q(\theta) = p(\theta) \exp{\left\{-1 - \lambda - \ell(\mathcal{D}; \theta)\right\}}
 $$
@@ -86,7 +87,7 @@ $$
 $$
 
 Note that we have sneaked in a normalizer $Z$ as it does not change the optimization problem.
-This ensure the denominator remains a probability distribution and allows us 
+This ensure the denominator remains a probability distribution and allows us
 to arrive at the following expression,
 
 $$
@@ -109,7 +110,7 @@ and we arrive at the optimal Gibbs distribution $q(\theta)$.
 Bayesian inference can be seen as an infinite dimensional generalization of the
 optimization problem described above \cite{csiszar1975divergence,donsker1976asymptotic,zellner1988optimal}.
 This result can also be extended to build all sorts of new schemes based on generalized
-divergences like the $\beta$-divergence \cite{futami2017variational}. Generalized 
+divergences like the $\beta$-divergence \cite{futami2017variational}. Generalized
 variational inference \cite{knoblauch2019generalized} encompasses a large family
 of inference schemes, for instance power likelihoods when we use a tempered divergence
 $\frac{1}{\beta}$ $\mathcal{KL}$.

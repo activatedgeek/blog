@@ -1,4 +1,4 @@
-import { StaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 /** @jsx jsx */
 import { jsx, Styled, Flex, Box } from "theme-ui"
 import emoji from "node-emoji"
@@ -53,20 +53,15 @@ const TagList = ({
   )
 }
 
-const TagIndex = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        allMdx(filter: { frontmatter: { category: { eq: "blog" } } }) {
-          group(field: frontmatter___tags) {
-            tag: fieldValue
-            totalCount
-          }
-        }
-      }
-    `}
-    render={data => <TagList data={data} />}
-  />
-)
+export default ({ data }) => <TagList data={data} />
 
-export default TagIndex
+export const pageQuery = graphql`
+  {
+    allMdx(filter: { frontmatter: { category: { eq: "blog" } } }) {
+      group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
+    }
+  }
+`

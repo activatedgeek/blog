@@ -2,6 +2,8 @@
 title: Adages, Quotes
 ---
 
+## Uncategorized
+
 - _The best time to plant a tree was twenty years ago. The second best time is now._
 - _No battle plan survives contact with the enemy._
 - _Science progresses one funeral at a time._ - Max Planck

@@ -6,6 +6,8 @@ title: Books
 
 In recent times, I've warmed up to a variety of themes from history, philosophy, economics and technology. Here's a list books that have shaped my opinion, ordered by date of first publication. A modern version of the publication is linked to Goodreads when available.
 
+## Uncategorized
+
 - Advice for a Young Investigator by Santiago Ramón y Cajal \(1897; [2004](https://www.goodreads.com/book/show/437689.Advice_for_a_Young_Investigator)\)
 - [The Structure of Scientific Revolutions](https://www.uky.edu/~eushe2/Pajares/Kuhn.html) by Thomas S. Kuhn \(1962; [1996](https://www.goodreads.com/book/show/61539.The_Structure_of_Scientific_Revolutions)\)
 - High Output Management by Andrew S. Grove \(1983; [2015](https://www.goodreads.com/book/show/27140043-high-output-management)\)

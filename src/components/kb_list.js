@@ -1,29 +1,8 @@
-import { graphql, StaticQuery, Link } from "gatsby"
+import { Link } from "gatsby"
 /** @jsx jsx */
 import { jsx, Styled, Flex } from "theme-ui"
 
-const KBList = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        allMdx(
-          filter: {
-            frontmatter: { category: { in: "kb" }, list: { ne: false } }
-          }
-          sort: { order: ASC, fields: frontmatter___title }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                slug
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={({ allMdx: { edges } }) => (
+const KBList = ({ edges }) => (
       <Flex sx={{ pt: "1.5em", flexDirection: "column" }}>
         <Styled.h4 sx={{ p: "0 0.5em", m: 0 }}>Knowledge Base</Styled.h4>
         {edges.map(({ node: { frontmatter: { title, slug } } }, i) => (
@@ -43,8 +22,6 @@ const KBList = () => (
           </Styled.a>
         ))}
       </Flex>
-    )}
-  />
 )
 
 export default KBList

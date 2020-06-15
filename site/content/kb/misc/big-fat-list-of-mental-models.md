@@ -8,6 +8,8 @@ This is a fat list and the purpose is not to memorize these. Instead, consciousl
 
 > We don’t become better at things we do – we become better at things we _pay attention to while we’re doing them_
 
+## Uncategorized List
+
 - **Inverse Thinking** - _be wrong less_
   - unforced errors
   - antifragile - [_gain from disorder_](https://en.wikipedia.org/wiki/Antifragile)
