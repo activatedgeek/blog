@@ -1,5 +1,6 @@
 ---
 title: Cooking Recipes
+label: Miscellaneous
 ---
 
 I hate cooking and am always seeking the easiest possible recipes that are wholesome and consume _less than_ 30 minutes.

@@ -1,5 +1,6 @@
 ---
 title: Common Yardsticks
+label: Miscellaneous
 ---
 
 All values are approximate.

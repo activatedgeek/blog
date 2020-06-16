@@ -40,7 +40,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       .split(" ")[0]
 
     if (defaultcategory.length) {
-      category.push(defaultcategory)
+      category = [defaultcategory, ...category]
     }
 
     let slug = `/${parsedFilePath.dir}`

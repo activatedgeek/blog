@@ -1,5 +1,6 @@
 ---
 title: Adages, Quotes
+label: Miscellaneous
 ---
 
 ## Uncategorized

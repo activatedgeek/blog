@@ -1,6 +1,7 @@
 ---
 title: Shape of My Heart
 description: by Sting
+label: Miscellaneous
 ---
 
 ## Lyrics Excerpt
