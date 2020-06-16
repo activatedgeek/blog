@@ -46,12 +46,13 @@ All values are approximate.
 - World's first encyclopedia - 1751-1777, edited by Denis Diderot and Jean le Rond D'Alembert
 - First modern record of a "birthday" - 1772
 - First electric elevator - 1889, Otis
+- Color Presses - 1890s
 - First mass car ownership - 1908, Ford Model-T
 
 ## Percentages
 
-- Percentage of total physical money in the world - &lt;10% (7% as of 2020)
+- Percentage of total physical money in the world - < 10% (7% as of 2020)
 
 ## Temperature
 
-- Melting point of (virgin) Cocunut oil - 24 **°**C
+- Melting point of (virgin) Cocunut oil - 24 °C

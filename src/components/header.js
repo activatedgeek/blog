@@ -1,11 +1,9 @@
 import { Link } from "gatsby"
-import { Flex } from "rebass"
-
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled, Flex } from "theme-ui"
 
 const Header = ({ name, menu, extMenu }) => (
-  <Flex alignItems="center" p="0 2%" bg="muted">
+  <Flex sx={{ alignItems: "center", p: "0 2%", bg: "muted" }}>
     <h1 sx={{ fontWeight: "medium" }}>
       <Styled.a
         as={Link}
@@ -20,7 +18,7 @@ const Header = ({ name, menu, extMenu }) => (
         {name}
       </Styled.a>
     </h1>
-    <Flex justifyContent="flex-end" flexGrow={1} flexWrap="wrap">
+    <Flex sx={{ justifyContent: "flex-end", flexGrow: 1, flexWrap: "wrap" }}>
       {extMenu.map(({ label, url }, i) => (
         <h4
           key={i}

@@ -1,7 +1,6 @@
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import emoji from "node-emoji"
 /** @jsx jsx */
 import { jsx, Styled, Flex, Box } from "theme-ui"
 
@@ -20,9 +19,11 @@ export const PostInfo = ({ tags, createdMs, updatedMs }) => (
       alignItems: "center",
     }}
   >
-    {createdMs
-      ? `${emoji.get(":writing_hand:")} ${new Date(createdMs).toDateString()}`
-      : null}
+    {createdMs ? (
+      <span role="img" aria-label="Date written">
+        ✍️ {new Date(createdMs).toDateString()}
+      </span>
+    ) : null}
     {updatedMs ? ` (Updated: ${new Date(updatedMs).toDateString()})` : null}
     {tags.length ? (
       <Styled.hr
@@ -34,7 +35,11 @@ export const PostInfo = ({ tags, createdMs, updatedMs }) => (
         }}
       />
     ) : null}
-    {tags.length ? emoji.get(":label:") : null}
+    {tags.length ? (
+      <span role="img" aria-label="tags">
+        🏷️
+      </span>
+    ) : null}
     <Tags tags={tags} />
   </Flex>
 )

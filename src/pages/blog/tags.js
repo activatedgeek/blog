@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby"
 /** @jsx jsx */
 import { jsx, Styled, Flex, Box } from "theme-ui"
-import emoji from "node-emoji"
 
 import Layout from "../../components/layout"
 
@@ -24,7 +23,12 @@ const TagList = ({
           maxWidth: ["100%", "100%", "50rem", "50rem"],
         }}
       >
-        <Styled.h2 sx={{ mb: "0.5em" }}>Tags {emoji.get(`:label:`)}</Styled.h2>
+        <Styled.h2 sx={{ mb: "0.5em" }}>
+          Tags{" "}
+          <span role="img" aria-label="tags">
+            🏷️
+          </span>
+        </Styled.h2>
         <Flex sx={{ flexFlow: "row wrap" }}>
           {group.map(({ tag, totalCount }, i) => (
             <Styled.a

@@ -13,16 +13,17 @@ module.exports = {
             options: { icon: false },
           },
           {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
+          {
             resolve: require.resolve(`./plugins/gatsby-remark-image`),
           },
           {
             resolve: require.resolve(`./plugins/gatsby-remark-bibtex`),
           },
-        ],
-        remarkPlugins: [
-          require(`remark-math`),
-          require(`remark-html-katex`),
-          require(`remark-emoji`),
         ],
       },
     },
