@@ -146,7 +146,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     result.data.allMdx.group.forEach(({ tag }) => {
       createPage({
         path: `/blog/tags/${encodeURIComponent(tag)}`,
-        component: path.resolve(`${templatesDir}/post_index.js`),
+        component: path.resolve(`${templatesDir}/list.js`),
         context: { tag },
       })
     })

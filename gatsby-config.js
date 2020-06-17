@@ -135,5 +135,64 @@ module.exports = {
         localStorageKey: "skipgc",
       },
     },
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "index",
+        engine: "flexsearch",
+        engineOptions: "speed",
+        query: `
+        {
+          allMdx(
+            filter: { frontmatter: { draft: { ne: true } } }
+          ) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  title
+                  description
+                  tags
+                  slug
+                  archive
+                  draft
+                }
+                fields {
+                  createdMs
+                }
+                rawBody
+              }
+            }
+          }
+        }
+        `,
+        ref: "id",
+        index: ["title", "description", "rawBody"],
+        store: ["title", "tags", "slug", "archive", "draft", "createdMs"],
+        normalizer: ({
+          data: {
+            allMdx: { edges },
+          },
+        }) =>
+          edges.map(
+            ({
+              node: {
+                id,
+                frontmatter: { title, description, tags, slug, archive, draft },
+                fields: { createdMs },
+              },
+            }) => ({
+              id,
+              title,
+              description,
+              tags,
+              slug,
+              archive,
+              draft,
+              createdMs,
+            })
+          ),
+      },
+    },
   ],
 }
