@@ -2,6 +2,7 @@ module.exports = {
   name: `Sanyam Kapoor`,
   description: `Website and knowledge base.`,
   author: `Sanyam Kapoor`,
+  siteUrl: `https://www.sanyamkapoor.com`,
   menu: [
     {
       label: "Knowledge Base",

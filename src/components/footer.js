@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserGraduate } from "@fortawesome/free-solid-svg-icons"
+import { faUserGraduate, faRss } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faYCombinator,
@@ -73,6 +73,9 @@ const Footer = ({ name, social }) => {
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
+        </Styled.a>
+        <Styled.a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faRss} sx={iconStyle} />
         </Styled.a>
       </Flex>
       <Styled.p

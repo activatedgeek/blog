@@ -9,6 +9,8 @@ This is a list of websites I occassionally read.
 
 [Stratechery](https://stratechery.com) - On the business, strategy, and impact of technology by Ben Thompson
 
+[Axios](https://www.axios.com) - Axios gets you smarter, faster with news & information that matters.
+
 [Commonplace](https://commoncog.com/blog/) - building career moats in a constantly changing world
 
 [LessWrong](https://www.lesswrong.com) - More precisely, LessWrong 2.0, is a collection of long-form insights into a variety of concepts including rationality, ethics, technology, effective altruism etc.

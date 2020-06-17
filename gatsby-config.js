@@ -48,6 +48,82 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              name
+              description
+              author
+              siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            output: `/rss.xml`,
+            title: `Sanyam Kapoor's RSS Feed`,
+            query: `
+            {
+              allMdx(
+                filter: { frontmatter: { draft: { ne: true } } }
+                sort: { order: DESC, fields: [frontmatter___date] }
+              ) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      title
+                      description
+                      category
+                      slug
+                    }
+                    fields {
+                      createdMs
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            serialize: ({
+              query: {
+                site: {
+                  siteMetadata: { siteUrl, author },
+                },
+                allMdx,
+              },
+            }) => {
+              return allMdx.edges.map(
+                ({
+                  node: {
+                    id,
+                    frontmatter: { title, description, category, slug },
+                    fields: { createdMs },
+                  },
+                }) =>
+                  Object.assign(
+                    {},
+                    {
+                      title,
+                      description,
+                      url: `${siteUrl}${slug}`,
+                      guid: id,
+                      categories: category,
+                      author,
+                      date: new Date(createdMs),
+                    }
+                  )
+              )
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
         code: "sanyamkapoor",

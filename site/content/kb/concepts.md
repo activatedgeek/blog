@@ -15,7 +15,7 @@ I've usually come across interesting concepts, phenomenons and what not. This pl
 - [Ignoratio elenchi](https://en.wikipedia.org/wiki/Irrelevant_conclusion)
   - Fun article: [http://nibblestew.blogspot.com/2020/04/your-statement-is-100-correct-but.html?m=1](http://nibblestew.blogspot.com/2020/04/your-statement-is-100-correct-but.html?m=1)
 - Pavlovian conditioning
-- Cantor's Diagonalization \(some infinities are bigger than other infinities\)
+- Cantor's Diagonalization (some infinities are bigger than other infinities)
 - [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law)
 - [Ovarian Lottery](https://www.businessinsider.com/warren-buffett-on-the-ovarian-lottery-2013-12)
 - Lindy effect

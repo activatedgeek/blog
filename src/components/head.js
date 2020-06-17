@@ -6,6 +6,7 @@ const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
   const {
     name,
+    siteUrl,
     title,
     social,
     author,
@@ -22,9 +23,9 @@ const Head = ({ siteMetadata, frontmatter }) => {
         {name}
       </title>
 
-      <link rel="canonical" href={`https://www.sanyamkapoor.com${slug}`} />
+      <link rel="canonical" href={`${siteUrl}${slug}`} />
 
-      <meta name="description" content={description} />
+      {description ? <meta name="description" content={description} /> : null}
 
       <meta property="og:type" content="article" />
       <meta property="article:tag" content={(tags || []).join(", ")} />
@@ -37,19 +38,20 @@ const Head = ({ siteMetadata, frontmatter }) => {
 
       <meta property="article:author" content={author} />
       <meta property="og:site_name" content={title} />
-      <meta property="og:url" content={`https://www.sanyamkapoor.com${slug}`} />
+      <meta property="og:url" content={`${siteUrl}${slug}`} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      {description ? (
+        <meta property="og:description" content={description} />
+      ) : null}
 
       <meta name="twitter:site" content={author} />
       <meta name="twitter:creator" content={social.twitter} />
       <meta name="twitter:card" content="summary" />
-      <meta
-        name="twitter:url"
-        content={`https://www.sanyamkapoor.com${slug}`}
-      />
+      <meta name="twitter:url" content={`${siteUrl}${slug}`} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      {description ? (
+        <meta name="twitter:description" content={description} />
+      ) : null}
     </Helmet>
   )
 }
@@ -63,6 +65,7 @@ export default ({ frontmatter }) => (
             name
             description
             author
+            siteUrl
             menu {
               label
               url

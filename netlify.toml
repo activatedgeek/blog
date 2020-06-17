@@ -1,3 +1,7 @@
 [build]
   publish = "public/"
-  command = "yarn build && cp netlify.redirects public/_redirects"
+  command = "yarn build"
+
+[build.environment]
+  NODE_VERSION = "14"
+  YARN_VERSION = "1.22.4"
