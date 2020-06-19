@@ -181,6 +181,9 @@ const Footer = ({ name, social }) => {
         <Styled.a as={Link} to="/blog/drafts" sx={{ m: "0 1em" }}>
           Drafts
         </Styled.a>
+        <Styled.a as={Link} to="/stack" sx={{ m: "0 1em" }}>
+          Stack
+        </Styled.a>
       </Flex>
       <Flex w="100vw" m="0.5em 0">
         <Styled.a

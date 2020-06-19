@@ -1,9 +1,13 @@
 ---
 title: Hey! 👋
+description: Welcome to sanyamkapoor.com!
+date: 2020-04-18T19:29:00-07:00
+updated: 2020-06-19T12:55:00-07:00
 ---
 
 I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working
-with a [host](https://twitter.com/tkaraletsos?lang=en) of [amazing](https://people.orie.cornell.edu/mup3/) people, spending most of my time on approximate inference with [Thang Bui](http://mlg.eng.cam.ac.uk/thang/). I also spent some time developing representation learning for Go-Explore with [Jeff Clune](http://jeffclune.com/).
+with a [host](http://karaletsos.com) of [amazing](https://people.orie.cornell.edu/mup3/)
+people, spending most of my time on approximate inference with [Thang Bui](https://thangbui.github.io). I also spent some time developing representation learning for Go-Explore with [Jeff Clune](http://jeffclune.com/).
 
 I completed my Masters in Computer Science at [NYU Courant](https://cs.nyu.edu)
 with [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the
@@ -14,6 +18,11 @@ Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
 with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/)
 (who by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85))!
 
-I occassionally write on the [blog](/blog) and maintain a [knowledge base](/kb). I also like to think of myself as a budding oenophile. Check out my wines and notes on the [world map](//wine.sanyamkapoor.com).
+For a longer background, see my [CV](https://files.sanyamkapoor.com/cv.pdf).
 
-See my [CV](https://files.sanyamkapoor.com/cv.pdf) for more details.
+I occassionally write on the [blog](/blog) and maintain a [knowledge base](/kb).
+See the [stack](/stack) behind this website to know the tools I use to build
+this.
+
+I also like to think of myself as a budding oenophile. Check out my wines and
+notes on the [world map](//wine.sanyamkapoor.com).

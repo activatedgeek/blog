@@ -25,7 +25,11 @@ export const PostInfo = ({ tags, createdMs, updatedMs }) => (
         ✍️ {new Date(createdMs).toDateString()}
       </span>
     ) : null}
-    {updatedMs ? ` (Updated: ${new Date(updatedMs).toDateString()})` : null}
+    {updatedMs ? (
+      <span sx={{ ml: "0.1em" }}>
+        (Updated: {new Date(updatedMs).toDateString()})
+      </span>
+    ) : null}
     {tags.length ? (
       <Styled.hr
         sx={{

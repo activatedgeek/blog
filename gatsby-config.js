@@ -9,6 +9,15 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
+            resolve: require.resolve(`./plugins/gatsby-remark-links`),
+          },
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-image`),
+          },
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-bibtex`),
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: { icon: false },
           },
@@ -17,12 +26,6 @@ module.exports = {
             options: {
               strict: `ignore`,
             },
-          },
-          {
-            resolve: require.resolve(`./plugins/gatsby-remark-image`),
-          },
-          {
-            resolve: require.resolve(`./plugins/gatsby-remark-bibtex`),
           },
         ],
       },
