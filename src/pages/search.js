@@ -1,8 +1,9 @@
+/** @jsx jsx */
+
 import React, { useState } from "react" // eslint-disable-line no-unused-vars
 import { graphql, Link } from "gatsby"
 import { navigate } from "@reach/router"
 import { useFlexSearch } from "react-use-flexsearch"
-/** @jsx jsx */
 import { jsx, Styled, Box, Flex, Input } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
@@ -62,12 +63,17 @@ const SearchPage = ({
             🔎
           </span>
         </Styled.h1>
+        <p sx={{ color: "secondary", fontSize: 0, display: "inline" }}>
+          This is experimental and probably not satisfactory.
+        </p>
         {q ? (
           <>
-            <Styled.a as={Link} to="/search">
-              <FontAwesomeIcon icon={faArrowLeft} title="Search another" /> Back
-              to search.
-            </Styled.a>
+            <Styled.p>
+              <Styled.a as={Link} to="/search">
+                <FontAwesomeIcon icon={faArrowLeft} title="Search another" />{" "}
+                Back to search.
+              </Styled.a>
+            </Styled.p>
             <Styled.p sx={{ color: "secondary" }}>
               showing results for "<b>{q}</b>"
             </Styled.p>

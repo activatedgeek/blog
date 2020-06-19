@@ -1,5 +1,6 @@
-import { graphql, Link } from "gatsby"
 /** @jsx jsx */
+
+import { graphql, Link } from "gatsby"
 import { jsx, Styled, Flex, Box } from "theme-ui"
 
 import Layout from "../../components/layout"

@@ -1,5 +1,6 @@
-import { graphql, Link } from "gatsby"
 /** @jsx jsx */
+
+import { graphql, Link } from "gatsby"
 import { jsx, Styled, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"

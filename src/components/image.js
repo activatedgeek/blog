@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Styled, Image as TImage } from "theme-ui" // eslint-disable-line no-unused-vars
+
+import { jsx, Image as TImage } from "theme-ui"
 
 const Image = ({ alt, ...props }) => {
   return (

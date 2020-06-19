@@ -1,7 +1,8 @@
+/** @jsx jsx */
+
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-/** @jsx jsx */
 import { jsx, Styled, Flex, Box } from "theme-ui"
 
 import Layout from "../components/layout"

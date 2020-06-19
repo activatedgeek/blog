@@ -1,11 +1,16 @@
 ---
 title: Products
+description: Products that fascinate me and I'd probably want to use or own (if not already).
 ---
 
-Products that I like and will probably buy sometime in the future - either after the prices drop or after fixing some missing pieces that I need.
+Products that fascinate me.
 
 ## Hardware
 
-- [Moon Pod](https://www.moonpod.co)
-- [reMarkable](https://remarkable.com/)
-- [Vejo](https://www.vejo.com)
+- [Moon Pod](https://www.moonpod.co) - FEEL THE FUTURE OF RELAXATION
+- [reMarkable](https://remarkable.com/) - The next-generation paper tablet
+- [Vejo](https://www.vejo.com) - Organic fruit smoothies, immune-boosters & more in 30 seconds
+
+## Software
+
+- [Hash](https://hash.ai) - Build multi-agent simulations in minutes, a free online platform for assembling models of the world.

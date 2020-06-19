@@ -20,7 +20,7 @@ An unstructured collection of Machine Learning talks, articles and courses.
 
 - [One World Approximate Bayesian Computation \(ABC\) Seminar](https://warwick.ac.uk/fac/sci/statistics/news/upcoming-seminars/abcworldseminar/)
 - [RL Theory Seminars](https://sites.google.com/view/rltheoryseminars/home)
-- [Laplace's Demon: A Seminar Series about Bayesian Machine Learning at Scale](https://sites.google.com/view/laplacesdemon/home)
+- [Laplace's Demon: A Seminar Series about Bayesian Machine Learning at Scale](https://ailab.criteo.com/laplaces-demon-bayesian-machine-learning-at-scale/)
 
 ## Talks
 

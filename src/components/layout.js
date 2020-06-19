@@ -1,3 +1,5 @@
+/** @jsx jsx */
+
 import React, { useState } from "react" // eslint-disable-line no-unused-vars
 import Helmet from "react-helmet"
 import { graphql, Link, StaticQuery } from "gatsby"
@@ -11,7 +13,6 @@ import {
   faStackOverflow,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
-/** @jsx jsx */
 import { jsx, Styled, Flex, Input } from "theme-ui"
 
 const Head = ({ siteMetadata, frontmatter }) => {

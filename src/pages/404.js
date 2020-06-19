@@ -1,5 +1,6 @@
-import { Link } from "gatsby"
 /** @jsx jsx */
+
+import { Link } from "gatsby"
 import { jsx, Styled, Box } from "theme-ui"
 
 import Layout from "../components/layout"

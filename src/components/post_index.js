@@ -1,6 +1,7 @@
+/** @jsx jsx */
+
 import React from "react"
 import { Link } from "gatsby"
-/** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"

@@ -20,6 +20,9 @@ I think podcasts are great for passive content consumption. Here's a few I'm lis
 
 ## History
 
+[99% Invisible](https://99percentinvisible.org) - about all the thought that goes into the things we don’t think about led
+by **Roman Mars**.
+
 [Pessimists Archive](https://pessimists.co) - **Jason Feifer** takes us through stories of pessimists in history. It is funny to look at things that are the norm now being demonized, downplayed or outright rejected in yesteryears.
 
 [Nice Try!](https://www.curbed.com/2019/5/7/18514684/nice-try-podcast-utopian-avery-trufelman) - Narrations by **Avery Trufelman** telling the stories of the world's most fascinating attempts at utopian communities. Highly recommended for insights into behavorial patterns of communities with grandiose visions. As the title suggests, they unfortunately failed.

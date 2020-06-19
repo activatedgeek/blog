@@ -1,5 +1,6 @@
-import { Link } from "gatsby"
 /** @jsx jsx */
+
+import { Link } from "gatsby"
 import { jsx, Styled, Flex } from "theme-ui"
 
 const KBList = ({ edges }) => {

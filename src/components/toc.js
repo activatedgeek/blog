@@ -1,5 +1,6 @@
-import { Link } from "gatsby"
 /** @jsx jsx */
+
+import { Link } from "gatsby"
 import { jsx, Styled, Box } from "theme-ui"
 
 const NestedList = ({ toc, depth }) => (
