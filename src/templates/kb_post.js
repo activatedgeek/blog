@@ -17,12 +17,11 @@ const KBPageTemplate = ({
     allMdx: { edges },
   },
 }) => {
-  const { body, frontmatter, fields, tableOfContents } = mdx
-  const { title, tags } = frontmatter
-  const { createdMs } = fields
+  const { body, frontmatter, tableOfContents } = mdx
+  const { title } = frontmatter
 
   return (
-    <Layout frontmatter={{ ...frontmatter, createdMs, title: `${title} - KB` }}>
+    <Layout frontmatter={{ ...frontmatter, title: `${title} - KB` }}>
       <Flex>
         <Box
           sx={{
@@ -42,7 +41,7 @@ const KBPageTemplate = ({
         >
           <Styled.h1>{title}</Styled.h1>
 
-          <PostInfo tags={tags} createdMs={createdMs} />
+          <PostInfo {...frontmatter} />
 
           <Styled.hr />
 
@@ -79,7 +78,9 @@ export default KBPageTemplate
 export const pageQuery = graphql`
   query($id: String) {
     allMdx(
-      filter: { frontmatter: { category: { in: "kb" }, list: { ne: false } } }
+      filter: {
+        frontmatter: { category: { in: "kb" }, menuList: { ne: false } }
+      }
       sort: { order: ASC, fields: frontmatter___title }
     ) {
       edges {
@@ -98,12 +99,11 @@ export const pageQuery = graphql`
       tableOfContents
       frontmatter {
         title
+        date
+        updated
         description
         tags
         slug
-      }
-      fields {
-        createdMs
       }
     }
   }

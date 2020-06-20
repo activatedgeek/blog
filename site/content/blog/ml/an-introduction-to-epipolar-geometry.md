@@ -1,8 +1,7 @@
 ---
 title: An Introduction to Epipolar Geometry
 description: Understanding the intuition behind 3D to 2D mappings, the Fundamental Matrix with a demo
-date: 2017-08-08T16:01:07+05:30
-thumbnail: https://i.imgur.com/35kd5a7.jpg
+date: Aug 8 2017, 16:01 +0530
 tags:
   - CV
   - geometry

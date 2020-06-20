@@ -1,7 +1,7 @@
 ---
 title: "Before the Flood: A review"
 description: A take on the much anticipated DiCaprio Documentary on Climate Change
-date: 2016-11-03T12:06:04+05:30
+date: Nov 3 2016, 12:06 +0530
 tags:
   - opinion
   - film

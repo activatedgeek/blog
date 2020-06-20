@@ -1,6 +1,8 @@
 ---
 title: I watch a lot of movies
 description: A visual inspection into my IMDb ratings using Altair
+date: Jun 15 2020, 12:39 -0700
+updated: Jun 19 2020, 23:54 -0700
 tags:
   - viz
 draft: true

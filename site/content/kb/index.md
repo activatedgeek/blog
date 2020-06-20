@@ -1,6 +1,6 @@
 ---
 title: Home 🧠
-list: false
+menuList: false
 ---
 
 ## What?

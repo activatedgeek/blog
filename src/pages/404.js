@@ -6,7 +6,9 @@ import { jsx, Styled, Box } from "theme-ui"
 import Layout from "../components/layout"
 
 const LostPage = () => (
-  <Layout frontmatter={{ title: "404" }}>
+  <Layout
+    frontmatter={{ title: "404", description: "This page could not be found." }}
+  >
     <Box
       sx={{
         p: "1em",

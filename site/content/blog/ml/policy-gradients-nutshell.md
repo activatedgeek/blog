@@ -1,8 +1,7 @@
 ---
 title: Policy Gradients in a Nutshell
 description: Everything you need to know to get started with Policy Gradient Algorithms for Reinforcement Learning
-date: 2018-05-21
-thumbnail: https://i.imgur.com/K7Zjm95.png
+date: May 21 2018, 12:00 -0400
 tags:
   - ML
   - RL

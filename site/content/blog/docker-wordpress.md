@@ -1,7 +1,7 @@
 ---
 title: Getting started with Compose and WordPress
 description: Using Wordpress and Docker, the five-minute install & deploy, seriously!
-date: 2016-04-09T22:50:29+05:30
+date: Apr 9 2016, 22:50 +0530
 tags:
   - docker
   - oss

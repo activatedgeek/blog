@@ -1,8 +1,7 @@
 ---
 title: The magic of Automatic Differentiation
 description: Learn how to 'mathemagically' compute derivates in Machine Learning
-date: 2017-10-08T08:46:07-04:00
-thumbnail: https://i.imgur.com/TiD3zYJ.jpg
+date: Oct 8 2017, 8:46 -0400
 tags:
   - ML
   - optimization

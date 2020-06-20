@@ -15,6 +15,7 @@ const TagList = ({
       frontmatter={{
         title: "Tags",
         description: "All tags used in blog articles.",
+        slug: "/tags",
       }}
     >
       <Box

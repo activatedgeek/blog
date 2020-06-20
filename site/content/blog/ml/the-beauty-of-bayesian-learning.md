@@ -1,8 +1,7 @@
 ---
 title: The beauty of Bayesian Learning
 description: Understanding and visualizing Bayesian concepts
-date: 2017-12-04T02:25:07-05:00
-thumbnail: https://i.imgur.com/4IMDpdk.png
+date: Dec 4 2017, 2:25 -0500
 tags:
   - ML
   - bayes

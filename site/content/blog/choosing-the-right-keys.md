@@ -1,7 +1,7 @@
 ---
 title: Choosing the right keys
 description: Learnings to choose better database keys
-date: 2017-04-03T01:57:44+05:30
+date: Apr 3 2017, 1:57 +0530
 tags:
   - systems
   - databases

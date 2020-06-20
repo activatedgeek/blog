@@ -48,7 +48,13 @@ const SearchPage = ({
   const results = useFlexSearch(q, index, JSON.parse(store))
 
   return (
-    <Layout frontmatter={{ title: `Search ${q ? `"${q}"` : ""}` }}>
+    <Layout
+      frontmatter={{
+        title: `Search ${q ? `"${q}"` : ""}`,
+        description: `Search results for ${q ? `"${q}"` : ""}`,
+        slug: `/search?q=${encodeURIComponent(q)}`,
+      }}
+    >
       <Box
         sx={{
           p: "1em",

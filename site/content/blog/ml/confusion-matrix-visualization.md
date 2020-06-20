@@ -1,8 +1,7 @@
 ---
 title: Visualizing the Confusion Matrix
 description: Summary of terminologies in Confusion Matrix
-date: 2017-10-15T13:33:07-04:00
-thumbnail: https://i.imgur.com/uipmEwt.png
+date: Oct 15 2017, 13:33 -0400
 tags:
   - ML
   - viz

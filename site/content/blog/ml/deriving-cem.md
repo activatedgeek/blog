@@ -1,7 +1,7 @@
 ---
 title: Deriving the Cross Entropy Method
 description: A look at the popular Cross Entropy Method as an evidence lower bound.
-date: 2020-02-02T03:48:00-7:00
+date: Feb 2 2020, 3:48 -0700
 tags:
   - ML
   - RL

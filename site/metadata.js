@@ -1,8 +1,12 @@
 module.exports = {
+  dateFormat: `MMM D YYYY, H:m ZZ`,
   name: `Sanyam Kapoor`,
   description: `Website and knowledge base.`,
   author: `Sanyam Kapoor`,
-  siteUrl: `https://www.sanyamkapoor.com`,
+  siteUrl:
+    process.env.NODE_ENV === "production"
+      ? `https://www.sanyamkapoor.com`
+      : `http://localhost:8000`,
   menu: [
     {
       label: "Knowledge Base",

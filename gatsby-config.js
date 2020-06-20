@@ -1,5 +1,8 @@
+const moment = require(`moment`)
+const siteMetadata = require(`./site/metadata`)
+
 module.exports = {
-  siteMetadata: require(`./site/metadata`),
+  siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
@@ -67,13 +70,13 @@ module.exports = {
       `,
         feeds: [
           {
-            output: `/rss.xml`,
-            title: `Sanyam Kapoor's RSS Feed`,
+            output: `/rss/blog.xml`,
+            title: `Sanyam Kapoor's Blog RSS Feed`,
             query: `
             {
               allMdx(
-                filter: { frontmatter: { draft: { ne: true } } }
-                sort: { order: DESC, fields: [frontmatter___date] }
+                filter: { frontmatter: { category: { in: "blog" }, draft: { ne: true } } }
+                sort: { fields: frontmatter___date, order: DESC }
               ) {
                 edges {
                   node {
@@ -81,11 +84,9 @@ module.exports = {
                     frontmatter {
                       title
                       description
+                      date
                       category
                       slug
-                    }
-                    fields {
-                      createdMs
                     }
                   }
                 }
@@ -104,8 +105,7 @@ module.exports = {
                 ({
                   node: {
                     id,
-                    frontmatter: { title, description, category, slug },
-                    fields: { createdMs },
+                    frontmatter: { title, description, date, category, slug },
                   },
                 }) =>
                   Object.assign(
@@ -117,7 +117,7 @@ module.exports = {
                       guid: id,
                       categories: category,
                       author,
-                      date: new Date(createdMs),
+                      date: moment(new Date(date)).format(),
                     }
                   )
               )
@@ -155,13 +155,11 @@ module.exports = {
                 frontmatter {
                   title
                   description
+                  date
                   tags
                   slug
                   archive
                   draft
-                }
-                fields {
-                  createdMs
                 }
                 rawBody
               }
@@ -171,7 +169,7 @@ module.exports = {
         `,
         ref: "id",
         index: ["title", "description", "rawBody"],
-        store: ["title", "tags", "slug", "archive", "draft", "createdMs"],
+        store: ["title", "tags", "slug", "archive", "draft", "date"],
         normalizer: ({
           data: {
             allMdx: { edges },
@@ -181,18 +179,25 @@ module.exports = {
             ({
               node: {
                 id,
-                frontmatter: { title, description, tags, slug, archive, draft },
-                fields: { createdMs },
+                frontmatter: {
+                  title,
+                  description,
+                  date,
+                  tags,
+                  slug,
+                  archive,
+                  draft,
+                },
               },
             }) => ({
               id,
               title,
               description,
+              date,
               tags,
               slug,
               archive,
               draft,
-              createdMs,
             })
           ),
       },

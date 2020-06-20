@@ -1,7 +1,7 @@
 ---
 title: The Stack
 description: Tools powering this website.
-date: 2020-06-19T12:52:00-07:00
+updated: Jun 19 2020, 12:52 -0700
 ---
 
 This page details the tools powering this website.

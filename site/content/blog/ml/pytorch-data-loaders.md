@@ -1,7 +1,7 @@
 ---
 title: PyTorch Data Loaders are abstraction done right!
 description: A quick introduction to writing your first data loader in PyTorch
-date: 2017-11-25T01:59:07-04:00
+date: Nov 25 2017, 1:59 -0400
 tags:
   - ML
   - oss

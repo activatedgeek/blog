@@ -21,6 +21,7 @@ export default ({
       frontmatter={{
         title: `Posts tagged "${tag}"`,
         description: `Index of all blog posts tagged "${tag}".`,
+        slug: `/blog/tags/${tag}`,
       }}
     >
       <Box
@@ -40,16 +41,15 @@ export default ({
           items={edges.map(
             ({
               node: {
-                frontmatter: { title, tags, slug, archive, draft },
-                fields: { createdMs },
+                frontmatter: { title, date, tags, slug, archive, draft },
               },
             }) => ({
               title,
+              date,
               tags,
               slug,
               archive,
               draft,
-              createdMs,
             })
           )}
         />
@@ -62,19 +62,17 @@ export const pageQuery = graphql`
   query($tag: [String!]) {
     allMdx(
       filter: { frontmatter: { category: { in: "blog" }, tags: { in: $tag } } }
-      sort: { fields: fields___createdMs, order: DESC }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
           frontmatter {
             title
+            date
             tags
             slug
             archive
             draft
-          }
-          fields {
-            createdMs
           }
         }
       }

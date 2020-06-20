@@ -25,7 +25,7 @@ const Head = ({ siteMetadata, frontmatter }) => {
     author,
     slug,
     description,
-    createdMs,
+    date,
     tags,
   } = allMeta
 
@@ -42,12 +42,7 @@ const Head = ({ siteMetadata, frontmatter }) => {
 
       <meta property="og:type" content="article" />
       <meta property="article:tag" content={(tags || []).join(", ")} />
-      {createdMs ? (
-        <meta
-          property="article:published_time"
-          content={new Date(createdMs).toISOString()}
-        />
-      ) : null}
+      {date ? <meta property="article:published_time" content={date} /> : null}
 
       <meta property="article:author" content={author} />
       <meta property="og:site_name" content={title} />
@@ -224,7 +219,7 @@ const Footer = ({ name, social }) => {
         >
           <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
         </Styled.a>
-        <Styled.a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+        <Styled.a href="/rss/blog.xml" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faRss} sx={iconStyle} />
         </Styled.a>
       </Flex>
@@ -250,6 +245,7 @@ export default ({ children, frontmatter }) => (
         site {
           siteMetadata {
             name
+            siteUrl
             description
             author
             menu {

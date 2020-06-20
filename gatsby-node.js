@@ -1,21 +1,31 @@
 const path = require("path")
-const fs = require("fs")
+const moment = require("moment")
+const assert = require("assert")
+
+const siteMetadata = require(`./site/metadata`)
 
 const templatesDir = "./src/templates"
 const categoryTemplateMap = {
   blog: "post",
   kb: "kb_post",
+  info: "post",
 }
 
-exports.sourceNodes = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type MdxFrontmatter {
-      slug: String
+      title: String!
+      description: String
+      slug: String!
+      date: Date @dateformat
+      updated: Date @dateformat
+      category: [String]
+      tags: [String]
       draft: Boolean
       archive: Boolean
-      category: [String!]
-      tags: [String!]
+      menuList: Boolean
+      label: String
     }
   `
   createTypes(typeDefs)
@@ -25,10 +35,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let { date, updated, draft, category, tags } = node.frontmatter
+    let { date, updated, slug, category } = node.frontmatter
     category = category || []
-    tags = tags || []
-    draft = draft || false
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
@@ -43,41 +51,37 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       category = [defaultcategory, ...category]
     }
 
-    let slug = `/${parsedFilePath.dir}`
-    if (parsedFilePath.name !== "index") {
-      slug = `${slug}/${parsedFilePath.name}`
+    if (slug === undefined) {
+      slug = `/${parsedFilePath.dir}`
+      if (parsedFilePath.name !== "index") {
+        slug = `${slug}/${parsedFilePath.name}`
+      }
     }
 
-    if (date === undefined) {
-      const { birthtimeMs } = fs.statSync(node.fileAbsolutePath)
-      date = birthtimeMs
-    }
-    const createdMs = new Date(date).getTime()
-    const updatedMs = updated !== undefined ? new Date(updated).getTime() : null
-
-    if (isNaN(createdMs)) {
-      console.warn(`Unable to parse date in "${node.fileAbsolutePath}"`)
+    if (date !== undefined) {
+      date = new Date(date)
+      assert(date instanceof Date && !isNaN(date.getTime()))
+      date = moment(date).format()
     }
 
-    node.frontmatter.slug = slug
-    node.frontmatter.category = category
-    node.frontmatter.tags = tags
-    node.frontmatter.draft = draft
+    if (updated !== undefined) {
+      updated = new Date(updated)
+      assert(updated instanceof Date && !isNaN(updated.getTime()))
+      updated = moment(updated).format()
+    }
+
+    node.frontmatter = {
+      ...node.frontmatter,
+      date,
+      updated,
+      slug,
+      category,
+    }
 
     createNodeField({
       node,
       name: "template",
       value: defaultcategory || "blog",
-    })
-    createNodeField({
-      node,
-      name: "createdMs",
-      value: createdMs,
-    })
-    createNodeField({
-      node,
-      name: "updatedMs",
-      value: updatedMs,
     })
   }
 }

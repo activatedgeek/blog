@@ -1,7 +1,7 @@
 ---
 title: A Primer on Projective Geometry
 description: Understanding the basics behind 2D projections
-date: 2017-07-19T03:08:04+05:30
+date: Jul 19 2017, 3:08 +0530
 tags:
   - CV
   - geometry

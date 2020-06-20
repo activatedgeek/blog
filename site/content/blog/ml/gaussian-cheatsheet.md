@@ -1,7 +1,7 @@
 ---
 title: The Gaussian Cheatsheet
-date: 2020-04-22T12:30:00-7:00
-updated: 2020-06-09T5:30:00-7:00
+date: Apr 22 2020, 12:30 -0700
+updated: Jun 9 2020, 17:30 -0700
 tags:
   - ML
   - bayes

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 
+import React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -11,53 +12,69 @@ import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 
-export const PostInfo = ({ tags, createdMs, updatedMs }) => (
-  <Flex
+const InfoSep = () => (
+  <Styled.hr
     sx={{
-      color: "secondary",
-      fontSize: 0,
-      flexWrap: "wrap",
-      alignItems: "center",
+      width: "1px",
+      height: "2em",
+      display: "inline-block",
+      m: "0 0.5em",
     }}
-  >
-    {createdMs ? (
-      <span role="img" aria-label="Date written">
-        ✍️ {new Date(createdMs).toDateString()}
-      </span>
-    ) : null}
-    {updatedMs ? (
-      <span sx={{ ml: "0.1em" }}>
-        (Updated: {new Date(updatedMs).toDateString()})
-      </span>
-    ) : null}
-    {tags.length ? (
-      <Styled.hr
-        sx={{
-          width: "1px",
-          height: "2em",
-          display: "inline-block",
-          m: "0 0.5em",
-        }}
-      />
-    ) : null}
-    {tags.length ? (
-      <span role="img" aria-label="tags">
-        🏷️
-      </span>
-    ) : null}
-    <Tags tags={tags} />
-  </Flex>
+  />
 )
 
-const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { body, frontmatter, fields, tableOfContents } = mdx
-  const { title, tags, archive, draft } = frontmatter
-  const { createdMs, updatedMs } = fields
+export const PostInfo = ({ date, updated, tags }) => {
+  let infoList = []
+
+  if (date !== null) {
+    infoList.push(
+      <React.Fragment>
+        <span role="img" aria-label="Date" sx={{ mr: "0.3em" }}>
+          ✍️
+        </span>
+        {date}
+      </React.Fragment>
+    )
+  }
+  if (updated !== null) {
+    infoList.push(
+      <React.Fragment>
+        <span role="img" aria-label="Last Updated" sx={{ mr: "0.3em" }}>
+          🕓
+        </span>{" "}
+        Last updated: {updated}
+      </React.Fragment>
+    )
+  }
+  if (Array.isArray(tags) && tags.length) {
+    infoList.push(<Tags tags={tags} />)
+  }
 
   return (
-    <Layout
-      frontmatter={{ ...frontmatter, createdMs, title: `${title} - Blog` }}
+    <Flex
+      sx={{
+        color: "secondary",
+        fontSize: 0,
+        flexWrap: "wrap",
+        alignItems: "center",
+      }}
     >
+      {infoList.map((c, i) => (
+        <React.Fragment key={i}>
+          {c}
+          {i < infoList.length - 1 ? <InfoSep /> : null}
+        </React.Fragment>
+      ))}
+    </Flex>
+  )
+}
+
+const BlogPageTemplate = ({ data: { mdx } }) => {
+  const { body, frontmatter, tableOfContents } = mdx
+  const { title, draft, archive } = frontmatter
+
+  return (
+    <Layout frontmatter={{ ...frontmatter, title: `${title} - Blog` }}>
       <Flex>
         <Box
           sx={{
@@ -68,7 +85,7 @@ const BlogPageTemplate = ({ data: { mdx } }) => {
         >
           <Styled.h1>{title}</Styled.h1>
 
-          <PostInfo tags={tags} createdMs={createdMs} updatedMs={updatedMs} />
+          <PostInfo {...frontmatter} />
 
           <Styled.hr />
 
@@ -120,14 +137,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        tags
         slug
-        archive
+        date(formatString: "MMM D YYYY")
+        updated(fromNow: true)
+        tags
         draft
-      }
-      fields {
-        createdMs
-        updatedMs
+        archive
       }
     }
   }

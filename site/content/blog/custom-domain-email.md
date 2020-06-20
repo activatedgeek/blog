@@ -1,7 +1,7 @@
 ---
 title: Setup custom email addresses
 description: Using Mailgun's MX server with your custom domain for emails
-date: 2016-10-17T13:20:40+05:30
+date: Oct 17 2016, 13:20 +0530
 tags:
   - devops
   - email

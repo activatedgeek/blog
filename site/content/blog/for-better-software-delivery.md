@@ -1,7 +1,7 @@
 ---
 title: For better software delivery
 description: Building the swiss-knife for DevOps
-date: 2016-01-03T01:00:09+05:30
+date: Jan 3 2016, 1:00 +0530
 tags:
   - devops
   - oss

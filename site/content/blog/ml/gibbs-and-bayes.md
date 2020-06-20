@@ -1,7 +1,7 @@
 ---
 title: The Gibbs distribution and general Bayes
 description: A visual inspection into my IMDb ratings using Altair
-date: 2020-06-11T16:00:00-7:00
+date: Jun 11 2020, 16:00 -0700
 tags:
   - ML
   - bayes

@@ -1,8 +1,7 @@
 ---
 title: The Stein Gradient
 description: Visualizing the simple yet powerful Stein gradient for sampling (with notebook)
-date: 2019-03-17
-thumbnail: https://i.imgur.com/eXeOKWn.png
+date: Mar 17 2019, 12:00 -0400
 tags:
   - ML
   - bayes

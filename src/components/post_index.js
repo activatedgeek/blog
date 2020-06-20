@@ -10,8 +10,8 @@ import Tags from "../components/tags"
 
 const PostIndex = ({ items }) => {
   let yearIndex = items.reduce((acc, x) => {
-    const { createdMs } = x
-    const year = new Date(createdMs).getFullYear()
+    const { date } = x
+    const year = new Date(date).getFullYear()
     if (!acc.hasOwnProperty(year)) {
       acc[year] = []
     }
@@ -29,7 +29,7 @@ const PostIndex = ({ items }) => {
           <Styled.h3>{year}</Styled.h3>
           <Styled.ul>
             {yearIndex[year].map(
-              ({ title, slug, archive, draft, tags, createdMs }, j) => (
+              ({ title, slug, archive, draft, tags, date }, j) => (
                 <Styled.li key={j}>
                   <Styled.a as={Link} to={slug}>
                     {title}
@@ -48,11 +48,14 @@ const PostIndex = ({ items }) => {
                       sx={{ ml: "0.5em", fontSize: 0 }}
                     />
                   ) : null}
-                  <span sx={{ color: "secondary", m: "0 .5em", fontSize: 0 }}>
-                    {new Date(createdMs).toLocaleString("default", {
+                  <span
+                    sx={{ color: "secondary", m: "0 .5em", fontSize: 0 }}
+                    title={date}
+                  >
+                    {new Date(date).toLocaleString("default", {
                       month: "long",
                     })}{" "}
-                    {new Date(createdMs).getDate()}
+                    {new Date(date).getDate()}
                   </span>
                   <br />
                   <Tags tags={tags} />
