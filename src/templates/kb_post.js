@@ -79,7 +79,7 @@ export const pageQuery = graphql`
   query($id: String) {
     allMdx(
       filter: {
-        frontmatter: { category: { in: "kb" }, menuList: { ne: false } }
+        frontmatter: { category: { in: "kb" } }
       }
       sort: { order: ASC, fields: frontmatter___title }
     ) {

@@ -2,6 +2,8 @@
 title: The Stack
 description: Tools powering this website.
 updated: Jun 19 2020, 12:52 -0700
+_options:
+  template: blog
 ---
 
 This page details the tools powering this website.
@@ -30,5 +32,5 @@ The complete source is available on [Github](https://github.com/activatedgeek/we
 
 ## Footnotes
 
-[^1]: Still finalizing on a minimimal color palette that I can stick to and get rid of external theme dependencies.
+[^1]: Still finalizing on a minimal color palette before I can get rid of external theme dependencies.
 [^2]: Albeit experimental and not satisfactory for now.

@@ -2,13 +2,10 @@ const path = require("path")
 const moment = require("moment")
 const assert = require("assert")
 
-const siteMetadata = require(`./site/metadata`)
-
 const templatesDir = "./src/templates"
 const categoryTemplateMap = {
   blog: "post",
   kb: "kb_post",
-  info: "post",
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -24,7 +21,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String]
       draft: Boolean
       archive: Boolean
-      menuList: Boolean
       label: String
     }
   `
@@ -35,8 +31,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    let { date, updated, slug, category } = node.frontmatter
+    let { date, updated, slug, category, _options } = node.frontmatter
     category = category || []
+    _options = _options || {}
 
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
@@ -54,7 +51,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (slug === undefined) {
       slug = `/${parsedFilePath.dir}`
       if (parsedFilePath.name !== "index") {
-        slug = `${slug}/${parsedFilePath.name}`
+        slug = `${slug}${parsedFilePath.dir ? "/" : ""}${parsedFilePath.name}`
       }
     }
 
@@ -81,8 +78,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: "template",
-      value: defaultcategory || "blog",
+      value: _options.template || defaultcategory,
     })
+
+    delete node.frontmatter._options
   }
 }
 

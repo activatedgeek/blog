@@ -1,6 +1,7 @@
 ---
 title: Home 🧠
-menuList: false
+_options:
+  template: kb
 ---
 
 ## What?

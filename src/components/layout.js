@@ -219,7 +219,11 @@ const Footer = ({ name, social }) => {
         >
           <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
         </Styled.a>
-        <Styled.a href="/rss/blog.xml" target="_blank" rel="noopener noreferrer">
+        <Styled.a
+          href="/rss/blog.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faRss} sx={iconStyle} />
         </Styled.a>
       </Flex>
