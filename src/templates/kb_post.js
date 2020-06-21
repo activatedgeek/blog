@@ -1,15 +1,48 @@
 /** @jsx jsx */
 
-import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { graphql, Link } from "gatsby"
 import { jsx, Styled, Flex, Box } from "theme-ui"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBrain } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
-import TableOfContents from "../components/toc"
-import shortcodes from "../components/shortcodes"
-import KBList from "../components/kb_list"
-import { PostInfo } from "./post"
+import { Post } from "./post"
+
+const KBList = ({ edges }) => {
+  let labelMap = {}
+  edges.forEach(({ node }) => {
+    const {
+      frontmatter: { label },
+    } = node
+    const useLabel = label || "0ungrouped"
+    labelMap[useLabel] = labelMap[useLabel] || []
+    labelMap[useLabel].push(node)
+  })
+
+  return (
+    <Flex sx={{ p: 3, flexDirection: "column" }}>
+      <Styled.h4>
+        <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} /> Knowledge Base
+      </Styled.h4>
+      <Styled.hr />
+      {Object.keys(labelMap)
+        .sort()
+        .map((l, k) => (
+          <Flex key={k} sx={{ flexDirection: "column" }}>
+            {l === "0ungrouped" ? null : (
+              <Styled.p sx={{ color: "gray.6" }}>{l}</Styled.p>
+            )}
+            {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
+              <Styled.a key={i} as={Link} to={slug} sx={{ my: 1 }}>
+                {title}
+              </Styled.a>
+            ))}
+            <Styled.hr />
+          </Flex>
+        ))}
+    </Flex>
+  )
+}
 
 const KBPageTemplate = ({
   data: {
@@ -17,58 +50,29 @@ const KBPageTemplate = ({
     allMdx: { edges },
   },
 }) => {
-  const { body, frontmatter, tableOfContents } = mdx
+  const { frontmatter } = mdx
   const { title } = frontmatter
 
   return (
     <Layout frontmatter={{ ...frontmatter, title: `${title} - KB` }}>
-      <Flex>
-        <Box
-          sx={{
-            bg: "gray.1",
-            overflow: "auto",
-            display: ["none", "none", "block", "block"],
-          }}
-        >
-          <KBList edges={edges} />
-        </Box>
-        <Box
-          sx={{
-            p: "1em",
-            m: "0 auto",
-            maxWidth: ["100%", "100%", "50rem", "50rem"],
-          }}
-        >
-          <Styled.h1>{title}</Styled.h1>
-
-          <PostInfo {...frontmatter} />
-
-          <Styled.hr />
-
-          {tableOfContents.items ? (
-            <Box sx={{ display: ["block", "block", "none", "none"] }}>
-              <TableOfContents toc={tableOfContents} />
-              <Styled.hr />
-            </Box>
-          ) : null}
-
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{body}</MDXRenderer>
-          </MDXProvider>
-        </Box>
-
-        {tableOfContents.items ? (
-          <Box
-            sx={{
-              pt: "2em",
-              display: ["none", "none", "block", "block"],
-              mr: "1em",
-            }}
-          >
-            <TableOfContents toc={tableOfContents} />
-          </Box>
-        ) : null}
-      </Flex>
+      <Box
+        sx={{
+          p: 4,
+          mx: "auto",
+          maxWidth: ["100%", "100%", "3xl", "4xl"],
+          flex: 1,
+        }}
+      >
+        <Post mdx={mdx} toc />
+      </Box>
+      <Box
+        sx={{
+          bg: "gray.2",
+          display: ["none", "none", "block", "block"],
+        }}
+      >
+        <KBList edges={edges} />
+      </Box>
     </Layout>
   )
 }
@@ -78,9 +82,7 @@ export default KBPageTemplate
 export const pageQuery = graphql`
   query($id: String) {
     allMdx(
-      filter: {
-        frontmatter: { category: { in: "kb" } }
-      }
+      filter: { frontmatter: { category: { in: "kb" } } }
       sort: { order: ASC, fields: frontmatter___title }
     ) {
       edges {

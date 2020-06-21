@@ -8,13 +8,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 const Info = ({ children }) => (
-  <Styled.p sx={{ bg: "blue.2", p: "1em" }}>
+  <Styled.p sx={{ bg: "blue.3", p: 3, borderRadius: "lg" }}>
     <FontAwesomeIcon icon={faInfoCircle} /> {children}
   </Styled.p>
 )
 
 const Warn = ({ children }) => (
-  <Styled.p sx={{ bg: "yellow.2", p: "1em" }}>
+  <Styled.p sx={{ bg: "yellow.3", p: 3, borderRadius: "lg" }}>
     <FontAwesomeIcon icon={faExclamationTriangle} /> {children}
   </Styled.p>
 )

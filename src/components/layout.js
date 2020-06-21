@@ -13,7 +13,7 @@ import {
   faStackOverflow,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
-import { jsx, Styled, Flex, Input } from "theme-ui"
+import { jsx, Styled, Flex, Input, Box } from "theme-ui"
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -64,65 +64,33 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-const Header = ({ name, menu, extMenu }) => (
-  <Flex sx={{ alignItems: "center", p: "0 2%", bg: "muted" }}>
-    <h1 sx={{ fontWeight: "medium" }}>
+const Header = () => (
+  <Box>
+    <Box
+      sx={{
+        display: "inline-block",
+        position: "sticky",
+        top: 3,
+        bg: "gray.9",
+        px: 3,
+      }}
+    >
       <Styled.a
         as={Link}
         to="/"
         sx={{
-          textDecoration: "none",
           ":visited,:hover,:active": {
-            textDecoration: "inherit",
+            textDecoration: "none",
           },
         }}
       >
-        {name}
+        <Styled.h1 sx={{ color: "gray.1" }}>SK</Styled.h1>
       </Styled.a>
-    </h1>
-    <Flex sx={{ justifyContent: "flex-end", flexGrow: 1, flexWrap: "wrap" }}>
-      {extMenu.map(({ label, url }, i) => (
-        <h4
-          key={i}
-          sx={{ fontWeight: "normal", m: "0 0.5em" }}
-          style={{ fontSize: "1em" }}
-        >
-          <Styled.a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              textDecoration: "none",
-              ":visited,:hover,:active": {
-                textDecoration: "inherit",
-              },
-            }}
-          >
-            {label}
-          </Styled.a>
-        </h4>
-      ))}
-      {menu.map(({ label, url }, i) => (
-        <h4 key={i} sx={{ fontWeight: "normal", m: "0 0.5em" }}>
-          <Styled.a
-            as={Link}
-            to={url}
-            sx={{
-              textDecoration: "none",
-              ":visited,:hover,:active": {
-                textDecoration: "inherit",
-              },
-            }}
-          >
-            {label}
-          </Styled.a>
-        </h4>
-      ))}
-    </Flex>
-  </Flex>
+    </Box>
+  </Box>
 )
 
-const SearchBar = () => {
+export const SearchBar = ({ inputSx }) => {
   const [query, setQuery] = useState("")
 
   return (
@@ -133,18 +101,20 @@ const SearchBar = () => {
         setQuery(query)
         navigate(`/search?q=${encodeURIComponent(query)}`)
       }}
-      sx={{ alignItems: "center", fontSize: 0 }}
+      sx={{ alignItems: "center", color: "gray.1" }}
     >
       <Input
         name="query"
         value={query}
         placeholder="Search"
         sx={{
-          p: "0.3em",
+          width: "64",
+          p: 1,
           textAlign: "center",
-          borderColor: "secondary",
-          borderRadius: "0.1em",
-          "&:focus": { outline: "none" },
+          borderColor: "gray.5",
+          borderRadius: "lg",
+          mx: "auto",
+          ...inputSx,
         }}
         onChange={e => setQuery(e.target.value)}
       />
@@ -152,89 +122,97 @@ const SearchBar = () => {
   )
 }
 
-const Footer = ({ name, social }) => {
-  const iconStyle = { margin: "0 0.2em", fontSize: 3 }
+const MenuLink = ({ url, external, children }) => (
+  <Styled.p sx={{ display: "inline-block", my: 1 }}>
+    <Styled.a
+      as={external ? null : Link}
+      target={external ? "_blank" : null}
+      rel={external ? "noopener noreferrer" : null}
+      to={external ? null : url}
+      href={external ? url : null}
+      sx={{
+        color: "gray.5",
+        textDecoration: "none",
+        ":visited,:hover,:active": {
+          textDecoration: "inherit",
+        },
+        ":hover": {
+          color: "gray.1",
+        },
+      }}
+    >
+      {children}
+    </Styled.a>
+  </Styled.p>
+)
+
+const Footer = ({ name, social, menu, extMenu }) => {
+  const iconStyle = {
+    mx: 1,
+    fontSize: 2,
+    color: "gray.5",
+    ":hover": { color: "gray.1" },
+  }
   return (
     <Flex
       sx={{
+        width: "screenWidth",
         alignItems: "center",
         flexDirection: "column",
         justifyContent: "center",
-        p: "2em 2%",
-        bg: "muted",
+        py: 3,
+        bg: "gray.9",
         mt: "auto",
       }}
     >
-      <SearchBar />
-      <Flex w="100vw" m="0.5em 0">
-        <Styled.a as={Link} to="/blog" sx={{ m: "0 1em" }}>
-          Blog
-        </Styled.a>
-        <Styled.a as={Link} to="/blog/tags" sx={{ m: "0 1em" }}>
-          Tags
-        </Styled.a>
-        <Styled.a as={Link} to="/blog/drafts" sx={{ m: "0 1em" }}>
-          Drafts
-        </Styled.a>
-        <Styled.a as={Link} to="/stack" sx={{ m: "0 1em" }}>
-          Stack
-        </Styled.a>
+      <SearchBar
+        inputSx={{
+          "&:hover": { borderColor: "gray.3" },
+          "&:focus": { outline: "none", borderColor: "gray.1" },
+        }}
+      />
+      <Flex sx={{ flexWrap: "wrap", justifyContent: "center" }}>
+        {menu.map(({ label, url }, i) => (
+          <MenuLink key={i} url={url}>
+            <span sx={{ mx: 2 }}>{label}</span>
+          </MenuLink>
+        ))}
+        {extMenu.map(({ label, url }, i) => (
+          <MenuLink key={i} url={url} external>
+            <span sx={{ mx: 2 }}>{label}</span>
+          </MenuLink>
+        ))}
       </Flex>
-      <Flex w="100vw" m="0.5em 0">
-        <Styled.a
-          href={social.scholar}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <Flex>
+        <MenuLink url={social.scholar} external>
           <FontAwesomeIcon icon={faUserGraduate} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a
-          href={social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </MenuLink>
+        <MenuLink url={social.github} external>
           <FontAwesomeIcon icon={faGithub} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a href={social.yc} target="_blank" rel="noopener noreferrer">
+        </MenuLink>
+        <MenuLink url={social.yc} external>
           <FontAwesomeIcon icon={faYCombinator} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a
-          href={social.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </MenuLink>
+        <MenuLink url={social.linkedin} external>
           <FontAwesomeIcon icon={faLinkedin} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a
-          href={social.stackoverflow}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </MenuLink>
+        <MenuLink url={social.stackoverflow} external>
           <FontAwesomeIcon icon={faStackOverflow} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a
-          href={social.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </MenuLink>
+        <MenuLink url={social.twitter} external>
           <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
-        </Styled.a>
-        <Styled.a
-          href="/rss/blog.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </MenuLink>
+        <MenuLink url="/rss/blog.xml" external>
           <FontAwesomeIcon icon={faRss} sx={iconStyle} />
-        </Styled.a>
+        </MenuLink>
       </Flex>
       <Styled.p
         sx={{
-          fontSize: 0,
-          m: "0.5em 0",
-          color: "secondary",
+          my: 1,
+          color: "gray.7",
           fontWeight: "light",
+          mb: 0,
         }}
-        mt={0}
       >
         © {new Date().getFullYear()} {name}
       </Styled.p>
@@ -278,12 +256,12 @@ export default ({ children, frontmatter }) => (
       return (
         <>
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
-          <Flex sx={{ minHeight: "100vh", flexDirection: "column" }}>
-            <Header name={name} menu={menu} extMenu={extMenu} />
-
-            {children}
-
-            <Footer name={name} social={social} />
+          <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
+            <Flex sx={{ flexDirection: ["column", "column", "row", "row"] }}>
+              <Header />
+              {children}
+            </Flex>
+            <Footer name={name} menu={menu} extMenu={extMenu} social={social} />
           </Flex>
         </>
       )

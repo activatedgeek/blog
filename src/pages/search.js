@@ -2,41 +2,13 @@
 
 import React, { useState } from "react" // eslint-disable-line no-unused-vars
 import { graphql, Link } from "gatsby"
-import { navigate } from "@reach/router"
 import { useFlexSearch } from "react-use-flexsearch"
-import { jsx, Styled, Box, Flex, Input } from "theme-ui"
+import { jsx, Styled, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "../components/layout"
+import Layout, { SearchBar } from "../components/layout"
 import PostIndex from "../components/post_index"
-
-const SearchBar = () => {
-  const [query, setQuery] = useState("")
-
-  return (
-    <Flex
-      as="form"
-      onSubmit={e => {
-        e.preventDefault()
-        navigate(`/search?q=${encodeURIComponent(query)}`)
-      }}
-      sx={{ alignItems: "center", w: "50%" }}
-    >
-      <Input
-        name="query"
-        placeholder="Search"
-        sx={{
-          textAlign: "center",
-          borderColor: "secondary",
-          borderRadius: "0.1em",
-          "&:focus": { outline: "none" },
-        }}
-        onChange={e => setQuery(e.target.value)}
-      />
-    </Flex>
-  )
-}
 
 const SearchPage = ({
   location: { search },
@@ -57,27 +29,24 @@ const SearchPage = ({
     >
       <Box
         sx={{
-          p: "1em",
-          m: "auto",
-          minWidth: [null, null, "50rem", "50rem"],
-          maxWidth: ["100%", "100%", "50rem", "50rem"],
+          p: 4,
+          mx: "auto",
+          maxWidth: ["100%", "100%", "3xl", "4xl"],
+          flex: 1,
         }}
       >
         <Styled.h1>
-          Search{" "}
-          <span role="img" aria-label="Search">
-            🔎
-          </span>
+          <FontAwesomeIcon icon={faSearch} /> Search
         </Styled.h1>
-        <p sx={{ color: "secondary", fontSize: 0, display: "inline" }}>
-          This is experimental and probably not satisfactory.
-        </p>
+        <Styled.p sx={{ color: "gray.5", fontSize: 0, display: "inline" }}>
+          Experimental.
+        </Styled.p>
         {q ? (
           <>
             <Styled.p>
               <Styled.a as={Link} to="/search">
                 <FontAwesomeIcon icon={faArrowLeft} title="Search another" />{" "}
-                Back to search.
+                Back to Search
               </Styled.a>
             </Styled.p>
             <Styled.p sx={{ color: "secondary" }}>
@@ -85,7 +54,15 @@ const SearchPage = ({
             </Styled.p>
           </>
         ) : (
-          <SearchBar />
+          <SearchBar
+            inputSx={{
+              width: "11/12",
+              my: 2,
+              fontSize: 2,
+              color: "gray.7",
+              "&:focus": { outline: "none", borderColor: "gray.7" },
+            }}
+          />
         )}
         <PostIndex items={results} />
       </Box>

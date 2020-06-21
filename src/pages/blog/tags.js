@@ -1,9 +1,12 @@
 /** @jsx jsx */
 
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { jsx, Styled, Flex, Box } from "theme-ui"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTag } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../../components/layout"
+import Tags from "../../components/tags"
 
 const TagList = ({
   data: {
@@ -20,39 +23,17 @@ const TagList = ({
     >
       <Box
         sx={{
-          p: "1em",
-          m: "auto",
-          maxWidth: ["100%", "100%", "50rem", "50rem"],
+          p: 4,
+          mx: "auto",
+          maxWidth: ["100%", "100%", "3xl", "4xl"],
+          flex: 1,
         }}
       >
         <Styled.h2 sx={{ mb: "0.5em" }}>
-          Tags{" "}
-          <span role="img" aria-label="tags">
-            🏷️
-          </span>
+          <FontAwesomeIcon icon={faTag} /> Tags
         </Styled.h2>
         <Flex sx={{ flexFlow: "row wrap" }}>
-          {group.map(({ tag, totalCount }, i) => (
-            <Styled.a
-              key={i}
-              as={Link}
-              to={`/blog/tags/${encodeURIComponent(tag)}`}
-              sx={{ m: "0 0.5em 1em 0", "&:hover": { textDecoration: "none" } }}
-            >
-              <span
-                sx={{
-                  m: "0.5em 0.5em 0.5em 0",
-                  borderStyle: "solid",
-                  borderWidth: "1px",
-                  p: "0.2em",
-                  borderRadius: "0.2em",
-                  fontSize: 2,
-                }}
-              >
-                {tag} ({totalCount})
-              </span>
-            </Styled.a>
-          ))}
+          <Tags tags={group} fontSize={2} my={2} />
         </Flex>
       </Box>
     </Layout>

@@ -3,7 +3,7 @@
 import { graphql, Link } from "gatsby"
 import { jsx, Styled, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import { faArrowLeft, faNewspaper } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import PostIndex from "../components/post_index"
@@ -26,17 +26,20 @@ export default ({
     >
       <Box
         sx={{
-          p: "1em",
-          m: "auto",
-          minWidth: [null, null, "50rem", "50rem"],
-          maxWidth: ["100%", "100%", "50rem", "50rem"],
+          p: 4,
+          mx: "auto",
+          maxWidth: ["100%", "100%", "3xl", "4xl"],
         }}
       >
-        <Styled.h2>Posts tagged "{tag}"</Styled.h2>
-        <Styled.a as={Link} to="/blog">
-          <FontAwesomeIcon icon={faArrowLeft} title="Show all posts." /> All
-          Posts
-        </Styled.a>
+        <Styled.h2>
+          <FontAwesomeIcon icon={faNewspaper} /> Posts tagged "{tag}"
+        </Styled.h2>
+        <Styled.p>
+          <Styled.a as={Link} to="/blog">
+            <FontAwesomeIcon icon={faArrowLeft} title="Show all posts." /> back
+            to All Posts
+          </Styled.a>
+        </Styled.p>
         <PostIndex
           items={edges.map(
             ({
@@ -46,7 +49,7 @@ export default ({
             }) => ({
               title,
               date,
-              tags,
+              tags: tags.map(t => ({ tag: t })),
               slug,
               archive,
               draft,

@@ -9,12 +9,24 @@ module.exports = {
       : `http://localhost:8000`,
   menu: [
     {
-      label: "Knowledge Base",
-      url: "/kb",
+      label: "Home",
+      url: "/",
     },
     {
       label: "Blog",
       url: "/blog",
+    },
+    {
+      label: "Drafts",
+      url: "/blog/drafts",
+    },
+    {
+      label: "Tags",
+      url: "/blog/tags",
+    },
+    {
+      label: "Knowledge Base",
+      url: "/kb",
     },
   ],
   extMenu: [

@@ -2,6 +2,8 @@
 
 import { graphql } from "gatsby"
 import { jsx, Styled, Box } from "theme-ui"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../../components/layout"
 import PostIndex from "../../components/post_index"
@@ -20,13 +22,14 @@ export default ({
   >
     <Box
       sx={{
-        p: "1em",
-        m: "auto",
-        minWidth: [null, null, "50rem", "50rem"],
-        maxWidth: ["100%", "100%", "50rem", "50rem"],
+        p: 4,
+        mx: "auto",
+        maxWidth: ["100%", "100%", "3xl", "4xl"],
       }}
     >
-      <Styled.h2>All Posts</Styled.h2>
+      <Styled.h2>
+        <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} /> All Posts
+      </Styled.h2>
       <PostIndex
         items={edges.map(
           ({
@@ -36,7 +39,7 @@ export default ({
           }) => ({
             title,
             date,
-            tags,
+            tags: tags.map(t => ({ tag: t })),
             slug,
             archive,
             draft,

@@ -1,29 +1,29 @@
 /** @jsx jsx */
 
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled, Box } from "theme-ui"
 import { Link } from "gatsby"
 
-const Tags = ({ tags }) =>
-  tags.map((t, k) => (
-    <Styled.a
+const Tags = ({ tags, fontSize, my }) =>
+  tags.map(({ tag, totalCount }, k) => (
+    <Box
       key={k}
-      as={Link}
-      to={`/blog/tags/${encodeURIComponent(t)}`}
-      sx={{ "&:hover": { textDecoration: "none" } }}
+      sx={{
+        display: "inline-block",
+        bg: "gray.2",
+        borderRadius: "lg",
+        px: 2,
+        mx: 1,
+        my,
+      }}
     >
-      <span
-        sx={{
-          m: "0.25em",
-          borderStyle: "solid",
-          borderWidth: "1px",
-          p: "0.2em",
-          borderRadius: "0.2em",
-          fontSize: 0,
-        }}
+      <Styled.a
+        as={Link}
+        to={`/blog/tags/${encodeURIComponent(tag)}`}
+        sx={{ fontSize, "&:hover": { textDecoration: "none" } }}
       >
-        {t}
-      </span>
-    </Styled.a>
+        {tag} {totalCount ? `(${totalCount})` : null}
+      </Styled.a>
+    </Box>
   ))
 
 export default Tags
