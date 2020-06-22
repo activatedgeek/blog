@@ -23,3 +23,5 @@ I've usually come across interesting concepts, phenomenons and what not. This pl
 - [Brandolini's Law](https://en.wikipedia.org/wiki/Brandolini%27s_law)
 - [Wisdom of the crowd](https://en.wikipedia.org/wiki/Wisdom_of_the_crowd)
 - [Troxler's fading](https://en.wikipedia.org/wiki/Troxler's_fading)
+- [Sprezzatura](https://en.wikipedia.org/wiki/Sprezzatura)
+- [Focal point (game theory)](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>)

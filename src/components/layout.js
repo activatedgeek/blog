@@ -5,7 +5,16 @@ import Helmet from "react-helmet"
 import { graphql, Link, StaticQuery } from "gatsby"
 import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserGraduate, faRss } from "@fortawesome/free-solid-svg-icons"
+import {
+  faUserGraduate,
+  faRss,
+  faBrain,
+  faNewspaper,
+  faDraftingCompass,
+  faSearch,
+  faTag,
+  faWineBottle,
+} from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
   faYCombinator,
@@ -14,6 +23,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { jsx, Styled, Flex, Input, Box } from "theme-ui"
+
+import { KBList } from "../templates/kb_post"
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -64,31 +75,104 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-const Header = () => (
-  <Box>
-    <Box
+const HeaderMenuItem = ({ url, children, external }) => (
+  <Styled.a
+    as={external ? null : Link}
+    target={external ? "_blank" : null}
+    rel={external ? "noopener noreferrer" : null}
+    to={external ? null : url}
+    href={external ? url : null}
+    sx={{
+      width: [null, null, "100%", "100%"],
+      ":visited,:hover,:active": {
+        textDecoration: "none",
+      },
+    }}
+  >
+    <Styled.p
       sx={{
-        display: "inline-block",
-        position: "sticky",
-        top: 3,
-        bg: "gray.9",
+        color: "gray.8",
         px: 3,
+        py: 1,
+        my: 1,
+        ":hover": {
+          bg: "gray.1",
+          cursor: "pointer",
+        },
       }}
     >
-      <Styled.a
-        as={Link}
-        to="/"
+      {children}
+    </Styled.p>
+  </Styled.a>
+)
+
+const Header = ({ kbedges }) => {
+  return (
+    <Flex
+      sx={{
+        flexDirection: ["row", "row", "column", "column"],
+        boxShadow: "md",
+      }}
+    >
+      <Box
         sx={{
-          ":visited,:hover,:active": {
-            textDecoration: "none",
-          },
+          p: 3,
+          bg: "gray.9",
         }}
       >
-        <Styled.h1 sx={{ color: "gray.1" }}>SK</Styled.h1>
-      </Styled.a>
-    </Box>
-  </Box>
-)
+        <Styled.a
+          as={Link}
+          to="/"
+          sx={{
+            ":visited,:hover,:active": {
+              textDecoration: "none",
+            },
+            color: "gray.1",
+          }}
+        >
+          <Styled.h2>SK</Styled.h2>
+        </Styled.a>
+      </Box>
+      <Flex
+        sx={{
+          flexDirection: ["row", "row", "column", "column"],
+          mt: 2,
+          alignItems: ["center", "center", null, null],
+          flexWrap: "wrap",
+        }}
+      >
+        <HeaderMenuItem url="/blog">
+          <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} /> Blog
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/blog/drafts">
+          <FontAwesomeIcon icon={faDraftingCompass} sx={{ mr: 1 }} /> Drafts
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/blog/tags">
+          <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} /> Tags
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/search">
+          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} /> Search
+        </HeaderMenuItem>
+        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
+          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} /> Wine Map
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/kb">
+          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} /> Knowledge Base
+        </HeaderMenuItem>
+      </Flex>
+      <Box
+        sx={{
+          display: ["none", "none", "block", "block"],
+          fontSize: 0,
+          pl: 4,
+          pr: 2,
+        }}
+      >
+        <KBList edges={kbedges} />
+      </Box>
+    </Flex>
+  )
+}
 
 export const SearchBar = ({ inputSx }) => {
   const [query, setQuery] = useState("")
@@ -101,7 +185,7 @@ export const SearchBar = ({ inputSx }) => {
         setQuery(query)
         navigate(`/search?q=${encodeURIComponent(query)}`)
       }}
-      sx={{ alignItems: "center", color: "gray.1" }}
+      sx={{ color: "gray.1" }}
     >
       <Input
         name="query"
@@ -131,7 +215,7 @@ const MenuLink = ({ url, external, children }) => (
       to={external ? null : url}
       href={external ? url : null}
       sx={{
-        color: "gray.5",
+        color: "gray.3",
         textDecoration: "none",
         ":visited,:hover,:active": {
           textDecoration: "inherit",
@@ -146,7 +230,7 @@ const MenuLink = ({ url, external, children }) => (
   </Styled.p>
 )
 
-const Footer = ({ name, social, menu, extMenu }) => {
+const Footer = ({ name, social }) => {
   const iconStyle = {
     mx: 1,
     fontSize: 2,
@@ -157,7 +241,6 @@ const Footer = ({ name, social, menu, extMenu }) => {
     <Flex
       sx={{
         width: "screenWidth",
-        alignItems: "center",
         flexDirection: "column",
         justifyContent: "center",
         py: 3,
@@ -165,25 +248,7 @@ const Footer = ({ name, social, menu, extMenu }) => {
         mt: "auto",
       }}
     >
-      <SearchBar
-        inputSx={{
-          "&:hover": { borderColor: "gray.3" },
-          "&:focus": { outline: "none", borderColor: "gray.1" },
-        }}
-      />
-      <Flex sx={{ flexWrap: "wrap", justifyContent: "center" }}>
-        {menu.map(({ label, url }, i) => (
-          <MenuLink key={i} url={url}>
-            <span sx={{ mx: 2 }}>{label}</span>
-          </MenuLink>
-        ))}
-        {extMenu.map(({ label, url }, i) => (
-          <MenuLink key={i} url={url} external>
-            <span sx={{ mx: 2 }}>{label}</span>
-          </MenuLink>
-        ))}
-      </Flex>
-      <Flex>
+      <Flex sx={{ justifyContent: "center" }}>
         <MenuLink url={social.scholar} external>
           <FontAwesomeIcon icon={faUserGraduate} sx={iconStyle} />
         </MenuLink>
@@ -212,6 +277,7 @@ const Footer = ({ name, social, menu, extMenu }) => {
           color: "gray.7",
           fontWeight: "light",
           mb: 0,
+          textAlign: "center",
         }}
       >
         © {new Date().getFullYear()} {name}
@@ -219,6 +285,21 @@ const Footer = ({ name, social, menu, extMenu }) => {
     </Flex>
   )
 }
+
+export const ContentBox = ({ children, sx }) => (
+  <Box
+    sx={{
+      p: 4,
+      mx: "auto",
+      maxWidth: ["100%", "100%", "3xl", "3xl"],
+      flex: 1,
+      boxShadow: "md",
+      ...sx,
+    }}
+  >
+    {children}
+  </Box>
+)
 
 export default ({ children, frontmatter }) => (
   <StaticQuery
@@ -230,14 +311,6 @@ export default ({ children, frontmatter }) => (
             siteUrl
             description
             author
-            menu {
-              label
-              url
-            }
-            extMenu {
-              label
-              url
-            }
             social {
               scholar
               github
@@ -248,20 +321,34 @@ export default ({ children, frontmatter }) => (
             }
           }
         }
+        allMdx(
+          filter: { frontmatter: { category: { in: "kb" } } }
+          sort: { order: ASC, fields: frontmatter___title }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                slug
+                label
+              }
+            }
+          }
+        }
       }
     `}
-    render={({ site: { siteMetadata } }) => {
-      const { name, menu, extMenu, social } = siteMetadata
+    render={({ site: { siteMetadata }, allMdx: { edges: kbedges } }) => {
+      const { name, social } = siteMetadata
 
       return (
         <>
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
             <Flex sx={{ flexDirection: ["column", "column", "row", "row"] }}>
-              <Header />
+              <Header kbedges={kbedges} />
               {children}
             </Flex>
-            <Footer name={name} menu={menu} extMenu={extMenu} social={social} />
+            <Footer name={name} social={social} />
           </Flex>
         </>
       )

@@ -8,7 +8,7 @@ import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt, faEdit, faTag } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "../components/layout"
+import Layout, { ContentBox } from "../components/layout"
 import Tags from "../components/tags"
 import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
@@ -70,13 +70,13 @@ export const PostInfo = ({ date, updated, tags }) => {
   )
 }
 
-export const Post = ({ mdx, toc }) => {
+export const Post = ({ mdx }) => {
   const { body, frontmatter, tableOfContents } = mdx
   const { title, draft, archive } = frontmatter
 
   return (
     <Box>
-      <Styled.h1>{title}</Styled.h1>
+      <Styled.h1 sx={{ mt: 0 }}>{title}</Styled.h1>
 
       <PostInfo {...frontmatter} />
 
@@ -84,10 +84,14 @@ export const Post = ({ mdx, toc }) => {
 
       {tableOfContents.items ? (
         <Box
-          sx={{ display: toc ? "block" : ["block", "block", "none", "none"] }}
+          sx={{
+            display: "inline-block",
+            float: [null, null, "right", "right"],
+            ml: [0, 0, 4, 4],
+            mb: 4,
+          }}
         >
           <TableOfContents toc={tableOfContents} />
-          <Styled.hr />
         </Box>
       ) : null}
 
@@ -107,32 +111,22 @@ export const Post = ({ mdx, toc }) => {
   )
 }
 
-const BlogPageTemplate = ({ data: { mdx } }) => {
-  const { frontmatter, tableOfContents } = mdx
+const BlogPageTemplate = ({ data: { mdx }, location: { pathname } }) => {
+  const { frontmatter } = mdx
   const { title } = frontmatter
 
+  console.log(pathname)
+
   return (
-    <Layout frontmatter={{ ...frontmatter, title: `${title} - Blog` }}>
-      <Box
-        sx={{
-          p: 4,
-          mx: "auto",
-          maxWidth: ["100%", "100%", "3xl", "4xl"],
-          flex: 1,
-        }}
-      >
+    <Layout
+      frontmatter={{
+        ...frontmatter,
+        title: `${title}${pathname === "/" ? "" : " - Blog"}`,
+      }}
+    >
+      <ContentBox>
         <Post mdx={mdx} />
-      </Box>
-      {tableOfContents.items ? (
-        <Box
-          sx={{
-            display: ["none", "none", "block", "block"],
-            mx: "auto",
-          }}
-        >
-          <TableOfContents toc={tableOfContents} />
-        </Box>
-      ) : null}
+      </ContentBox>
     </Layout>
   )
 }

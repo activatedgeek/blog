@@ -56,10 +56,10 @@ const PostIndex = ({ items }) => {
       {yearList.map((year, i) => (
         <Flex
           key={i}
-          sx={{ flexDirection: ["column", "column", "row", "row"] }}
+          sx={{ flexDirection: ["column", "column", "row", "row"], mb: 3 }}
         >
           <Box sx={{ width: "20" }}>
-            <Styled.h4>{year}</Styled.h4>
+            <Styled.h5>{year}</Styled.h5>
           </Box>
           <Box sx={{ flex: 1 }}>
             {yearIndex[year].map(({ date, ...props }, j) => (
@@ -78,7 +78,7 @@ const PostIndex = ({ items }) => {
                     )}
                   </span>
                 </Box>
-                <Box sx={{ flex: 1, mb: 2 }}>
+                <Box sx={{ flex: 1, mb: 1 }}>
                   <PostItem date={date} {...props} />
                 </Box>
               </Flex>

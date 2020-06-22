@@ -4,8 +4,6 @@ title: Movies
 
 Gems, in my opinion of course. See also the full [list](https://www.imdb.com/user/ur34765497/ratings).
 
-## List
-
 - [12 Angry Men](https://www.imdb.com/title/tt0050083/?ref_=rt_li_tt) \(1957\)
 - [Schindler's List](https://www.imdb.com/title/tt0108052/?ref_=rt_li_tt) \(1993\)
 - [The Shawshank Redemption](https://www.imdb.com/title/tt0111161/?ref_=rt_li_tt) \(1994\)

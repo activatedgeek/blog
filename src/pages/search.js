@@ -3,11 +3,11 @@
 import React, { useState } from "react" // eslint-disable-line no-unused-vars
 import { graphql, Link } from "gatsby"
 import { useFlexSearch } from "react-use-flexsearch"
-import { jsx, Styled, Box } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons"
 
-import Layout, { SearchBar } from "../components/layout"
+import Layout, { SearchBar, ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
 
 const SearchPage = ({
@@ -27,14 +27,7 @@ const SearchPage = ({
         slug: `/search?q=${encodeURIComponent(q)}`,
       }}
     >
-      <Box
-        sx={{
-          p: 4,
-          mx: "auto",
-          maxWidth: ["100%", "100%", "3xl", "4xl"],
-          flex: 1,
-        }}
-      >
+      <ContentBox sx={{ my: "auto" }}>
         <Styled.h1>
           <FontAwesomeIcon icon={faSearch} /> Search
         </Styled.h1>
@@ -65,7 +58,7 @@ const SearchPage = ({
           />
         )}
         <PostIndex items={results} />
-      </Box>
+      </ContentBox>
     </Layout>
   )
 }

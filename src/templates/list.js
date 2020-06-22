@@ -1,11 +1,11 @@
 /** @jsx jsx */
 
 import { graphql, Link } from "gatsby"
-import { jsx, Styled, Box } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faNewspaper } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "../components/layout"
+import Layout, { ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
 
 export default ({
@@ -24,13 +24,7 @@ export default ({
         slug: `/blog/tags/${tag}`,
       }}
     >
-      <Box
-        sx={{
-          p: 4,
-          mx: "auto",
-          maxWidth: ["100%", "100%", "3xl", "4xl"],
-        }}
-      >
+      <ContentBox>
         <Styled.h2>
           <FontAwesomeIcon icon={faNewspaper} /> Posts tagged "{tag}"
         </Styled.h2>
@@ -56,7 +50,7 @@ export default ({
             })
           )}
         />
-      </Box>
+      </ContentBox>
     </Layout>
   )
 }

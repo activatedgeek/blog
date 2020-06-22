@@ -1,11 +1,11 @@
 /** @jsx jsx */
 
 import { graphql } from "gatsby"
-import { jsx, Styled, Flex, Box } from "theme-ui"
+import { jsx, Styled, Flex } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTag } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "../../components/layout"
+import Layout, { ContentBox } from "../../components/layout"
 import Tags from "../../components/tags"
 
 const TagList = ({
@@ -21,21 +21,14 @@ const TagList = ({
         slug: "/tags",
       }}
     >
-      <Box
-        sx={{
-          p: 4,
-          mx: "auto",
-          maxWidth: ["100%", "100%", "3xl", "4xl"],
-          flex: 1,
-        }}
-      >
+      <ContentBox>
         <Styled.h2 sx={{ mb: "0.5em" }}>
           <FontAwesomeIcon icon={faTag} /> Tags
         </Styled.h2>
         <Flex sx={{ flexFlow: "row wrap" }}>
-          <Tags tags={group} fontSize={2} my={2} />
+          <Tags tags={group} my={2} />
         </Flex>
-      </Box>
+      </ContentBox>
     </Layout>
   )
 }

@@ -1,14 +1,14 @@
 /** @jsx jsx */
 
 import { graphql, Link } from "gatsby"
-import { jsx, Styled, Box } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowLeft,
   faDraftingCompass,
 } from "@fortawesome/free-solid-svg-icons"
 
-import Layout from "../../components/layout"
+import Layout, { ContentBox } from "../../components/layout"
 import PostIndex from "../../components/post_index"
 
 export default ({
@@ -22,21 +22,14 @@ export default ({
       description: "Draft blog posts.",
     }}
   >
-    <Box
-      sx={{
-        p: 4,
-        mx: "auto",
-        maxWidth: ["100%", "100%", "3xl", "4xl"],
-        flex: 1,
-      }}
-    >
+    <ContentBox>
       <Styled.h2>
         <FontAwesomeIcon icon={faDraftingCompass} title="Show all posts." />{" "}
         Drafts
       </Styled.h2>
       <Styled.p>
         <Styled.a as={Link} to="/blog">
-          <FontAwesomeIcon icon={faArrowLeft} title="Show all posts." /> Back to
+          <FontAwesomeIcon icon={faArrowLeft} title="Show all posts." /> back to
           All Posts
         </Styled.a>
       </Styled.p>
@@ -56,7 +49,7 @@ export default ({
           })
         )}
       />
-    </Box>
+    </ContentBox>
   </Layout>
 )
 

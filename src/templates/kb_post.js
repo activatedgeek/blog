@@ -1,14 +1,12 @@
 /** @jsx jsx */
 
 import { graphql, Link } from "gatsby"
-import { jsx, Styled, Flex, Box } from "theme-ui"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBrain } from "@fortawesome/free-solid-svg-icons"
+import { jsx, Styled, Flex } from "theme-ui"
 
-import Layout from "../components/layout"
+import Layout, { ContentBox } from "../components/layout"
 import { Post } from "./post"
 
-const KBList = ({ edges }) => {
+export const KBList = ({ edges }) => {
   let labelMap = {}
   edges.forEach(({ node }) => {
     const {
@@ -20,11 +18,7 @@ const KBList = ({ edges }) => {
   })
 
   return (
-    <Flex sx={{ p: 3, flexDirection: "column" }}>
-      <Styled.h4>
-        <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} /> Knowledge Base
-      </Styled.h4>
-      <Styled.hr />
+    <Flex sx={{ flexDirection: "column" }}>
       {Object.keys(labelMap)
         .sort()
         .map((l, k) => (
@@ -44,35 +38,15 @@ const KBList = ({ edges }) => {
   )
 }
 
-const KBPageTemplate = ({
-  data: {
-    mdx,
-    allMdx: { edges },
-  },
-}) => {
+const KBPageTemplate = ({ data: { mdx } }) => {
   const { frontmatter } = mdx
   const { title } = frontmatter
 
   return (
     <Layout frontmatter={{ ...frontmatter, title: `${title} - KB` }}>
-      <Box
-        sx={{
-          p: 4,
-          mx: "auto",
-          maxWidth: ["100%", "100%", "3xl", "4xl"],
-          flex: 1,
-        }}
-      >
-        <Post mdx={mdx} toc />
-      </Box>
-      <Box
-        sx={{
-          bg: "gray.2",
-          display: ["none", "none", "block", "block"],
-        }}
-      >
-        <KBList edges={edges} />
-      </Box>
+      <ContentBox>
+        <Post mdx={mdx} />
+      </ContentBox>
     </Layout>
   )
 }
@@ -81,20 +55,6 @@ export default KBPageTemplate
 
 export const pageQuery = graphql`
   query($id: String) {
-    allMdx(
-      filter: { frontmatter: { category: { in: "kb" } } }
-      sort: { order: ASC, fields: frontmatter___title }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            label
-          }
-        }
-      }
-    }
     mdx(id: { eq: $id }) {
       id
       body
