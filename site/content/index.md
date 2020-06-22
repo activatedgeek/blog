@@ -2,8 +2,6 @@
 title: Hey! 👋
 description: Welcome to sanyamkapoor.com!
 updated: Jun 19 2020, 12:55 -0700
-_options:
-  template: blog
 ---
 
 I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working

@@ -1,6 +1,6 @@
 ---
 title: Common Yardsticks
-label: Miscellaneous
+menuLabel: Miscellaneous
 ---
 
 All values are approximate.

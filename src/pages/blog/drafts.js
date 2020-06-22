@@ -18,7 +18,7 @@ export default ({
 }) => (
   <Layout
     frontmatter={{
-      title: "Drafts",
+      title: "Drafts - Blog",
       description: "Draft blog posts.",
     }}
   >

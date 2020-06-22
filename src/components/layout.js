@@ -24,7 +24,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { jsx, Styled, Flex, Input, Box } from "theme-ui"
 
-import { KBList } from "../templates/kb_post"
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -72,6 +71,41 @@ const Head = ({ siteMetadata, frontmatter }) => {
         <meta name="twitter:description" content={description} />
       ) : null}
     </Helmet>
+  )
+}
+
+
+const KBList = ({ edges }) => {
+  let labelMap = {}
+  edges.forEach(({ node }) => {
+    const {
+      frontmatter: { menuLabel, menuList },
+    } = node
+    if (menuList !== false) {
+      const useLabel = menuLabel || "00default"
+      labelMap[useLabel] = labelMap[useLabel] || []
+      labelMap[useLabel].push(node)
+    }
+  })
+
+  return (
+    <Flex sx={{ flexDirection: "column" }}>
+      {Object.keys(labelMap)
+        .sort()
+        .map((l, k) => (
+          <Flex key={k} sx={{ flexDirection: "column" }}>
+            {l === "00default" ? null : (
+              <Styled.p sx={{ color: "gray.6" }}>{l}</Styled.p>
+            )}
+            {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
+              <Styled.a key={i} as={Link} to={slug} sx={{ my: 1 }}>
+                {title}
+              </Styled.a>
+            ))}
+            <Styled.hr />
+          </Flex>
+        ))}
+    </Flex>
   )
 }
 
@@ -142,22 +176,22 @@ const Header = ({ kbedges }) => {
         }}
       >
         <HeaderMenuItem url="/blog">
-          <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} /> Blog
+          <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} fixedWidth /> Blog
         </HeaderMenuItem>
         <HeaderMenuItem url="/blog/drafts">
-          <FontAwesomeIcon icon={faDraftingCompass} sx={{ mr: 1 }} /> Drafts
+          <FontAwesomeIcon icon={faDraftingCompass} sx={{ mr: 1 }} fixedWidth /> Drafts
         </HeaderMenuItem>
         <HeaderMenuItem url="/blog/tags">
-          <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} /> Tags
+          <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} fixedWidth /> Tags
         </HeaderMenuItem>
         <HeaderMenuItem url="/search">
-          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} /> Search
+          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
         </HeaderMenuItem>
         <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
-          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} /> Wine Map
+          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine Map
         </HeaderMenuItem>
         <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} /> Knowledge Base
+          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> Knowledge Base
         </HeaderMenuItem>
       </Flex>
       <Box
@@ -207,7 +241,7 @@ export const SearchBar = ({ inputSx }) => {
 }
 
 const MenuLink = ({ url, external, children }) => (
-  <Styled.p sx={{ display: "inline-block", my: 1 }}>
+  <Box>
     <Styled.a
       as={external ? null : Link}
       target={external ? "_blank" : null}
@@ -227,7 +261,7 @@ const MenuLink = ({ url, external, children }) => (
     >
       {children}
     </Styled.a>
-  </Styled.p>
+  </Box>
 )
 
 const Footer = ({ name, social }) => {
@@ -243,40 +277,39 @@ const Footer = ({ name, social }) => {
         width: "screenWidth",
         flexDirection: "column",
         justifyContent: "center",
-        py: 3,
         bg: "gray.9",
         mt: "auto",
+        p: 4,
       }}
     >
       <Flex sx={{ justifyContent: "center" }}>
         <MenuLink url={social.scholar} external>
-          <FontAwesomeIcon icon={faUserGraduate} sx={iconStyle} />
+          <FontAwesomeIcon icon={faUserGraduate} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url={social.github} external>
-          <FontAwesomeIcon icon={faGithub} sx={iconStyle} />
+          <FontAwesomeIcon icon={faGithub} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url={social.yc} external>
-          <FontAwesomeIcon icon={faYCombinator} sx={iconStyle} />
+          <FontAwesomeIcon icon={faYCombinator} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url={social.linkedin} external>
-          <FontAwesomeIcon icon={faLinkedin} sx={iconStyle} />
+          <FontAwesomeIcon icon={faLinkedin} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url={social.stackoverflow} external>
-          <FontAwesomeIcon icon={faStackOverflow} sx={iconStyle} />
+          <FontAwesomeIcon icon={faStackOverflow} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url={social.twitter} external>
-          <FontAwesomeIcon icon={faTwitter} sx={iconStyle} />
+          <FontAwesomeIcon icon={faTwitter} sx={iconStyle} fixedWidth />
         </MenuLink>
         <MenuLink url="/rss/blog.xml" external>
-          <FontAwesomeIcon icon={faRss} sx={iconStyle} />
+          <FontAwesomeIcon icon={faRss} sx={iconStyle} fixedWidth />
         </MenuLink>
       </Flex>
       <Styled.p
         sx={{
-          my: 1,
           color: "gray.7",
           fontWeight: "light",
-          mb: 0,
+          m: 0,
           textAlign: "center",
         }}
       >
@@ -330,7 +363,8 @@ export default ({ children, frontmatter }) => (
               frontmatter {
                 title
                 slug
-                label
+                menuLabel
+                menuList
               }
             }
           }

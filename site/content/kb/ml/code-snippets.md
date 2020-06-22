@@ -1,7 +1,7 @@
 ---
 title: Code Snippets
 description: Utilities so that I don't have to scour the internet always.
-label: Machine Learning
+menuLabel: Machine Learning
 ---
 
 ## PyTorch

@@ -1,6 +1,6 @@
 ---
 title: World Materials
-label: Miscellaneous
+menuLabel: Miscellaneous
 ---
 
 I think at some point, it is going to be worthwhile to map an extensive value chain from raw materials to finished products. Meanwhile, I'm collecting a flat list of items.

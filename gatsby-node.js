@@ -4,8 +4,9 @@ const assert = require("assert")
 
 const templatesDir = "./src/templates"
 const categoryTemplateMap = {
-  blog: "post",
-  kb: "kb_post",
+  default: "page",
+  blog: "page",
+  kb: "page",
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -21,7 +22,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String]
       draft: Boolean
       archive: Boolean
-      label: String
+      menuLabel: String
+      menuList: Boolean
     }
   `
   createTypes(typeDefs)
@@ -78,7 +80,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: "template",
-      value: _options.template || defaultcategory,
+      value: _options.template || defaultcategory || "default",
     })
 
     delete node.frontmatter._options

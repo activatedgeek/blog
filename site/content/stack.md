@@ -2,8 +2,6 @@
 title: The Stack
 description: Tools powering this website.
 updated: Jun 19 2020, 12:52 -0700
-_options:
-  template: blog
 ---
 
 This page details the tools powering this website.

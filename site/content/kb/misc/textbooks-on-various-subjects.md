@@ -1,6 +1,6 @@
 ---
 title: Textbooks on Various Subjects
-label: Miscellaneous
+menuLabel: Miscellaneous
 ---
 
 I believe _well-written_ textbooks \(or even theses\) are the fastest way to learn topics that have achieved **critical mass**. Inspired by a [similarly titled post](https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject) on LessWrong 2.0, I have my own evolving list.

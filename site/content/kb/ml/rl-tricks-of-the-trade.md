@@ -1,6 +1,6 @@
 ---
 title: "RL: Tricks of the Trade"
-label: Machine Learning
+menuLabel: Machine Learning
 ---
 
 Raw collection of random things I've read around for better RL but now forgotten the sources. Hopefully, I can refine this sometime.

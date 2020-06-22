@@ -111,17 +111,22 @@ export const Post = ({ mdx }) => {
   )
 }
 
-const BlogPageTemplate = ({ data: { mdx }, location: { pathname } }) => {
-  const { frontmatter } = mdx
-  const { title } = frontmatter
+const titleSuffixMap = {
+  "kb": "KB",
+  "blog": "Blog"
+}
 
-  console.log(pathname)
+const PageTemplate = ({ data: { mdx } }) => {
+  const { frontmatter } = mdx
+  const { title, category } = frontmatter
+
+  const titleSuffix = titleSuffixMap[category[0]]
 
   return (
     <Layout
       frontmatter={{
         ...frontmatter,
-        title: `${title}${pathname === "/" ? "" : " - Blog"}`,
+        title: `${title}${titleSuffix ? ` - ${titleSuffix}` : ''}`,
       }}
     >
       <ContentBox>
@@ -131,7 +136,7 @@ const BlogPageTemplate = ({ data: { mdx }, location: { pathname } }) => {
   )
 }
 
-export default BlogPageTemplate
+export default PageTemplate
 
 export const pageQuery = graphql`
   query($id: String) {
@@ -146,6 +151,7 @@ export const pageQuery = graphql`
         date(formatString: "MMM D YYYY")
         updated(fromNow: true)
         tags
+        category
         draft
         archive
       }

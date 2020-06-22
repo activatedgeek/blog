@@ -15,7 +15,7 @@ export default ({
 }) => (
   <Layout
     frontmatter={{
-      title: "All Posts",
+      title: "All Posts - Blog",
       description: "Index of all blog posts.",
       slug: "/blog",
     }}

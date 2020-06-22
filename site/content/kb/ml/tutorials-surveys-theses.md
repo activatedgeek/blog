@@ -1,6 +1,6 @@
 ---
 title: Tutorials, Surveys, Theses
-label: Machine Learning
+menuLabel: Machine Learning
 ---
 
 ## Tutorials

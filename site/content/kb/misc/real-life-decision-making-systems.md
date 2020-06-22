@@ -1,6 +1,6 @@
 ---
 title: Real-Life Decision Making Systems
-label: Miscellaneous
+menuLabel: Miscellaneous
 ---
 
 I'm collecting a list of real-life decision making systems that are primarily making data-driven decisions \(hopefully with some level of human-in-the-loop\) or are ripe to be disrupted by data-driven methods.

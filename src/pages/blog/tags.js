@@ -16,7 +16,7 @@ const TagList = ({
   return (
     <Layout
       frontmatter={{
-        title: "Tags",
+        title: "Tags - Blog",
         description: "All tags used in blog articles.",
         slug: "/tags",
       }}

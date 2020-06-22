@@ -1,7 +1,7 @@
 ---
 title: Fragments
 description: Raw unstructured thoughts
-label: Machine Learning
+menuLabel: Machine Learning
 ---
 
 These are just raw keywords which may eventually evolve into their own pages if I dive deep enough. For now they are just disconnected "fragments", interesting directions that I may want to pursue.

@@ -1,7 +1,7 @@
 ---
 title: Courses, Talks, Articles
 description: Recommendations
-label: Machine Learning
+menuLabel: Machine Learning
 ---
 
 An unstructured collection of Machine Learning talks, articles and courses.

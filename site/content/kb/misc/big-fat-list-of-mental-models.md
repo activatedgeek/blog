@@ -1,6 +1,6 @@
 ---
 title: Big fat list of Mental Models
-label: Miscellaneous
+menuLabel: Miscellaneous
 ---
 
 This is a collection of mental models I've read about. Makes for a good master reference for the times I'm always stuck in _Déjà vu_ \*\*\*\*thinking "what's the term?". I will grow, evolve and categorize this list largely trying to understand / answer "what can I do to minimize negative externalities?", a meta-mental model for decision making in life.
