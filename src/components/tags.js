@@ -9,17 +9,24 @@ const Tags = ({ tags, fontSize, my }) =>
       key={k}
       sx={{
         display: "inline-block",
-        bg: "gray.2",
+        bg: "themeColor.8",
         borderRadius: "lg",
         px: 2,
         mx: 1,
         my,
+        ":hover": {
+          boxShadow: "md",
+        },
       }}
     >
       <Styled.a
         as={Link}
         to={`/blog/tags/${encodeURIComponent(tag)}`}
-        sx={{ fontSize, "&:hover": { textDecoration: "none" } }}
+        sx={{
+          fontSize,
+          color: "gray.1",
+          "&:hover": { textDecoration: "none" },
+        }}
       >
         {tag} {totalCount ? `(${totalCount})` : null}
       </Styled.a>

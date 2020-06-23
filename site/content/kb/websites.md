@@ -23,7 +23,9 @@ description: Interesting places on the internet.
 
 [Paul Graham](http://paulgraham.com/) - Co-Founder of YC. Some great observational [essays](http://paulgraham.com/articles.html).
 
-[Ben Thompson](https://stratechery.com) - In-depth articles by on analysis of the strategy and business side of technology and media, and the impact of technology on society
+[Ben Thompson](https://stratechery.com) - In-depth articles by on analysis of the strategy and business side of technology and media, and the impact of technology on society.
+
+[Benedict Evans](https://www.ben-evans.com) - Independent technology analyst with annual trend reports.
 
 [Fred Wilson](https://avc.com) - Writes some insightful content on a [broad spectrum of topics](https://avc.com/archive/).
 

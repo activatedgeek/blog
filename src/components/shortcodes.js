@@ -10,7 +10,7 @@ const asLazy = (ipath, defaultProps) => props => {
 
 export default {
   LazyImage: asLazy(import("./image.js")),
-  LazyVega: asLazy(import("../../node_modules/react-vega/lib/Vega"), {
+  LazyVega: asLazy(import("./chart.js"), {
     actions: false,
   }),
 }

@@ -16,7 +16,7 @@ const Info = ({ children }) => (
       borderLeftWidth: "4",
       borderLeftColor: "blue.4",
       bg: "blue.1",
-      color: "blue.8",
+      color: "blue.5",
     }}
   >
     <FontAwesomeIcon icon={faInfoCircle} /> {children}
@@ -26,13 +26,14 @@ const Info = ({ children }) => (
 const Warn = ({ children }) => (
   <Styled.p
     sx={{
+      display: "block",
       p: 3,
       boxShadow: "md",
       borderLeftStyle: "solid",
       borderLeftWidth: "4",
       borderLeftColor: "yellow.4",
-      bg: "yellow.1",
-      color: "yellow.8",
+      bg: "yellow.2",
+      color: "yellow.7",
     }}
   >
     <FontAwesomeIcon icon={faExclamationTriangle} /> {children}

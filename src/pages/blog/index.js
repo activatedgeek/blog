@@ -47,7 +47,7 @@ export default ({
 export const pageQuery = graphql`
   {
     allMdx(
-      filter: { frontmatter: { category: { in: "blog" }, draft: { ne: true } } }
+      filter: { frontmatter: { category: { in: "blog" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {

@@ -47,7 +47,7 @@ export const PostInfo = ({ date, updated, tags }) => {
     infoList.push(
       <React.Fragment>
         <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} />
-        <Tags tags={tags.map(t => ({ tag: t }))} />
+        <Tags tags={tags.map(t => ({ tag: t }))} fontSize={0} />
       </React.Fragment>
     )
   }
@@ -82,9 +82,20 @@ export const Post = ({ mdx }) => {
 
       <Styled.hr />
 
+      {archive ? (
+        <Warn>
+          This post is archived. Some content may be out of date or render
+          incorrectly.
+        </Warn>
+      ) : null}
+
+      {draft ? <Info>This post is a work in progress.</Info> : null}
+
       {tableOfContents.items ? (
         <Box
           sx={{
+            position: "relative",
+            zIndex: 1,
             display: "inline-block",
             float: [null, null, "right", "right"],
             ml: [0, 0, 4, 4],
@@ -95,15 +106,6 @@ export const Post = ({ mdx }) => {
         </Box>
       ) : null}
 
-      {archive ? (
-        <Warn>
-          This post is archived. Some content may be out of date or render
-          incorrectly.
-        </Warn>
-      ) : null}
-
-      {draft ? <Info>This post is a work in progress.</Info> : null}
-
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
@@ -112,8 +114,8 @@ export const Post = ({ mdx }) => {
 }
 
 const titleSuffixMap = {
-  "kb": "KB",
-  "blog": "Blog"
+  kb: "KB",
+  blog: "Blog",
 }
 
 const PageTemplate = ({ data: { mdx } }) => {
@@ -126,7 +128,7 @@ const PageTemplate = ({ data: { mdx } }) => {
     <Layout
       frontmatter={{
         ...frontmatter,
-        title: `${title}${titleSuffix ? ` - ${titleSuffix}` : ''}`,
+        title: `${title}${titleSuffix ? ` - ${titleSuffix}` : ""}`,
       }}
     >
       <ContentBox>

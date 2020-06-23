@@ -4,7 +4,7 @@ title: Books
 
 > See also [Textbooks on Various Subjects](./misc/textbooks-on-various-subjects).
 
-In recent times, I've warmed up to a variety of themes from history, philosophy, 
+In recent times, I've warmed up to a variety of themes from history, philosophy,
 economics and technology. Here's a list books that have shaped my opinion.
 
 ## History
@@ -13,13 +13,12 @@ economics and technology. Here's a list books that have shaped my opinion.
 
 - [A Farewell to Alms A Brief Economic History of the World](http://faculty.econ.ucdavis.edu/faculty/gclark/a_farewell_to_alms.html) by _Gregory Clark_ (2007; 2009)
 
-
 ### Culture
 
 - [Sapiens: A Brief History of Humankind](https://www.ynharari.com/book/sapiens/) by _Yuval Noah Harari_ (2011; 2014)
 
 - A Short History of Drunkenness: How, Why, Where, and When Humankind Has Gotten Merry from the Stone Age to the Present
-by _Mark Forsyth, Simon Vance_ (2017; 2019)
+  by _Mark Forsyth, Simon Vance_ (2017; 2019)
 
 ### Science
 
@@ -39,7 +38,7 @@ by _Mark Forsyth, Simon Vance_ (2017; 2019)
 
 - Stories of Your Life and Others by _Ted Chiang_ (2002; 2010)
 
-- [Flatland: A Romance of Many Dimensions](https://en.wikisource.org/wiki/Flatland) by Edwin A. Abbott,  Banesh Hoffmann (Introduction) (1884; 1992)
+- [Flatland: A Romance of Many Dimensions](https://en.wikisource.org/wiki/Flatland) by Edwin A. Abbott, Banesh Hoffmann (Introduction) (1884; 1992)
 
 ## Models
 

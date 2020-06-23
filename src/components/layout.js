@@ -10,7 +10,6 @@ import {
   faRss,
   faBrain,
   faNewspaper,
-  faDraftingCompass,
   faSearch,
   faTag,
   faWineBottle,
@@ -23,7 +22,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { jsx, Styled, Flex, Input, Box } from "theme-ui"
-
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -74,7 +72,6 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-
 const KBList = ({ edges }) => {
   let labelMap = {}
   edges.forEach(({ node }) => {
@@ -95,7 +92,7 @@ const KBList = ({ edges }) => {
         .map((l, k) => (
           <Flex key={k} sx={{ flexDirection: "column" }}>
             {l === "00default" ? null : (
-              <Styled.p sx={{ color: "gray.6" }}>{l}</Styled.p>
+              <Styled.p sx={{ color: "menu.sub" }}>{l}</Styled.p>
             )}
             {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
               <Styled.a key={i} as={Link} to={slug} sx={{ my: 1 }}>
@@ -125,13 +122,15 @@ const HeaderMenuItem = ({ url, children, external }) => (
   >
     <Styled.p
       sx={{
-        color: "gray.8",
-        px: 3,
-        py: 1,
         my: 1,
+        p: 2,
+        color: "menu.main",
+        borderRadius: "lg",
         ":hover": {
-          bg: "gray.1",
+          bg: "menu.hover.bg",
+          color: "menu.hover.main",
           cursor: "pointer",
+          boxShadow: "xl",
         },
       }}
     >
@@ -146,12 +145,14 @@ const Header = ({ kbedges }) => {
       sx={{
         flexDirection: ["row", "row", "column", "column"],
         boxShadow: "md",
+        borderRadius: "lg",
       }}
     >
-      <Box
+      <Flex
         sx={{
           p: 3,
-          bg: "gray.9",
+          bg: "hero.bg",
+          alignItems: "center",
         }}
       >
         <Styled.a
@@ -161,48 +162,49 @@ const Header = ({ kbedges }) => {
             ":visited,:hover,:active": {
               textDecoration: "none",
             },
-            color: "gray.1",
+            color: "hero.text",
           }}
         >
           <Styled.h2>SK</Styled.h2>
         </Styled.a>
-      </Box>
-      <Flex
-        sx={{
-          flexDirection: ["row", "row", "column", "column"],
-          mt: 2,
-          alignItems: ["center", "center", null, null],
-          flexWrap: "wrap",
-        }}
-      >
-        <HeaderMenuItem url="/blog">
-          <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} fixedWidth /> Blog
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/blog/drafts">
-          <FontAwesomeIcon icon={faDraftingCompass} sx={{ mr: 1 }} fixedWidth /> Drafts
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/blog/tags">
-          <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} fixedWidth /> Tags
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/search">
-          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
-        </HeaderMenuItem>
-        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
-          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine Map
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> Knowledge Base
-        </HeaderMenuItem>
       </Flex>
-      <Box
-        sx={{
-          display: ["none", "none", "block", "block"],
-          fontSize: 0,
-          pl: 4,
-          pr: 2,
-        }}
-      >
-        <KBList edges={kbedges} />
+      <Box sx={{ p: 3 }}>
+        <Flex
+          sx={{
+            flexDirection: ["row", "row", "column", "column"],
+            mt: [0, 0, 2, 2],
+            alignItems: ["center", "center", null, null],
+            flexWrap: "wrap",
+          }}
+        >
+          <HeaderMenuItem url="/blog">
+            <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} fixedWidth />{" "}
+            Blog
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/blog/tags">
+            <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} fixedWidth /> Tags
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/search">
+            <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
+          </HeaderMenuItem>
+          <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
+            <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth />{" "}
+            Wine Map
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/kb">
+            <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth />{" "}
+            Knowledge Base
+          </HeaderMenuItem>
+        </Flex>
+        <Box
+          sx={{
+            display: ["none", "none", "block", "block"],
+            fontSize: 0,
+            pl: 4,
+          }}
+        >
+          <KBList edges={kbedges} />
+        </Box>
       </Box>
     </Flex>
   )
@@ -219,7 +221,6 @@ export const SearchBar = ({ inputSx }) => {
         setQuery(query)
         navigate(`/search?q=${encodeURIComponent(query)}`)
       }}
-      sx={{ color: "gray.1" }}
     >
       <Input
         name="query"
@@ -229,7 +230,7 @@ export const SearchBar = ({ inputSx }) => {
           width: "64",
           p: 1,
           textAlign: "center",
-          borderColor: "gray.5",
+          borderColor: "search.border",
           borderRadius: "lg",
           mx: "auto",
           ...inputSx,
@@ -249,13 +250,9 @@ const MenuLink = ({ url, external, children }) => (
       to={external ? null : url}
       href={external ? url : null}
       sx={{
-        color: "gray.3",
         textDecoration: "none",
         ":visited,:hover,:active": {
           textDecoration: "inherit",
-        },
-        ":hover": {
-          color: "gray.1",
         },
       }}
     >
@@ -268,8 +265,7 @@ const Footer = ({ name, social }) => {
   const iconStyle = {
     mx: 1,
     fontSize: 2,
-    color: "gray.5",
-    ":hover": { color: "gray.1" },
+    color: "hero.text",
   }
   return (
     <Flex
@@ -277,7 +273,7 @@ const Footer = ({ name, social }) => {
         width: "screenWidth",
         flexDirection: "column",
         justifyContent: "center",
-        bg: "gray.9",
+        bg: "hero.bg",
         mt: "auto",
         p: 4,
       }}
@@ -307,9 +303,10 @@ const Footer = ({ name, social }) => {
       </Flex>
       <Styled.p
         sx={{
-          color: "gray.7",
+          color: "hero.lighttext",
           fontWeight: "light",
-          m: 0,
+          mb: 0,
+          mt: 2,
           textAlign: "center",
         }}
       >
@@ -327,6 +324,7 @@ export const ContentBox = ({ children, sx }) => (
       maxWidth: ["100%", "100%", "3xl", "3xl"],
       flex: 1,
       boxShadow: "md",
+      borderRadius: "lg",
       ...sx,
     }}
   >
@@ -379,7 +377,7 @@ export default ({ children, frontmatter }) => (
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
             <Flex sx={{ flexDirection: ["column", "column", "row", "row"] }}>
-              <Header kbedges={kbedges} />
+              <Header kbedges={kbedges} siteMetadata={siteMetadata} />
               {children}
             </Flex>
             <Footer name={name} social={social} />

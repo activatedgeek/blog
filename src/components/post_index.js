@@ -6,9 +6,7 @@ import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
-import Tags from "../components/tags"
-
-const PostItem = ({ title, tags, slug, archive, draft }) => (
+const PostItem = ({ title, slug, archive, draft }) => (
   <Box>
     <Styled.p sx={{ display: "inline", my: 0 }}>
       <Styled.a as={Link} to={slug}>
@@ -18,20 +16,17 @@ const PostItem = ({ title, tags, slug, archive, draft }) => (
         <FontAwesomeIcon
           icon={faArchive}
           title="This post is archived."
-          sx={{ mx: 2, color: "gray.6" }}
+          sx={{ mx: 2, color: "gray.7" }}
         />
       ) : null}
       {draft === true ? (
         <FontAwesomeIcon
           icon={faEdit}
           title="This post is a working draft."
-          sx={{ mx: 2, color: "gray.6" }}
+          sx={{ mx: 2, color: "gray.8" }}
         />
       ) : null}
     </Styled.p>
-    <Box sx={{ display: "inline" }}>
-      <Tags tags={tags} fontSize={0} />
-    </Box>
   </Box>
 )
 

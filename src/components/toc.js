@@ -28,8 +28,9 @@ const TableOfContents = ({ toc: { items } }) => {
         top: 4,
         borderTopStyle: "solid",
         borderTopWidth: "4",
-        borderTopColor: "gray.9",
-        boxShadow: "lg",
+        borderTopColor: "hero.bg",
+        boxShadow: "md",
+        borderRadius: "lg",
       }}
     >
       <Styled.h5>

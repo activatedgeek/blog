@@ -5,6 +5,7 @@ date: Nov 3 2016, 12:06 +0530
 tags:
   - opinion
   - film
+archive: true
 ---
 
 I’ve been reading about DiCaprio’s quest to push the agenda of Climate Change
