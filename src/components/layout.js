@@ -13,6 +13,8 @@ import {
   faSearch,
   faTag,
   faWineBottle,
+  faWindowClose,
+  faEllipsisV,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -95,7 +97,17 @@ const KBList = ({ edges }) => {
               <Styled.p sx={{ color: "menu.sub" }}>{l}</Styled.p>
             )}
             {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
-              <Styled.a key={i} as={Link} to={slug} sx={{ my: 1 }}>
+              <Styled.a
+                key={i}
+                as={Link}
+                to={slug}
+                sx={{
+                  my: 1,
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                }}
+              >
                 {title}
               </Styled.a>
             ))}
@@ -106,7 +118,7 @@ const KBList = ({ edges }) => {
   )
 }
 
-const HeaderMenuItem = ({ url, children, external }) => (
+const HeaderMenuItem = ({ url, children, external, display }) => (
   <Styled.a
     as={external ? null : Link}
     target={external ? "_blank" : null}
@@ -114,6 +126,7 @@ const HeaderMenuItem = ({ url, children, external }) => (
     to={external ? null : url}
     href={external ? url : null}
     sx={{
+      display,
       width: [null, null, "100%", "100%"],
       ":visited,:hover,:active": {
         textDecoration: "none",
@@ -140,12 +153,15 @@ const HeaderMenuItem = ({ url, children, external }) => (
 )
 
 const Header = ({ kbedges }) => {
+  const [showOverlay, setShowOverlay] = useState(false)
+
   return (
     <Flex
       sx={{
         flexDirection: ["row", "row", "column", "column"],
-        boxShadow: "md",
+        boxShadow: "inner",
         borderRadius: "lg",
+        width: [null, null, "13rem", "13rem"],
       }}
     >
       <Flex
@@ -153,6 +169,8 @@ const Header = ({ kbedges }) => {
           p: 3,
           bg: "hero.bg",
           alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "lg",
         }}
       >
         <Styled.a
@@ -195,12 +213,54 @@ const Header = ({ kbedges }) => {
             <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth />{" "}
             Knowledge Base
           </HeaderMenuItem>
+          <HeaderMenuItem url="#" display={[null, null, "none", "none"]}>
+            <FontAwesomeIcon
+              onClick={e => {
+                e.preventDefault()
+                setShowOverlay(!showOverlay)
+              }}
+              icon={faEllipsisV}
+              fixedWidth
+            />
+          </HeaderMenuItem>
         </Flex>
         <Box
           sx={{
-            display: ["none", "none", "block", "block"],
+            display: showOverlay ? null : "none",
+            p: 4,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "screenWidth",
+            height: "screenHeight",
+            bg: "gray.1",
+            zIndex: 10,
+            overflowY: "auto",
+          }}
+        >
+          <Styled.p
+            sx={{
+              position: "fixed",
+              right: 4,
+              top: 4,
+              m: 0,
+              fontSize: 2,
+              cursor: "pointer",
+            }}
+            onClick={e => {
+              e.preventDefault()
+              setShowOverlay(!showOverlay)
+            }}
+          >
+            <FontAwesomeIcon icon={faWindowClose} fixedWidth />
+          </Styled.p>
+          <KBList edges={kbedges} />
+        </Box>
+        <Box
+          sx={{
+            display: ["none", "none", "inherit", "inherit"],
             fontSize: 0,
-            pl: 4,
+            pl: 2,
           }}
         >
           <KBList edges={kbedges} />
@@ -274,6 +334,7 @@ const Footer = ({ name, social }) => {
         flexDirection: "column",
         justifyContent: "center",
         bg: "hero.bg",
+        boxShadow: "lg",
         mt: "auto",
         p: 4,
       }}
@@ -323,7 +384,7 @@ export const ContentBox = ({ children, sx }) => (
       mx: "auto",
       maxWidth: ["100%", "100%", "3xl", "3xl"],
       flex: 1,
-      boxShadow: "md",
+      boxShadow: "inner",
       borderRadius: "lg",
       ...sx,
     }}

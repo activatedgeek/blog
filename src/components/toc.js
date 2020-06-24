@@ -29,7 +29,7 @@ const TableOfContents = ({ toc: { items } }) => {
         borderTopStyle: "solid",
         borderTopWidth: "4",
         borderTopColor: "hero.bg",
-        boxShadow: "md",
+        boxShadow: "default",
         borderRadius: "lg",
       }}
     >

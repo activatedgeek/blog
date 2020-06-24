@@ -42,6 +42,7 @@ const mods = {
       overflow: "auto",
       p: "2rem",
       borderRadius: "lg",
+      boxShadow: "default",
     },
     a: {
       color: themeColor[8],
