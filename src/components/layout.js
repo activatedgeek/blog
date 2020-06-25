@@ -15,6 +15,7 @@ import {
   faWineBottle,
   faWindowClose,
   faEllipsisV,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -360,6 +361,9 @@ const Footer = ({ name, social }) => {
         </MenuLink>
         <MenuLink url="/rss/blog.xml" external>
           <FontAwesomeIcon icon={faRss} sx={iconStyle} fixedWidth />
+        </MenuLink>
+        <MenuLink url={`${social.github}/www`} external>
+          <FontAwesomeIcon icon={faCode} sx={iconStyle} fixedWidth />
         </MenuLink>
       </Flex>
       <Styled.p
