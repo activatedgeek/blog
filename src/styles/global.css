@@ -1,3 +1,7 @@
 span.katex-display {
   overflow: auto;
 }
+
+div.footnotes > ol {
+  list-style-type: lower-alpha;
+}

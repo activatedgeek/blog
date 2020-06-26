@@ -86,7 +86,7 @@ $$
 \lambda_1 \left( \int_{-\infty}^{\infty} p(x) dx - 1 \right) + \lambda_2 \left( \int_{-\infty}^{\infty} x p(x) dx - \mu \right) + \lambda_3 \left( \int_{-\infty}^{\infty} (x - \mu)^2 p(x) dx - \sigma^2 \right)
 $$
 
-Setting the functional derivative [^1] $\frac{d [f(p(x))] }{d p(x)} = 0$, we get
+Setting the functional derivative [^a] $\frac{d [f(p(x))] }{d p(x)} = 0$, we get
 
 $$
 -\log{p(x)} + 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = 0
@@ -98,7 +98,7 @@ $$
 
 To recover the precise values of the Lagrange multipliers, we substitute them back
 into the constraints. The derivation is involved but straightforward. We first manipulate the exponent by
-completing the squares [^2] which will allow us to re-use results from the [previous section](#normalizing-constant). We also further always make use of the subsitution $x^\prime = x - \frac{\beta}{2\alpha}$.
+completing the squares [^b] which will allow us to re-use results from the [previous section](#normalizing-constant). We also further always make use of the subsitution $x^\prime = x - \frac{\beta}{2\alpha}$.
 
 $$
 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = \underbrace{\lambda_3}_{=\alpha} x^2 - \underbrace{(2\mu\lambda_3 - \lambda_2)}_{=\beta} x + \underbrace{(1 + \lambda_1 + \lambda_3 \mu^2)}_{=\gamma}
@@ -168,7 +168,7 @@ $$
 \end{aligned}
 $$
 
-where we utilize the fact that $\Gamma(x + 1) = x\Gamma(x)$ [^3] and $\Gamma(1/2) = \sqrt{\pi}$. Plugging
+where we utilize the fact that $\Gamma(x + 1) = x\Gamma(x)$ [^c] and $\Gamma(1/2) = \sqrt{\pi}$. Plugging
 everything back and using $\beta = 2\mu\alpha$, we get
 
 $$
@@ -195,7 +195,7 @@ $$
 \end{aligned}
 $$
 
-Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$ [^4].
+Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$ [^d].
 
 ## Gaussian Conditionals
 
@@ -383,9 +383,9 @@ plugging in the right values.
 }
 ```
 
-## Footnotes
+### Footnotes
 
-[^1]: See Appendix D in \cite{bishop2006pattern}.
-[^2]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$.
-[^3]: $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function.
-[^4]: For maximum entropy distributions under other constraints, see examples on [this Wikipedia entry](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples).
+[^a]: See Appendix D in \cite{bishop2006pattern}.
+[^b]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$.
+[^c]: $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function.
+[^d]: For maximum entropy distributions under other constraints, see examples on [this Wikipedia entry](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples).

@@ -17,7 +17,7 @@ be able to attack a vast amount of (if not all) Reinforcement Learning literatur
 
 Reinforcement Learning (RL) refers to both the learning problem and the sub-field of machine
 learning which has lately been in the news for great reasons. RL based systems have now beaten
-world champions of Go [^1], helped operate datacenters better [^2] and mastered a wide variety of Atari games [^3]. The research community is seeing many more promising results. With enough motivation, let us now take a look at the Reinforcement Learning problem.
+world champions of Go [^a], helped operate datacenters better [^b] and mastered a wide variety of Atari games [^c]. The research community is seeing many more promising results. With enough motivation, let us now take a look at the Reinforcement Learning problem.
 
 Reinforcement Learning is the most general description of the learning problem where the aim is to maximize a long-term objective. The system description consists of an _agent_ which interacts with the _environment_ via its actions at discrete timesteps and receives a _reward_. This transitions the agent into a new _state_. A canonical agent-environment feedback loop is depicted by the figure below \cite{sutton2018reinforcement}.
 
@@ -394,8 +394,8 @@ Completed Modular implementations of the full pipeline can be viewed at [activat
 }
 ```
 
-## Footnotes
+### Footnotes
 
-[^1]: See [AlphaGo Zero: Starting from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)
-[^2]: See [DeepMind AI Reduces Google Data Centre Cooling Bill by 40%](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/)
-[^3]: See [Playing Atari with Deep Reinforcement Learning](https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/)
+[^a]: See [AlphaGo Zero: Starting from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)
+[^b]: See [DeepMind AI Reduces Google Data Centre Cooling Bill by 40%](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/)
+[^c]: See [Playing Atari with Deep Reinforcement Learning](https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/)

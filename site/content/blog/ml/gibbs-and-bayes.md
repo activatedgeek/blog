@@ -50,7 +50,7 @@ $$
 \mathcal{J}(q(\theta); \ell, \mathcal{D}, p(\theta)) + \lambda \left(\int q(\theta) d\theta - 1 \right)
 $$
 
-We take the functional derivatives [^1] w.r.t $q(\theta)$ and the fact that this should
+We take the functional derivatives [^a] w.r.t $q(\theta)$ and the fact that this should
 be equal to zero for a minimum.
 
 $$
@@ -279,6 +279,6 @@ learning world.
 }
 ```
 
-## Footnotes
+### Footnotes
 
-[^1]: See Appendix D in Bishop \cite{bishop2006pattern}.
+[^a]: See Appendix D in Bishop \cite{bishop2006pattern}.

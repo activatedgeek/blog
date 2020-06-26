@@ -28,7 +28,7 @@ $$
 \mathcal{J}(\tau_{1:H}) = \mathbb{E}\left[ r(\tau_{1:H}) \right]
 $$
 
-We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we _want_ - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$ [^1]. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
+We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we _want_ - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$ [^a]. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
 
 $$
 p(\tau_{1:H}, \mathcal{O}_{1:H}) = p(s_0)\prod_{h=0}^{H-1} f(s_{h+1} | s_h, a_h) p(a_h) p(\mathcal{O}_h | s_h, a_h)
@@ -125,6 +125,6 @@ This finishes the foundations of deriving CEM from a probabilistic modeling pers
 }
 ```
 
-## Footnotes
+### Footnotes
 
-[^1]: The normalization constant in this discussion is not important. However, one approach to do that may be normalizing it by the maximum reward possible.
+[^a]: The normalization constant in this discussion is not important. However, one approach to do that may be normalizing it by the maximum reward possible.
