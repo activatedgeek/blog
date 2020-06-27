@@ -17,8 +17,6 @@ description: Interesting places on the internet.
 
 [Quanta Magazine](https://www.quantamagazine.org) - covers complex topics in science for "popular science", often insightful.
 
-[Startup School](https://www.startupschool.org) - a free online program and global community of founders.
-
 ### People
 
 [Paul Graham](http://paulgraham.com/) - Co-Founder of YC. Some great observational [essays](http://paulgraham.com/articles.html).

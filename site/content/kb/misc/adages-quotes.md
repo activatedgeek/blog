@@ -16,3 +16,4 @@ menuLabel: Miscellaneous
 - _Sunlight is said to be the best of disinfectants._ - Louis Brandeis \(on transparency\)
 - _All models are wrong, but some are useful._ - George E. P. Box
 - _If it can't be measured, it becomes politics._
+- _If I had asked people what they wanted, they would have said faster horses._ -Henry Ford
