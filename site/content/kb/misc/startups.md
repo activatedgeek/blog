@@ -1,6 +1,7 @@
 ---
 title: Startups
 description: Resources for when I'm probably going to start up, again.
+menuLabel: Miscellaneous
 ---
 
 [Startup School](https://www.startupschool.org)

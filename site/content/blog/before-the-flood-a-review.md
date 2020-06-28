@@ -77,42 +77,42 @@ Are the policy makers listening?
 
 Here’s a collection of my favorite quotes from the documentary which sum up the emotions.
 
-> #### “It’s like Mordor” — Remarks DiCaprio after seeing a rainforest turned into the largest coal mine
+> “It’s like Mordor” — Remarks DiCaprio after seeing a rainforest turned into the largest coal mine
 
 ---
 
-> #### “It’s ice-cream type of ice” — A Greenland dweller
+> “It’s ice-cream type of ice” — A Greenland dweller
 
 ---
 
-> #### “The ocean is neither a Republican nor a Democrat, all it knows is how to rise” — A research scholar disappointed with policy makers
+> “The ocean is neither a Republican nor a Democrat, all it knows is how to rise” — A research scholar disappointed with policy makers
 
 ---
 
-> #### “Politicians are elected followers” — Greg Mankiw on why mass mobilization is needed before political will
+> “Politicians are elected followers” — Greg Mankiw on why mass mobilization is needed before political will
 
 ---
 
-> #### “We had to relocate halfway around the world just to find snow” — DiCaprio on shifting locations for ‘Revenant’
+> “We had to relocate halfway around the world just to find snow” — DiCaprio on shifting locations for ‘Revenant’
 
 ---
 
-> #### “If you like some flesh between your teeth, just by switching to chicken instead of beef could cut emissions up to 80%” — A research scholar on the easiest contribution we can make and switch diets
+> “If you like some flesh between your teeth, just by switching to chicken instead of beef could cut emissions up to 80%” — A research scholar on the easiest contribution we can make and switch diets
 
 ---
 
-> #### “Carbon Tax is the silver bullet” — famed economist, Greg Mankiw
+> “Carbon Tax is the silver bullet” — famed economist, Greg Mankiw
 
 ---
 
-> #### “It would take a 100 Gigafactories to satisfy the world’s energy needs” — Elon Musk, “That’s it!?” — DiCaprio
+> “It would take a 100 Gigafactories to satisfy the world’s energy needs” — Elon Musk, “That’s it!?” — DiCaprio
 
 ---
 
-> #### “It’s a national security issue” — Obama echoing the Pentagon to reiterate far reaching consequences
+> “It’s a national security issue” — Obama echoing the Pentagon to reiterate far reaching consequences
 
 ---
 
-> #### “You are the last best hope of Earth”
+> “You are the last best hope of Earth”
 
 Go watch the [documentary](https://www.youtube.com/watch?v=90CkXVF-Q8M) now.

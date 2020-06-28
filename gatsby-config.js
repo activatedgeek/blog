@@ -168,7 +168,7 @@ module.exports = {
         }
         `,
         ref: "id",
-        index: ["title", "description", "rawBody"],
+        index: ["title", "description"],
         store: ["title", "tags", "slug", "archive", "draft", "date"],
         normalizer: ({
           data: {

@@ -47,6 +47,13 @@ const mods = {
     a: {
       color: themeColor[8],
     },
+    blockquote: {
+      pl: 2,
+      color: baseColors.gray[6],
+      borderLeftWidth: "4",
+      borderLeftStyle: "solid",
+      borderLeftColor: baseColors.gray[6],
+    }
   },
   colors: {
     ...colorSystem,
