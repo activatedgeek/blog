@@ -53,7 +53,7 @@ const mods = {
       borderLeftWidth: "4",
       borderLeftStyle: "solid",
       borderLeftColor: baseColors.gray[6],
-    }
+    },
   },
   colors: {
     ...colorSystem,

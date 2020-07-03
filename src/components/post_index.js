@@ -33,7 +33,7 @@ const PostItem = ({ title, slug, archive, draft }) => (
 const PostIndex = ({ items }) => {
   let yearIndex = items.reduce((acc, x) => {
     const { date } = x
-    const year = new Date(date).getFullYear()
+    const year = date ? new Date(date).getFullYear() : 0
     if (!acc.hasOwnProperty(year)) {
       acc[year] = []
     }
@@ -54,7 +54,7 @@ const PostIndex = ({ items }) => {
           sx={{ flexDirection: ["column", "column", "row", "row"], mb: 3 }}
         >
           <Box sx={{ width: "20" }}>
-            <Styled.h5>{year}</Styled.h5>
+            <Styled.h5>{year === "0" ? "Undated" : year}</Styled.h5>
           </Box>
           <Box sx={{ flex: 1 }}>
             {yearIndex[year].map(({ date, ...props }, j) => (
@@ -67,11 +67,13 @@ const PostIndex = ({ items }) => {
                     color: "gray.5",
                   }}
                 >
-                  <span>
-                    {new Intl.DateTimeFormat("en-US", dateOptions).format(
-                      new Date(date)
-                    )}
-                  </span>
+                  {date ? (
+                    <span>
+                      {new Intl.DateTimeFormat("en-US", dateOptions).format(
+                        new Date(date)
+                      )}
+                    </span>
+                  ) : null}
                 </Box>
                 <Box sx={{ flex: 1, mb: 1 }}>
                   <PostItem date={date} {...props} />

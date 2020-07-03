@@ -20,6 +20,7 @@ to find opportunities to reduce entropy introduced by these events.
 - [Coronal Mass Ejection](https://en.wikipedia.org/wiki/Coronal_mass_ejection) (CME), [The Carrington Event](https://en.wikipedia.org/wiki/September_1859_geomagnetic_storm)
 
 - Pandemics
+
   - Disease X
 
 - Giant volcanic eruptions

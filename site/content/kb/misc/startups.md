@@ -11,3 +11,5 @@ menuLabel: Miscellaneous
 [The Tech Non-profit Playbook](https://www.ffwd.org/playbook/)
 
 Fun: [Billion Dollar Startup Ideas](https://www.billiondollarstartupideas.com)
+
+[SideProjectors](https://www.sideprojectors.com/#/)

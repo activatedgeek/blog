@@ -18,16 +18,14 @@ Math is rendered via [KaTeX](https://github.com/KaTeX/KaTeX) and I've written
 to render [BibTeX](http://www.bibtex.org) using [Citation.js](https://citation.js.org).
 Images are lazy loaded via React hooks, which is also implemented as a tiny plugin.
 
-Search is powered by [FlexSearch](https://github.com/nextapps-de/flexsearch) [^a].
-I use [Vega Lite](https://vega.github.io/vega-lite/) to embed charts, allowing
-me to use the same specification across both Python and the web.
+Search is powered by [FlexSearch](https://github.com/nextapps-de/flexsearch). The
+search index contains text extracted by parsing the MDX AST. Eventually, I would
+like this to be more refined with word stemming and other language processing
+goodies. I use [Vega Lite](https://vega.github.io/vega-lite/) to embed charts, allowing me
+to use the same specification across both Python and the web.
 
 The website is deployed on [Netlify](https://www.netlify.com) and the domain
 registrar is [Google Domains](https://domains.google). Simple and private
 analytics are powered by [GoatCounter](https://www.goatcounter.com).
 
 The complete source is available on [Github](https://github.com/activatedgeek/website).
-
-### Footnotes
-
-[^a]: Albeit experimental and not satisfactory for now.

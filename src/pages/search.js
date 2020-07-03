@@ -32,7 +32,7 @@ const SearchPage = ({
           <FontAwesomeIcon icon={faSearch} /> Search
         </Styled.h1>
         <Styled.p sx={{ color: "gray.5", fontSize: 0, display: "inline" }}>
-          Experimental.
+          Experimental exact word search.
         </Styled.p>
         {q ? (
           <>

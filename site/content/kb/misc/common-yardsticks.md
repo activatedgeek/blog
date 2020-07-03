@@ -49,6 +49,10 @@ All values are approximate.
 - Color Presses - 1890s
 - First mass car ownership - 1908, Ford Model-T
 
+### Healthcare
+
+- Antiretroviral therapy (ART) - 1996
+
 ## Percentages
 
 - Percentage of total physical money in the world - < 10% (7% as of 2020)

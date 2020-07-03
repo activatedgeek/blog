@@ -62,7 +62,11 @@ economics and technology. Here's a list books that have shaped my opinion.
 
 - [Refactoring UI](https://refactoringui.com/book/) by _Adam Wathan, Steve Schoger_ ([2019](https://www.worldcat.org/title/refactoring-ui/oclc/1127645283))
 
-## Wine
+## Culture & Society
+
+- [Mental Load: A Feminist Comic.](https://www.workingmother.com/this-comic-perfectly-explains-mental-load-working-mothers-bear) by Emma. ([2018](https://www.worldcat.org/title/mental-load-a-feminist-comic/oclc/1104812641))
+
+### Wine
 
 - [The World Atlas of Wine](https://www.jancisrobinson.com/learn/booksDVDsapps/world-atlas-wine-8th-edition) by _Hugh Johnson, Jancis Robinson_ ([2019](https://www.worldcat.org/title/world-atlas-of-wine/oclc/1085594332))
 

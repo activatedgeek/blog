@@ -1,45 +1,49 @@
 const moment = require(`moment`)
 const siteMetadata = require(`./site/metadata`)
+const visit = require(`unist-util-visit`)
+
+const gatsbyRemarkPlugins = [
+  {
+    resolve: require.resolve(`./plugins/gatsby-remark-local-links`),
+  },
+  {
+    resolve: require.resolve(`./plugins/gatsby-remark-local-image`),
+  },
+  {
+    resolve: require.resolve(`./plugins/gatsby-remark-local-bibtex`),
+  },
+  {
+    resolve: `gatsby-remark-autolink-headers`,
+    options: { icon: false },
+  },
+]
+
+if (process.env.NODE_ENV === "production") {
+  const prodGatsbyRemarkPlugins = [
+    {
+      resolve: `gatsby-remark-katex`,
+      options: {
+        strict: `ignore`,
+      },
+    },
+  ]
+
+  gatsbyRemarkPlugins.push(...prodGatsbyRemarkPlugins)
+}
+
+const getSearchText = ast => {
+  let searchText = []
+
+  visit(ast, "text", n => {
+    searchText.push(n.value)
+  })
+
+  return searchText.join(" ")
+}
 
 module.exports = {
   siteMetadata,
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-theme-ui`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: require.resolve(`./plugins/gatsby-remark-links`),
-          },
-          {
-            resolve: require.resolve(`./plugins/gatsby-remark-image`),
-          },
-          {
-            resolve: require.resolve(`./plugins/gatsby-remark-bibtex`),
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: { icon: false },
-          },
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: `ignore`,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/site/content`,
-        name: `content`,
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -52,7 +56,97 @@ module.exports = {
         icon: `static/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/site/content`,
+        name: `content`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-local-mdx`,
+      options: {
+        templatesDir: `src/templates`,
+        categoryTemplateMap: {
+          default: "page",
+          blog: "page",
+          kb: "page",
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "index",
+        engine: "flexsearch",
+        engineOptions: "speed",
+        query: `
+        {
+          allMdx(
+            filter: { frontmatter: { draft: { ne: true } } }
+          ) {
+            edges {
+              node {
+                id
+                mdxAST
+                frontmatter {
+                  title
+                  description
+                  date
+                  tags
+                  slug
+                  archive
+                  draft
+                }
+              }
+            }
+          }
+        }
+        `,
+        ref: "id",
+        index: ["title", "description", "searchText"],
+        store: ["title", "tags", "slug", "archive", "draft", "date"],
+        normalizer: ({
+          data: {
+            allMdx: { edges },
+          },
+        }) =>
+          edges.map(
+            ({
+              node: {
+                id,
+                mdxAST,
+                frontmatter: {
+                  title,
+                  description,
+                  date,
+                  tags,
+                  slug,
+                  archive,
+                  draft,
+                },
+              },
+            }) => ({
+              id,
+              title,
+              description,
+              date,
+              tags,
+              slug,
+              archive,
+              draft,
+              searchText: getSearchText(mdxAST),
+            })
+          ),
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -138,69 +232,8 @@ module.exports = {
         localStorageKey: "skipgc",
       },
     },
-    {
-      resolve: "gatsby-plugin-local-search",
-      options: {
-        name: "index",
-        engine: "flexsearch",
-        engineOptions: "speed",
-        query: `
-        {
-          allMdx(
-            filter: { frontmatter: { draft: { ne: true } } }
-          ) {
-            edges {
-              node {
-                id
-                frontmatter {
-                  title
-                  description
-                  date
-                  tags
-                  slug
-                  archive
-                  draft
-                }
-                rawBody
-              }
-            }
-          }
-        }
-        `,
-        ref: "id",
-        index: ["title", "description"],
-        store: ["title", "tags", "slug", "archive", "draft", "date"],
-        normalizer: ({
-          data: {
-            allMdx: { edges },
-          },
-        }) =>
-          edges.map(
-            ({
-              node: {
-                id,
-                frontmatter: {
-                  title,
-                  description,
-                  date,
-                  tags,
-                  slug,
-                  archive,
-                  draft,
-                },
-              },
-            }) => ({
-              id,
-              title,
-              description,
-              date,
-              tags,
-              slug,
-              archive,
-              draft,
-            })
-          ),
-      },
-    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-offline`,
   ],
 }
