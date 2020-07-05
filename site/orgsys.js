@@ -10,7 +10,7 @@ module.exports = {
     phil: {
       label: "Philosophy",
       categories: {
-        th: { label: "Thinking" },
+        psych: { label: "Cognitive & experimental psychology" },
         meta: { label: "Metaphysics" },
       },
     },
@@ -35,6 +35,7 @@ module.exports = {
       categories: {
         prod: { label: "Products" },
         dev: { label: "Ideas & Development" },
+        code: { label: "Software Programming" },
       },
     },
     soc: {
@@ -56,6 +57,7 @@ module.exports = {
       label: "Mathematics",
       categories: {
         res: { label: "Research" },
+        ml: { label: "Machine Learning & Statistics" },
       },
     },
   },

@@ -1,6 +1,9 @@
 ---
 title: "RL: Tricks of the Trade"
-menuLabel: Machine Learning
+description: Getting RL to work is hard. Collecting some tricks here.
+date: Jul 05 2020, 16:00 -0700
+area: math
+cat: res
 ---
 
 Raw collection of random things I've read around for better RL but now forgotten the sources. Hopefully, I can refine this sometime.

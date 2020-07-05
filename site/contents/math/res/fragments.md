@@ -1,7 +1,9 @@
 ---
-title: Fragments
-description: Raw unstructured thoughts
-menuLabel: Machine Learning
+title: ML Fragments
+description: Raw unstructured thoughts and ideas.
+date: Jul 05 2020, 15:48 -0700
+area: math
+cat: res
 ---
 
 These are just raw keywords which may eventually evolve into their own pages if I dive deep enough. For now they are just disconnected "fragments", interesting directions that I may want to pursue.

@@ -25,7 +25,7 @@ const InfoSep = () => (
   />
 )
 
-export const PostInfo = ({ date, updated, permalink, filedUnder }) => {
+export const PostInfo = ({ date, updated, filedUnder }) => {
   let infoList = []
 
   if (date !== null) {
@@ -129,7 +129,6 @@ export const pageQuery = graphql`
         title
         description
         slug
-        permalink
         date(formatString: "MMM D YYYY")
         updated(fromNow: true)
         draft

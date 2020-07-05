@@ -75,7 +75,7 @@ exports.onCreateNode = (
     date: date !== undefined ? moment(date).format() : date,
     updated: updated !== undefined ? moment(updated).format() : updated,
     slug: slug || `/kb/${slugger(title)}`,
-    permalink: `/kb/${area}.${cat}--${moment(date).format("YYYYMMDD--HHmmss")}`,
+    permalink: `/kb/${area}.${cat}.${moment(date).format("YYYYMMDD.HHmmss")}`,
   }
 
   createNodeField({

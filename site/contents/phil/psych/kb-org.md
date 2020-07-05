@@ -3,7 +3,7 @@ title: Knowledge Base Organization Philosophy
 description: My core philosophy for pragmatic organization of knowledge.
 date: Jul 4 2020, 11:14 -0700
 area: phil
-cat: th
+cat: psych
 ---
 
 Personal knowledge organization [^a] is a very individualistic choice. Something

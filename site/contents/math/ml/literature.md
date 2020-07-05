@@ -1,6 +1,9 @@
 ---
-title: Tutorials, Surveys, Theses
-menuLabel: Machine Learning
+title: Machine Learning literature
+description: Recommendations for tutorials, surveys and theses.
+date: Jul 05 2020, 15:44 -0700
+area: math
+cat: ml
 ---
 
 ## Tutorials
@@ -36,3 +39,15 @@ menuLabel: Machine Learning
 - [Stochastic Gradient MCMC: Algorithms and Applications](https://escholarship.org/uc/item/4k8039zm) by Sungjin Ahn (2015)
 - [Optimizing Expectations: From Deep Reinforcement Learning to Stochastic Computation Graphs](http://joschu.net/docs/thesis.pdf) by John Schulman (2016)
 - [On Priors for Bayesian Neural Networks](https://escholarship.org/uc/item/1jq6z904) by Eric Nalisnick (2018)
+
+## Uncategorized
+
+- [Gaussian Identities](https://cs.nyu.edu/~roweis/notes/gaussid.pdf) - Sam Roweis
+- [A Mathematical Theory of Communication](http://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) - Claude E. Shannon (1948)
+- [A Complete Recipe for Stochastic Gradient MCMC](https://arxiv.org/abs/1506.04696) - Yi-An Ma, Tianqi Chen, Emily B. Fox (2015)
+- [A Conceptual Introduction to Hamiltonian Monte Carlo](https://arxiv.org/abs/1701.02434) - Michael Betancourt (2017)
+- [The Permutation Test**:** A Visual Explanation of Statistical Testing](https://www.jwilber.me/permutationtest/) - Jared Wilber (2019)
+- [Holes in Bayesian Statistics](http://www.stat.columbia.edu/~gelman/research/unpublished/bayes_holes_2.pdf) - Andrew Gelman, Yuling Yao (2020)
+- [Understanding the Neural Tangent Kernel](https://rajatvd.github.io/NTK/) - Rajat Vadiraj Dwaraknath (2020)
+- [Planning as Inference in Epidemiological Models](https://arxiv.org/abs/2003.13221) - Frank Wood, Andrew Warrington, Saeid Naderiparizi, Christian Weilbach, Vaden Masrani, William Harvey, Adam Scibior, Boyan Beronov, Ali Nasseri (2020)
+- [Information-Theoretic Probing with Minimum Description Length](https://arxiv.org/abs/2003.12298) - Elena Voita, Ivan Titov (2020)

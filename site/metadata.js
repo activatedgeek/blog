@@ -8,7 +8,7 @@ module.exports = {
       ? `https://www.sanyamkapoor.com`
       : `http://localhost:8000`,
   social: {
-    scholar: "https://scholar.google.com/citations?user=p0NMtgsAAAAJ",
+    scholar: "https://scholar.google.com/citations?user=mwB-BekAAAAJ",
     github: "https://github.com/activatedgeek",
     yc: "https://news.ycombinator.com/user?id=activatedgeek",
     linkedin: "https://www.linkedin.com/in/sanyamkapoor",
