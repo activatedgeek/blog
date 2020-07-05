@@ -1,6 +1,6 @@
 const path = require("path")
 const moment = require("moment")
-const assert = require("assert")
+const slugger = require("github-slugger").slug
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -8,85 +8,88 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MdxFrontmatter {
       title: String!
       description: String
-      slug: String!
+      area: String!
+      cat: String!
       date: Date @dateformat
       updated: Date @dateformat
-      category: [String]
-      tags: [String]
+      slug: String!
+      permalink: String!
       draft: Boolean
       archive: Boolean
-      menuLabel: String
-      menuList: Boolean
     }
   `
   createTypes(typeDefs)
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = (
+  { node, reporter, actions, getNode },
+  { orgsys: { areas } }
+) => {
   if (node.internal.type !== "Mdx") {
     return
   }
 
   const { createNodeField } = actions
 
-  let { date, updated, slug, category, _options } = node.frontmatter
-  category = category || []
-  _options = _options || {}
-
   const fileNode = getNode(node.parent)
-  const parsedFilePath = path.parse(fileNode.relativePath)
+  let { title, date, updated, area, cat, slug } = node.frontmatter
 
-  // Assign default category to the root folder.
-  const defaultcategory = parsedFilePath.dir
-    .replace(/\//g, " ")
-    .trim()
-    .split(" ")[0]
-
-  if (defaultcategory.length) {
-    category = [defaultcategory, ...category]
+  if (area !== undefined) {
+    if (area in areas) {
+      if (!(cat in areas[area].categories)) {
+        reporter.panicOnBuild(
+          `ERROR: ${fileNode.relativePath} - Undefined category "${cat}" in area "${area}"`
+        )
+      }
+    } else {
+      reporter.panicOnBuild(
+        `ERROR: ${fileNode.relativePath} - Undefined area "${area}"`
+      )
+    }
   }
 
-  if (slug === undefined) {
-    slug = `/${parsedFilePath.dir}`
-    if (parsedFilePath.name !== "index") {
-      slug = `${slug}${parsedFilePath.dir ? "/" : ""}${parsedFilePath.name}`
-    }
+  if (date === undefined) {
+    reporter.warn(`WARN: ${fileNode.relativePath} - Missing creation date`)
   }
 
   if (date !== undefined) {
     date = new Date(date)
-    assert(date instanceof Date && !isNaN(date.getTime()))
-    date = moment(date).format()
+    if (!(date instanceof Date && !isNaN(date.getTime()))) {
+      reporter.panicOnBuild(
+        `ERROR: ${fileNode.relativePath} - Invalid creation date.`
+      )
+    }
   }
 
   if (updated !== undefined) {
     updated = new Date(updated)
-    assert(updated instanceof Date && !isNaN(updated.getTime()))
-    updated = moment(updated).format()
+    if (!(updated instanceof Date && !isNaN(updated.getTime()))) {
+      reporter.panicOnBuild(
+        `ERROR: ${fileNode.relativePath} - Invalid updated date.`
+      )
+    }
   }
 
   node.frontmatter = {
     ...node.frontmatter,
-    date,
-    updated,
-    slug,
-    category,
+    date: date !== undefined ? moment(date).format() : date,
+    updated: updated !== undefined ? moment(updated).format() : updated,
+    slug: slug || `/kb/${slugger(title)}`,
+    permalink: `/kb/${area}.${cat}--${moment(date).format("YYYYMMDD--HHmmss")}`,
   }
 
   createNodeField({
     node,
-    name: "template",
-    value: _options.template || defaultcategory || "default",
+    name: "filedUnder",
+    value: `${areas[area].label} :: ${areas[area].categories[cat].label}`,
   })
-
-  delete node.frontmatter._options
 }
 
 exports.createPages = async (
   { graphql, actions, reporter },
-  { templatesDir, categoryTemplateMap }
+  { templatesDir, templateMap }
 ) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const createAllPages = async function() {
     const result = await graphql(`
@@ -95,11 +98,9 @@ exports.createPages = async (
           edges {
             node {
               id
-              fields {
-                template
-              }
               frontmatter {
                 slug
+                permalink
               }
             }
           }
@@ -115,46 +116,21 @@ exports.createPages = async (
       ({
         node: {
           id,
-          fields: { template },
-          frontmatter: { slug },
+          frontmatter: { slug, permalink },
         },
       }) => {
         createPage({
           path: slug,
-          component: path.resolve(
-            `${templatesDir}/${categoryTemplateMap[template]}.js`
-          ),
+          component: path.resolve(`${templatesDir}/${templateMap.default}.js`),
           context: { id },
+        })
+        createRedirect({
+          fromPath: permalink,
+          toPath: slug,
         })
       }
     )
   }
 
-  const createAllTagPages = async function() {
-    const result = await graphql(`
-      {
-        allMdx(filter: { frontmatter: { category: { eq: "blog" } } }) {
-          group(field: frontmatter___tags) {
-            tag: fieldValue
-            totalCount
-          }
-        }
-      }
-    `)
-
-    if (result.errors) {
-      reporter.panicOnBuild('🚨  ERROR: Loading "createAllTagPages" query')
-    }
-
-    result.data.allMdx.group.forEach(({ tag }) => {
-      createPage({
-        path: `/blog/tags/${encodeURIComponent(tag)}`,
-        component: path.resolve(`${templatesDir}/list.js`),
-        context: { tag },
-      })
-    })
-  }
-
   createAllPages()
-  createAllTagPages()
 }

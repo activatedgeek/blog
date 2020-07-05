@@ -6,10 +6,9 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPencilAlt, faEdit, faTag } from "@fortawesome/free-solid-svg-icons"
+import { faPencilAlt, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 import Layout, { ContentBox } from "../components/layout"
-import Tags from "../components/tags"
 import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
@@ -26,7 +25,7 @@ const InfoSep = () => (
   />
 )
 
-export const PostInfo = ({ date, updated, tags }) => {
+export const PostInfo = ({ date, updated, permalink, filedUnder }) => {
   let infoList = []
 
   if (date !== null) {
@@ -43,14 +42,6 @@ export const PostInfo = ({ date, updated, tags }) => {
       </React.Fragment>
     )
   }
-  if (Array.isArray(tags) && tags.length) {
-    infoList.push(
-      <React.Fragment>
-        <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} />
-        <Tags tags={tags.map(t => ({ tag: t }))} fontSize={0} />
-      </React.Fragment>
-    )
-  }
 
   return (
     <Flex
@@ -63,22 +54,23 @@ export const PostInfo = ({ date, updated, tags }) => {
       {infoList.map((c, i) => (
         <React.Fragment key={i}>
           {c}
-          {i < infoList.length - 1 ? <InfoSep /> : null}
+          <InfoSep />
         </React.Fragment>
       ))}
+      {filedUnder}
     </Flex>
   )
 }
 
 export const Post = ({ mdx }) => {
-  const { body, frontmatter, tableOfContents } = mdx
+  const { body, frontmatter, fields, tableOfContents } = mdx
   const { title, draft, archive } = frontmatter
 
   return (
     <Box>
       <Styled.h1 sx={{ mt: 0 }}>{title}</Styled.h1>
 
-      <PostInfo {...frontmatter} />
+      <PostInfo {...frontmatter} {...fields} />
 
       <Styled.hr />
 
@@ -113,24 +105,11 @@ export const Post = ({ mdx }) => {
   )
 }
 
-const titleSuffixMap = {
-  kb: "KB",
-  blog: "Blog",
-}
-
 const PageTemplate = ({ data: { mdx } }) => {
   const { frontmatter } = mdx
-  const { title, category } = frontmatter
-
-  const titleSuffix = titleSuffixMap[category[0]]
 
   return (
-    <Layout
-      frontmatter={{
-        ...frontmatter,
-        title: `${title}${titleSuffix ? ` - ${titleSuffix}` : ""}`,
-      }}
-    >
+    <Layout frontmatter={frontmatter}>
       <ContentBox>
         <Post mdx={mdx} />
       </ContentBox>
@@ -150,12 +129,14 @@ export const pageQuery = graphql`
         title
         description
         slug
+        permalink
         date(formatString: "MMM D YYYY")
         updated(fromNow: true)
-        tags
-        category
         draft
         archive
+      }
+      fields {
+        filedUnder
       }
     }
   }

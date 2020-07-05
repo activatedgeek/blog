@@ -11,10 +11,7 @@ import {
   faBrain,
   faNewspaper,
   faSearch,
-  faTag,
   faWineBottle,
-  faWindowClose,
-  faEllipsisV,
   faCode,
 } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -75,49 +72,49 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-const KBList = ({ edges }) => {
-  let labelMap = {}
-  edges.forEach(({ node }) => {
-    const {
-      frontmatter: { menuLabel, menuList },
-    } = node
-    if (menuList !== false) {
-      const useLabel = menuLabel || "00default"
-      labelMap[useLabel] = labelMap[useLabel] || []
-      labelMap[useLabel].push(node)
-    }
-  })
+// const KBList = ({ edges }) => {
+//   let labelMap = {}
+//   edges.forEach(({ node }) => {
+//     const {
+//       frontmatter: { menuLabel, menuList },
+//     } = node
+//     if (menuList !== false) {
+//       const useLabel = menuLabel || "00default"
+//       labelMap[useLabel] = labelMap[useLabel] || []
+//       labelMap[useLabel].push(node)
+//     }
+//   })
 
-  return (
-    <Flex sx={{ flexDirection: "column" }}>
-      {Object.keys(labelMap)
-        .sort()
-        .map((l, k) => (
-          <Flex key={k} sx={{ flexDirection: "column" }}>
-            {l === "00default" ? null : (
-              <Styled.p sx={{ color: "menu.sub" }}>{l}</Styled.p>
-            )}
-            {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
-              <Styled.a
-                key={i}
-                as={Link}
-                to={slug}
-                sx={{
-                  my: 1,
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                }}
-              >
-                {title}
-              </Styled.a>
-            ))}
-            <Styled.hr />
-          </Flex>
-        ))}
-    </Flex>
-  )
-}
+//   return (
+//     <Flex sx={{ flexDirection: "column" }}>
+//       {Object.keys(labelMap)
+//         .sort()
+//         .map((l, k) => (
+//           <Flex key={k} sx={{ flexDirection: "column" }}>
+//             {l === "00default" ? null : (
+//               <Styled.p sx={{ color: "menu.sub" }}>{l}</Styled.p>
+//             )}
+//             {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
+//               <Styled.a
+//                 key={i}
+//                 as={Link}
+//                 to={slug}
+//                 sx={{
+//                   my: 1,
+//                   textOverflow: "ellipsis",
+//                   whiteSpace: "nowrap",
+//                   overflow: "hidden",
+//                 }}
+//               >
+//                 {title}
+//               </Styled.a>
+//             ))}
+//             <Styled.hr />
+//           </Flex>
+//         ))}
+//     </Flex>
+//   )
+// }
 
 const HeaderMenuItem = ({ url, children, external, display }) => (
   <Styled.a
@@ -153,9 +150,7 @@ const HeaderMenuItem = ({ url, children, external, display }) => (
   </Styled.a>
 )
 
-const Header = ({ kbedges }) => {
-  const [showOverlay, setShowOverlay] = useState(false)
-
+const Header = () => {
   return (
     <Flex
       sx={{
@@ -200,9 +195,6 @@ const Header = ({ kbedges }) => {
             <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} fixedWidth />{" "}
             Blog
           </HeaderMenuItem>
-          <HeaderMenuItem url="/blog/tags">
-            <FontAwesomeIcon icon={faTag} sx={{ mr: 1 }} fixedWidth /> Tags
-          </HeaderMenuItem>
           <HeaderMenuItem url="/search">
             <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
           </HeaderMenuItem>
@@ -214,58 +206,7 @@ const Header = ({ kbedges }) => {
             <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth />{" "}
             Knowledge Base
           </HeaderMenuItem>
-          <HeaderMenuItem url="#" display={[null, null, "none", "none"]}>
-            <FontAwesomeIcon
-              onClick={e => {
-                e.preventDefault()
-                setShowOverlay(!showOverlay)
-              }}
-              icon={faEllipsisV}
-              fixedWidth
-            />
-          </HeaderMenuItem>
         </Flex>
-        <Box
-          sx={{
-            display: showOverlay ? null : "none",
-            p: 4,
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "screenWidth",
-            height: "screenHeight",
-            bg: "gray.1",
-            zIndex: 10,
-            overflowY: "auto",
-          }}
-        >
-          <Styled.p
-            sx={{
-              position: "fixed",
-              right: 4,
-              top: 4,
-              m: 0,
-              fontSize: 2,
-              cursor: "pointer",
-            }}
-            onClick={e => {
-              e.preventDefault()
-              setShowOverlay(!showOverlay)
-            }}
-          >
-            <FontAwesomeIcon icon={faWindowClose} fixedWidth />
-          </Styled.p>
-          <KBList edges={kbedges} />
-        </Box>
-        <Box
-          sx={{
-            display: ["none", "none", "inherit", "inherit"],
-            fontSize: 0,
-            pl: 2,
-          }}
-        >
-          <KBList edges={kbedges} />
-        </Box>
       </Box>
     </Flex>
   )
@@ -417,24 +358,9 @@ export default ({ children, frontmatter }) => (
             }
           }
         }
-        allMdx(
-          filter: { frontmatter: { category: { in: "kb" } } }
-          sort: { order: ASC, fields: frontmatter___title }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                slug
-                menuLabel
-                menuList
-              }
-            }
-          }
-        }
       }
     `}
-    render={({ site: { siteMetadata }, allMdx: { edges: kbedges } }) => {
+    render={({ site: { siteMetadata } }) => {
       const { name, social } = siteMetadata
 
       return (
@@ -442,7 +368,7 @@ export default ({ children, frontmatter }) => (
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
             <Flex sx={{ flexDirection: ["column", "column", "row", "row"] }}>
-              <Header kbedges={kbedges} siteMetadata={siteMetadata} />
+              <Header siteMetadata={siteMetadata} />
               {children}
             </Flex>
             <Footer name={name} social={social} />

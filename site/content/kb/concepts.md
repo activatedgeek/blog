@@ -2,13 +2,6 @@
 title: Concepts
 ---
 
-I've usually come across interesting concepts, phenomenons and what not. This place is to document them. There are also others uncategorized in [Observations](./observations).
-
-## Economics
-
-- Time Preference
-- Inflation Tax
-
 ## Uncategorized
 
 - [Not invented here](https://en.wikipedia.org/wiki/Not_invented_here)

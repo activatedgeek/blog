@@ -38,12 +38,11 @@ export default ({
           items={edges.map(
             ({
               node: {
-                frontmatter: { title, date, tags, slug, archive, draft },
+                frontmatter: { title, date, slug, archive, draft },
               },
             }) => ({
               title,
               date,
-              tags: tags.map(t => ({ tag: t })),
               slug,
               archive,
               draft,
@@ -56,17 +55,13 @@ export default ({
 }
 
 export const pageQuery = graphql`
-  query($tag: [String!]) {
-    allMdx(
-      filter: { frontmatter: { category: { in: "blog" }, tags: { in: $tag } } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
+  query {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           frontmatter {
             title
             date
-            tags
             slug
             archive
             draft
