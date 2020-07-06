@@ -21,7 +21,7 @@ Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
 with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/)
 (who by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85))!
 
-For a longer background, see my [CV](https://files.sanyamkapoor.com/cv.pdf).
+For a longer background, see my [CV](https://data.perhapsbay.es/cv.pdf).
 
 Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 See the [stack](/kb/the-stack) behind this website to know the tools I use to build

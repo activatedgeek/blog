@@ -51,3 +51,4 @@ cat: ml
 - [Understanding the Neural Tangent Kernel](https://rajatvd.github.io/NTK/) - Rajat Vadiraj Dwaraknath (2020)
 - [Planning as Inference in Epidemiological Models](https://arxiv.org/abs/2003.13221) - Frank Wood, Andrew Warrington, Saeid Naderiparizi, Christian Weilbach, Vaden Masrani, William Harvey, Adam Scibior, Boyan Beronov, Ali Nasseri (2020)
 - [Information-Theoretic Probing with Minimum Description Length](https://arxiv.org/abs/2003.12298) - Elena Voita, Ivan Titov (2020)
+- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - Jay Alammar (2018)
