@@ -21,12 +21,14 @@ const colorSystem = {
     bg: themeColor[8],
     text: baseColors.gray[1],
     lighttext: baseColors.gray[3],
+    graytext: baseColors.gray[6],
+    darktext: baseColors.gray[8],
   },
   menu: {
     main: baseColors.gray[8],
     sub: baseColors.gray[6],
     hover: {
-      bg: themeColor[8],
+      bg: themeColor[9],
       main: baseColors.gray[1],
     },
   },

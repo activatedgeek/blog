@@ -9,12 +9,12 @@ const LostPage = () => (
   <Layout
     frontmatter={{ title: "404", description: "This page could not be found." }}
   >
-    <ContentBox>
-      <Styled.h1>Hmm... Nothing here!</Styled.h1>
+    <ContentBox style={{ width: ["100%", "100%", "3xl", "4xl"] }}>
+      <Styled.h1>Oops! Nothing here.</Styled.h1>
       <Styled.p>
-        Go back{" "}
-        <Styled.a to="/" as={Link}>
-          home
+        Have some keywords in mind? Search them{" "}
+        <Styled.a to="/search" as={Link}>
+          here
         </Styled.a>
       </Styled.p>
     </ContentBox>

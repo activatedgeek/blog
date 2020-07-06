@@ -20,6 +20,7 @@ module.exports = {
         books: { label: "Books" },
         www: { label: "WWW" },
         hb: { label: "Handbook" },
+        data: { label: "Data & Visualization" },
       },
     },
     cult: {
@@ -35,7 +36,7 @@ module.exports = {
       categories: {
         prod: { label: "Products" },
         dev: { label: "Ideas & Development" },
-        code: { label: "Software Programming" },
+        swe: { label: "Software Engineering" },
       },
     },
     soc: {
@@ -45,6 +46,7 @@ module.exports = {
         econ: { label: "Economics" },
         sys: { label: "Societal systems" },
         biz: { label: "Business" },
+        jrn: { label: "(Investigative) Journalism" },
       },
     },
     people: {
@@ -58,6 +60,9 @@ module.exports = {
       categories: {
         res: { label: "Research" },
         ml: { label: "Machine Learning & Statistics" },
+        cs: { label: "Computer science" },
+        cv: { label: "Computer vision" },
+        rl: { label: "Reinforcement learning" },
       },
     },
   },

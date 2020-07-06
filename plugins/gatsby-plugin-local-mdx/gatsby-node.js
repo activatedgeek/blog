@@ -16,6 +16,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       permalink: String!
       draft: Boolean
       archive: Boolean
+      redirectsFrom: [String]
     }
   `
   createTypes(typeDefs)
@@ -38,14 +39,18 @@ exports.onCreateNode = (
     if (area in areas) {
       if (!(cat in areas[area].categories)) {
         reporter.panicOnBuild(
-          `ERROR: ${fileNode.relativePath} - Undefined category "${cat}" in area "${area}"`
+          `ERROR: ${fileNode.relativePath} - Undefined category "${cat}" in area "${area}".`
         )
       }
     } else {
       reporter.panicOnBuild(
-        `ERROR: ${fileNode.relativePath} - Undefined area "${area}"`
+        `ERROR: ${fileNode.relativePath} - Undefined/missing area "${area}".`
       )
     }
+  } else {
+    reporter.panicOnBuild(
+      `ERROR: ${fileNode.relativePath} - Missing category."`
+    )
   }
 
   if (date === undefined) {
@@ -101,6 +106,7 @@ exports.createPages = async (
               frontmatter {
                 slug
                 permalink
+                redirectsFrom
               }
             }
           }
@@ -116,7 +122,7 @@ exports.createPages = async (
       ({
         node: {
           id,
-          frontmatter: { slug, permalink },
+          frontmatter: { slug, permalink, redirectsFrom },
         },
       }) => {
         createPage({
@@ -124,10 +130,13 @@ exports.createPages = async (
           component: path.resolve(`${templatesDir}/${templateMap.default}.js`),
           context: { id },
         })
-        createRedirect({
-          fromPath: permalink,
-          toPath: slug,
-        })
+
+        // createRedirect({ fromPath: permalink, toPath: slug })
+        if (Array.isArray(redirectsFrom)) {
+          redirectsFrom.forEach(fromPath => {
+            createRedirect({ fromPath, toPath: slug, isPermanent: true })
+          })
+        }
       }
     )
   }

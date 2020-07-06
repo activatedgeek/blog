@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useState } from "react" // eslint-disable-line no-unused-vars
+import React from "react" // eslint-disable-line no-unused-vars
 import { graphql, Link } from "gatsby"
 import { useFlexSearch } from "react-use-flexsearch"
 import { jsx, Styled } from "theme-ui"
@@ -27,11 +27,11 @@ const SearchPage = ({
         slug: `/search?q=${encodeURIComponent(q)}`,
       }}
     >
-      <ContentBox sx={{ my: "auto" }}>
+      <ContentBox style={{ width: ["100%", "100%", "3xl", "4xl"] }}>
         <Styled.h1>
           <FontAwesomeIcon icon={faSearch} /> Search
         </Styled.h1>
-        <Styled.p sx={{ color: "gray.5", fontSize: 0, display: "inline" }}>
+        <Styled.p sx={{ color: "hero.graytext", fontSize: 0 }}>
           Experimental exact word search.
         </Styled.p>
         {q ? (
@@ -49,11 +49,10 @@ const SearchPage = ({
         ) : (
           <SearchBar
             inputSx={{
-              width: "11/12",
               my: 2,
               fontSize: 2,
-              color: "gray.7",
-              "&:focus": { outline: "none", borderColor: "gray.7" },
+              color: "hero.darktext",
+              "&:focus": { outline: "none", borderColor: "hero.graytext" },
             }}
           />
         )}

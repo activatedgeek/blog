@@ -14,6 +14,9 @@ const gatsbyRemarkPlugins = [
     resolve: require.resolve(`./plugins/gatsby-remark-local-bibtex`),
   },
   {
+    resolve: require.resolve(`./plugins/gatsby-remark-local-vega`),
+  },
+  {
     resolve: `gatsby-remark-autolink-headers`,
     options: { icon: false },
   },
@@ -152,5 +155,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
   ],
 }

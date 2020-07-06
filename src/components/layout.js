@@ -7,12 +7,11 @@ import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
-  faRss,
   faBrain,
-  faNewspaper,
   faSearch,
   faWineBottle,
   faCode,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -72,51 +71,7 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-// const KBList = ({ edges }) => {
-//   let labelMap = {}
-//   edges.forEach(({ node }) => {
-//     const {
-//       frontmatter: { menuLabel, menuList },
-//     } = node
-//     if (menuList !== false) {
-//       const useLabel = menuLabel || "00default"
-//       labelMap[useLabel] = labelMap[useLabel] || []
-//       labelMap[useLabel].push(node)
-//     }
-//   })
-
-//   return (
-//     <Flex sx={{ flexDirection: "column" }}>
-//       {Object.keys(labelMap)
-//         .sort()
-//         .map((l, k) => (
-//           <Flex key={k} sx={{ flexDirection: "column" }}>
-//             {l === "00default" ? null : (
-//               <Styled.p sx={{ color: "menu.sub" }}>{l}</Styled.p>
-//             )}
-//             {labelMap[l].map(({ frontmatter: { title, slug } }, i) => (
-//               <Styled.a
-//                 key={i}
-//                 as={Link}
-//                 to={slug}
-//                 sx={{
-//                   my: 1,
-//                   textOverflow: "ellipsis",
-//                   whiteSpace: "nowrap",
-//                   overflow: "hidden",
-//                 }}
-//               >
-//                 {title}
-//               </Styled.a>
-//             ))}
-//             <Styled.hr />
-//           </Flex>
-//         ))}
-//     </Flex>
-//   )
-// }
-
-const HeaderMenuItem = ({ url, children, external, display }) => (
+const HeaderMenuItem = ({ url, children, external }) => (
   <Styled.a
     as={external ? null : Link}
     target={external ? "_blank" : null}
@@ -124,8 +79,6 @@ const HeaderMenuItem = ({ url, children, external, display }) => (
     to={external ? null : url}
     href={external ? url : null}
     sx={{
-      display,
-      width: [null, null, "100%", "100%"],
       ":visited,:hover,:active": {
         textDecoration: "none",
       },
@@ -135,11 +88,11 @@ const HeaderMenuItem = ({ url, children, external, display }) => (
       sx={{
         my: 1,
         p: 2,
-        color: "menu.main",
+        color: "hero.lighttext",
         borderRadius: "lg",
         ":hover": {
           bg: "menu.hover.bg",
-          color: "menu.hover.main",
+          color: "hero.text",
           cursor: "pointer",
           boxShadow: "xl",
         },
@@ -154,19 +107,19 @@ const Header = () => {
   return (
     <Flex
       sx={{
-        flexDirection: ["row", "row", "column", "column"],
-        boxShadow: "inner",
-        borderRadius: "lg",
-        width: [null, null, "13rem", "13rem"],
+        bg: "hero.bg",
+        width: "screenWidth",
+        boxShadow: "default",
       }}
     >
       <Flex
         sx={{
           p: 3,
-          bg: "hero.bg",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "lg",
+          borderRightColor: "hero.lighttext",
+          borderRightWidth: 1,
+          borderRightStyle: "solid",
         }}
       >
         <Styled.a
@@ -182,32 +135,25 @@ const Header = () => {
           <Styled.h2>SK</Styled.h2>
         </Styled.a>
       </Flex>
-      <Box sx={{ p: 3 }}>
-        <Flex
-          sx={{
-            flexDirection: ["row", "row", "column", "column"],
-            mt: [0, 0, 2, 2],
-            alignItems: ["center", "center", null, null],
-            flexWrap: "wrap",
-          }}
-        >
-          <HeaderMenuItem url="/blog">
-            <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} fixedWidth />{" "}
-            Blog
-          </HeaderMenuItem>
-          <HeaderMenuItem url="/search">
-            <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
-          </HeaderMenuItem>
-          <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
-            <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth />{" "}
-            Wine Map
-          </HeaderMenuItem>
-          <HeaderMenuItem url="/kb">
-            <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth />{" "}
-            Knowledge Base
-          </HeaderMenuItem>
-        </Flex>
-      </Box>
+      <Flex
+        sx={{
+          ml: "auto",
+          px: 3,
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <HeaderMenuItem url="/search">
+          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/kb">
+          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> KB
+        </HeaderMenuItem>
+        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
+          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
+          Map
+        </HeaderMenuItem>
+      </Flex>
     </Flex>
   )
 }
@@ -229,12 +175,10 @@ export const SearchBar = ({ inputSx }) => {
         value={query}
         placeholder="Search"
         sx={{
-          width: "64",
           p: 1,
           textAlign: "center",
           borderColor: "search.border",
           borderRadius: "lg",
-          mx: "auto",
           ...inputSx,
         }}
         onChange={e => setQuery(e.target.value)}
@@ -243,7 +187,7 @@ export const SearchBar = ({ inputSx }) => {
   )
 }
 
-const MenuLink = ({ url, external, children }) => (
+const IconLink = ({ url, external, children, icon }) => (
   <Box>
     <Styled.a
       as={external ? null : Link}
@@ -253,63 +197,53 @@ const MenuLink = ({ url, external, children }) => (
       href={external ? url : null}
       sx={{
         textDecoration: "none",
-        ":visited,:hover,:active": {
+        ":visited,:active,:hover": {
           textDecoration: "inherit",
         },
       }}
     >
       {children}
+      <FontAwesomeIcon
+        icon={icon}
+        sx={{
+          mx: 1,
+          fontSize: 2,
+          color: "hero.graytext",
+          ":hover": {
+            color: "hero.bg",
+          },
+        }}
+        fixedWidth
+      />
     </Styled.a>
   </Box>
 )
 
 const Footer = ({ name, social }) => {
-  const iconStyle = {
-    mx: 1,
-    fontSize: 2,
-    color: "hero.text",
-  }
   return (
     <Flex
       sx={{
         width: "screenWidth",
         flexDirection: "column",
         justifyContent: "center",
-        bg: "hero.bg",
-        boxShadow: "lg",
         mt: "auto",
         p: 4,
       }}
     >
+      <Styled.hr sx={{ mt: 0 }} />
       <Flex sx={{ justifyContent: "center" }}>
-        <MenuLink url={social.scholar} external>
-          <FontAwesomeIcon icon={faUserGraduate} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={social.github} external>
-          <FontAwesomeIcon icon={faGithub} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={social.yc} external>
-          <FontAwesomeIcon icon={faYCombinator} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={social.linkedin} external>
-          <FontAwesomeIcon icon={faLinkedin} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={social.stackoverflow} external>
-          <FontAwesomeIcon icon={faStackOverflow} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={social.twitter} external>
-          <FontAwesomeIcon icon={faTwitter} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url="/rss/blog.xml" external>
-          <FontAwesomeIcon icon={faRss} sx={iconStyle} fixedWidth />
-        </MenuLink>
-        <MenuLink url={`${social.github}/www`} external>
-          <FontAwesomeIcon icon={faCode} sx={iconStyle} fixedWidth />
-        </MenuLink>
+        <IconLink url={social.scholar} icon={faUserGraduate} external />
+        <IconLink url={social.github} icon={faGithub} external />
+        <IconLink url={social.yc} icon={faYCombinator} external />
+        <IconLink url={social.linkedin} icon={faLinkedin} external />
+        <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
+        <IconLink url={social.twitter} icon={faTwitter} external />
+        <IconLink url={`${social.github}/www`} icon={faCode} external />
+        <IconLink url="/everything" icon={faDatabase} external />
       </Flex>
       <Styled.p
         sx={{
-          color: "hero.lighttext",
+          color: "hero.graytext",
           fontWeight: "light",
           mb: 0,
           mt: 2,
@@ -322,16 +256,15 @@ const Footer = ({ name, social }) => {
   )
 }
 
-export const ContentBox = ({ children, sx }) => (
+export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
       p: 4,
       mx: "auto",
-      maxWidth: ["100%", "100%", "3xl", "3xl"],
+      maxWidth: ["100%", "100%", "3xl", "4xl"],
       flex: 1,
-      boxShadow: "inner",
-      borderRadius: "lg",
-      ...sx,
+      boxShadow: "default",
+      ...style,
     }}
   >
     {children}
@@ -367,10 +300,8 @@ export default ({ children, frontmatter }) => (
         <>
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
-            <Flex sx={{ flexDirection: ["column", "column", "row", "row"] }}>
-              <Header siteMetadata={siteMetadata} />
-              {children}
-            </Flex>
+            <Header siteMetadata={siteMetadata} />
+            {children}
             <Footer name={name} social={social} />
           </Flex>
         </>

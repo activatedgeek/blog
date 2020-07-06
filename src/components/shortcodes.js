@@ -10,7 +10,5 @@ const asLazy = (ipath, defaultProps) => props => {
 
 export default {
   LazyImage: asLazy(import("./image.js")),
-  LazyVega: asLazy(import("./chart.js"), {
-    actions: false,
-  }),
+  LazyVega: asLazy(import("./chart.js")),
 }
