@@ -7,7 +7,8 @@ import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
-  faBrain,
+  // faBrain,
+  faHome,
   faSearch,
   faWineBottle,
   faCode,
@@ -143,12 +144,15 @@ const Header = () => {
           flexWrap: "wrap",
         }}
       >
+        <HeaderMenuItem url="/">
+          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
+        </HeaderMenuItem>
         <HeaderMenuItem url="/search">
           <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
         </HeaderMenuItem>
-        <HeaderMenuItem url="/kb">
+        {/* <HeaderMenuItem url="/kb">
           <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> KB
-        </HeaderMenuItem>
+        </HeaderMenuItem> */}
         <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
           <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
           Map
@@ -239,7 +243,7 @@ const Footer = ({ name, social }) => {
         <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
         <IconLink url={social.twitter} icon={faTwitter} external />
         <IconLink url={`${social.github}/www`} icon={faCode} external />
-        <IconLink url="/everything" icon={faDatabase} external />
+        <IconLink url="/db" icon={faDatabase} external />
       </Flex>
       <Styled.p
         sx={{
@@ -260,10 +264,12 @@ export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
       p: 4,
+      mt: 4,
       mx: "auto",
       maxWidth: ["100%", "100%", "3xl", "4xl"],
       flex: 1,
-      boxShadow: "default",
+      boxShadow: "md",
+      borderRadius: "lg",
       ...style,
     }}
   >

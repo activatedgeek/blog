@@ -6,7 +6,7 @@ area: phil
 cat: psych
 ---
 
-Personal knowledge organization [^a] is a very individualistic choice. Something
+Personal knowledge organization [^a] is a very intimate choice. Something
 that works for one, may not work for another. Instead of providing a system, I'm going
 meta - a system to think about knowledge organization. Outlining the key philosophical
 principles allows clarity of thought. This document should prove helpful to anyone

@@ -12,6 +12,12 @@ cat: books
 In recent times, I've warmed up to a variety of themes from history, philosophy,
 economics and technology. Here's a list books that have shaped my opinion.
 
+## Economics
+
+### General
+
+- [Economics for Everyone: A Short Guide to the Economics of Capitalism](http://economicsforeveryone.ca) by _Jim Stanford_ ([2015](https://www.worldcat.org/title/economics-for-everyone-a-short-guide-to-the-economics-of-capitalism/oclc/912325695))
+
 ## History
 
 ### Economics

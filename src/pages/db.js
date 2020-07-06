@@ -3,7 +3,7 @@
 import { graphql, Link } from "gatsby"
 import { jsx, Styled } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons"
+import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 
 import Layout, { ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
@@ -16,22 +16,25 @@ export default ({
 }) => (
   <Layout
     frontmatter={{
-      title: "Everything",
+      title: "Database of everything",
       description: "Index of all posts.",
-      slug: "/everything",
+      slug: "/db",
     }}
   >
     <ContentBox>
       <Styled.h2>
-        <FontAwesomeIcon icon={faNewspaper} sx={{ mr: 1 }} /> Everything
+        <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} /> Database of
+        everything
       </Styled.h2>
       <Warn>
         This is a list of everything in the knowledge base. This place should
-        only be visited rarely. Instead, visit the relevant outline pages or{" "}
+        rarely need a visit, unless you don't know what you are looking for.
+        Instead, visit the relevant outline or portal pages. If you know what
+        you are looking for, try{" "}
         <Styled.a to="/search" as={Link}>
           search
         </Styled.a>{" "}
-        for something on your mind.
+        instead.
       </Warn>
       <PostIndex
         items={edges.map(

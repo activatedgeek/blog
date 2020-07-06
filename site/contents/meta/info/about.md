@@ -23,9 +23,10 @@ with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/)
 
 For a longer background, see my [CV](https://files.sanyamkapoor.com/cv.pdf).
 
-I occassionally write on the [blog](/blog) and maintain a [knowledge base](/kb).
+Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 See the [stack](/kb/the-stack) behind this website to know the tools I use to build
-this.
+this. I also like to think of myself as a budding oenophile. Check out my wines and
+notes on the [world map](https://wine.sanyamkapoor.com).
 
-I also like to think of myself as a budding oenophile. Check out my wines and
-notes on the [world map](//wine.sanyamkapoor.com).
+_I'm reorganizing content to realize my knowledge organization philosophy.
+Meanwhile, a crude way to browse everything is to look at the [database of everything](/db)._
