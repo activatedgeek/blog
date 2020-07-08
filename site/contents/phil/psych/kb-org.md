@@ -140,4 +140,4 @@ However, without doubt there is broader utility of such systems. Wikipedia could
 possibly be run using _text files_. We aren't trying to build _Wikipedia_ though,
 are we?
 
-[^1]: An alternate (admittedly fancy) expression I came across was _Digital garden_.
+[^a]: An alternate (admittedly fancy) expression I came across was _Digital garden_.

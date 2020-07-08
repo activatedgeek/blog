@@ -15,50 +15,28 @@ const themeColor = [
   "#113b86",
 ]
 
-const colorSystem = {
-  themeColor,
-  hero: {
-    bg: themeColor[8],
-    text: baseColors.gray[1],
-    lighttext: baseColors.gray[3],
-    graytext: baseColors.gray[6],
-    darktext: baseColors.gray[8],
-  },
-  menu: {
-    main: baseColors.gray[8],
-    sub: baseColors.gray[6],
-    hover: {
-      bg: themeColor[9],
-      main: baseColors.gray[1],
-    },
-  },
-  search: {
-    border: themeColor[4],
-  },
-}
-
 const mods = {
+  colors: {
+    primary: themeColor[8],
+    primaryHover: themeColor[9],
+    warning: baseColors.yellow[5],
+  },
   styles: {
     pre: {
       ...prism,
       overflow: "auto",
-      p: "2rem",
-      borderRadius: "lg",
-      boxShadow: "default",
-    },
-    a: {
-      color: themeColor[8],
+      p: "1rem",
+      borderRadius: "md",
+      borderStyle: "solid",
+      borderWidth: "px",
+      borderColor: "muted",
     },
     blockquote: {
       pl: 2,
-      color: baseColors.gray[6],
       borderLeftWidth: "4",
       borderLeftStyle: "solid",
-      borderLeftColor: baseColors.gray[6],
+      borderLeftColor: "secondary",
     },
-  },
-  colors: {
-    ...colorSystem,
   },
 }
 

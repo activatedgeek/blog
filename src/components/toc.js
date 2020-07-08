@@ -27,10 +27,17 @@ const TableOfContents = ({ toc: { items } }) => {
         position: "sticky",
         top: 4,
         borderTopStyle: "solid",
-        borderTopWidth: "4",
-        borderTopColor: "hero.bg",
-        boxShadow: "default",
-        borderRadius: "lg",
+        borderTopWidth: 4,
+        borderTopColor: "primary",
+        borderRightStyle: "solid",
+        borderRightWidth: "px",
+        borderRightColor: "muted",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "px",
+        borderBottomColor: "muted",
+        borderLeftStyle: "solid",
+        borderLeftWidth: "px",
+        borderLeftColor: "muted",
       }}
     >
       <Styled.h5>

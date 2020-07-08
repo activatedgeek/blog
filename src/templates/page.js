@@ -46,9 +46,10 @@ export const PostInfo = ({ date, updated, filedUnder }) => {
   return (
     <Flex
       sx={{
-        color: "gray.6",
+        color: "textMuted",
         flexWrap: "wrap",
         alignItems: "center",
+        fontSize: 0,
       }}
     >
       {infoList.map((c, i) => (

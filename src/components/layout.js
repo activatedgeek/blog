@@ -89,12 +89,10 @@ const HeaderMenuItem = ({ url, children, external }) => (
       sx={{
         my: 1,
         p: 2,
-        color: "hero.lighttext",
+        color: "light",
         borderRadius: "lg",
         ":hover": {
-          bg: "menu.hover.bg",
-          color: "hero.text",
-          cursor: "pointer",
+          bg: "primaryHover",
           boxShadow: "xl",
         },
       }}
@@ -108,19 +106,17 @@ const Header = () => {
   return (
     <Flex
       sx={{
-        bg: "hero.bg",
+        bg: "primary",
         width: "screenWidth",
         boxShadow: "default",
       }}
     >
       <Flex
         sx={{
-          p: 3,
+          px: 4,
+          py: 2,
           alignItems: "center",
           justifyContent: "center",
-          borderRightColor: "hero.lighttext",
-          borderRightWidth: 1,
-          borderRightStyle: "solid",
         }}
       >
         <Styled.a
@@ -130,7 +126,7 @@ const Header = () => {
             ":visited,:hover,:active": {
               textDecoration: "none",
             },
-            color: "hero.text",
+            color: "light",
           }}
         >
           <Styled.h2>SK</Styled.h2>
@@ -181,8 +177,11 @@ export const SearchBar = ({ inputSx }) => {
         sx={{
           p: 1,
           textAlign: "center",
-          borderColor: "search.border",
-          borderRadius: "lg",
+          borderColor: "muted",
+          borderRadius: "md",
+          ":focus": {
+            outline: "none",
+          },
           ...inputSx,
         }}
         onChange={e => setQuery(e.target.value)}
@@ -212,9 +211,9 @@ const IconLink = ({ url, external, children, icon }) => (
         sx={{
           mx: 1,
           fontSize: 2,
-          color: "hero.graytext",
+          color: "textMuted",
           ":hover": {
-            color: "hero.bg",
+            color: "primary",
           },
         }}
         fixedWidth
@@ -230,8 +229,7 @@ const Footer = ({ name, social }) => {
         width: "screenWidth",
         flexDirection: "column",
         justifyContent: "center",
-        mt: "auto",
-        p: 4,
+        pb: 3,
       }}
     >
       <Styled.hr sx={{ mt: 0 }} />
@@ -247,7 +245,7 @@ const Footer = ({ name, social }) => {
       </Flex>
       <Styled.p
         sx={{
-          color: "hero.graytext",
+          color: "textMuted",
           fontWeight: "light",
           mb: 0,
           mt: 2,
@@ -264,12 +262,15 @@ export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
       p: 4,
-      mt: 4,
       mx: "auto",
-      maxWidth: ["100%", "100%", "3xl", "4xl"],
+      width: ["100%", "100%", "3xl", "4xl"],
       flex: 1,
-      boxShadow: "md",
-      borderRadius: "lg",
+      borderLeftStyle: "solid",
+      borderRightStyle: "solid",
+      borderLeftWidth: "px",
+      borderRightWidth: "px",
+      borderLeftColor: "muted",
+      borderRightColor: "muted",
       ...style,
     }}
   >

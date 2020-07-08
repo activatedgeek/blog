@@ -1,43 +1,33 @@
 /** @jsx jsx */
 
-import { jsx, Styled } from "theme-ui"
+import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faExclamationTriangle,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons"
 
-const Info = ({ children }) => (
-  <Styled.p
+const Info = ({ children, icon, color }) => (
+  <Flex
     sx={{
-      p: 3,
-      boxShadow: "md",
+      my: 4,
       borderLeftStyle: "solid",
+      borderLeftColor: color || "info",
       borderLeftWidth: "4",
-      borderLeftColor: "blue.4",
-      bg: "blue.1",
-      color: "blue.5",
+      alignItems: "center",
     }}
   >
-    <FontAwesomeIcon icon={faInfoCircle} /> {children}
-  </Styled.p>
+    <Box sx={{ px: 3, color: color || "info", fontSize: 2 }}>
+      <FontAwesomeIcon icon={icon || faInfoCircle} />
+    </Box>
+    <Box sx={{ pr: 3, fontSize: 0, flex: 1 }}>
+      <Styled.p sx={{ m: 0 }}>{children}</Styled.p>
+    </Box>
+  </Flex>
 )
 
-const Warn = ({ children }) => (
-  <Styled.p
-    sx={{
-      display: "block",
-      p: 3,
-      boxShadow: "md",
-      borderLeftStyle: "solid",
-      borderLeftWidth: "4",
-      borderLeftColor: "yellow.4",
-      bg: "yellow.2",
-      color: "yellow.7",
-    }}
-  >
-    <FontAwesomeIcon icon={faExclamationTriangle} /> {children}
-  </Styled.p>
+const Warn = ({ ...props }) => (
+  <Info {...props} icon={faExclamationTriangle} color="warning" />
 )
 
 export { Info, Warn }

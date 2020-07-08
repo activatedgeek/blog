@@ -16,14 +16,14 @@ const PostItem = ({ title, slug, archive, draft }) => (
         <FontAwesomeIcon
           icon={faArchive}
           title="This post is archived."
-          sx={{ mx: 2, color: "gray.7" }}
+          sx={{ mx: 2, color: "textMuted" }}
         />
       ) : null}
       {draft === true ? (
         <FontAwesomeIcon
           icon={faEdit}
           title="This post is a working draft."
-          sx={{ mx: 2, color: "gray.8" }}
+          sx={{ mx: 2, color: "textMuted" }}
         />
       ) : null}
     </Styled.p>
@@ -47,7 +47,7 @@ const PostIndex = ({ items }) => {
   const dateOptions = { month: "short", day: "numeric" }
 
   return (
-    <>
+    <Box sx={{ mt: 3 }}>
       {yearList.map((year, i) => (
         <Flex
           key={i}
@@ -64,7 +64,7 @@ const PostIndex = ({ items }) => {
                     display: "inline",
                     width: "24",
                     mx: [0, 0, 2, 2],
-                    color: "gray.5",
+                    color: "textMuted",
                   }}
                 >
                   {date ? (
@@ -83,7 +83,7 @@ const PostIndex = ({ items }) => {
           </Box>
         </Flex>
       ))}
-    </>
+    </Box>
   )
 }
 
