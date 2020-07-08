@@ -16,10 +16,20 @@ const themeColor = [
 ]
 
 const mods = {
+  useLocalStorage: false,
   colors: {
     primary: themeColor[8],
     primaryHover: themeColor[9],
     warning: baseColors.yellow[5],
+    link: themeColor[8],
+    modes: {
+      dark: {
+        text: baseColors.gray[1],
+        background: baseColors.gray[9],
+        textMuted: baseColors.gray[3],
+        link: themeColor[6],
+      },
+    },
   },
   styles: {
     pre: {
@@ -30,6 +40,13 @@ const mods = {
       borderStyle: "solid",
       borderWidth: "px",
       borderColor: "muted",
+    },
+    a: {
+      color: "link",
+      textDecoration: "none",
+      ":hover": {
+        textDecoration: "underline",
+      },
     },
     blockquote: {
       pl: 2,

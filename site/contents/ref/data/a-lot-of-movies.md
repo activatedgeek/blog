@@ -1,10 +1,9 @@
 ---
 title: I watch a lot of movies
 description: A visual inspection into my IMDb ratings using Altair
-date: Jul 5 2020, 19:48 -0700
+date: Jul 7 2020, 23:29 -0700
 area: ref
 cat: data
-draft: true
 ---
 
 For better or for worse, I have watched [over 780 movies](/kb/movies). It
@@ -56,7 +55,39 @@ specUrl: /vega/hist_year.alt.json
 specUrl: /vega/heatmap_genre.alt.json
 ```
 
-### Footnotes
+### Votes based
+
+#### Distribution of votes
+
+```vega
+specUrl: /vega/hist_votes.alt.json
+```
+
+#### Distribution of votes by year
+
+```vega
+specUrl: /vega/hist_votes_year.alt.json
+```
+
+### Ratings based
+
+#### Distribution over all ratings
+
+```vega
+specUrl: /vega/ratings.alt.json
+```
+
+#### Distribution by release year
+
+```vega
+specUrl: /vega/ratings_year.alt.json
+```
+
+#### Distribution by genre
+
+```vega
+specUrl: /vega/ratings_genre.alt.json
+```
 
 [^a]: The code and data is available at [activatedgeek/imdb-ratings](https://github.com/activatedgeek/imdb-ratings).
 [^b]: More SQL-esque notions would be the operations of table merge and join.

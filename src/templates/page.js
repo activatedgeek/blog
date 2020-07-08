@@ -16,8 +16,8 @@ import shortcodes from "../components/shortcodes"
 const InfoSep = () => (
   <Styled.hr
     sx={{
-      width: "1px",
-      height: "2em",
+      width: "px",
+      height: 5,
       display: "inline-block",
       mx: 2,
       my: 0,

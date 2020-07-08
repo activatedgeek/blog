@@ -2,7 +2,7 @@
 title: About
 description: Welcome to sanyamkapoor.com!
 date: Jun 6 2020, 20:02 -0700
-updated: Jul 4 2020, 18:29 -0700
+updated: Jul 7 2020, 23:07 -0700
 area: meta
 cat: info
 slug: /
@@ -18,8 +18,7 @@ with [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the
 communication for efficient Monte Carlo sampling](https://cs.nyu.edu/media/publications/kapoor_sanyam.pdf).
 
 Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
-with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/)
-(who by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85))!
+with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/) who, by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85)!
 
 For a longer background, see my [CV](https://data.perhapsbay.es/cv.pdf).
 

@@ -7,7 +7,8 @@ import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
-  // faBrain,
+  faMoon,
+  faSun,
   faHome,
   faSearch,
   faWineBottle,
@@ -21,7 +22,7 @@ import {
   faStackOverflow,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
-import { jsx, Styled, Flex, Input, Box } from "theme-ui"
+import { jsx, Styled, Flex, Input, Box, useColorMode } from "theme-ui"
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -103,6 +104,8 @@ const HeaderMenuItem = ({ url, children, external }) => (
 )
 
 const Header = () => {
+  const [colorMode, setColorMode] = useColorMode("default")
+
   return (
     <Flex
       sx={{
@@ -153,6 +156,21 @@ const Header = () => {
           <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
           Map
         </HeaderMenuItem>
+        <FontAwesomeIcon
+          icon={colorMode === "default" ? faMoon : faSun}
+          title="Toggle Dark Mode"
+          sx={{
+            mx: 1,
+            fontSize: 2,
+            color: "light",
+            cursor: "pointer",
+          }}
+          fixedWidth
+          onClick={e => {
+            e.preventDefault()
+            setColorMode(colorMode === "default" ? "dark" : "default")
+          }}
+        />
       </Flex>
     </Flex>
   )
