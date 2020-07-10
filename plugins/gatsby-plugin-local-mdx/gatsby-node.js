@@ -13,7 +13,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       updated: Date @dateformat
       slug: String!
-      permalink: String!
+      permid: String!
       draft: Boolean
       archive: Boolean
       redirectsFrom: [String]
@@ -80,7 +80,7 @@ exports.onCreateNode = (
     date: date !== undefined ? moment(date).format() : date,
     updated: updated !== undefined ? moment(updated).format() : updated,
     slug: slug || `/kb/${slugger(title)}`,
-    permalink: `/db/${area}.${cat}.${moment(date).format("YYYYMMDD.HHmmss")}`,
+    permid: `${area}.${cat}.${moment(date).format("YYYYMMDD.HHmmss")}`,
   }
 
   createNodeField({
@@ -105,7 +105,6 @@ exports.createPages = async (
               id
               frontmatter {
                 slug
-                permalink
                 redirectsFrom
               }
             }
@@ -122,7 +121,7 @@ exports.createPages = async (
       ({
         node: {
           id,
-          frontmatter: { slug, permalink, redirectsFrom },
+          frontmatter: { slug, redirectsFrom },
         },
       }) => {
         createPage({
@@ -131,7 +130,6 @@ exports.createPages = async (
           context: { id },
         })
 
-        // createRedirect({ fromPath: permalink, toPath: slug })
         if (Array.isArray(redirectsFrom)) {
           redirectsFrom.forEach(fromPath => {
             createRedirect({ fromPath, toPath: slug, isPermanent: true })

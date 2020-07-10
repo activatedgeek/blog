@@ -18,6 +18,8 @@ to adapt new systems to the content. This is in contrast to choices where one
 would adapt content to systems and make migration hell. Along the way, we address
 any crossroads that may pop up.
 
+> A realization of this philosophy is outlined in [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base).
+
 ## Content
 
 Everything starts with just raw letters and words and a single unit of content

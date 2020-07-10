@@ -2,6 +2,7 @@
 title: An Introduction to Epipolar Geometry
 description: Understanding the intuition behind 3D to 2D mappings, the Fundamental Matrix with a demo
 date: Aug 8 2017, 16:01 +0530
+updated: Jul 9 2020, 20:29 -0700
 area: math
 cat: cv
 redirectsFrom:
@@ -316,5 +317,5 @@ our keypoint detection algorithm works.
 
 ### Footnotes
 
-[^a]: See [A Primer on Projective Geometry](../a-primer-on-projective-geometry).
-[^b]: RANSAC was covered in a [previous post](../ransac)
+[^a]: See [A Primer on Projective Geometry](/kb/a-primer-on-projective-geometry).
+[^b]: RANSAC was covered in a [previous post](/kb/introduction-to-ransac)

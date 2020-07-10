@@ -40,14 +40,15 @@ export default ({
         items={edges.map(
           ({
             node: {
-              frontmatter: { title, date, slug, archive, draft },
+              frontmatter: { title, day, year, slug, archive, draft },
             },
           }) => ({
             title,
-            date,
             slug,
             archive,
             draft,
+            day,
+            year,
           })
         )}
       />
@@ -62,10 +63,11 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            date
             slug
             archive
             draft
+            day: date(formatString: "MMM D")
+            year: date(formatString: "YYYY")
           }
         }
       }

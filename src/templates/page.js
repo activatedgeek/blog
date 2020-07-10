@@ -6,7 +6,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPencilAlt, faEdit } from "@fortawesome/free-solid-svg-icons"
+import { faPencilAlt, faEdit, faTag } from "@fortawesome/free-solid-svg-icons"
 
 import Layout, { ContentBox } from "../components/layout"
 import { Info, Warn } from "../components/hint"
@@ -31,14 +31,20 @@ export const PostInfo = ({ date, updated, filedUnder }) => {
   if (date !== null) {
     infoList.push(
       <React.Fragment>
-        <FontAwesomeIcon icon={faPencilAlt} sx={{ mr: 1 }} /> {date}
+        <FontAwesomeIcon
+          title="Date written"
+          icon={faPencilAlt}
+          sx={{ mr: 1 }}
+        />{" "}
+        {date}
       </React.Fragment>
     )
   }
   if (updated !== null) {
     infoList.push(
       <React.Fragment>
-        <FontAwesomeIcon icon={faEdit} sx={{ mr: 1 }} /> Last updated: {updated}
+        <FontAwesomeIcon title="Date updated" icon={faEdit} sx={{ mr: 1 }} />{" "}
+        Last updated: {updated}
       </React.Fragment>
     )
   }
@@ -58,6 +64,7 @@ export const PostInfo = ({ date, updated, filedUnder }) => {
           <InfoSep />
         </React.Fragment>
       ))}
+      <FontAwesomeIcon title="Filed under" icon={faTag} sx={{ mr: 1 }} />
       {filedUnder}
     </Flex>
   )

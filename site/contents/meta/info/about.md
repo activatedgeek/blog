@@ -2,7 +2,7 @@
 title: About
 description: Welcome to sanyamkapoor.com!
 date: Jun 6 2020, 20:02 -0700
-updated: Jul 7 2020, 23:07 -0700
+updated: Jul 9 2020, 20:02 -0700
 area: meta
 cat: info
 slug: /
@@ -22,7 +22,7 @@ with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/) who, by the way 
 
 For a longer background, see my [CV](https://data.perhapsbay.es/cv.pdf).
 
-Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
+I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 See the [stack](/kb/the-stack) behind this website to know the tools I use to build
 this. I also like to think of myself as a budding oenophile. Check out my wines and
 notes on the [world map](https://wine.sanyamkapoor.com).

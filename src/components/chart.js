@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { useState, useEffect } from "react"
-import { jsx, Box } from "theme-ui"
+import { jsx, Box, Styled } from "theme-ui"
 import { VegaLite } from "react-vega"
 import axios from "axios"
 
-export default ({ specUrl }) => {
+export default ({ id, specUrl }) => {
   const [spec, setSpec] = useState()
 
   useEffect(() => {
@@ -20,8 +20,17 @@ export default ({ specUrl }) => {
   }, [])
 
   return (
-    <Box sx={{ overflow: "auto" }}>
-      {spec ? <VegaLite spec={spec} actions={false} /> : null}
-    </Box>
+    <figure sx={{ textAlign: "center" }}>
+      <Box sx={{ overflow: "auto", maxHeight: "3xl" }}>
+        {spec ? <VegaLite spec={spec} actions={false} /> : null}
+      </Box>
+      <figcaption sx={{ fontSize: 0, color: "textMuted" }}>
+        Chart {id}:{" "}
+        <Styled.a href={specUrl} target="_blank" rel="noopener noreferrer">
+          Vega-Lite Spec
+        </Styled.a>
+        .
+      </figcaption>
+    </figure>
   )
 }

@@ -2,6 +2,7 @@
 title: I watch a lot of movies
 description: A visual inspection into my IMDb ratings using Altair
 date: Jul 7 2020, 23:29 -0700
+updated: Jul 9 2020, 18:29 -0700
 area: ref
 cat: data
 ---
@@ -40,6 +41,8 @@ selection, union and difference [^b].
 
 This is a list of questions I've thought of visualizing so far for a qualitative
 inspection of the statistics.
+
+_Do not forget to scroll as some charts may be larger than they appear_.
 
 ### Count based
 
