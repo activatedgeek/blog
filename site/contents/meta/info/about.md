@@ -26,6 +26,3 @@ I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](
 See the [stack](/kb/the-stack) behind this website to know the tools I use to build
 this. I also like to think of myself as a budding oenophile. Check out my wines and
 notes on the [world map](https://wine.sanyamkapoor.com).
-
-_I'm reorganizing content to realize my knowledge organization philosophy.
-Meanwhile, a crude way to browse everything is to look at the [database of everything](/db)._

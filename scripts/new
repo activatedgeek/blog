@@ -20,6 +20,9 @@ description:
 date: $(date +"%b %d %Y, %H:%M %z")
 area:
 cat:
+slug:
+redirectsFrom:
+  -
 ---
 EOF
 

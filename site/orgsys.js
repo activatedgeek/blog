@@ -29,6 +29,7 @@ module.exports = {
         arts: { label: "Performing Arts" },
         media: { label: "(Mass) Media" },
         food: { label: "Food & Drink" },
+        lit: { label: "Literature" },
       },
     },
     tech: {
@@ -52,7 +53,9 @@ module.exports = {
     people: {
       label: "People",
       categories: {
+        oo: { label: "Overview" },
         th: { label: "Thoughts" },
+        gkph: { label: "Greek Philosophers" },
       },
     },
     math: {
@@ -63,6 +66,7 @@ module.exports = {
         cs: { label: "Computer science" },
         cv: { label: "Computer vision" },
         rl: { label: "Reinforcement learning" },
+        ph: { label: "Physics" },
       },
     },
   },

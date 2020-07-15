@@ -2,7 +2,7 @@
 title: Concepts in literature
 date: Jul 05 2020, 16:25 -0700
 area: cult
-cat: arts
+cat: lit
 ---
 
 This is a parking space for concepts in literature which don't have their own

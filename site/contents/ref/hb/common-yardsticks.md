@@ -2,12 +2,17 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Jul 4 2020, 19:43 -0700
+updated: Jul 14 2020, 21:53 -0700
 area: ref
 cat: hb
 ---
 
-All values are approximate.
+Historically, science has made great strides because someone cared to ask,
+_how much_? This is my concerted effort towards _numerical literacy_ in the modern
+world. Assigning tangible quantities is immensely effective towards understanding
+the metaphorical "gravity of the situation". 
+
+All values are approximate and meant to facilitate back-of-the-envelope calculations.
 
 ## Length
 

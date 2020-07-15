@@ -139,5 +139,5 @@ exports.createPages = async (
     )
   }
 
-  createAllPages()
+  await createAllPages()
 }

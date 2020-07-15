@@ -6,6 +6,8 @@ area: soc
 cat: biz
 ---
 
+This is a scratch space to collect links and resources related to startups.
+
 [Startup School](https://www.startupschool.org)
 
 [Startup Toolchain](https://startuptoolchain.com)
@@ -15,3 +17,5 @@ cat: biz
 Fun: [Billion Dollar Startup Ideas](https://www.billiondollarstartupideas.com)
 
 [SideProjectors](https://www.sideprojectors.com/#/)
+
+[On Deck](https://www.beondeck.com)

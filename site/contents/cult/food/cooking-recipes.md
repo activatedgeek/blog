@@ -7,7 +7,8 @@ area: cult
 cat: food
 ---
 
-I hate cooking and am always seeking the easiest possible recipes that are wholesome and consume _less than_ 30 minutes.
+I hate cooking and am always seeking the easiest possible recipes that are
+wholesome and consume _less than_ 30 minutes.
 
 ## Breakfast
 
@@ -16,3 +17,7 @@ I hate cooking and am always seeking the easiest possible recipes that are whole
 - Waffle Mix, Eggs, Maple Syrup, Milk/Water, Chicken, Nutella
 - Mushroom, Coleslaw, Spinach/Kale, Za’atar/Turmeric, Red Chilli, Sesame Seeds, Salt, Wheat Tortilla/Bread/Rice
 - Tomato, Onion, Avocado, Egg, Wheat Tortilla wrap
+
+## Snacks
+
+- Dates wrapped in Almond butter
