@@ -6,9 +6,11 @@ const Image = ({ id, alt, ...props }) => {
   return (
     <figure sx={{ textAlign: "center" }}>
       <TImage alt={alt} {...props} />
-      <figcaption sx={{ color: "textMuted" }}>
-        Fig. {id}: {alt}
-      </figcaption>
+      {alt ? (
+        <figcaption sx={{ color: "textMuted" }}>
+          Fig. {id}: {alt}
+        </figcaption>
+      ) : null}
     </figure>
   )
 }

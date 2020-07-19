@@ -5,7 +5,7 @@ module.exports = _ref => {
 
   visit(markdownAST, "link", node => {
     const targetAttrs = {
-      target: node.url.indexOf('#') === -1 ? `_blank` : undefined,
+      target: node.url.indexOf("#") === -1 ? `_blank` : undefined,
       rel: `noopener noreferrer`,
     }
 

@@ -66,7 +66,14 @@ module.exports = {
         cs: { label: "Computer science" },
         cv: { label: "Computer vision" },
         rl: { label: "Reinforcement learning" },
+      },
+    },
+    nat: {
+      label: "Natural sciences",
+      categories: {
         ph: { label: "Physics" },
+        neur: { label: "Neuroscience" },
+        geo: { label: "Earth" }
       },
     },
   },

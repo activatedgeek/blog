@@ -296,7 +296,7 @@ export const ContentBox = ({ children, style }) => (
   </Box>
 )
 
-export default ({ children, frontmatter }) => (
+const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
   <StaticQuery
     query={graphql`
       {
@@ -325,12 +325,19 @@ export default ({ children, frontmatter }) => (
         <>
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
-            <Header siteMetadata={siteMetadata} />
+            {showHeader ? <Header siteMetadata={siteMetadata} /> : null}
             {children}
-            <Footer name={name} social={social} />
+            {showFooter ? <Footer name={name} social={social} /> : null}
           </Flex>
         </>
       )
     }}
   />
 )
+
+Layout.defaultProps = {
+  showHeader: true,
+  showFooter: true,
+}
+
+export default Layout

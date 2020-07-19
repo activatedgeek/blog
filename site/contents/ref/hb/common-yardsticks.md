@@ -10,7 +10,7 @@ cat: hb
 Historically, science has made great strides because someone cared to ask,
 _how much_? This is my concerted effort towards _numerical literacy_ in the modern
 world. Assigning tangible quantities is immensely effective towards understanding
-the metaphorical "gravity of the situation". 
+the metaphorical "gravity of the situation".
 
 All values are approximate and meant to facilitate back-of-the-envelope calculations.
 

@@ -38,5 +38,4 @@ base.
 
 [Andrew Gelman](https://statmodeling.stat.columbia.edu) - Probably the most prominent Bayesian \(and its critic\) with takes on plenty of topics. Guest authors occasionally.
 
-
 [^a]: See [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base) for an explanation of how the knowledge base is organized.

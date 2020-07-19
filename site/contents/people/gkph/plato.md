@@ -12,7 +12,7 @@ cat: gkph
 
 There's various interpretations, but I was particularly struck by the context
 of this allegory for Representation Learning in Machine Learning. This was
-described in the ICML 2020 [tutorial](https://icml.cc/virtual/2020/tutorial/5751) 
+described in the ICML 2020 [tutorial](https://icml.cc/virtual/2020/tutorial/5751)
 "Representation Learning Without Labels" by _S. M. Ali Eslami, Irina Higgins, Danilo J. Rezende_.
 
 This distinguishes between a "true reality" and an "observed reality". This is

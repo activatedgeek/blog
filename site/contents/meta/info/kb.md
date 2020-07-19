@@ -2,6 +2,7 @@
 title: Knowledge Base
 description: My second brain.
 date: Jul 14 2020, 19:07 -0700
+updated: Jul 18 2020, 20:49 -0700
 area: meta
 cat: info
 slug: /kb
@@ -12,7 +13,8 @@ this instead of a mouthful "_knowledge base_".
 
 The objective here is to ease the reader (including myself) into the database
 via well-purposed directions instead of a large flat archive. This makes knowledge
-collection more meaningful. This is a fluid document that I will keep adding more context to.
+collection more meaningful. This is a fluid document that I will keep adding more
+context to.
 
 ## Philosophy
 
@@ -33,7 +35,7 @@ This area includes everything that the human activity has produced in terms of
 arts, media, food, literature, etc. In the performing arts, take a look at my [Movies & TV](/kb/movies--tv)
 and [Music](/kb/music). I listen to a fair bit of [Podcasts](/kb/podcasts) and
 try to read some [Books](/kb/books). I hate cooking (maybe because I cook terribly?).
-Nevertheless, I have some quick [Recipes](/kb/cooking-recipes) for the desperate times. 
+Nevertheless, I have some quick [Recipes](/kb/cooking-recipes) for the desperate times.
 
 ### Mathematics
 
@@ -50,30 +52,41 @@ includes this page and the [about](/) page. Visit [The Stack](/kb/the-stack)
 to get a summary of all the tools used to build the website. The [philosophy](#philosophy)
 is also _Meta_ content.
 
+### Natural sciences
+
+This is the home to topics in physics, chemistry, biology, geology among other
+natural sciences. The more formal sciences with some semblance of laid out rules
+go under [Mathematics](#mathematics). For instance, take a look at some
+[Chronological dating techniques](/kb/chronological-dating-techniques).
+
 ### People
 
-This area hosts content that starts at individual personalities and their outlooks.
+This area hosts content that starts at individual personalities and their legacies.
 I've collected a few personalities at the [People Overview](/kb/people-overview) page.
 These are websites I occasionally drop by on a sunny day. On a sad day,
 I usually procrastinate by watching [movies](/kb/movies--tv); or revisit some [adages](/kb/adages-quotes).
 
 ### Philosophy
 
-_Writing soon_.
+Topics like metaphysics find their place under the Philosophy area. Here's a
+collection of [Existential Risks](/kb/existential-risks) humanity faces. It also
+hosts Psychology. See this collection on concepts in [Cognitive and Experimental
+Psychology](/kb/cognitive-and-experimental-psychology). I've also collected a
+[Big Fat list of Mental Models](/kb/big-fat-list-of-mental-models).
 
 ### Reference
 
 This area is dedicated to collecting reference materials. Take a look at
 [Textbooks on various subjects](/kb/textbooks-on-various-subjects) for a comprehensive
 list of reference texts on topics that have achieved _critical mass_. For now,
-this is dominated by texts in machine learning. I'll expand this as I read more. 
+this is dominated by texts in machine learning. I'll expand this as I read more.
 
 I'm collecting a set of [Common Yardsticks](/kb/common-yardsticks) to address
 quantities that we encounter daily. This is my effort towards _numerical literacy_ and a
 back-of-the-envelope temperament. Further, I am trying to map the modern
 [World material](/kb/world-materials) flows qualitatively. This will help
-me map the value chain and understand societies better. To this extent,
-[Data Sources](/kb/data-sources) should come in handy.
+me map the value chain and understand societies better. [Data Sources](/kb/data-sources)
+should come in handy for this.
 
 ### Society
 

@@ -33,7 +33,9 @@ exports.onCreateNode = (
   const { createNodeField } = actions
 
   const fileNode = getNode(node.parent)
-  let { title, date, updated, area, cat, slug } = node.frontmatter
+  const { title, area, cat, slug } = node.frontmatter
+  let { date, updated, _options } = node.frontmatter
+  _options = _options || {}
 
   if (area !== undefined) {
     if (area in areas) {
@@ -88,6 +90,13 @@ exports.onCreateNode = (
     name: "filedUnder",
     value: `${areas[area].label} :: ${areas[area].categories[cat].label}`,
   })
+  createNodeField({
+    node,
+    name: "template",
+    value: _options.template || "default",
+  })
+
+  delete node.frontmatter._options
 }
 
 exports.createPages = async (
@@ -107,6 +116,9 @@ exports.createPages = async (
                 slug
                 redirectsFrom
               }
+              fields {
+                template
+              }
             }
           }
         }
@@ -122,11 +134,14 @@ exports.createPages = async (
         node: {
           id,
           frontmatter: { slug, redirectsFrom },
+          fields: { template },
         },
       }) => {
         createPage({
           path: slug,
-          component: path.resolve(`${templatesDir}/${templateMap.default}.js`),
+          component: path.resolve(
+            `${templatesDir}/${templateMap[template]}.js`
+          ),
           context: { id },
         })
 

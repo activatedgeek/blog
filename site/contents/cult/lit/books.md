@@ -49,7 +49,6 @@ categorization [^a]. For now, here we are.
 
 - [A Farewell to Alms A Brief Economic History of the World](http://faculty.econ.ucdavis.edu/faculty/gclark/a_farewell_to_alms.html) by _Gregory Clark_ ([2007](https://www.worldcat.org/title/farewell-to-alms-a-brief-economic-history-of-the-world/oclc/1104927093))
 
-
 ## Culture
 
 - [Sapiens: A Brief History of Humankind](https://www.ynharari.com/book/sapiens/) by _Yuval Noah Harari_ ([2015](https://www.worldcat.org/title/sapiens-a-brief-history-of-humankind/oclc/1146439635))
@@ -92,6 +91,5 @@ categorization [^a]. For now, here we are.
 - [Wine Folly: The Essential Guide to Wine](https://winefolly.com/wine-folly-the-essential-guide-to-wine-book/) by _Madeline Puckette, Justin Hammack_ ([2015](https://www.worldcat.org/title/wine-folly-the-essential-guide-to-wine/oclc/1053928643))
 
 - [Windows on the World Complete Wine Course](http://kevinzraly.com) by _Kevin Zraly_ ([2018](https://www.worldcat.org/title/windows-on-the-world-complete-wine-course/oclc/1078216490))
-
 
 [^a]: See [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base).
