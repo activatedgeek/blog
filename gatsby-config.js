@@ -90,10 +90,11 @@ module.exports = {
                 frontmatter {
                   title
                   description
-                  date
                   slug
                   archive
                   draft
+                  day: date(formatString: "MMM D")
+                  year: date(formatString: "YYYY")
                 }
               }
             }
@@ -102,7 +103,7 @@ module.exports = {
         `,
         ref: "id",
         index: ["title", "description", "searchText"],
-        store: ["title", "slug", "archive", "draft", "date"],
+        store: ["title", "slug", "archive", "draft", "day", "year"],
         normalizer: ({
           data: {
             allMdx: { edges },
@@ -113,16 +114,17 @@ module.exports = {
               node: {
                 id,
                 mdxAST,
-                frontmatter: { title, description, date, slug, archive, draft },
+                frontmatter: { title, description, slug, archive, draft, day, year },
               },
             }) => ({
               id,
               title,
               description,
-              date,
               slug,
               archive,
               draft,
+              day,
+              year,
               searchText: getSearchText(mdxAST),
             })
           ),

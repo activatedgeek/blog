@@ -54,6 +54,9 @@ const mods = {
       borderLeftStyle: "solid",
       borderLeftColor: "secondary",
     },
+    td: {
+      p: 2,
+    },
   },
 }
 

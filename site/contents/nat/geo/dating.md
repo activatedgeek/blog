@@ -31,4 +31,4 @@ stored energy is released in the form of luminescence and measuring this is
 related to the total time electrons were trapped in the crystals.
 
 Under the correct conditions, optically stimulated luminescence (OSL) dating
-can reliably estimate upto 350,000 years. 
+can reliably estimate upto 350,000 years.

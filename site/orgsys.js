@@ -1,3 +1,5 @@
+// Categories with "!!!" needs triaging.
+
 module.exports = {
   areas: {
     meta: {
@@ -32,24 +34,6 @@ module.exports = {
         lit: { label: "Literature" },
       },
     },
-    tech: {
-      label: "Technology",
-      categories: {
-        prod: { label: "Products" },
-        dev: { label: "Ideas & Development" },
-        swe: { label: "Software Engineering" },
-      },
-    },
-    soc: {
-      label: "Society",
-      categories: {
-        obs: { label: "Observations" },
-        econ: { label: "Economics" },
-        sys: { label: "Societal systems" },
-        biz: { label: "Business" },
-        jrn: { label: "(Investigative) Journalism" },
-      },
-    },
     people: {
       label: "People",
       categories: {
@@ -73,7 +57,28 @@ module.exports = {
       categories: {
         ph: { label: "Physics" },
         neur: { label: "Neuroscience" },
-        geo: { label: "Earth" }
+        geo: { label: "Earth sciences" },
+      },
+    },
+    tech: {
+      label: "Technology",
+      categories: {
+        prod: { label: "Products" },
+        dev: { label: "Ideas & Development" }, // !!!
+        swe: { label: "Software Engineering" },
+      },
+    },
+    soc: {
+      label: "Society",
+      categories: {
+        biz: { label: "Business" },
+        econ: { label: "Economics" },
+        gov: { label: "Government" },
+        jrn: { label: "Journalism" },
+        org: { label: "Organizations and Institutions" },
+        ssc: { label: "Social sciences" },
+        obs: { label: "Observations" }, // !!!
+        sys: { label: "Societal systems" }, // !!!
       },
     },
   },

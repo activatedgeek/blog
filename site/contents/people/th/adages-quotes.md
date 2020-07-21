@@ -2,6 +2,7 @@
 title: Adages, Quotes
 description: What have people said over the years?
 date: Jul 4 2020, 19:40 -0700
+updated: Jul 20 2020, 14:55 -0700
 area: people
 cat: th
 ---
@@ -20,3 +21,4 @@ cat: th
 - _All models are wrong, but some are useful._ - George E. P. Box
 - _If it can't be measured, it becomes politics._
 - _If I had asked people what they wanted, they would have said faster horses._ -Henry Ford
+- _E pur si muove_ (And yet it moves) - Galileo Galilei

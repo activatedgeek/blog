@@ -105,7 +105,7 @@ This is a fat list and the purpose is not to memorize these. Instead, consciousl
 - **Leverage**
   - Pareto principle
   - power law distribution
-- \*\*\*\*[**Learning curve effect**](https://en.wikipedia.org/wiki/Learning_curve)\*\*\*\*
+- [**Learning curve effect**](https://en.wikipedia.org/wiki/Learning_curve)
 - **Law of diminishing returns**
   - Law of diminishing utility
   - negative returns

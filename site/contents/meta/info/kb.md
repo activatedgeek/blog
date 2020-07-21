@@ -21,7 +21,7 @@ context to.
 I would start by reading my [Knowledge Organization Philosophy](/kb/knowledge-base-organization-philosophy).
 To see how I realize this philosophy, read the [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base).
 
-_I'm reorganizing content. While I curate and surface content here, a crude way to browse everything is to look at the [database of everything](/db)_.
+> I'm reorganizing content. While I curate and surface content here, a crude way to browse everything is to look at the [database of everything](/db).
 
 ## Areas
 

@@ -2,8 +2,9 @@
 title: Institutional Short-Sightedness
 description: For some reason, societal decisions are short-sighted and reactive.
 date: Jul 4 2020, 19:22 -0700
+updated: Jul 20 2020, 14:38 -0700
 area: soc
-cat: obs
+cat: gov
 ---
 
 Our institutional structures \(perhaps unwittingly\) seem to condone reactive
