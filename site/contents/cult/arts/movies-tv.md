@@ -2,17 +2,33 @@
 title: Movies & TV
 description: A selected list of movies I recommend.
 date: Jun 6 2020, 20:06 -0700
-updated: Jul 11 2020, 19:33 -0700
+updated: Jul 22 2020, 18:51 -0700
 area: cult
 cat: arts
 ---
 
-I watch a lot of TV and movies. According to [TMDB](https://www.themoviedb.org) [^a],
-I've seen ~800 titles. [See all my ratings](https://www.themoviedb.org/u/snymkpr/ratings).
+import TMDbMovies from "../../../../src/components/tmdb/movies"
+import TMDbTV from "../../../../src/components/tmdb/tv"
 
-[Here's some pretty graphs](/kb/i-watch-a-lot-of-movies) on this data.
+For better or worse, I watch a lot of TV and movies. According to
+[TMDB](https://www.themoviedb.org), I've seen 800+ titles as of last writing.
 
-Since TMDB provides a pretty clean API, I'm going to list some automated listings
-here soon.
+Take a look at [some pretty plots](/kb/i-watch-a-lot-of-movies) on this data.
 
-[^a]: I migrated away from IMDb. TMDB is a community-driven effort (think Wikipedia for movies) and provides a rich API for free. Occasionally, I contribute an edit or two.
+I migrated away from IMDb to TMDB, a community-driven effort. I like to think of
+it as the Wikipedia for movies & TV and occasionally contribute an edit or two.
+
+## Favorites
+
+See all [my favorites](https://www.themoviedb.org/u/snymkpr/favorites) on TMDb [^a].
+I list a few here using the [TMDb Developer API](https://developers.themoviedb.org/3/getting-started/introduction).
+
+### Movies
+
+<TMDbMovies />
+
+### TV
+
+<TMDbTV />
+
+[^a]: For all my ratings, see [here](https://www.themoviedb.org/u/snymkpr/ratings).

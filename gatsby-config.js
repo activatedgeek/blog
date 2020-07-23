@@ -49,10 +49,21 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-tmdb`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins,
+        apiKey: process.env.TMDB_API_KEY,
+        sessionID: process.env.TMDB_SESSION_ID,
+        modules: {
+          account: {
+            activate: true,
+            endpoints: {
+              tvs: [`accountFavoriteTv`],
+              movies: [`accountFavoriteMovies`],
+            },
+          },
+        },
+        poster: false,
+        backdrop: false,
       },
     },
     {
@@ -60,6 +71,13 @@ module.exports = {
       options: {
         path: `${__dirname}/site/contents`,
         name: `contents`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins,
       },
     },
     {
@@ -114,7 +132,15 @@ module.exports = {
               node: {
                 id,
                 mdxAST,
-                frontmatter: { title, description, slug, archive, draft, day, year },
+                frontmatter: {
+                  title,
+                  description,
+                  slug,
+                  archive,
+                  draft,
+                  day,
+                  year,
+                },
               },
             }) => ({
               id,
