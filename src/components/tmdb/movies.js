@@ -10,7 +10,6 @@ export default ({ limit }) => (
       {
         movies: allTmdbAccountFavoriteMovies(
           sort: { fields: release_date, order: DESC }
-          limit: 30
         ) {
           nodes {
             id: accountFavoriteMoviesId

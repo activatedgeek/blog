@@ -51,6 +51,7 @@ All values are approximate and meant to facilitate back-of-the-envelope calculat
 - Iron - 1200 BCE, popular usage
 - Printing Press - 1440
 - Founding of Manila - 1571, marks substantial, direct and continuous trade between Asia and Americas
+- Great Fire of London - 1666, pretty much forced the rebuilding that led to modern London
 - Modernization of Paris - 1852-70, directed by Eugene Haussmann
 - World's first encyclopedia - 1751-1777, edited by Denis Diderot and Jean le Rond D'Alembert
 - First modern record of a "birthday" - 1772

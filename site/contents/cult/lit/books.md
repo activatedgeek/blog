@@ -30,7 +30,17 @@ books with more technical treatment.
 
 ### Literature
 
+- The Bartimaeus Trilogy: The Amulet of Samarkan by _Jonathan Stroud_ ([2003](https://www.worldcat.org/title/bartimaeus-trilogy-the-amulet-of-samarkan-book-1/oclc/608833198))
+
 - Stories of Your Life and Others by _Ted Chiang_ ([2004](https://www.worldcat.org/title/stories-of-your-life/oclc/53709911))
+
+- The Martian by _Andy Weir_ ([2014](https://www.worldcat.org/title/martian/oclc/907204121))
+
+- Girl on the train by _Paula Hawkins_ ([2015](https://www.worldcat.org/title/girl-on-the-train-the/oclc/905098029))
+
+- And Then There Were None by _Agatha Christie_ (1939; [2007](https://www.worldcat.org/title/and-then-there-were-none/oclc/779187184))
+
+- The Girl with the Dragon Tattoo by _Stieg Larsson_ ()
 
 ## Mathematics
 
@@ -46,7 +56,9 @@ books with more technical treatment.
 
 - Making the Modern World: Materials and Dematerialization by _Vaclav Smil_ ([2014](https://www.worldcat.org/title/making-the-modern-world-materials-and-dematerialization/oclc/961532313))
 
-<!-- ## People -->
+## People
+
+- Steve Jobs by _Walter Isaacson_ (2011; [2015](https://www.worldcat.org/title/steve-jobs/oclc/933053953))
 
 ## Philosophy
 
@@ -60,7 +72,11 @@ books with more technical treatment.
 
 - [Thinking, Fast and Slow](https://scholar.princeton.edu/kahneman/publications-0) by _Daniel Kahneman_ ([2011](https://www.worldcat.org/title/thinking-fast-and-slow/oclc/917473664))
 
-<!-- ## Reference -->
+## Reference
+
+- The Elements of Style by __ (1918; [2011](https://www.worldcat.org/title/elements-of-style-the-original-edition/oclc/795129284))
+
+- [Refactoring UI](https://refactoringui.com/book/) by _Adam Wathan, Steve Schoger_ ([2019](https://www.worldcat.org/title/refactoring-ui/oclc/1127645283))
 
 ## Society
 
@@ -86,4 +102,3 @@ books with more technical treatment.
 
 - [Thing Explainer: Complicated Stuff in Simple Words](https://xkcd.com/thing-explainer/) by _Randall Munroe_ ([2017](https://www.worldcat.org/title/thing-explainer/oclc/966822258))
 
-- [Refactoring UI](https://refactoringui.com/book/) by _Adam Wathan, Steve Schoger_ ([2019](https://www.worldcat.org/title/refactoring-ui/oclc/1127645283))

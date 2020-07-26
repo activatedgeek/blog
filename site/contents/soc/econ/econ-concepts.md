@@ -13,3 +13,4 @@ the knowledge base.
 - Lindy effect
 - [Focal point (game theory)](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>)
 - [Paradox of thrift](https://en.wikipedia.org/wiki/Paradox_of_thrift)
+- [Mittelstand](https://en.wikipedia.org/wiki/Mittelstand)

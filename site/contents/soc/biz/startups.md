@@ -2,6 +2,7 @@
 title: Startups
 description: Resources for when I'm probably going to start up, again.
 date: Jul 4 2020, 20:05 -0700
+updated: Jul 24 2020, 17:18 -0700
 area: soc
 cat: biz
 ---
@@ -19,3 +20,5 @@ Fun: [Billion Dollar Startup Ideas](https://www.billiondollarstartupideas.com)
 [SideProjectors](https://www.sideprojectors.com/#/)
 
 [On Deck](https://www.beondeck.com)
+
+[The Network Effects Bible](https://www.nfx.com/post/network-effects-bible/)

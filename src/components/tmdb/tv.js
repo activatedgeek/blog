@@ -10,7 +10,6 @@ export default () => (
       {
         tv: allTmdbAccountFavoriteTv(
           sort: { fields: first_air_date, order: DESC }
-          limit: 30
         ) {
           nodes {
             id: accountFavoriteTvId
