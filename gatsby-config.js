@@ -49,6 +49,13 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: `@jamesdanylik/gatsby-source-goodreads`,
+      options: {
+          key: process.env.GOODREADS_API_KEY,
+          id: '25941036'
+      },
+    },
+    {
       resolve: `gatsby-source-tmdb`,
       options: {
         apiKey: process.env.TMDB_API_KEY,

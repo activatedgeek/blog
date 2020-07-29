@@ -4,27 +4,28 @@ import React from "react" // eslint-disable-line no-unused-vars
 import { StaticQuery, graphql } from "gatsby"
 import { jsx, Styled } from "theme-ui"
 
+
 export default () => (
   <StaticQuery
     query={graphql`
       {
-        movies: allTmdbAccountFavoriteMovies(
-          sort: { fields: release_date, order: DESC }
-        ) {
+        reviews: allGoodreadsReview(sort: {fields: book___publication_year, order: DESC}) {
           nodes {
-            id: accountFavoriteMoviesId
-            title
-            year: release_date(formatString: "YYYY")
+            book {
+              link
+              year: publication_year
+              title: title_without_series
+            }
           }
         }
-      }
+      }    
     `}
-    render={({ movies }) => (
+    render={({ reviews }) => (
       <Styled.ul>
-        {movies.nodes.map(({ id, title, year }, i) => (
+        {reviews.nodes.map(({ book: { link, title, year } }, i) => (
           <Styled.li key={i}>
             <Styled.a
-              href={`https://www.themoviedb.org/movie/${id}`}
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
             >
