@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: `@jamesdanylik/gatsby-source-goodreads`,
       options: {
-          key: process.env.GOODREADS_API_KEY,
-          id: '25941036'
+        key: process.env.GOODREADS_API_KEY,
+        id: "25941036",
       },
     },
     {

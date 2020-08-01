@@ -2,7 +2,7 @@
 title: Knowledge Base
 description: My second brain.
 date: Jul 14 2020, 19:07 -0700
-updated: Jul 18 2020, 20:49 -0700
+updated: Aug 1 2020, 1:25 -0700
 area: meta
 cat: info
 slug: /kb
@@ -34,7 +34,8 @@ their book - some of those areas are appropriated for this knowledge base.
 This area includes everything that the human activity has produced in terms of
 arts, media, food, literature, etc. In the performing arts, take a look at my [Movies & TV](/kb/movies--tv)
 and [Music](/kb/music). I listen to a fair bit of [Podcasts](/kb/podcasts) and
-try to read some [Books](/kb/books). I hate cooking (maybe because I cook terribly?).
+try to read some [Books](/kb/books). I do have some medium to long term goals
+on [Books I want to write](/kb/books-i-want-to-write). I hate cooking, maybe because I suck.
 Nevertheless, I have some quick [Recipes](/kb/cooking-recipes) for the desperate times.
 
 ### Mathematics
@@ -106,4 +107,4 @@ This area involves collecting knowledge about the "process" of driving value
 from raw materials. I note a few [Products](/kb/products) I like. This is usually
 the area where I write about software engineering and related ideas.
 
-I am really interested in this question: [Are ideas becoming harder to find?](http://localhost:8000/kb/are-ideas-becoming-harder-to-find)
+I am really interested in this question: [Are ideas becoming harder to find?](/kb/are-ideas-becoming-harder-to-find)

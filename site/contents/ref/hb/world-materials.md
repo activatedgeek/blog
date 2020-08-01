@@ -34,6 +34,7 @@ I think at some point, it is going to be worthwhile to map an extensive value ch
 - Porcelain
 - Glass
 - Bronze, brass
+- Gunpowder - mixture of charcoal, sulphur, and potassium nitrate
 
 ## Early Modern
 

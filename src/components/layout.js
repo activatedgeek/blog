@@ -7,6 +7,7 @@ import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
+  faBrain,
   faMoon,
   faSun,
   faHome,
@@ -143,15 +144,15 @@ const Header = () => {
           flexWrap: "wrap",
         }}
       >
-        <HeaderMenuItem url="/">
-          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
-        </HeaderMenuItem>
         <HeaderMenuItem url="/search">
           <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
         </HeaderMenuItem>
-        {/* <HeaderMenuItem url="/kb">
+        <HeaderMenuItem url="/kb">
           <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> KB
-        </HeaderMenuItem> */}
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/">
+          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
+        </HeaderMenuItem>
         <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
           <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
           Map

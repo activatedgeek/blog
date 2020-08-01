@@ -40,7 +40,7 @@ module.exports = {
         oo: { label: "Overview" },
         th: { label: "Thoughts" },
         gkph: { label: "Greek Philosophers" },
-        bio: { label: "Biographies" }
+        bio: { label: "Biographies" },
       },
     },
     math: {

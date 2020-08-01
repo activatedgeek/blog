@@ -8,7 +8,7 @@ cat: bio
 
 _Yokai_ are monsters from Japanese folklore, described as talismanic. The first
 stories date back to the 8th century. _Toriyama Sekien_ documented this folklore
-into a graphic encylopedia titled, _The Illustrated Night Parade of a Hundred 
+into a graphic encylopedia titled, _The Illustrated Night Parade of a Hundred
 Demons_, further solidifying their place in Japanese culture. This was
 the first time oral descriptions of these creatures came to life in pictures
 and unsurprisingly, was an instant hit among the masses. People explained the
@@ -23,7 +23,6 @@ immense driver of Japanese modernization post the _Edo period_.
 > I recommend the fascinating episode of 99% Invisible -
 > [The Return of Yokai](https://99percentinvisible.org/episode/return-of-the-yokai/),
 > where I first learned this.
-
 
 ## Remarks
 

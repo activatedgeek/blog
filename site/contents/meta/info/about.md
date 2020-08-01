@@ -15,12 +15,12 @@ people, spending most of my time on approximate inference with [Thang Bui](https
 I completed my Masters in Computer Science at [NYU Courant](https://cs.nyu.edu)
 with [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the
 [CILVR](https://wp.nyu.edu/cilvr/) lab. My thesis investigated how to [leverage
-communication for efficient Monte Carlo sampling](https://cs.nyu.edu/media/publications/kapoor_sanyam.pdf).
+communication for efficient Monte Carlo sampling](https://u.perhapsbay.es/msthesis).
 
 Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
 with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/) who, by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85)!
 
-For a longer background, see my [CV](https://data.perhapsbay.es/cv.pdf).
+For a longer background, see my [CV](https://u.perhapsbay.es/cv).
 
 I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 See the [stack](/kb/the-stack) behind this website to know the tools I use to build

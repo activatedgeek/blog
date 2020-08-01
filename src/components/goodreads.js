@@ -4,12 +4,13 @@ import React from "react" // eslint-disable-line no-unused-vars
 import { StaticQuery, graphql } from "gatsby"
 import { jsx, Styled } from "theme-ui"
 
-
 export default () => (
   <StaticQuery
     query={graphql`
       {
-        reviews: allGoodreadsReview(sort: {fields: book___publication_year, order: DESC}) {
+        reviews: allGoodreadsReview(
+          sort: { fields: book___publication_year, order: DESC }
+        ) {
           nodes {
             book {
               link
@@ -18,17 +19,13 @@ export default () => (
             }
           }
         }
-      }    
+      }
     `}
     render={({ reviews }) => (
       <Styled.ul>
         {reviews.nodes.map(({ book: { link, title, year } }, i) => (
           <Styled.li key={i}>
-            <Styled.a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Styled.a href={link} target="_blank" rel="noopener noreferrer">
               {title}
             </Styled.a>{" "}
             ({year})

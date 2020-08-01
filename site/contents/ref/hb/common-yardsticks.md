@@ -70,3 +70,7 @@ All values are approximate and meant to facilitate back-of-the-envelope calculat
 ## Temperature
 
 - Melting point of (virgin) Cocunut oil - 24 °C
+
+## Speed
+
+- Wildfire fronts - 30 km/h (short bursts, otherwise 10% windspeed rule)
