@@ -10,7 +10,6 @@ import {
   faBrain,
   faMoon,
   faSun,
-  faHome,
   faSearch,
   faWineBottle,
   faCode,
@@ -22,6 +21,7 @@ import {
   faLinkedin,
   faStackOverflow,
   faTwitter,
+  faReddit,
 } from "@fortawesome/free-brands-svg-icons"
 import { jsx, Styled, Flex, Input, Box, useColorMode } from "theme-ui"
 
@@ -150,9 +150,6 @@ const Header = () => {
         <HeaderMenuItem url="/kb">
           <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> KB
         </HeaderMenuItem>
-        <HeaderMenuItem url="/">
-          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
-        </HeaderMenuItem>
         <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
           <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
           Map
@@ -259,6 +256,7 @@ const Footer = ({ name, social }) => {
         <IconLink url={social.linkedin} icon={faLinkedin} external />
         <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
         <IconLink url={social.twitter} icon={faTwitter} external />
+        <IconLink url={social.reddit} icon={faReddit} external />
         <IconLink url={`${social.github}/www`} icon={faCode} external />
         <IconLink url="/db" icon={faDatabase} external />
       </Flex>
@@ -314,6 +312,7 @@ const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
               linkedin
               stackoverflow
               twitter
+              reddit
             }
           }
         }

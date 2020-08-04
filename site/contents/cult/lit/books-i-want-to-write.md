@@ -2,11 +2,14 @@
 title: Books I want to write
 # description:
 date: Jul 30 2020, 18:05 -0700
+updated: Aug 2 2020, 13:22 -0700
 area: cult
 cat: lit
 ---
 
-## Numerical Literacy
+## Ideas
+
+### Numerical Literacy
 
 Numbers are ubiquitous. The world would be meaningless without them.
 Quite a few people hate the idea of operating with raw numbers and yet
@@ -19,7 +22,7 @@ a language to reason about the unknown.
 
 _[Common Yardsticks](/kb/common-yardsticks) is my ongoing effort to crystallize the most important numbers for modern civilization._
 
-## Material Flows
+### Material Flows
 
 We interact with finished goods that have come from a long way from just
 being stardust. Often, they have a unique history attached to them. I
@@ -34,7 +37,7 @@ rather make it more qualitative in its description than the thick quantitative s
 _[World Materials](/kb/world-materials) is my exercise to collect the most
 pervasive materials, partly noted from the above book._
 
-## The Mythbuster
+### The Mythbuster
 
 I was inspired by [Inoue Enryō](/kb/inoue-enryō). He was probably the real
 mythbuster. Far too many people have succumbed to superstitions and
@@ -46,3 +49,8 @@ of conveniently explaining it away as "God's will".
 I want to collect stories, especially in India, where overcoming such
 a temperament has broken barriers and unleashed huge potential. If there
 aren't such stories, I want to create them. I want to be a mythbuster.
+
+## Resources
+
+I had my first sense of what really goes behind-the-scenes with
+Blake Boles's detailed [book publishing journey](https://www.blakeboles.com/2020/07/book-story/).
