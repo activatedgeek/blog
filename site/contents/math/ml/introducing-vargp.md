@@ -7,4 +7,4 @@ cat: ml
 draft: true
 ---
 
-> This post summarizes my recent work, [Variational Auto-Regressive Gaussian Processes for Continual Learning](https://arxiv.org/abs/2006.05468) by [_Sanyam Kapoor_](https://www.sanyamkapoor.com), [_Theofanis Karaletsos_](http://karaletsos.com), [_Thang D. Bui_](https://thangbui.github.io).
+> This post summarizes my recent work, [Variational Auto-Regressive Gaussian Processes for Continual Learning](https://arxiv.org/abs/2006.05468) by [_Sanyam Kapoor_](https://sanyamkapoor.com), [_Theofanis Karaletsos_](http://karaletsos.com), [_Thang D. Bui_](https://thangbui.github.io).
