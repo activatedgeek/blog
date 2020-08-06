@@ -93,6 +93,7 @@ module.exports = {
         templatesDir: `src/templates`,
         templateMap: {
           default: "page",
+          overview: "overview",
         },
         orgsys,
       },

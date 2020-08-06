@@ -2,7 +2,7 @@
 title: Knowledge Base
 description: My second brain.
 date: Jul 14 2020, 19:07 -0700
-updated: Aug 1 2020, 1:25 -0700
+updated: Aug 5 2020, 18:55 -0700
 area: meta
 cat: info
 slug: /kb
@@ -19,9 +19,8 @@ context to.
 ## Philosophy
 
 I would start by reading my [Knowledge Organization Philosophy](/kb/knowledge-base-organization-philosophy).
-To see how I realize this philosophy, read the [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base).
-
-> I'm reorganizing content. While I curate and surface content here, a crude way to browse everything is to look at the [database of everything](/db).
+To see how I realize this philosophy, read the [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base). From then on, the overview pages of each area
+linked below are the place to go.
 
 ## Areas
 
@@ -31,22 +30,28 @@ their book - some of those areas are appropriated for this knowledge base.
 
 ### Culture
 
+**[Visit Overview Page](/kb/culture-overview)**
+
 This area includes everything that the human activity has produced in terms of
-arts, media, food, literature, etc. In the performing arts, take a look at my [Movies & TV](/kb/movies--tv)
-and [Music](/kb/music). I listen to a fair bit of [Podcasts](/kb/podcasts) and
-try to read some [Books](/kb/books). I do have some medium to long term goals
-on [Books I want to write](/kb/books-i-want-to-write). I hate cooking, maybe because I suck.
-Nevertheless, I have some quick [Recipes](/kb/cooking-recipes) for the desperate times.
+arts, media, food, literature, etc. In the performing arts, take a look at my
+[Movies & TV](/kb/movies--tv) and [Music](/kb/music). I listen to a fair bit of
+[Podcasts](/kb/podcasts) and try to read some [Books](/kb/books). I do have some
+medium to long term goals on [Books I want to write](/kb/books-i-want-to-write).
+I hate cooking, maybe because I suck. Nevertheless, I have some quick
+[Recipes](/kb/cooking-recipes) for the desperate times.
 
 ### Mathematics
+
+**[Visit Overview Page](/kb/mathematics-overview)**
 
 Mathematics is the language of nature. Or at least the best thing that humans
 have at disposal to understand nature. This is a collection of posts around
 computer science, machine learning, reinforcement learning
-and other research-y topics I am involved in. I still need to create an overview
-page to surface all the content I have here.
+and other research-y topics I am involved in.
 
 ### Meta
+
+**[Visit Overview Page](/kb/meta-overview)**
 
 Posts in this area are meant to explain the _system behind the system_. It
 includes this page and the [about](/) page. Visit [The Stack](/kb/the-stack)
@@ -55,12 +60,16 @@ is also _Meta_ content.
 
 ### Natural sciences
 
+**[Visit Overview Page](/kb/natural-sciences-overview)**
+
 This is the home to topics in physics, chemistry, biology, geology among other
 natural sciences. The more formal sciences with some semblance of laid out rules
 go under [Mathematics](#mathematics). For instance, take a look at some
 [Chronological dating techniques](/kb/chronological-dating-techniques).
 
 ### People
+
+**[Visit Overview Page](/kb/people-overview)**
 
 This area hosts content that starts at individual personalities and their legacies.
 I've collected a few personalities at the [People Overview](/kb/people-overview) page.
@@ -69,6 +78,8 @@ I usually procrastinate by watching [movies](/kb/movies--tv); or revisit some [a
 
 ### Philosophy
 
+**[Visit Overview Page](/kb/philosophy-overview)**
+
 Topics like metaphysics find their place under the Philosophy area. Here's a
 collection of [Existential Risks](/kb/existential-risks) humanity faces. It also
 hosts Psychology. See this collection on concepts in [Cognitive and Experimental
@@ -76,6 +87,8 @@ Psychology](/kb/cognitive-and-experimental-psychology). I've also collected a
 [Big Fat list of Mental Models](/kb/big-fat-list-of-mental-models).
 
 ### Reference
+
+**[Visit Overview Page](/kb/reference-overview)**
 
 This area is dedicated to collecting reference materials. Take a look at
 [Textbooks on various subjects](/kb/textbooks-on-various-subjects) for a comprehensive
@@ -91,9 +104,11 @@ should come in handy for this.
 
 ### Society
 
+**[Visit Overview Page](/kb/society-overview)**
+
 Everything that humans do collectively as a "society" goes in here. This involves
 topics in economics, journalism, business etc. It also includes my general
-rants and observations. I'm yet to curate and surface this content.
+rants and observations.
 
 I'm particularly interested in collecting [Real Life Decision Making Systems](/kb/real-life-decision-making-systems).
 This is a humbling excercise. Some decisions are reversible. Irreversible decisions
@@ -102,6 +117,8 @@ COVID-19 and government responses, circa 2020. We cannot do without uncertainty
 quantification and this is a page to remind myself of that.
 
 ### Technology
+
+**[Visit Overview Page](/kb/technology-overview)**
 
 This area involves collecting knowledge about the "process" of driving value
 from raw materials. I note a few [Products](/kb/products) I like. This is usually

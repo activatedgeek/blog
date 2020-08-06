@@ -25,7 +25,7 @@ const InfoSep = () => (
   />
 )
 
-export const PostInfo = ({ date, updated, filedUnder }) => {
+const PostInfo = ({ date, updated, filedUnder }) => {
   let infoList = []
 
   if (date !== null) {

@@ -1,16 +1,16 @@
 ---
 title: People Overview
-description: Overview post for the "People" area.
+description: Overview page for area "People"
 date: Jul 14 2020, 18:10 -0700
+updated: Aug 5 2020, 19:21 -0700
 area: people
-cat: oo
+cat: ov
 ---
 
-This page is the main entry point for the _area_ in my knowledge base defined as
-"People" [^a]. This is meant to house all the links to individuals that I find
-interesting and have had a great deal to learn from. If I have something
-deeper to say about an individual, I'll link the associated page in the knowledge
-base.
+_This is the overview page for area **People**._
+
+This area hosts content that starts at individual personalities and their
+legacies.
 
 ## Individuals
 
@@ -38,4 +38,4 @@ base.
 
 [Andrew Gelman](https://statmodeling.stat.columbia.edu) - Probably the most prominent Bayesian \(and its critic\) with takes on plenty of topics. Guest authors occasionally.
 
-[^a]: See [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base) for an explanation of how the knowledge base is organized.
+## Index

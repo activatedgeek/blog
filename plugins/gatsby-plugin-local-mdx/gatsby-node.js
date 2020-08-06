@@ -35,7 +35,7 @@ exports.onCreateNode = (
   const fileNode = getNode(node.parent)
   const { title, area, cat, slug } = node.frontmatter
   let { date, updated, _options } = node.frontmatter
-  _options = _options || {}
+  let { template } = _options || {}
 
   if (area !== undefined) {
     if (area in areas) {
@@ -92,8 +92,23 @@ exports.onCreateNode = (
   })
   createNodeField({
     node,
+    name: "sortTs",
+    value: moment(node.frontmatter.updated || node.frontmatter.date).format(
+      "x"
+    ),
+  })
+
+  if (cat === "ov") {
+    template = "overview"
+    // reporter.info(
+    //   `INFO: ${fileNode.relativePath} - Using template "overview".`
+    // )
+  }
+
+  createNodeField({
+    node,
     name: "template",
-    value: _options.template || "default",
+    value: template || "default",
   })
 
   delete node.frontmatter._options
@@ -113,6 +128,7 @@ exports.createPages = async (
             node {
               id
               frontmatter {
+                area
                 slug
                 redirectsFrom
               }
@@ -133,7 +149,7 @@ exports.createPages = async (
       ({
         node: {
           id,
-          frontmatter: { slug, redirectsFrom },
+          frontmatter: { area, slug, redirectsFrom },
           fields: { template },
         },
       }) => {
@@ -142,7 +158,7 @@ exports.createPages = async (
           component: path.resolve(
             `${templatesDir}/${templateMap[template]}.js`
           ),
-          context: { id },
+          context: { id, area },
         })
 
         if (Array.isArray(redirectsFrom)) {
