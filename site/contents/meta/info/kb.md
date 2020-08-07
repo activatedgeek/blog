@@ -2,7 +2,7 @@
 title: Knowledge Base
 description: My second brain.
 date: Jul 14 2020, 19:07 -0700
-updated: Aug 5 2020, 18:55 -0700
+updated: Aug 6 2020, 17:34 -0700
 area: meta
 cat: info
 slug: /kb
@@ -13,12 +13,9 @@ this instead of a mouthful "_knowledge base_".
 
 The objective here is to ease the reader (including myself) into the database
 via well-purposed directions instead of a large flat archive. This makes knowledge
-collection more meaningful. This is a fluid document that I will keep adding more
-context to.
+collection more meaningful. If lost, the [footer](#footer) has helpful links.
 
-## Philosophy
-
-I would start by reading my [Knowledge Organization Philosophy](/kb/knowledge-base-organization-philosophy).
+A good place to start reading is my [Knowledge Organization Philosophy](/kb/knowledge-base-organization-philosophy).
 To see how I realize this philosophy, read the [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base). From then on, the overview pages of each area
 linked below are the place to go.
 
@@ -30,7 +27,7 @@ their book - some of those areas are appropriated for this knowledge base.
 
 ### Culture
 
-**[Visit Overview Page](/kb/culture-overview)**
+> **[Visit Overview Page](/kb/culture-overview)**
 
 This area includes everything that the human activity has produced in terms of
 arts, media, food, literature, etc. In the performing arts, take a look at my
@@ -42,7 +39,7 @@ I hate cooking, maybe because I suck. Nevertheless, I have some quick
 
 ### Mathematics
 
-**[Visit Overview Page](/kb/mathematics-overview)**
+> **[Visit Overview Page](/kb/mathematics-overview)**
 
 Mathematics is the language of nature. Or at least the best thing that humans
 have at disposal to understand nature. This is a collection of posts around
@@ -51,16 +48,15 @@ and other research-y topics I am involved in.
 
 ### Meta
 
-**[Visit Overview Page](/kb/meta-overview)**
+> **[Visit Overview Page](/kb/meta-overview)**
 
 Posts in this area are meant to explain the _system behind the system_. It
 includes this page and the [about](/) page. Visit [The Stack](/kb/the-stack)
-to get a summary of all the tools used to build the website. The [philosophy](#philosophy)
-is also _Meta_ content.
+to get a summary of all the tools used to build the website.
 
 ### Natural sciences
 
-**[Visit Overview Page](/kb/natural-sciences-overview)**
+> **[Visit Overview Page](/kb/natural-sciences-overview)**
 
 This is the home to topics in physics, chemistry, biology, geology among other
 natural sciences. The more formal sciences with some semblance of laid out rules
@@ -69,7 +65,7 @@ go under [Mathematics](#mathematics). For instance, take a look at some
 
 ### People
 
-**[Visit Overview Page](/kb/people-overview)**
+> **[Visit Overview Page](/kb/people-overview)**
 
 This area hosts content that starts at individual personalities and their legacies.
 I've collected a few personalities at the [People Overview](/kb/people-overview) page.
@@ -78,7 +74,7 @@ I usually procrastinate by watching [movies](/kb/movies--tv); or revisit some [a
 
 ### Philosophy
 
-**[Visit Overview Page](/kb/philosophy-overview)**
+> **[Visit Overview Page](/kb/philosophy-overview)**
 
 Topics like metaphysics find their place under the Philosophy area. Here's a
 collection of [Existential Risks](/kb/existential-risks) humanity faces. It also
@@ -88,7 +84,7 @@ Psychology](/kb/cognitive-and-experimental-psychology). I've also collected a
 
 ### Reference
 
-**[Visit Overview Page](/kb/reference-overview)**
+> **[Visit Overview Page](/kb/reference-overview)**
 
 This area is dedicated to collecting reference materials. Take a look at
 [Textbooks on various subjects](/kb/textbooks-on-various-subjects) for a comprehensive
@@ -104,7 +100,7 @@ should come in handy for this.
 
 ### Society
 
-**[Visit Overview Page](/kb/society-overview)**
+> **[Visit Overview Page](/kb/society-overview)**
 
 Everything that humans do collectively as a "society" goes in here. This involves
 topics in economics, journalism, business etc. It also includes my general
@@ -118,7 +114,7 @@ quantification and this is a page to remind myself of that.
 
 ### Technology
 
-**[Visit Overview Page](/kb/technology-overview)**
+> **[Visit Overview Page](/kb/technology-overview)**
 
 This area involves collecting knowledge about the "process" of driving value
 from raw materials. I note a few [Products](/kb/products) I like. This is usually

@@ -6,6 +6,8 @@ updated: Jul 9 2020, 20:02 -0700
 area: meta
 cat: info
 slug: /
+redirectsFrom:
+  - /about
 ---
 
 I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working

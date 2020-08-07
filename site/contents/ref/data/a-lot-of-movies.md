@@ -2,12 +2,12 @@
 title: I watch a lot of movies
 description: A visual inspection into my IMDb ratings using Altair
 date: Jul 7 2020, 23:29 -0700
-updated: Jul 9 2020, 18:29 -0700
+updated: Aug 6 2020, 17:22 -0700
 area: ref
 cat: data
 ---
 
-For better or for worse, I have watched [over 780 movies](/kb/movies). It
+For better or for worse, I have watched [over 800 titles](/kb/movies--tv). It
 seems natural to put that data to good use, at least academically. This
 post is written, in expectation, to mainly serve three purposes -
 

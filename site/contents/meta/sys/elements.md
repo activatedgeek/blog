@@ -13,7 +13,7 @@ a large disconnected pile of text. Organizing also keeps the learning discipline
 Albeit, content organization is tricky. Organizing too little is as good as nothing
 and organizing too much becomes an categorization hell.
 
-> I highly recommend my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy)
+> I recommend my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy)
 > to set the right context before reading further.
 
 This post is about how I realize the philosophy. First things first - everything

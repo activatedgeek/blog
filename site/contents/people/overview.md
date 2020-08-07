@@ -12,6 +12,14 @@ _This is the overview page for area **People**._
 This area hosts content that starts at individual personalities and their
 legacies.
 
+## Websites
+
+[MacTutor](https://mathshistory.st-andrews.ac.uk/) is an amazing resource.
+Quoting from the website,
+
+> MacTutor is a free online resource containing biographies of nearly 3000
+> mathematicians and over 2000 pages of essays and supporting materials.
+
 ## Individuals
 
 [Paul Graham](http://paulgraham.com/) - Co-Founder of YC. Some great observational [essays](http://paulgraham.com/articles.html).

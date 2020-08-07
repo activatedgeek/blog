@@ -17,6 +17,10 @@ const themeColor = [
 
 const mods = {
   useLocalStorage: false,
+  fonts: {
+    heading: "'Open Sans', sans-serif;",
+    body: "'Open Sans', sans-serif;",
+  },
   colors: {
     primary: themeColor[8],
     primaryHover: themeColor[9],

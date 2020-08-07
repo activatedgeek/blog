@@ -8,22 +8,10 @@ import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt, faEdit, faTag } from "@fortawesome/free-solid-svg-icons"
 
-import Layout, { ContentBox } from "../components/layout"
+import Layout, { ContentBox, InfoSep } from "../components/layout"
 import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
-
-const InfoSep = () => (
-  <Styled.hr
-    sx={{
-      width: "px",
-      height: 5,
-      display: "inline-block",
-      mx: 2,
-      my: 0,
-    }}
-  />
-)
 
 const PostInfo = ({ date, updated, filedUnder }) => {
   let infoList = []
@@ -95,7 +83,6 @@ export const Post = ({ mdx }) => {
         <Box
           sx={{
             position: "relative",
-            zIndex: 1,
             display: "inline-block",
             float: [null, null, "right", "right"],
             ml: [0, 0, 4, 4],

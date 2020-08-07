@@ -7,9 +7,8 @@ import { navigate } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faUserGraduate,
+  faHome,
   faBrain,
-  faMoon,
-  faSun,
   faSearch,
   faWineBottle,
   faCode,
@@ -23,7 +22,7 @@ import {
   faTwitter,
   faReddit,
 } from "@fortawesome/free-brands-svg-icons"
-import { jsx, Styled, Flex, Input, Box, useColorMode } from "theme-ui"
+import { jsx, Styled, Flex, Input, Box } from "theme-ui"
 
 const Head = ({ siteMetadata, frontmatter }) => {
   const allMeta = { ...siteMetadata, ...frontmatter }
@@ -91,10 +90,11 @@ const HeaderMenuItem = ({ url, children, external }) => (
       sx={{
         my: 1,
         p: 2,
-        color: "light",
+        color: "textMuted",
         borderRadius: "lg",
         ":hover": {
-          bg: "primaryHover",
+          bg: "primary",
+          color: "light",
           boxShadow: "xl",
         },
       }}
@@ -105,22 +105,21 @@ const HeaderMenuItem = ({ url, children, external }) => (
 )
 
 const Header = () => {
-  const [colorMode, setColorMode] = useColorMode("default")
-
   return (
     <Flex
       sx={{
-        bg: "primary",
-        width: "screenWidth",
-        boxShadow: "default",
+        position: ["inherit", "inherit", "fixed", "fixed"],
+        top: 0,
+        left: 0,
       }}
     >
       <Flex
         sx={{
-          px: 4,
-          py: 2,
+          bg: "primary",
+          p: 3,
           alignItems: "center",
           justifyContent: "center",
+          boxShadow: "default",
         }}
       >
         <Styled.a
@@ -136,43 +135,22 @@ const Header = () => {
           <Styled.h2>SK</Styled.h2>
         </Styled.a>
       </Flex>
-      <Flex
-        sx={{
-          ml: "auto",
-          px: 3,
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        <HeaderMenuItem url="/search">
-          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> KB
-        </HeaderMenuItem>
-        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
-          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
-          Map
-        </HeaderMenuItem>
-        <FontAwesomeIcon
-          icon={colorMode === "default" ? faMoon : faSun}
-          title="Toggle Dark Mode"
-          sx={{
-            mx: 1,
-            fontSize: 2,
-            color: "light",
-            cursor: "pointer",
-          }}
-          fixedWidth
-          onClick={e => {
-            e.preventDefault()
-            setColorMode(colorMode === "default" ? "dark" : "default")
-          }}
-        />
-      </Flex>
     </Flex>
   )
 }
+
+export const InfoSep = ({ customSx }) => (
+  <Styled.hr
+    sx={{
+      width: "px",
+      height: 5,
+      display: "inline-block",
+      mx: 2,
+      my: 0,
+      ...customSx,
+    }}
+  />
+)
 
 export const SearchBar = ({ inputSx }) => {
   const [query, setQuery] = useState("")
@@ -239,8 +217,11 @@ const IconLink = ({ url, external, children, icon }) => (
 )
 
 const Footer = ({ name, social }) => {
+  // const [colorMode, setColorMode] = useColorMode("default")
+
   return (
     <Flex
+      id="footer"
       sx={{
         width: "screenWidth",
         flexDirection: "column",
@@ -248,8 +229,46 @@ const Footer = ({ name, social }) => {
         pb: 3,
       }}
     >
-      <Styled.hr sx={{ mt: 0 }} />
-      <Flex sx={{ justifyContent: "center" }}>
+      <Styled.hr sx={{ m: 0 }} />
+      <Flex sx={{ justifyContent: "center", flexWrap: "wrap", fontSize: 0 }}>
+        <HeaderMenuItem url="/">
+          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/search">
+          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/kb">
+          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> Knowledge
+          Base
+        </HeaderMenuItem>
+        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
+          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
+          Map
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/db">
+          <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} fixedWidth /> DB
+        </HeaderMenuItem>
+        <HeaderMenuItem url={`${social.github}/www`} external>
+          <FontAwesomeIcon icon={faCode} sx={{ mr: 1 }} fixedWidth /> Source
+        </HeaderMenuItem>
+        {/* <FontAwesomeIcon
+          icon={colorMode === "default" ? faMoon : faSun}
+          title="Toggle Dark Mode"
+          sx={{
+            mx: 1,
+            // fontSize: 2,
+            color: "textMuted",
+            cursor: "pointer",
+          }}
+          fixedWidth
+          onClick={e => {
+            e.preventDefault()
+            setColorMode(colorMode === "default" ? "dark" : "default")
+          }}
+        /> */}
+      </Flex>
+
+      <Flex sx={{ justifyContent: "center", mt: 2 }}>
         <IconLink url={social.scholar} icon={faUserGraduate} external />
         <IconLink url={social.github} icon={faGithub} external />
         <IconLink url={social.yc} icon={faYCombinator} external />
@@ -257,8 +276,6 @@ const Footer = ({ name, social }) => {
         <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
         <IconLink url={social.twitter} icon={faTwitter} external />
         <IconLink url={social.reddit} icon={faReddit} external />
-        <IconLink url={`${social.github}/www`} icon={faCode} external />
-        <IconLink url="/db" icon={faDatabase} external />
       </Flex>
       <Styled.p
         sx={{
@@ -278,9 +295,9 @@ const Footer = ({ name, social }) => {
 export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
-      p: 4,
+      p: 3,
       mx: "auto",
-      width: ["100%", "100%", "3xl", "4xl"],
+      width: ["100%", "100%", "3xl", "3xl"],
       flex: 1,
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
