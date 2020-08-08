@@ -27,7 +27,7 @@ const SearchPage = ({
         slug: `/search?q=${encodeURIComponent(q)}`,
       }}
     >
-      <ContentBox style={{ width: ["100%", "100%", "3xl", "4xl"] }}>
+      <ContentBox>
         <Styled.h1>
           <FontAwesomeIcon icon={faSearch} /> Search
         </Styled.h1>

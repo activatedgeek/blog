@@ -108,9 +108,14 @@ const Header = () => {
   return (
     <Flex
       sx={{
-        position: ["inherit", "inherit", "fixed", "fixed"],
+        // position: ["inherit", "inherit", "fixed", "fixed"],
+        position: "absolute",
         top: 0,
-        left: 0,
+        right: 0,
+        opacity: 0.8,
+        ":hover": {
+          opacity: 1,
+        },
       }}
     >
       <Flex
@@ -132,7 +137,7 @@ const Header = () => {
             color: "light",
           }}
         >
-          <Styled.h2>SK</Styled.h2>
+          <Styled.h3>SK</Styled.h3>
         </Styled.a>
       </Flex>
     </Flex>
@@ -241,12 +246,12 @@ const Footer = ({ name, social }) => {
           <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> Knowledge
           Base
         </HeaderMenuItem>
+        <HeaderMenuItem url="/db">
+          <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} fixedWidth /> DB
+        </HeaderMenuItem>
         <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
           <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
           Map
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/db">
-          <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} fixedWidth /> DB
         </HeaderMenuItem>
         <HeaderMenuItem url={`${social.github}/www`} external>
           <FontAwesomeIcon icon={faCode} sx={{ mr: 1 }} fixedWidth /> Source
@@ -295,16 +300,11 @@ const Footer = ({ name, social }) => {
 export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
-      p: 3,
+      px: 4,
+      mt: 4,
       mx: "auto",
-      width: ["100%", "100%", "3xl", "3xl"],
+      width: ["100%", "100%", "3xl", "4xl"],
       flex: 1,
-      borderLeftStyle: "solid",
-      borderRightStyle: "solid",
-      borderLeftWidth: "px",
-      borderRightWidth: "px",
-      borderLeftColor: "muted",
-      borderRightColor: "muted",
       ...style,
     }}
   >

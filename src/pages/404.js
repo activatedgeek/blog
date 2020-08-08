@@ -18,7 +18,7 @@ const LostPage = ({
       description: "This page could not be found.",
     }}
   >
-    <ContentBox style={{ width: ["100%", "100%", "3xl", "4xl"] }}>
+    <ContentBox>
       <Styled.h1>Hmm... An error?</Styled.h1>
       <Shortcodes.LazyImage
         src="https://imgs.xkcd.com/comics/error_types.png"
