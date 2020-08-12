@@ -6,6 +6,7 @@ import { jsx, Styled } from "theme-ui"
 import Layout, { ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
 import Shortcodes from "../components/shortcodes"
+import { processRawEdges } from "../utils"
 
 const LostPage = ({
   data: {
@@ -34,31 +35,7 @@ const LostPage = ({
       <Styled.p>
         Or now that you are here, perhaps check the last 10 pages I updated.
       </Styled.p>
-      <PostIndex
-        items={edges.map(
-          ({
-            node: {
-              frontmatter: {
-                title,
-                day,
-                year,
-                updatedDay,
-                updatedYear,
-                slug,
-                archive,
-                draft,
-              },
-            },
-          }) => ({
-            title,
-            slug,
-            archive,
-            draft,
-            day: updatedDay || day,
-            year: updatedYear || year,
-          })
-        )}
-      />
+      <PostIndex items={processRawEdges(edges)} />
     </ContentBox>
   </Layout>
 )

@@ -3,7 +3,7 @@ title: Nostalgia narratives
 description: Our generation was the best.
 date: Jul 14 2020, 22:35 -0700
 area: soc
-cat: obs
+cat: uncat
 ---
 
 As a society, we've given into _nostalgia narratives_. But actually, this is not

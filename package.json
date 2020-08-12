@@ -53,6 +53,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "new": "./scripts/new",
     "debug": "node --nolazy --inspect-brk node_modules/gatsby/dist/bin/gatsby develop",
     "fmt": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",

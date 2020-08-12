@@ -3,7 +3,7 @@ title: Information Types
 description: The changing face of information.
 date: Jul 4 2020, 19:19 -0700
 area: soc
-cat: obs
+cat: uncat
 ---
 
 Ben Thompson discusses "information types" in a [cool post](https://stratechery.com/2020/defining-information/).

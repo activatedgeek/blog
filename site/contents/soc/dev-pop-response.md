@@ -3,7 +3,7 @@ title: Development and Population response
 description: Development is determined by population response.
 date: Jul 4 2020, 19:26 -0700
 area: soc
-cat: obs
+cat: uncat
 ---
 
 Events in society a large determined by the response of the population- find a

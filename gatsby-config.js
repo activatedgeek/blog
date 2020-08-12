@@ -115,6 +115,8 @@ module.exports = {
                 mdxAST
                 frontmatter {
                   title
+                  area
+                  cat
                   description
                   slug
                   archive
@@ -129,7 +131,7 @@ module.exports = {
         `,
         ref: "id",
         index: ["title", "description", "searchText"],
-        store: ["title", "slug", "archive", "draft", "day", "year"],
+        store: ["title", "area", "cat", "slug", "archive", "draft", "day", "year"],
         normalizer: ({
           data: {
             allMdx: { edges },
@@ -142,6 +144,8 @@ module.exports = {
                 mdxAST,
                 frontmatter: {
                   title,
+                  area,
+                  cat,
                   description,
                   slug,
                   archive,
@@ -153,6 +157,8 @@ module.exports = {
             }) => ({
               id,
               title,
+              area,
+              cat,
               description,
               slug,
               archive,

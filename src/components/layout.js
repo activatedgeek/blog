@@ -235,7 +235,7 @@ const Footer = ({ name, social }) => {
       }}
     >
       <Styled.hr sx={{ m: 0 }} />
-      <Flex sx={{ justifyContent: "center", flexWrap: "wrap", fontSize: 0 }}>
+      <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
         <HeaderMenuItem url="/">
           <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
         </HeaderMenuItem>
@@ -301,7 +301,7 @@ export const ContentBox = ({ children, style }) => (
   <Box
     sx={{
       px: 4,
-      mt: 4,
+      my: 4,
       mx: "auto",
       width: ["100%", "100%", "3xl", "4xl"],
       flex: 1,

@@ -1,9 +1,9 @@
-// Categories with "!!!" needs triaging.
-
 module.exports = {
   areas: {
     cult: {
+      url: "/kb/culture-overview",
       label: "Culture",
+      color: "indigo.5",
       categories: {
         ov: { label: "Overview" },
         arts: { label: "Performing Arts" },
@@ -14,6 +14,8 @@ module.exports = {
     },
     math: {
       label: "Mathematics",
+      url: "/kb/mathematics-overview",
+      color: "green.6",
       categories: {
         ov: { label: "Overview" },
         res: { label: "Research" },
@@ -26,6 +28,8 @@ module.exports = {
     },
     meta: {
       label: "Meta",
+      url: "/kb/meta-overview",
+      color: "blue.5",
       categories: {
         ov: { label: "Overview" },
         info: { label: "Info" },
@@ -34,6 +38,8 @@ module.exports = {
     },
     nat: {
       label: "Natural sciences",
+      url: "/kb/natural-sciences-overview",
+      color: "teal.5",
       categories: {
         ov: { label: "Overview" },
         ph: { label: "Physics" },
@@ -43,6 +49,8 @@ module.exports = {
     },
     people: {
       label: "People",
+      url: "/kb/people-overview",
+      color: "red.6",
       categories: {
         ov: { label: "Overview" },
         th: { label: "Thoughts" },
@@ -52,6 +60,8 @@ module.exports = {
     },
     phil: {
       label: "Philosophy",
+      url: "/kb/philosophy-overview",
+      color: "pink.6",
       categories: {
         ov: { label: "Overview" },
         psych: { label: "Cognitive & experimental psychology" },
@@ -60,6 +70,8 @@ module.exports = {
     },
     ref: {
       label: "Reference",
+      url: "/kb/reference-overview",
+      color: "purple.5",
       categories: {
         ov: { label: "Overview" },
         books: { label: "Books" },
@@ -70,6 +82,8 @@ module.exports = {
     },
     soc: {
       label: "Society",
+      url: "/kb/society-overview",
+      color: "yellow.6",
       categories: {
         ov: { label: "Overview" },
         biz: { label: "Business" },
@@ -78,17 +92,18 @@ module.exports = {
         jrn: { label: "Journalism" },
         org: { label: "Organizations and Institutions" },
         ssc: { label: "Social sciences" },
-        obs: { label: "Observations" }, // !!!
-        sys: { label: "Societal systems" }, // !!!
+        uncat: { label: "Uncategorized" },
       },
     },
     tech: {
       label: "Technology",
+      url: "/kb/technology-overview",
+      color: "orange.6",
       categories: {
         ov: { label: "Overview" },
         prod: { label: "Products" },
-        dev: { label: "Ideas & Development" }, // !!!
         swe: { label: "Software Engineering" },
+        uncat: { label: "Uncategorized" },
       },
     },
   },

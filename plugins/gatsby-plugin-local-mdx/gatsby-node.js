@@ -87,11 +87,6 @@ exports.onCreateNode = (
 
   createNodeField({
     node,
-    name: "filedUnder",
-    value: `${areas[area].label} :: ${areas[area].categories[cat].label}`,
-  })
-  createNodeField({
-    node,
     name: "sortTs",
     value: moment(node.frontmatter.updated || node.frontmatter.date).format(
       "x"

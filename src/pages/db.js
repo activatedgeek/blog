@@ -8,6 +8,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import Layout, { ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
 import { Warn } from "../components/hint"
+import { processRawEdges } from "../utils"
 
 export default ({
   data: {
@@ -35,31 +36,7 @@ export default ({
         </Styled.a>{" "}
         instead.
       </Warn>
-      <PostIndex
-        items={edges.map(
-          ({
-            node: {
-              frontmatter: {
-                title,
-                day,
-                year,
-                updatedDay,
-                updatedYear,
-                slug,
-                archive,
-                draft,
-              },
-            },
-          }) => ({
-            title,
-            slug,
-            archive,
-            draft,
-            day: updatedDay || day,
-            year: updatedYear || year,
-          })
-        )}
-      />
+      <PostIndex items={processRawEdges(edges)} />
     </ContentBox>
   </Layout>
 )
@@ -71,6 +48,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            area
+            cat
             slug
             archive
             draft

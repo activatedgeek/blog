@@ -2,13 +2,13 @@
 title: Machine Learning literature
 description: Recommendations for tutorials, surveys and theses.
 date: Jul 05 2020, 15:44 -0700
+updated: Aug 11 2020, 17:13 -0700
 area: math
 cat: ml
 ---
 
 ## Tutorials
 
-- [An Introduction to the Conjugate Gradient Method Without the Agonizing Pain](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf) - Jonathan Richard Shewchuk (1994)
 - [A modern Bayesian look at the multi-armed bandit](http://www.economics.uci.edu/~ivan/asmb.874.pdf) - Steven L. Scott (2010)
 - [A Tutorial on Particle Filtering and Smoothing: Fifteen years later](https://www.stats.ox.ac.uk/~doucet/doucet_johansen_tutorialPF2011.pdf) - Arnaud Doucet, Adam M. Johansen (2011)
 - [Determinantal point processes for machine learning](https://arxiv.org/abs/1207.6083) - Alex Kulesza, Ben Taskar (2012)

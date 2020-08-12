@@ -2,7 +2,7 @@
 title: Movies & TV
 description: A selected list of movies I recommend.
 date: Jun 6 2020, 20:06 -0700
-updated: Jul 22 2020, 18:51 -0700
+updated: Aug 11 2020, 17:41 -0700
 area: cult
 cat: arts
 ---
@@ -17,6 +17,8 @@ Take a look at [some pretty plots](/kb/i-watch-a-lot-of-movies) on this data.
 
 I migrated away from IMDb to TMDB, a community-driven effort. I like to think of
 it as the Wikipedia for movies & TV and occasionally contribute an edit or two.
+For a great place to find movies, see [agoodmovietowatch.com](https://agoodmovietowatch.com)
+for human-curated lists.
 
 ## Favorites
 

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Post } from "./page"
 import Layout, { ContentBox } from "../components/layout"
 import PostIndex from "../components/post_index"
+import { processRawEdges } from "../utils"
 
 const OverviewPageTemplate = ({
   data: {
@@ -18,31 +19,7 @@ const OverviewPageTemplate = ({
       <ContentBox>
         <Post mdx={mdx} />
 
-        <PostIndex
-          items={edges.map(
-            ({
-              node: {
-                frontmatter: {
-                  title,
-                  day,
-                  year,
-                  updatedDay,
-                  updatedYear,
-                  slug,
-                  archive,
-                  draft,
-                },
-              },
-            }) => ({
-              title,
-              slug,
-              archive,
-              draft,
-              day: updatedDay || day,
-              year: updatedYear || year,
-            })
-          )}
-        />
+        <PostIndex items={processRawEdges(edges)} />
       </ContentBox>
     </Layout>
   )
@@ -59,14 +36,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        area
+        cat
         slug
         date(formatString: "MMM D YYYY")
         updated(fromNow: true)
         draft
         archive
-      }
-      fields {
-        filedUnder
       }
     }
     allMdx(

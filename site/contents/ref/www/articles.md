@@ -14,12 +14,6 @@ worth revisiting in the future.
 
 ### General Research
 
-[How to read a paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by S. Keshav
-
-[How to write a great research paper](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/) by Simon Peyton Jones
-
-[How to give a great research talk](https://www.microsoft.com/en-us/research/academic-program/give-great-research-talk/) by Simon Peyton Jones
-
 [William Shockley on what makes a person who publishes a lot of papers \(and the superstar researcher system\)](https://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/) by Brian McGill
 
 [You and Your Research](http://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by Richard Hamming

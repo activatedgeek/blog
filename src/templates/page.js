@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { jsx, Styled, Flex, Box } from "theme-ui"
@@ -12,8 +12,10 @@ import Layout, { ContentBox, InfoSep } from "../components/layout"
 import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
+import { areas } from "../../site/orgsys"
 
-const PostInfo = ({ date, updated, filedUnder }) => {
+
+const PostInfo = ({ area, cat, date, updated }) => {
   let infoList = []
 
   if (date !== null) {
@@ -53,7 +55,31 @@ const PostInfo = ({ date, updated, filedUnder }) => {
         </React.Fragment>
       ))}
       <FontAwesomeIcon title="Filed under" icon={faTag} sx={{ mr: 1 }} />
-      {filedUnder}
+      {areas[area].categories[cat].label} in{" "}
+      <span
+        sx={{
+          display: "inline-block",
+          bg: areas[area].color,
+          borderRadius: "lg",
+          boxShadow: "md",
+          px: 2,
+          ml: 1,
+        }}
+      >
+        <Styled.a
+          as={Link}
+          to={areas[area].url}
+          sx={{
+            fontSize: 0,
+            color: "light",
+            ":visited,:hover,:active": {
+              textDecoration: "none",
+            },
+          }}
+        >
+          {area}
+        </Styled.a>
+      </span>
     </Flex>
   )
 }
@@ -61,6 +87,7 @@ const PostInfo = ({ date, updated, filedUnder }) => {
 export const Post = ({ mdx }) => {
   const { body, frontmatter, fields, tableOfContents } = mdx
   const { title, draft, archive } = frontmatter
+  const { area } = frontmatter
 
   return (
     <Box>
@@ -89,7 +116,7 @@ export const Post = ({ mdx }) => {
             mb: 4,
           }}
         >
-          <TableOfContents toc={tableOfContents} />
+          <TableOfContents toc={tableOfContents} color={areas[area].color} />
         </Box>
       ) : null}
 
@@ -123,14 +150,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        area
+        cat
         slug
         date(formatString: "MMM D YYYY")
         updated(fromNow: true)
         draft
         archive
-      }
-      fields {
-        filedUnder
       }
     }
   }

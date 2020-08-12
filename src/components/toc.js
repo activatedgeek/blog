@@ -18,7 +18,7 @@ const NestedList = ({ toc, depth }) => (
   </Styled.ul>
 )
 
-const TableOfContents = ({ toc: { items } }) => {
+const TableOfContents = ({ toc: { items }, color }) => {
   return (
     <Box
       sx={{
@@ -28,7 +28,7 @@ const TableOfContents = ({ toc: { items } }) => {
         top: 4,
         borderTopStyle: "solid",
         borderTopWidth: 4,
-        borderTopColor: "primary",
+        borderTopColor: color || "primary",
         borderRightStyle: "solid",
         borderRightWidth: "px",
         borderRightColor: "muted",

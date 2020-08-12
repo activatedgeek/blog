@@ -6,7 +6,15 @@ import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
-const PostItem = ({ title, slug, archive, draft }) => (
+import { areas } from "../../site/orgsys"
+
+const PostItem = ({
+  title,
+  area,
+  slug,
+  archive,
+  draft,
+}) => (
   <Box>
     <Styled.p sx={{ display: "inline", my: 0 }}>
       <Styled.a as={Link} to={slug}>
@@ -25,6 +33,32 @@ const PostItem = ({ title, slug, archive, draft }) => (
           title="This post is a working draft."
           sx={{ mx: 2, color: "textMuted" }}
         />
+      ) : null}
+      {area ? (
+        <span
+          sx={{
+            display: "inline-block",
+            bg: areas[area].color,
+            borderRadius: "lg",
+            boxShadow: "md",
+            px: 2,
+            ml: 2,
+          }}
+        >
+          <Styled.a
+            as={Link}
+            to={areas[area].url}
+            sx={{
+              fontSize: 0,
+              color: "light",
+              ":visited,:hover,:active": {
+                textDecoration: "none",
+              },
+            }}
+          >
+            {area}
+          </Styled.a>
+        </span>
       ) : null}
     </Styled.p>
   </Box>

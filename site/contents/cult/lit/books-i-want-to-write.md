@@ -54,3 +54,8 @@ aren't such stories, I want to create them. I want to be a mythbuster.
 
 I had my first sense of what really goes behind-the-scenes with
 Blake Boles's detailed [book publishing journey](https://www.blakeboles.com/2020/07/book-story/).
+
+## Writing
+
+I definitely need to hone my writing skills. See my other post
+[On Good Writing](/kb/on-good-writing) for that.
