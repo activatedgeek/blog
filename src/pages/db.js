@@ -34,7 +34,10 @@ export default ({
         <Styled.a to="/search" as={Link}>
           Keyword Search
         </Styled.a>{" "}
-        instead.
+        instead. Otherwise, a good place to start is{" "}
+        <Styled.a to="/kb" as={Link}>
+          here
+        </Styled.a>
       </Warn>
       <PostIndex items={processRawEdges(edges)} />
     </ContentBox>

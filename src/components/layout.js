@@ -303,7 +303,7 @@ export const ContentBox = ({ children, style }) => (
       px: 4,
       my: 4,
       mx: "auto",
-      width: ["100%", "100%", "3xl", "4xl"],
+      width: ["100%", "100%", "3xl", "3xl"],
       flex: 1,
       ...style,
     }}

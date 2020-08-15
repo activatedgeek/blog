@@ -1,18 +1,13 @@
 /** @jsx jsx */
 
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { jsx, Styled } from "theme-ui"
 
 import Layout, { ContentBox } from "../components/layout"
-import PostIndex from "../components/post_index"
+import LatestPages from "../components/latest"
 import Shortcodes from "../components/shortcodes"
-import { processRawEdges } from "../utils"
 
-const LostPage = ({
-  data: {
-    allMdx: { edges },
-  },
-}) => (
+const LostPage = () => (
   <Layout
     frontmatter={{
       title: "Hmm... An error?",
@@ -30,37 +25,18 @@ const LostPage = ({
         <Styled.a to="/search" as={Link}>
           Keyword Search
         </Styled.a>
+        . More generally, a good place to start is{" "}
+        <Styled.a to="/kb" as={Link}>
+          here
+        </Styled.a>
         .
       </Styled.p>
       <Styled.p>
-        Or now that you are here, perhaps check the last 10 pages I updated.
+        Or now that you've arrived, check some of the recently updated pages.
       </Styled.p>
-      <PostIndex items={processRawEdges(edges)} />
+      <LatestPages />
     </ContentBox>
   </Layout>
 )
 
 export default LostPage
-
-export const pageQuery = graphql`
-  {
-    allMdx(sort: { fields: fields___sortTs, order: DESC }, limit: 10) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            archive
-            draft
-            day: date(formatString: "MMM D")
-            year: date(formatString: "YYYY")
-            updatedDay: updated(formatString: "MMM D")
-            updatedYear: updated(formatString: "YYYY")
-            dateTs: date(formatString: "X")
-            updatedTs: updated(formatString: "X")
-          }
-        }
-      }
-    }
-  }
-`
