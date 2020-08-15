@@ -8,13 +8,7 @@ import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 import { areas } from "../../site/orgsys"
 
-const PostItem = ({
-  title,
-  area,
-  slug,
-  archive,
-  draft,
-}) => (
+const PostItem = ({ title, area, slug, archive, draft }) => (
   <Box>
     <Styled.p sx={{ display: "inline", my: 0 }}>
       <Styled.a as={Link} to={slug}>

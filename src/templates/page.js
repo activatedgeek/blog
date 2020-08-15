@@ -14,7 +14,6 @@ import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 import { areas } from "../../site/orgsys"
 
-
 const PostInfo = ({ area, cat, date, updated }) => {
   let infoList = []
 

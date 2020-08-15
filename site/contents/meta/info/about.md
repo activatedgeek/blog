@@ -2,7 +2,7 @@
 title: About
 description: Welcome to sanyamkapoor.com!
 date: Jun 6 2020, 20:02 -0700
-updated: Jul 9 2020, 20:02 -0700
+updated: Aug 14 2020, 7:31 -0700
 area: meta
 cat: info
 slug: /
@@ -10,21 +10,24 @@ redirectsFrom:
   - /about
 ---
 
-I'm at [Uber AI Labs](https://www.uber.com/us/en/uberai/), fortunate to be working
-with a [host](http://karaletsos.com) of [amazing](https://people.orie.cornell.edu/mup3/)
-people, spending most of my time on approximate inference with [Thang Bui](https://thangbui.github.io). I also spent some time developing representation learning for Go-Explore with [Jeff Clune](http://jeffclune.com/).
+I do [_normal science_](https://www.uky.edu/~eushe2/Pajares/Kuhn.html).
 
-I completed my Masters in Computer Science at [NYU Courant](https://cs.nyu.edu)
-with [Joan Bruna](https://cims.nyu.edu/~bruna/) and other researchers in the
-[CILVR](https://wp.nyu.edu/cilvr/) lab. My thesis investigated how to [leverage
-communication for efficient Monte Carlo sampling](https://u.perhapsbay.es/msthesis).
+I am pursuing a PhD, advised by [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/),
+primarily interested in scaling up probabilistic inference and advancing
+reinforcement learning.
 
-Before this, I spent a few years building [StoryXpress](https://storyxpress.co/)
-with my co-founders at [IIT Hyderabad](https://www.iith.ac.in/) who, by the way are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85)!
+I was at [Uber AI Labs](https://www.uber.com/us/en/uberai/),
+mostly working on approximate inference with [Thang Bui](https://thangbui.github.io)
+and [Theofanis Karaletsos](http://karaletsos.com). Before this, I completed my
+Masters thesis on how to [leverage communication for efficient Monte
+Carlo sampling](https://u.perhapsbay.es/msthesis), advised by [Joan Bruna](https://cims.nyu.edu/~bruna/)
+in the [CILVR](https://wp.nyu.edu/cilvr/) lab.
 
-For a longer background, see my [CV](https://u.perhapsbay.es/cv).
+In a previous life, I co-founded [StoryXpress](https://storyxpress.co/) where we
+automated video creation for businesses. My co-founders carry much of the work
+forward now and are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85)!
 
-I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
-See the [stack](/kb/the-stack) behind this website to know the tools I use to build
-this. I also like to think of myself as a budding oenophile. Check out my wines and
-notes on the [world map](https://wine.sanyamkapoor.com).
+For a longer background, see my [CV](https://u.perhapsbay.es/cv). I also maintain a [knowledge base](/kb).
+
+I'd love to collaborate on some of [these](/kb/ml-fragments) ideas. Even if
+you have ideas of your own, please don't hesitate to reach out!

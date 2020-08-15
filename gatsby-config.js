@@ -131,7 +131,16 @@ module.exports = {
         `,
         ref: "id",
         index: ["title", "description", "searchText"],
-        store: ["title", "area", "cat", "slug", "archive", "draft", "day", "year"],
+        store: [
+          "title",
+          "area",
+          "cat",
+          "slug",
+          "archive",
+          "draft",
+          "day",
+          "year",
+        ],
         normalizer: ({
           data: {
             allMdx: { edges },
