@@ -15,9 +15,9 @@ import LatestPages from "../../../../src/components/latest"
 I do [_normal science_](https://www.uky.edu/~eushe2/Pajares/Kuhn.html).
 
 I am pursuing a PhD, advised by [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/),
-primarily interested in scaling up probabilistic inference and advancing
-reinforcement learning. I'd love to collaborate on some of [these](/kb/ml-fragments)
-ideas. Even if you have ideas of your own, please don't hesitate to reach out!
+interested in scaling up probabilistic inference and advancing
+reinforcement learning. I'd love to collaborate on some of [these idea fragments](/kb/ml-fragments).
+Even if you have ideas of your own, please don't hesitate to reach out!
 
 Before this, I was at [Uber AI Labs](https://www.uber.com/us/en/uberai/),
 mostly working on approximate inference with [Thang Bui](https://thangbui.github.io)
@@ -31,8 +31,6 @@ automated video creation for businesses. My co-founders carry much of the work
 forward now and are [killing it](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85)!
 
 For a formal background, see my [CV](https://u.perhapsbay.es/cv).
-
-### Knowledge Base
 
 I maintain a knowledge base. Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 More generally, a good place to start is [here](/kb) or check out some of the

@@ -12,7 +12,7 @@ all my devices. I like that my coverage is delayed by a few days (at most a week
 and never felt that I am missing out on anything. This allows for reporting that
 is far more researched instead of mindless hyperboles. Opinion pieces are
 usually well-balanced. The Economist, however, finds itself in a tough spot
-on hot button issue like race. Thankfully, the "Letters" section welcomes feedback
+on hot-button issue like race. Thankfully, the "Letters" section welcomes feedback
 from many readers with opposing views and keeps the discourse healthy.
 
 My main challenge is that there is much quality content but only little time to

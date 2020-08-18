@@ -2,6 +2,7 @@
 title: Existential Risks
 description: Events that can potentially disrupt humanity as it exists
 date: Jul 4 2020, 19:51 -0700
+updated: Aug 16 2020, 12:49 -0700
 area: phil
 cat: meta
 ---
@@ -36,9 +37,10 @@ to find opportunities to reduce entropy introduced by these events.
 ### Sci-Fi
 
 Some risks are still being evaluated largely from an anthropolgical impact
-perspective. In fact, I'd say these are more dystopian sci-fi risks and than
-real world ones, so far.
+perspective. In fact, I'd say these are more dystopian sci-fi risks, so far.
 
 - Superhuman AI
 
 - Bioweapons
+
+- [Kessler Syndrome](https://en.wikipedia.org/wiki/Kessler_syndrome)

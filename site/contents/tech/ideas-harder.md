@@ -12,8 +12,10 @@ I believe ideas and innovation roughly follow a sine curve of progress. As a
 society, we are perhaps in the second half of the downward sloped-part as of this
 writing.
 
-Interestingly, I found this website by Patrick Collison and Michael Nielsen - [https://scientificreturns.org](https://scientificreturns.org) which has a well-researched list of content.
+Interestingly, I found this website by Patrick Collison and Michael Nielsen - [https://scientificreturns.org](https://scientificreturns.org) [^a] which has a well-researched list of content.
 
 > Technology takes a while to enter the realms where it will have the most impact.
 
 I'll make notes at some point in the future.
+
+[^a]: See this on [archive.org](https://web.archive.org/web/20191228020011/https://scientificreturns.org/) if unavailable.

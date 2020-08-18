@@ -10,7 +10,6 @@ import {
   faHome,
   faBrain,
   faSearch,
-  faWineBottle,
   faCode,
   faDatabase,
 } from "@fortawesome/free-solid-svg-icons"
@@ -30,12 +29,14 @@ const Head = ({ siteMetadata, frontmatter }) => {
     name,
     siteUrl,
     title,
+    area,
+    cat,
     social,
     author,
     slug,
     description,
     date,
-    tags,
+    updated,
   } = allMeta
 
   return (
@@ -50,8 +51,9 @@ const Head = ({ siteMetadata, frontmatter }) => {
       {description ? <meta name="description" content={description} /> : null}
 
       <meta property="og:type" content="article" />
-      <meta property="article:tag" content={(tags || []).join(", ")} />
+      <meta property="article:tag" content={`${area}, ${cat}`} />
       {date ? <meta property="article:published_time" content={date} /> : null}
+      {updated ? <meta property="article:modified_time" content={updated} /> : null}
 
       <meta property="article:author" content={author} />
       <meta property="og:site_name" content={title} />
@@ -248,10 +250,6 @@ const Footer = ({ name, social }) => {
         </HeaderMenuItem>
         <HeaderMenuItem url="/db">
           <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} fixedWidth /> DB
-        </HeaderMenuItem>
-        <HeaderMenuItem url="https://wine.sanyamkapoor.com" external>
-          <FontAwesomeIcon icon={faWineBottle} sx={{ mr: 1 }} fixedWidth /> Wine
-          Map
         </HeaderMenuItem>
         <HeaderMenuItem url={`${social.github}/www`} external>
           <FontAwesomeIcon icon={faCode} sx={{ mr: 1 }} fixedWidth /> Source

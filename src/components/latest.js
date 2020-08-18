@@ -22,8 +22,6 @@ const LatestPages = () => {
               year: date(formatString: "YYYY")
               updatedDay: updated(formatString: "MMM D")
               updatedYear: updated(formatString: "YYYY")
-              dateTs: date(formatString: "X")
-              updatedTs: updated(formatString: "X")
             }
           }
         }

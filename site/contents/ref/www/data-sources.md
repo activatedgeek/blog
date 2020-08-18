@@ -27,4 +27,4 @@ A list of tools that I find super useful for data visualization.
 
 [Vega](https://vega.github.io/vega/) - [Vega-Lite](https://vega.github.io/vega-lite/) for JS, [Altair](https://altair-viz.github.io) for Python are excellent declarative abstractions for data visualization.
 
-[kepler.gl](https://kepler.gl) - Geospatial analysis built on top of React. I use this to host [My Wine Map](https://wine.sanyamkapoor.com).
+[kepler.gl](https://kepler.gl) - Geospatial analysis built on top of React. I use this to host [My Wine Map](/kb/my-wine-map).

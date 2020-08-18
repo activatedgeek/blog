@@ -153,7 +153,7 @@ export const pageQuery = graphql`
         cat
         slug
         date(formatString: "MMM D YYYY")
-        updated(fromNow: true)
+        updated(formatString: "MMM D YYYY")
         draft
         archive
       }
