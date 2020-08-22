@@ -88,6 +88,7 @@ module.exports = {
         ov: { label: "Overview" },
         biz: { label: "Business" },
         econ: { label: "Economics" },
+        edu: { label: "Education" },
         gov: { label: "Government" },
         jrn: { label: "Journalism" },
         org: { label: "Organizations and Institutions" },
