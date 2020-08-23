@@ -14,7 +14,6 @@ reading, I'm collecting some nice pieces.
 
 - [a cup of lofi \#2](https://www.youtube.com/watch?v=8ZzFhFgOxfY)
 
-
 ### White Noise
 
 For more technical content, I recommend white noise combined with

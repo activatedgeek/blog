@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { jsx, Styled, Flex, Box } from "theme-ui"
@@ -13,78 +13,36 @@ import { Info, Warn } from "../components/hint"
 import TableOfContents from "../components/toc"
 import shortcodes from "../components/shortcodes"
 import { areas } from "../../site/orgsys"
+import { AreaButton } from "../components/post_index"
 
-const PostInfo = ({ area, cat, date, updated }) => {
-  let infoList = []
-
-  if (date !== null) {
-    infoList.push(
-      <React.Fragment>
-        <FontAwesomeIcon
-          title="Date written"
-          icon={faPencilAlt}
-          sx={{ mr: 1 }}
-        />{" "}
-        {date}
-      </React.Fragment>
-    )
-  }
-  if (updated !== null) {
-    infoList.push(
+const PostInfo = ({ area, cat, day, year, updatedDay, updatedYear }) => (
+  <Flex
+    sx={{
+      color: "textMuted",
+      flexWrap: "wrap",
+      alignItems: "center",
+      fontSize: 0,
+    }}
+  >
+    <span>
+      <FontAwesomeIcon title="Date written" icon={faPencilAlt} sx={{ mr: 1 }} />{" "}
+      {day}, {year}
+    </span>
+    <InfoSep />
+    {updatedDay ? (
       <React.Fragment>
         <FontAwesomeIcon title="Date updated" icon={faEdit} sx={{ mr: 1 }} />{" "}
-        Last updated: {updated}
+        Last updated: {updatedDay}, {updatedYear}
+        <InfoSep />
       </React.Fragment>
-    )
-  }
-
-  return (
-    <Flex
-      sx={{
-        color: "textMuted",
-        flexWrap: "wrap",
-        alignItems: "center",
-        fontSize: 0,
-      }}
-    >
-      {infoList.map((c, i) => (
-        <React.Fragment key={i}>
-          {c}
-          <InfoSep />
-        </React.Fragment>
-      ))}
-      <FontAwesomeIcon title="Filed under" icon={faTag} sx={{ mr: 1 }} />
-      {areas[area].categories[cat].label} in{" "}
-      <span
-        sx={{
-          display: "inline-block",
-          bg: areas[area].color,
-          borderRadius: "lg",
-          boxShadow: "md",
-          px: 2,
-          ml: 1,
-        }}
-      >
-        <Styled.a
-          as={Link}
-          to={areas[area].url}
-          sx={{
-            fontSize: 0,
-            color: "light",
-            ":visited,:hover,:active": {
-              textDecoration: "none",
-            },
-          }}
-        >
-          {area}
-        </Styled.a>
-      </span>
-    </Flex>
-  )
-}
+    ) : null}
+    <FontAwesomeIcon title="Filed under" icon={faTag} sx={{ mr: 1 }} />{" "}
+    <AreaButton area={area} cat={cat} />
+  </Flex>
+)
 
 export const Post = ({ mdx }) => {
-  const { body, frontmatter, fields, tableOfContents } = mdx
+  const { body, frontmatter, tableOfContents } = mdx
   const { title, draft, archive } = frontmatter
   const { area } = frontmatter
 
@@ -92,7 +50,7 @@ export const Post = ({ mdx }) => {
     <Box>
       <Styled.h1 sx={{ mt: 0 }}>{title}</Styled.h1>
 
-      <PostInfo {...frontmatter} {...fields} />
+      <PostInfo {...frontmatter} />
 
       <Styled.hr />
 
@@ -126,13 +84,14 @@ export const Post = ({ mdx }) => {
   )
 }
 
-const PageTemplate = ({ data: { mdx } }) => {
+const PageTemplate = ({ data: { mdx }, children }) => {
   const { frontmatter } = mdx
 
   return (
     <Layout frontmatter={frontmatter}>
       <ContentBox>
         <Post mdx={mdx} />
+        {children}
       </ContentBox>
     </Layout>
   )
@@ -141,22 +100,15 @@ const PageTemplate = ({ data: { mdx } }) => {
 export default PageTemplate
 
 export const pageQuery = graphql`
+  fragment page on Mdx {
+    body
+    tableOfContents
+    ...frontmatter
+  }
+
   query($id: String) {
     mdx(id: { eq: $id }) {
-      id
-      body
-      tableOfContents
-      frontmatter {
-        title
-        description
-        area
-        cat
-        slug
-        date(formatString: "MMM D YYYY")
-        updated(formatString: "MMM D YYYY")
-        draft
-        archive
-      }
+      ...page
     }
   }
 `

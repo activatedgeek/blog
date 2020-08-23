@@ -5,7 +5,7 @@ module.exports = {
   author: `Sanyam Kapoor`,
   siteUrl:
     process.env.NODE_ENV === "production"
-      ? `https://sanyamkapoor.com`
+      ? `https://im.perhapsbay.es`
       : `http://localhost:8000`,
   social: {
     scholar: "https://scholar.google.com/citations?user=mwB-BekAAAAJ",

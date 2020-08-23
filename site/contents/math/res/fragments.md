@@ -2,11 +2,15 @@
 title: ML Fragments
 description: Raw unstructured thoughts and ideas.
 date: Jul 05 2020, 15:48 -0700
+updated: Aug 23 2020, 10:36 +0530
 area: math
 cat: res
 ---
 
-These are just raw keywords which may eventually evolve into their own pages if I dive deep enough. For now they are just disconnected "fragments", interesting directions that I may want to pursue.
+These are just raw keywords which may eventually evolve into their own pages if
+I dive deep enough. For now they are just disconnected "fragments", interesting
+directions that I may want to pursue. These are intentionally abstract. Please
+don't hesitate to reach out if you'd like to discuss more!
 
 ## Three-Way Markets
 
@@ -19,7 +23,11 @@ Much like the reward hypothesis in RL, there appears to be a similar hypothesis 
 - Knowledge Graphs for exploration
 - Revisiting particle optimizing in Model-Based RL via amortized proposals \(Model free example - [\[2001.08116\] Q-Learning in enormous action spaces via amortized approximate maximization](https://arxiv.org/abs/2001.08116)\)
 - [\[1704.06440\] Equivalence Between Policy Gradients and Soft Q-Learning](https://arxiv.org/abs/1704.06440)
-- In light of EM vs VI, can we manipulate the CEM objective to perform better?
+
+### Model-Based
+
+- Fixing objective mismatch in MBRL using Expectation Maximization.
+- Connections to classic control theory
 
 ## Bayesian Inference
 
@@ -59,3 +67,5 @@ $$
 
 - [Variational Inference using Implicit Distributions](https://arxiv.org/abs/1702.08235) - Ferenc Huszár
 - [Adversarial Variational Bayes: Unifying Variational Autoencoders and Generative Adversarial Networks](https://arxiv.org/abs/1701.04722) - Lars Mescheder, Sebastian Nowozin, Andreas Geiger
+
+[^a]: There is probably work already done in this direction but I'm too alien to grasp much of it.

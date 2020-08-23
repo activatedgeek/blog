@@ -23,3 +23,4 @@ cat: th
 - _If I had asked people what they wanted, they would have said faster horses._ -Henry Ford
 - _E pur si muove_ (And yet it moves) - Galileo Galilei
 - _Truth emerges more readily from error than from confusion_ - Francis Bacon
+- _What we need are notions, not notations._ - Gauss

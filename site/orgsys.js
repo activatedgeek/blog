@@ -7,7 +7,7 @@ module.exports = {
       categories: {
         ov: { label: "Overview" },
         arts: { label: "Performing Arts" },
-        media: { label: "(Mass) Media" },
+        media: { label: "Mass Media" },
         food: { label: "Food & Drink" },
         lit: { label: "Literature" },
       },

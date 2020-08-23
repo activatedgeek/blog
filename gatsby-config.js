@@ -2,6 +2,7 @@ const siteMetadata = require(`./site/metadata`)
 const visit = require(`unist-util-visit`)
 
 const orgsys = require(`./site/orgsys`)
+const { processFrontmatter } = require(`./src/utils`)
 
 const gatsbyRemarkPlugins = [
   {
@@ -115,14 +116,16 @@ module.exports = {
                 mdxAST
                 frontmatter {
                   title
+                  description
                   area
                   cat
-                  description
                   slug
                   archive
                   draft
                   day: date(formatString: "MMM D")
                   year: date(formatString: "YYYY")
+                  updatedDay: updated(formatString: "MMM D")
+                  updatedYear: updated(formatString: "YYYY")
                 }
               }
             }
@@ -146,37 +149,11 @@ module.exports = {
             allMdx: { edges },
           },
         }) =>
-          edges.map(
-            ({
-              node: {
-                id,
-                mdxAST,
-                frontmatter: {
-                  title,
-                  area,
-                  cat,
-                  description,
-                  slug,
-                  archive,
-                  draft,
-                  day,
-                  year,
-                },
-              },
-            }) => ({
-              id,
-              title,
-              area,
-              cat,
-              description,
-              slug,
-              archive,
-              draft,
-              day,
-              year,
-              searchText: getSearchText(mdxAST),
-            })
-          ),
+          edges.map(({ node: { id, mdxAST, frontmatter } }) => ({
+            id,
+            searchText: getSearchText(mdxAST),
+            ...processFrontmatter(frontmatter),
+          })),
       },
     },
     {

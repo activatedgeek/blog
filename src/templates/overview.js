@@ -1,27 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Post } from "./page"
-import Layout, { ContentBox } from "../components/layout"
+import PageTemplate from "./page"
 import PostIndex from "../components/post_index"
-import { processRawEdges } from "../utils"
+import { processFrontmatter } from "../utils"
 
-const OverviewPageTemplate = ({
-  data: {
-    mdx,
+const OverviewPageTemplate = ({ data }) => {
+  const {
     allMdx: { edges },
-  },
-}) => {
-  const { frontmatter } = mdx
-
+  } = data
   return (
-    <Layout frontmatter={frontmatter}>
-      <ContentBox>
-        <Post mdx={mdx} />
-
-        <PostIndex items={processRawEdges(edges)} />
-      </ContentBox>
-    </Layout>
+    <PageTemplate data={data}>
+      <PostIndex
+        showArea={false}
+        items={edges.map(({ node: { frontmatter } }) =>
+          processFrontmatter(frontmatter)
+        )}
+      />
+    </PageTemplate>
   )
 }
 
@@ -30,20 +26,7 @@ export default OverviewPageTemplate
 export const pageQuery = graphql`
   query($id: String, $area: String) {
     mdx(id: { eq: $id }) {
-      id
-      body
-      tableOfContents
-      frontmatter {
-        title
-        description
-        area
-        cat
-        slug
-        date(formatString: "MMM D YYYY")
-        updated(formatString: "MMM D YYYY")
-        draft
-        archive
-      }
+      ...page
     }
     allMdx(
       sort: { fields: fields___sortTs, order: DESC }
@@ -51,16 +34,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            title
-            slug
-            archive
-            draft
-            day: date(formatString: "MMM D")
-            year: date(formatString: "YYYY")
-            updatedDay: updated(formatString: "MMM D")
-            updatedYear: updated(formatString: "YYYY")
-          }
+          ...frontmatter
         }
       }
     }

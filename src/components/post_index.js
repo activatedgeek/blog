@@ -1,14 +1,42 @@
 /** @jsx jsx */
 
 import React from "react" // eslint-disable-line no-unused-vars
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { jsx, Styled, Flex, Box } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 import { areas } from "../../site/orgsys"
 
-const PostItem = ({ title, area, slug, archive, draft }) => (
+export const AreaButton = ({ area, cat }) => (
+  <span sx={{ color: "textMuted", fontSize: 0 }}>
+    <Styled.i>{areas[area].categories[cat].label} </Styled.i> in{" "}
+    <Styled.a
+      as={Link}
+      to={areas[area].url}
+      sx={{
+        ":visited,:hover,:active": {
+          textDecoration: "none",
+        },
+      }}
+    >
+      <span
+        sx={{
+          color: "light",
+          display: "inline-block",
+          bg: areas[area].color,
+          borderRadius: "lg",
+          boxShadow: "md",
+          px: 2,
+        }}
+      >
+        {area}
+      </span>
+    </Styled.a>
+  </span>
+)
+
+const PostItem = ({ title, area, cat, slug, archive, draft, showArea }) => (
   <Box>
     <Styled.p sx={{ display: "inline", my: 0 }}>
       <Styled.a as={Link} to={slug}>
@@ -28,37 +56,13 @@ const PostItem = ({ title, area, slug, archive, draft }) => (
           sx={{ mx: 2, color: "textMuted" }}
         />
       ) : null}
-      {area ? (
-        <span
-          sx={{
-            display: "inline-block",
-            bg: areas[area].color,
-            borderRadius: "lg",
-            boxShadow: "md",
-            px: 2,
-            ml: 2,
-          }}
-        >
-          <Styled.a
-            as={Link}
-            to={areas[area].url}
-            sx={{
-              fontSize: 0,
-              color: "light",
-              ":visited,:hover,:active": {
-                textDecoration: "none",
-              },
-            }}
-          >
-            {area}
-          </Styled.a>
-        </span>
-      ) : null}
+      {"    "}
+      <AreaButton area={area} cat={cat} />
     </Styled.p>
   </Box>
 )
 
-const PostIndex = ({ items }) => {
+const PostIndex = ({ items, showArea, showCat }) => {
   let yearIndex = items.reduce((acc, x) => {
     const { year } = x
     acc[year] = acc[year] || []
@@ -93,7 +97,7 @@ const PostIndex = ({ items }) => {
                   {day}
                 </Box>
                 <Box sx={{ flex: 1, mb: 1 }}>
-                  <PostItem {...props} />
+                  <PostItem {...props} showArea={showArea} showCat={showCat} />
                 </Box>
               </Flex>
             ))}
@@ -105,3 +109,21 @@ const PostIndex = ({ items }) => {
 }
 
 export default PostIndex
+
+export const query = graphql`
+  fragment frontmatter on Mdx {
+    frontmatter {
+      title
+      description
+      area
+      cat
+      slug
+      archive
+      draft
+      day: date(formatString: "MMM D")
+      year: date(formatString: "YYYY")
+      updatedDay: updated(formatString: "MMM D")
+      updatedYear: updated(formatString: "YYYY")
+    }
+  }
+`

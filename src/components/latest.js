@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { processRawEdges } from "../utils"
+import { processFrontmatter } from "../utils"
 import PostIndex from "./post_index"
 
 const LatestPages = () => {
@@ -11,25 +11,20 @@ const LatestPages = () => {
       allMdx(sort: { fields: fields___sortTs, order: DESC }, limit: 10) {
         edges {
           node {
-            frontmatter {
-              title
-              area
-              cat
-              slug
-              archive
-              draft
-              day: date(formatString: "MMM D")
-              year: date(formatString: "YYYY")
-              updatedDay: updated(formatString: "MMM D")
-              updatedYear: updated(formatString: "YYYY")
-            }
+            ...frontmatter
           }
         }
       }
     }
   `)
 
-  return <PostIndex items={processRawEdges(edges)} />
+  return (
+    <PostIndex
+      items={edges.map(({ node: { frontmatter } }) =>
+        processFrontmatter(frontmatter)
+      )}
+    />
+  )
 }
 
 export default LatestPages

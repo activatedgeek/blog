@@ -53,7 +53,9 @@ const Head = ({ siteMetadata, frontmatter }) => {
       <meta property="og:type" content="article" />
       <meta property="article:tag" content={`${area}, ${cat}`} />
       {date ? <meta property="article:published_time" content={date} /> : null}
-      {updated ? <meta property="article:modified_time" content={updated} /> : null}
+      {updated ? (
+        <meta property="article:modified_time" content={updated} />
+      ) : null}
 
       <meta property="article:author" content={author} />
       <meta property="og:site_name" content={title} />

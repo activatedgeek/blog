@@ -12,7 +12,7 @@ I manually curated the lat/long values of each of the producing wineries. It is
 a collection of a little over a hundred unique wines. Hopefully, I can continue
 building this repository in the future.
 
-I've visualized all data on the world map at 
+I've visualized all data on the world map at
 [wine.sanyamkapoor.com](https://u.perhapsbay.es/wine-map). It looks something like
 this.
 
