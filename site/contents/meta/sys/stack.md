@@ -2,7 +2,7 @@
 title: The Stack
 description: Tools powering this website.
 date: Jun 19 2020, 14:32 -0700
-updated: Aug 6 2020, 17:07 -0700
+updated: Aug 23 2020, 22:41 +0530
 area: meta
 cat: sys
 ---
@@ -29,7 +29,7 @@ goodies. I use [Vega Lite](https://vega.github.io/vega-lite/) to embed charts, a
 to use the same specification across both Python and the web.
 
 The website is deployed on [Netlify](https://www.netlify.com) and the domain
-registrar is [Google Domains](https://domains.google). Simple and private
-analytics are powered by [GoatCounter](https://www.goatcounter.com).
+registrar is [GoDaddy](https://godaddy.com). Simple and private analytics are
+powered by [GoatCounter](https://www.goatcounter.com).
 
 The complete source is available on [Github](https://github.com/activatedgeek/www).

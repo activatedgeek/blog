@@ -1,0 +1,3 @@
+## Redirect all domain aliases
+https://sanyamkapoor.com/*      https://im.perhapsbay.es/:splat  301!
+https://www.sanyamkapoor.com/*  https://im.perhapsbay.es/:splat  301!
