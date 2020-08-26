@@ -19,7 +19,7 @@ module.exports = {
       categories: {
         ov: { label: "Overview" },
         res: { label: "Research" },
-        ml: { label: "Machine Learning & Statistics" },
+        ml: { label: "ML & Stats" },
         cs: { label: "Computer science" },
         cv: { label: "Computer vision" },
         rl: { label: "Reinforcement learning" },
@@ -64,7 +64,7 @@ module.exports = {
       color: "pink.6",
       categories: {
         ov: { label: "Overview" },
-        psych: { label: "Cognitive & experimental psychology" },
+        psych: { label: "Cognitive psychology" },
         meta: { label: "Metaphysics" },
       },
     },
@@ -77,7 +77,7 @@ module.exports = {
         books: { label: "Books" },
         www: { label: "WWW" },
         hb: { label: "Handbook" },
-        data: { label: "Data & Visualization" },
+        data: { label: "Data & Viz." },
       },
     },
     soc: {
@@ -91,7 +91,7 @@ module.exports = {
         edu: { label: "Education" },
         gov: { label: "Government" },
         jrn: { label: "Journalism" },
-        org: { label: "Organizations and Institutions" },
+        org: { label: "Orgs. and Institutions" },
         ssc: { label: "Social sciences" },
         uncat: { label: "Uncategorized" },
       },
@@ -103,7 +103,7 @@ module.exports = {
       categories: {
         ov: { label: "Overview" },
         prod: { label: "Products" },
-        swe: { label: "Software Engineering" },
+        swe: { label: "Software Eng." },
         uncat: { label: "Uncategorized" },
       },
     },

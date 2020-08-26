@@ -2,7 +2,7 @@
 title: Machine Learning literature
 description: Recommendations for tutorials, surveys and theses.
 date: Jul 05 2020, 15:44 -0700
-updated: Aug 11 2020, 17:13 -0700
+updated: Aug 25 2020, 14:28 -0700
 area: math
 cat: ml
 ---
@@ -23,6 +23,7 @@ cat: ml
 
 ## Surveys
 
+- [Bayesian Reinforcement Learning: A Survey](https://arxiv.org/abs/1609.04436) - Mohammad Ghavamzadeh, Shie Mannor, Joelle Pineau, Aviv Tamar
 - [Elements of Sequential Monte Carlo](https://arxiv.org/abs/1903.04797) - Christian A. Naesseth, Fredrik Lindsten, Thomas B. Schön (2019)
 - [Generalized Variational Inference: Three arguments for deriving new Posteriors](https://arxiv.org/abs/1904.02063) - Jeremias Knoblauch, Jack Jewson, Theodoros Damoulas (2019)
 - [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/abs/1906.10652) - Shakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih (2019)
@@ -34,6 +35,7 @@ cat: ml
 - [Bayesian Learning for Neural Networks](https://www.cs.toronto.edu/~radford/ftp/thesis.pdf) by Radford Neal (1995)
 - [Variational Algorithms for Approximate Bayesian Inference](https://cse.buffalo.edu/faculty/mbeal/papers/beal03.pdf) by Matthew J. Beal (2003)
 - [On the Sample Complexity of Reinforcement Learning](https://homes.cs.washington.edu/~sham/papers/thesis/sham_thesis.pdf) by Sham Kakade (2003)
+- [Advances in Markov chain Monte Carlo methods](https://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf) by Iain Murray (2007)
 - [Decision making with inference and learning methods](http://mlg.eng.cam.ac.uk/hoffmanm/papers/hoffman:2013:thesis.pdf) by Matthew William Hoffman (2013)
 - [Efficient Bayesian Active Learning and Matrix Modeling](https://pdfs.semanticscholar.org/9e74/60160be245daa2e8808ffc9097e475e18192.pdf) by Neil MT Houlsby (2014)
 - [Stochastic Gradient MCMC: Algorithms and Applications](https://escholarship.org/uc/item/4k8039zm) by Sungjin Ahn (2015)

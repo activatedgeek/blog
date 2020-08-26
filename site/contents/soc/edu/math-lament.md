@@ -42,4 +42,8 @@ A lot of us have been led to believe that young students need structure.
 Free-form classes don't work. Well, let me burst the bubble. Structured classes
 in schools don't work either.
 
-_Ivan Illich_ also wrote a seminal essay back in 1970 titled [_Deschooling Society_](https://davidtinapple.com/illich/1970_deschooling.html).
+## Other essays
+
+- _Ivan Illich_ also wrote a seminal essay back in 1970 titled [_Deschooling Society_](https://davidtinapple.com/illich/1970_deschooling.html).
+
+- [Is it still a Cheetah?](https://www.stephanietolan.com/is_it_a_cheetah.htm)

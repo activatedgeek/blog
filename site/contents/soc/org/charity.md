@@ -23,7 +23,7 @@ improve.
 
 There is, however, a case to be made that charity doesn't help because if it
 did, government subsidies would have solved poverty by now. As the most
-famous philanthropist of our times, Bill Gates would have probably solved 
+famous philanthropist of our times, Bill Gates would have probably solved
 many other problems by throwing money at the problem. There is some hyperbole
 there, but you get the idea. This argument has some truth to it. There is a
 reason why even the best-intentioned billionaires don't just donate all their

@@ -1,6 +1,6 @@
 ---
 title: About
-description: Welcome!
+description: Perhaps Bayes(ian).
 date: Jun 6 2020, 20:02 -0700
 updated: Aug 15 2020, 12:16 -0700
 area: meta

@@ -12,6 +12,9 @@ I dive deep enough. For now they are just disconnected "fragments", interesting
 directions that I may want to pursue. These are intentionally abstract. Please
 don't hesitate to reach out if you'd like to discuss more!
 
+There is non-trivial chance that prior work has already posed questions
+similar but then I haven't spent enough time studying these in detail.
+
 ## Three-Way Markets
 
 Economy \(and "micro-"economies if you will\) seem to be running on three-way markets. i\) The stock market ii\) Gig economy - the likes of Uber, AirBnB. Each transaction can most likely be modeled as consisting of three components - a buyer, a seller and a mediator where each component could be an individual or an institution.
@@ -68,4 +71,9 @@ $$
 - [Variational Inference using Implicit Distributions](https://arxiv.org/abs/1702.08235) - Ferenc Huszár
 - [Adversarial Variational Bayes: Unifying Variational Autoencoders and Generative Adversarial Networks](https://arxiv.org/abs/1701.04722) - Lars Mescheder, Sebastian Nowozin, Andreas Geiger
 
-[^a]: There is probably work already done in this direction but I'm too alien to grasp much of it.
+## Linear Algebra
+
+- Circulant (in general Toeplitz) matrices allow much faster matrix-vector
+  multiplications. For non-Toeplitz ones, we have a notion of "asymptotically
+  Toeplitz" under the weak matrix norm (Frobenius). What problems families afford
+  such a structure? If they do, can we leverage non-asymptotic guarantees?

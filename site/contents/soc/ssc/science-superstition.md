@@ -15,8 +15,7 @@ The success of [AlphaGo](https://deepmind.com/research/case-studies/alphago-the-
 is exemplar in this regard - we've beaten the world champion convincingly. More
 recent results with [GPT-3](https://arxiv.org/abs/2005.14165) add to the growing
 body of evidence that modern approaches can be scalable although, precise
-understanding still eludes us. My examples are rather biased because this is
-where I work. Extraordinary achievements, however, are spread across all science.
+understanding still eludes us. My examples are rather biased. Extraordinary achievements, however, are spread across all science.
 They've achieved things that no previous generations could even imagine.
 
 Without discounting the extraordinary achievements, these results are a natural
