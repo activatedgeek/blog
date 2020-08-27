@@ -12,6 +12,7 @@ import {
   faSearch,
   faCode,
   faDatabase,
+  faRss,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithub,
@@ -90,9 +91,8 @@ const HeaderMenuItem = ({ url, children, external }) => (
       },
     }}
   >
-    <Styled.p
+    <span
       sx={{
-        my: 1,
         p: 2,
         color: "textMuted",
         borderRadius: "lg",
@@ -104,7 +104,7 @@ const HeaderMenuItem = ({ url, children, external }) => (
       }}
     >
       {children}
-    </Styled.p>
+    </span>
   </Styled.a>
 )
 
@@ -235,26 +235,27 @@ const Footer = ({ name, social }) => {
         width: "screenWidth",
         flexDirection: "column",
         justifyContent: "center",
-        pb: 3,
+        py: 3,
       }}
     >
-      <Styled.hr sx={{ m: 0 }} />
       <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
         <HeaderMenuItem url="/">
-          <FontAwesomeIcon icon={faHome} sx={{ mr: 1 }} fixedWidth /> Home
+          <FontAwesomeIcon icon={faHome} fixedWidth /> Home
         </HeaderMenuItem>
         <HeaderMenuItem url="/search">
-          <FontAwesomeIcon icon={faSearch} sx={{ mr: 1 }} fixedWidth /> Search
+          <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
         </HeaderMenuItem>
         <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} sx={{ mr: 1 }} fixedWidth /> Knowledge
-          Base
+          <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Base
         </HeaderMenuItem>
         <HeaderMenuItem url="/db">
-          <FontAwesomeIcon icon={faDatabase} sx={{ mr: 1 }} fixedWidth /> DB
+          <FontAwesomeIcon icon={faDatabase} fixedWidth /> DB
         </HeaderMenuItem>
         <HeaderMenuItem url={`${social.github}/www`} external>
-          <FontAwesomeIcon icon={faCode} sx={{ mr: 1 }} fixedWidth /> Source
+          <FontAwesomeIcon icon={faCode} fixedWidth /> Source
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/rss.xml" external>
+          <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
         </HeaderMenuItem>
         {/* <FontAwesomeIcon
           icon={colorMode === "default" ? faMoon : faSun}
@@ -344,6 +345,7 @@ const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
             {showHeader ? <Header siteMetadata={siteMetadata} /> : null}
             {children}
+            <Styled.hr sx={{ m: 0 }} />
             {showFooter ? <Footer name={name} social={social} /> : null}
           </Flex>
         </>

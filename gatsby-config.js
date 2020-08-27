@@ -1,5 +1,6 @@
 const siteMetadata = require(`./site/metadata`)
 const visit = require(`unist-util-visit`)
+const moment = require(`moment`)
 
 const orgsys = require(`./site/orgsys`)
 const { processFrontmatter } = require(`./src/utils`)
@@ -45,6 +46,36 @@ const getSearchText = ast => {
 
   return searchText.join(" ")
 }
+
+const allQuery = `
+{
+  allMdx(
+    filter: { frontmatter: { draft: { ne: true } } }
+  ) {
+    edges {
+      node {
+        id
+        mdxAST
+        frontmatter {
+          title
+          description
+          area
+          cat
+          slug
+          archive
+          draft
+          date
+          updated
+          day: date(formatString: "MMM D")
+          year: date(formatString: "YYYY")
+          updatedDay: updated(formatString: "MMM D")
+          updatedYear: updated(formatString: "YYYY")
+        }
+      }
+    }
+  }
+}
+`
 
 module.exports = {
   siteMetadata,
@@ -105,33 +136,7 @@ module.exports = {
         name: "index",
         engine: "flexsearch",
         engineOptions: "speed",
-        query: `
-        {
-          allMdx(
-            filter: { frontmatter: { draft: { ne: true } } }
-          ) {
-            edges {
-              node {
-                id
-                mdxAST
-                frontmatter {
-                  title
-                  description
-                  area
-                  cat
-                  slug
-                  archive
-                  draft
-                  day: date(formatString: "MMM D")
-                  year: date(formatString: "YYYY")
-                  updatedDay: updated(formatString: "MMM D")
-                  updatedYear: updated(formatString: "YYYY")
-                }
-              }
-            }
-          }
-        }
-        `,
+        query: allQuery,
         ref: "id",
         index: ["title", "description", "searchText"],
         store: [
@@ -154,6 +159,61 @@ module.exports = {
             searchText: getSearchText(mdxAST),
             ...processFrontmatter(frontmatter),
           })),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                name
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            output: "/rss.xml",
+            title: "Sanyam Kapoor's RSS Feed",
+            query: allQuery,
+            serialize: ({
+              query: {
+                allMdx: { edges },
+              },
+            }) =>
+              edges.map(
+                ({
+                  node: {
+                    frontmatter: {
+                      title,
+                      description,
+                      slug,
+                      area,
+                      cat,
+                      date,
+                      updated,
+                    },
+                  },
+                }) => ({
+                  title,
+                  description,
+                  url: `${siteMetadata.siteUrl}/${slug}`,
+                  categories: [
+                    orgsys.areas[area].label,
+                    orgsys.areas[area].categories[cat].label,
+                  ],
+                  author: siteMetadata.author,
+                  date: moment(new Date(date || updated)).format(
+                    `ddd, DD, MMM YYYY HH:MM:ss ZZ`
+                  ),
+                })
+              ),
+          },
+        ],
       },
     },
     {
