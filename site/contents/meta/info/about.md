@@ -2,7 +2,7 @@
 title: About
 description: Perhaps Bayes(ian).
 date: Jun 6 2020, 20:02 -0700
-updated: Aug 15 2020, 12:16 -0700
+updated: Aug 29 2020, 8:00 +0530
 area: meta
 cat: info
 slug: /
@@ -32,8 +32,10 @@ forward now and are [killing it](https://www.forbes.com/profile/storyxpress/?lis
 
 For a formal background, see my [CV](https://u.perhapsbay.es/cv).
 
-I maintain a knowledge base. Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
-More generally, a good place to start is [here](/kb) or check out some of the
-recently updated pages.
+I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
+or check out some of the recently updated pages.
 
 <LatestPages />
+
+I also have an [RSS Feed](/rss.xml) that you can subscribe to. [The Database
+of Everything](/db) is otherwise the exhaustive list.

@@ -28,9 +28,9 @@ export default ({
         everything
       </Styled.h2>
       <Warn>
-        This is a list of everything in the knowledge base, reverse sorted by
-        last updated date. This place should rarely need a visit, unless you
-        don't know what you are looking for. If you do know, try{" "}
+        This is a list of everything in the knowledge base, sorted by last
+        updated date. This place should rarely need a visit, unless you don't
+        know what you are looking for. If you do know, try{" "}
         <Styled.a to="/search" as={Link}>
           Keyword Search
         </Styled.a>{" "}

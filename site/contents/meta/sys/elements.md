@@ -46,6 +46,7 @@ creation [^c]. Conforming to the philosophy, none of this is influenced by
 characteristics of the file system - the file name or organization under a folder.
 
 Pretty simple. The specific software to implement this is summarized in [the stack](/kb/the-stack).
+Go visit my [knowledge base](/kb).
 
 [^a]: See the raw text [here](https://github.com/activatedgeek/www/blob/master/site/contents/meta/sys/navigation.md).
 [^b]: See the [_orgsys file_](https://github.com/activatedgeek/www/blob/master/site/orgsys.js).

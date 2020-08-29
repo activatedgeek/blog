@@ -2,6 +2,7 @@
 title: Machine Learning courses
 description: My course recommendations for machine learning.
 date: Jul 05 2020, 15:43 -0700
+updated: Aug 27 2020, 18:29 +0530
 area: math
 cat: ml
 ---
@@ -13,6 +14,7 @@ cat: ml
 - [UCL COMPM050/COMPGI13 Reinforcement Learning](https://www.davidsilver.uk/teaching/) by David Silver
 - [Control Bootcamp](https://www.youtube.com/playlist?list=PLMrJAkhIeNNR20Mz-VpzgfQs5zrYi085m) by Steve Brunton
 - [Slotine Lectures on Nonlinear Systems](http://web.mit.edu/nsl/www/videos/lectures.html) by Jean-Jacques Slotine
+- [Statistical Reinforcement Learning](http://nanjiang.cs.illinois.edu/cs598/) by Nan Jiang
 
 ### Notes
 

@@ -201,7 +201,7 @@ module.exports = {
                 }) => ({
                   title,
                   description,
-                  url: `${siteMetadata.siteUrl}/${slug}`,
+                  url: `${siteMetadata.siteUrl}${slug}`,
                   categories: [
                     orgsys.areas[area].label,
                     orgsys.areas[area].categories[cat].label,

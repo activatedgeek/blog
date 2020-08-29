@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+###
+# Usage: ./new area/cat/filename
+#   This will automatically populate area, category and date.
+#
+
 if [[ -z "${1}" ]]; then
   echo "Missing file name!"
   exit 1
@@ -9,20 +14,19 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 pushd "${DIR}/.."
 
 CONTENT_DIR="site/contents"
-BASE_DIR=$(dirname ${1})
+IFS='/' read -ra INFO_ARRAY <<< "${1}"
 
-mkdir -p "${CONTENT_DIR}/${BASE_DIR}"
+mkdir -p "${CONTENT_DIR}/$(dirname ${1})"
 
 cat << EOF > "${CONTENT_DIR}/${1}.md"
 ---
 title:
 description:
 date: $(date +"%b %d %Y, %H:%M %z")
-area:
-cat:
+area: ${INFO_ARRAY[0]}
+cat: ${INFO_ARRAY[1]}
 slug:
-redirectsFrom:
-  -
+redirectsFrom: []
 ---
 EOF
 
