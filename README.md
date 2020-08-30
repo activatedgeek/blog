@@ -4,6 +4,16 @@
 
 Main website is hosted at [im.perhapsbay.es](https://im.perhapsbay.es). See details on the stack [here](https://im.perhapsbay.es/kb/the-stack).
 
+## Build
+
+### Environment Variables
+
+List of environment variables needed for build.
+
+- `GOODREADS_API_KEY`
+- `TMDB_API_KEY`
+- `TMDB_SESSION_ID`
+
 ## License
 
 MIT

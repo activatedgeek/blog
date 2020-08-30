@@ -23,7 +23,7 @@ const TableOfContents = ({ toc: { items }, color }) => {
     <Box
       sx={{
         display: "inline-block",
-        p: 4,
+        p: 3,
         position: "sticky",
         top: 4,
         borderTopStyle: "solid",

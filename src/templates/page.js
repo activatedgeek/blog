@@ -67,6 +67,7 @@ export const Post = ({ mdx }) => {
         <Box
           sx={{
             position: "relative",
+            maxWidth: [null, null, "40%", "40%"],
             display: "inline-block",
             float: [null, null, "right", "right"],
             ml: [0, 0, 4, 4],

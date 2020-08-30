@@ -26,7 +26,8 @@ Search is powered by [FlexSearch](https://github.com/nextapps-de/flexsearch). Th
 search index contains text extracted by parsing the MDX AST. Eventually, I would
 like this to be more refined with word stemming and other language processing
 goodies. I use [Vega Lite](https://vega.github.io/vega-lite/) to embed charts, allowing me
-to use the same specification across both Python and the web.
+to use the same specification across both Python and the web. Images are
+hosted on [Imgur](https://imgur.com).
 
 The website is deployed on [Netlify](https://www.netlify.com) and the domain
 registrar is [GoDaddy](https://godaddy.com). Simple and private analytics are
