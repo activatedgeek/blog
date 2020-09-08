@@ -2,7 +2,7 @@
 title: Adages, Quotes
 description: What have people said over the years?
 date: Jul 4 2020, 19:40 -0700
-updated: Jul 20 2020, 14:55 -0700
+updated: Sep 8 2020, 14:03 +0530
 area: people
 cat: th
 ---
@@ -24,3 +24,4 @@ cat: th
 - _E pur si muove_ (And yet it moves) - Galileo Galilei
 - _Truth emerges more readily from error than from confusion_ - Francis Bacon
 - _What we need are notions, not notations._ - Gauss
+- _If I want the door to turn, the hinges must stay put._ - Ludwig Wittgenstein

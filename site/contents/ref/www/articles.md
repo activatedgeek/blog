@@ -2,25 +2,13 @@
 title: Articles
 description: Standalone interesting pieces across the internet. Includes talks.
 date: Jun 19 2020, 12:30 -0700
-updated: Jul 4 2020, 18:40 -0700
+updated: Sep 8 2020, 14:14 +0530
 area: ref
 cat: www
 ---
 
 I'm not sure what I'm doing collecting these. Although, I have a feeling they will be
 worth revisiting in the future.
-
-## Writing
-
-### General Research
-
-[William Shockley on what makes a person who publishes a lot of papers \(and the superstar researcher system\)](https://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/) by Brian McGill
-
-[You and Your Research](http://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by Richard Hamming
-
-[Principles of Effective Research](http://michaelnielsen.org/blog/principles-of-effective-research/) by Michael Nielsen
-
-[An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) by John Schulman
 
 ### Behaviors
 
@@ -34,12 +22,10 @@ worth revisiting in the future.
 
 [The Complete CSS Flex Box Tutorial](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc) by Greg Sidelniko
 
+[TailwindInk](https://tailwind.ink)
+
 [Turtleocracy](https://www.notion.so/Turtleocracy-47a6df7692bf4e95a39504a73a50a295)
 
 [Business Models](https://axial.substack.com/p/axial-business-models) by Joshua Elkington
 
 [Reality has a surprising amount of detail](http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail) by John Salvatier
-
-## Talks
-
-[How To Speak](https://www.youtube.com/watch?v=Unzc731iCUY&feature=share) by Patrick Winston

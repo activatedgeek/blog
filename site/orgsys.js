@@ -66,6 +66,7 @@ module.exports = {
         ov: { label: "Overview" },
         psych: { label: "Cognitive psychology" },
         meta: { label: "Metaphysics" },
+        uncat: { label: "Uncategorized" },
       },
     },
     ref: {
