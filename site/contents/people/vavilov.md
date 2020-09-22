@@ -2,6 +2,7 @@
 title: Nikolai Vavilov
 description: We owe him our food and crops.
 date: Aug 02 2020, 12:56 -0700
+updated: Sep 22 2020, 13:46 +0530
 area: people
 cat: bio
 ---
@@ -28,8 +29,6 @@ for this dissent. He was sentenced to death, but later commuted to a
 20-year prison term. Ironically, he died of starvation in captivity a few
 years later. Some of the scientists during the Siege of Lenningrad, faced
 the same fate.
-
-_My post on [Reddit](https://www.reddit.com/r/todayilearned/comments/i276qw/til_about_nikolai_vavilov_who_obsessed_with/) has some more interesting comments._
 
 ## Remarks
 

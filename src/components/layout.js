@@ -20,7 +20,6 @@ import {
   faLinkedin,
   faStackOverflow,
   faTwitter,
-  faReddit,
 } from "@fortawesome/free-brands-svg-icons"
 import { jsx, Styled, Flex, Input, Box } from "theme-ui"
 
@@ -281,7 +280,6 @@ const Footer = ({ name, social }) => {
         <IconLink url={social.linkedin} icon={faLinkedin} external />
         <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
         <IconLink url={social.twitter} icon={faTwitter} external />
-        <IconLink url={social.reddit} icon={faReddit} external />
       </Flex>
       <Styled.p
         sx={{
@@ -330,7 +328,6 @@ const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
               linkedin
               stackoverflow
               twitter
-              reddit
             }
           }
         }

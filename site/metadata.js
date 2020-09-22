@@ -13,7 +13,6 @@ module.exports = {
     yc: "https://news.ycombinator.com/user?id=activatedgeek",
     linkedin: "https://www.linkedin.com/in/sanyamkapoor",
     stackoverflow: "https://stackoverflow.com/users/2425365",
-    twitter: "https://twitter.com/snymkpr",
-    reddit: "https://www.reddit.com/user/activatedgeek",
+    twitter: "https://twitter.com/snymkpr"
   },
 }
