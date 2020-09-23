@@ -17,7 +17,7 @@ const SearchPage = ({
   },
 }) => {
   const q = decodeURIComponent(search.split("=").slice(-1)[0])
-  const results = useFlexSearch(q, index, JSON.parse(store))
+  const results = useFlexSearch(q, index, store)
 
   return (
     <Layout

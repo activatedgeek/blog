@@ -273,7 +273,7 @@ const Footer = ({ name, social }) => {
         /> */}
       </Flex>
 
-      <Flex sx={{ justifyContent: "center", mt: 2 }}>
+      <Flex sx={{ justifyContent: "center", mt: 3 }}>
         <IconLink url={social.scholar} icon={faUserGraduate} external />
         <IconLink url={social.github} icon={faGithub} external />
         <IconLink url={social.yc} icon={faYCombinator} external />
