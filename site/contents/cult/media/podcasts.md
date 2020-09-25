@@ -2,7 +2,7 @@
 title: Podcasts
 description: List of podcasts I recommend.
 date: Jun 6 2020, 20:03 -0700
-updated: Jul 4 2020, 19:11 -0700
+updated: Sep 24 2020, 11:10 +0530
 area: cult
 cat: media
 ---
@@ -19,9 +19,15 @@ I think podcasts are great for passive content consumption. Here's a few I'm lis
 
 ## News & Analysis
 
+[More or less: Behind the stats](https://www.bbc.co.uk/programmes/p02nrss1) - **Tim Hartford** explains
+the story behind the numbers that popular media just throws around and the average population
+just gobbles up for the sake of watercooler conversations. It only discusses UK but highly recommended!
+
+[Sample Size](https://overcast.fm/itunes1526837923/sample-size) - Hosted by **Samantha Spiers** is often a nice dive into the science behind the latest news.
+
 [a16z Podcast](https://a16z.com/podcasts/) - Tech trends by people from Andreessen Horowitz as "_software eats the world_".
 
-[Exponent](https://exponent.fm) - Discussions on business and strategies by **Ben Thompson** and **James Allworth**. A nice supplement to [Stratechery](http://stratechery.com/).
+[Exponent](https://exponent.fm) - In-depth discussions on business and strategies by **Ben Thompson** and **James Allworth**. A nice supplement to [Stratechery](http://stratechery.com/).
 
 ## History
 
