@@ -8,7 +8,11 @@ const LatestPages = () => {
     allMdx: { edges },
   } = useStaticQuery(graphql`
     {
-      allMdx(sort: { fields: fields___sortTs, order: DESC }, limit: 10) {
+      allMdx(
+        sort: { fields: fields___sortTs, order: DESC },
+        filter: { frontmatter: { draft: { ne: true } } },
+        limit: 10
+      ) {
         edges {
           node {
             ...frontmatter
