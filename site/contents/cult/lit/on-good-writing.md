@@ -1,8 +1,8 @@
 ---
 title: On good writing
-description: Resources to understand what good writing consists of.
+description: Documenting characteristics of good writing.
 date: Aug 11 2020, 17:28 -0700
-updated: Sep 8 2020, 14:15 +0530
+updated: Sep 29 2020, 17:49 +0530
 area: cult
 cat: lit
 ---
@@ -10,10 +10,6 @@ cat: lit
 I want to be a good scientist and science is a social endeavour. Crisp communication
 is essential. Learning to write well, live everything else, is a process. Here
 are some resources I often go back to.
-
-## Books
-
-- [The Elements of Style](https://www.goodreads.com/book/show/11886303-the-elements-of-style) by _ William Strunk Jr._
 
 ## General Communication
 
@@ -27,12 +23,6 @@ are some resources I often go back to.
 
 - [Mathematical Writing](https://jmlr.csail.mit.edu/reviewing-papers/knuth_mathematical_writing.pdf) by _Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts_
 
-- [You and Your Research](http://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by _Richard Hamming_
-
-- [Principles of Effective Research](http://michaelnielsen.org/blog/principles-of-effective-research/) by _Michael Nielsen_
-
-- [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) by _John Schulman_
-
 #### Speech
 
 Speech is often a medium through which writing is communicated and also essential.
@@ -40,3 +30,53 @@ Speech is often a medium through which writing is communicated and also essentia
 - [How to give a great research talk](https://www.microsoft.com/en-us/research/academic-program/give-great-research-talk/) by _Simon Peyton Jones_
 
 - [How To Speak](https://www.youtube.com/watch?v=Unzc731iCUY&feature=share) by _Patrick Winston_
+
+## Strunk's Rules
+
+I was not happy with some of the sentence structures in a paper I wrote recently.
+I am deliberately noting these rules here for a quick reference whenever I write
+long-form public texts. My [knowledge base](/kb) will be exempt, to allow faster
+writing for now. This is a summary from the excellent book by _ William Strunk Jr._,
+[The Elements of Style](https://www.goodreads.com/book/show/11886303-the-elements-of-style).
+
+- [Rule 1] Always use **'s** (appostrophe s) to form singular possessive nouns. Some ancient
+proper nouns ending in _-es_ or _-is_ are an exception but the sentence can be
+restructured to sound better.
+  > _Moses' laws_ can be rewritten as _the law of Moses_.
+- [Rule 2] With a series of comma-separated terms, no need for the last one.
+  > supervised, unsupervised, and reinforcement learning.
+- [Rule 3] Parenthetic expressions can be enclosed in commas. These must, however, be used
+sparingly. Often, one can compromise on succinctness and break such phrases
+into multiple independent statements.
+  > Linear regression, one of the most popular methods, is an example of supervised learning.
+- [Rule 4] In some sentences, connectors _and_ or _but_ do not explicitly define the relation between
+connected clauses. Instead, the sentences can be structured better using explicit
+relational qualifiers like _although_, _while_, etc.
+  > _Linear regression is a regression method, but logistic regression is a classification method_ v/s
+  > **_While linear regression is a regression method, logistic regression is a classification method_**.
+- [Rule 5] A single compound sentence composed of complete clauses can be connected
+using a semi-colon ";" instead of a full stop; this is helpful to disambiguate
+pronouns like _this_, _they_, _it_, etc. Alternatively, we can fall back to using
+commas as usual with proper relational qualifiers.
+- [Rule 9] A paragraph should either denote a single unit in a composition or
+signal a new development of the subject from the previous paragraph. Single
+sentence paragraphs should be used sparingly, only as a connecting thread between
+the predecessor and successor.
+- [Rule 10] Within a paragraph, the first sentence can be the topic sentence,
+and the final sentence can emphasize a consequence of the discussion. Although,
+violating this thumb rule often breaks the monotony for the reader.
+- [Rule 11] Use active voice to enforce directness.
+- [Rule 12] Use positive statements; limit the use of _not_ qualifiers.
+- [Rule 13] Omit needless words.
+  > _She is the one who_ should be replaced by **_She_**.
+- [Rule 15] Express co-ordinate ideas in similar form. Correlative expressions
+should be followed by the same grammatical construction.
+  > _the Bayesians and frequentists_ should be **_the Bayesians and the frequentists_**
+- [Rule 16] Keep related words together. Parenthetic clauses can
+be transferred to the beginning of a sentence to avoid reading interruptions.
+- [Rule 18] The proper place for emphatic words, which the writer desires to make
+most prominent, is towards the end of a sentence.
+  > _Neural networks have hardly advanced our understanding of the human brain, though
+  > they are behind many breakthroughs in computer vision._ versus
+  > _Neural networks are behind many breakthroughs in computer vision, but they have
+  > hardly advanced our understanding of the human brain_.
