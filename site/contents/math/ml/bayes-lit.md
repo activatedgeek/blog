@@ -2,19 +2,16 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Sep 26 2020, 13:27 +0530
+updated: Oct 4 2020, 17:44 +0530
 area: math
 cat: ml
-draft: true
 ---
 
 I want this to be a helpful resource for newcomers to the field of _Bayesian_
 machine learning. The objective here is to collect relevant literature
 that brings insights into modern inference methods. Of course, this requires me
 to extract insights myself to be sure that the papers I put on are
-meaningful. Therefore, this post remains a living document. I'm inspired by 
-[Yingzhen Li](http://yingzhenli.net/home/en/)'s resourceful 
-document, [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/topics_approx_infer.pdf) (2017).
+meaningful. Therefore, this post remains a living document.
 
 I will post commentary, when I can, in terms of what to expect when reading the
 material. Often, however, I will only put materials in list to be considered
@@ -35,6 +32,12 @@ treatment on the topic.
 - The ideas can be further reinforced through DJCM's PhD Thesis, Chapter 2 \cite{MacKay92bayesianmethods}.
 - AGW's PhD Thesis Chapter 1 \cite{wilson2014thesis} provides a broader background on the big picture.
 
+Less so now, but often arguments around the subjectivity of the prior is brought
+into question. This is unfortunately a misdirected argument because without
+subjectivity, "learning" cannot happen and is in general an ill-defined problem
+to tackle. Although, subjective priors is not the only thing that being Bayesian
+brings to the table.
+
 Many people, including seasonsed researchers, have the wrong idea of what it
 means to be Bayesian. Putting prior assumptions _does not_ make one a Bayesian.
 In that sense, everyone is a Bayesian because they build algorithms starting
@@ -45,11 +48,21 @@ by Dan Simpson, "[The king must die](https://statmodeling.stat.columbia.edu/2017
 on why simply assuming a Laplace prior does not imply sparse solutions unlike
 its popular _maximum a-posteriori_ variant known as the Lasso.
 
-Less so now, but often arguments around the subjectivity of the prior is brought
-into question. This is unfortunately a misdirected argument because without
-subjectivity, "learning" cannot happen and is in general an ill-defined problem
-to tackle. Although, subjective priors is not the only thing that being Bayesian
-brings to the table.
+When explaining the data using a model, we usually have many competing
+hypothesis available, naturally leading to the _model selection_ problem.
+_Occam's razor_ principle advocates that we must choose the simplest possible 
+explanation. Bayesian inference shines here as well by automatically embodying
+this "principle of parsimony".
+
+- ITILA Chapter 28 \cite{mackay2003information} describes how Bayesian inference handles "automatic Occam's razor" quantitatively.
+- Seeing the ever increasing complexity of neural network models, one may doubt the
+  validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani \cite{rasmussen2001occam} resolve this through a simple experiment. Maddox & Benton et. al. \cite{maddox2020parameter} provide an excellent realization of this principle for large models.
+
+_Bayesian model averaging_ (BMA) is another perk enjoyed by Bayesians, which
+allows for _soft model selection_. Andrew G. Wilson
+clarifies the value it adds in a technical report titled [The Case for Bayesian Deep Learning](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
+model combination. Minka \cite{minka2000bayesian} dispells any misunderstandings
+in this regard.
 
 ## Topics
 
@@ -70,6 +83,11 @@ Process model and hence deserve a separate section altogether.
 come from.
 - DD's PhD Thesis Chapter 2 \cite{duvenaud2014automatic} contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
 
+## Acknowledgements
+
+I'm inspired by 
+[Yingzhen Li](http://yingzhenli.net/home/en/)'s resourceful 
+document on [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/topics_approx_infer.pdf) (2017).
 
 ## References
 
@@ -118,5 +136,30 @@ come from.
   year={2014},
   school={University of Cambridge},
   url={https://www.cs.toronto.edu/~duvenaud/thesis.pdf}
+}
+@book{mackay2003information,
+  title={Information theory, inference and learning algorithms},
+  author={MacKay, David JC and Mac Kay, David JC},
+  year={2003},
+  publisher={Cambridge university press}
+}
+@inproceedings{rasmussen2001occam,
+  title={Occam's razor},
+  author={Rasmussen, Carl Edward and Ghahramani, Zoubin},
+  booktitle={Advances in neural information processing systems},
+  pages={294--300},
+  year={2001}
+}
+@article{maddox2020parameter,
+  title={Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited},
+  author={Maddox, Wesley J and Benton, Gregory and Wilson, Andrew Gordon},
+  journal={arXiv preprint arXiv:2003.02139},
+  year={2020}
+}
+@article{minka2000bayesian,
+  title={Bayesian model averaging is not model combination},
+  author={Minka, Thomas P},
+  journal={https://tminka.github.io/papers/minka-bma-isnt-mc.pdf},
+  year={2002}
 }
 ```
