@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Oct 4 2020, 17:44 +0530
+updated: Oct 12 2020, 17:44 +0530
 area: math
 cat: ml
 ---
@@ -73,6 +73,15 @@ popularity and early success of neural networks.
 
 - DJCM's Introduction, Sections 1-6 \cite{mackay1998introduction} to understand where GPs comes from. A single reading before the next should help calibrate the mindset. I also recommend returning to this once more after the next reading.
 - GPML Chapter 1, 2, 3 \cite{williams2006gaussian} for a detailed treatment on the usual regression and classification problems.
+- LWK Chapter 1 \cite{scholkopf2018learning} is worth a read for a big picture view of kernel machines. It does not, however, present a Bayesian perspective, but an optimization perspective. Nevertheless, it is a useful perspective.
+- GPML Chapter 5 \cite{williams2006gaussian} to understand how model selection
+behaves with GPs, and key caveats to look out for, especially regarding Bayesian Model Averaging. It also has a nice example of a non-trivial composite kernel.
+
+#### Sparse Gaussian Processes
+
+The non-parametric nature is slightly at odds with scalability of Gaussian
+Processes, but we've made some considerable progress through first principles
+in this regard as well.
 
 #### Covariance Functions
 
@@ -82,6 +91,21 @@ Process model and hence deserve a separate section altogether.
 - GPML Chapter 4 \cite{williams2006gaussian} provides a broad discussion around where covariance functions
 come from.
 - DD's PhD Thesis Chapter 2 \cite{duvenaud2014automatic} contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
+
+### Monte Carlo algorithms
+
+Monte Carlo algorithms are used for exact inference in scenarios when
+closed-form inference is not possible.
+
+- PRML Chapter 11.1 \cite{bishop2006pattern}
+
+#### Markov Chain Monte Carlo
+
+The simple Monte Carlo algorithms rely on _independent_ samples from a target distribution to be useful. Relaxing the independence assumption leads to
+correlated samples via Markov Chain Monte Carlo (MCMC) family of algorithms.
+
+- IM's PhD Thesis, Chapter 1,2 \cite{murray2007advances} is arguably the best introduction to the topic.
+- PRML Chapter 11.2 \cite{bishop2006pattern}
 
 ## Acknowledgements
 
@@ -161,5 +185,18 @@ document on [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/t
   author={Minka, Thomas P},
   journal={https://tminka.github.io/papers/minka-bma-isnt-mc.pdf},
   year={2002}
+}
+@phdthesis{murray2007advances,
+  title={Advances in Markov chain Monte Carlo methods},
+  author={Murray, Iain Andrew},
+  year={2007},
+  school={University of London},
+  url={http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf}
+}
+@book{scholkopf2018learning,
+  title={Learning with kernels: support vector machines, regularization, optimization, and beyond},
+  author={Scholkopf, Bernhard and Smola, Alexander J},
+  year={2018},
+  publisher={Adaptive Computation and Machine Learning series}
 }
 ```

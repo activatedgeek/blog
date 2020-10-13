@@ -45,6 +45,7 @@ module.exports = {
         ph: { label: "Physics" },
         neur: { label: "Neuroscience" },
         geo: { label: "Earth sciences" },
+        bio: { label: "Biology" },
       },
     },
     people: {

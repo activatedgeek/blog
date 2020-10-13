@@ -13,6 +13,7 @@ List of environment variables needed for build.
 - `GOODREADS_API_KEY`
 - `TMDB_API_KEY`
 - `TMDB_SESSION_ID`
+- `GOATCOUNTER_CODE`
 
 ## License
 
