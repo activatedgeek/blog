@@ -155,7 +155,7 @@ const gatsbyPlugins = [
       background_color: `white`,
       theme_color: `#426bb3`,
       display: `standalone`,
-      icon: `static/images/icon.png`,
+      icon: `static/images/favicon.svg`,
     },
   },
   `gatsby-plugin-react-helmet`,

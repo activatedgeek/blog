@@ -2,7 +2,7 @@
 title: Topics in Numerical Linear Algebra
 description: The nicer and practical parts of linear algebra.
 date: Aug 04 2020, 23:00 -0700
-updated: Aug 26 2020, 3:17 +0530
+updated: Oct 19 2020, 3:17 +0530
 area: math
 cat: la
 ---
@@ -32,6 +32,8 @@ An uncategorized list of references of high pedagogic value.
 - [Toeplitz and Circulant Matrices: A Review](https://www.nowpublishers.com/article/Details/CIT-006) by Robert M. Gray (2006)
 
 - [Scalable Inference for Structured Gaussian Process Models](http://mlg.eng.cam.ac.uk/pub/pdf/Saa11.pdf), Chapter 5 [^a] by Yunus Saatçi (2011)
+
+- [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) by Kaare Brandt Petersen, Michael Syskind Pedersen (2012)
 
 - [Discovering Transforms: A Tutorial on Circulant Matrices, Circular Convolution, and the Discrete Fourier Transform](https://arxiv.org/abs/1805.05533) by Bassam Bamieh (2018)
 

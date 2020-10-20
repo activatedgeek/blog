@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Oct 12 2020, 17:44 +0530
+updated: Oct 20 2020, 18:51 +0530
 area: math
 cat: ml
 ---
@@ -18,6 +18,11 @@ material. Often, however, I will only put materials in list to be considered
 as the recommended reading order. A recommendation for the overall sequence
 in which topics should be considered is harder to be prescribed. I do,
 however, suggest that this not be your first excursion into machine learning.
+
+## Blogs
+
+- [Andrew Gelman](https://statmodeling.stat.columbia.edu)
+- [Christian Robert](https://xianblog.wordpress.com)
 
 ## Big Picture Views
 

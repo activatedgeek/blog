@@ -42,8 +42,4 @@ Quoting from the website,
 
 [Simon Hørup Eskildsen](https://sirupsen.com) - A dropout at Shopify who writes a lot of book reviews.
 
-### People in Machine Learning
-
-[Andrew Gelman](https://statmodeling.stat.columbia.edu) - Probably the most prominent Bayesian \(and its critic\) with takes on plenty of topics. Guest authors occasionally.
-
 ## Index
