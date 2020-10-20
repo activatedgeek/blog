@@ -112,6 +112,17 @@ correlated samples via Markov Chain Monte Carlo (MCMC) family of algorithms.
 - IM's PhD Thesis, Chapter 1,2 \cite{murray2007advances} is arguably the best introduction to the topic.
 - PRML Chapter 11.2 \cite{bishop2006pattern}
 
+### Variational Inference
+
+#### Pathologies
+
+Bishop Chapter 10 \cite{bishop2006pattern} shows the zero-forcing behavior of the KL term involved
+in variational inference, as a result underestimating the uncertainty when
+unimodal approximations are used for multimodal true distributions. This,
+however, should not be considered a law of the universe, but only a thumb
+rule as clarified by Richard Turner et. al. investigate [Counterexamples to variational free energy compactness folk theorems](http://www.gatsby.ucl.ac.uk/~turner/Notes/Compactness/CompactnessFolkTheorem.pdf).
+Tom Rainforth et. al show that [tighter variational bounds are not necessarily better](http://proceedings.mlr.press/v80/rainforth18b.html).
+
 ## Acknowledgements
 
 I'm inspired by 
