@@ -128,6 +128,8 @@ Tom Rainforth et. al show that [tighter variational bounds are not necessarily b
 I'm inspired by 
 [Yingzhen Li](http://yingzhenli.net/home/en/)'s resourceful 
 document on [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/topics_approx_infer.pdf) (2017).
+Many of the interesting references also come from discussions with my advisor,
+[Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).
 
 ## References
 
