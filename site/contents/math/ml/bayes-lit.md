@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Oct 20 2020, 18:51 +0530
+updated: Nov 6 2020, 18:39 +0530
 area: math
 cat: ml
 ---
@@ -19,12 +19,7 @@ as the recommended reading order. A recommendation for the overall sequence
 in which topics should be considered is harder to be prescribed. I do,
 however, suggest that this not be your first excursion into machine learning.
 
-## Blogs
-
-- [Andrew Gelman](https://statmodeling.stat.columbia.edu)
-- [Christian Robert](https://xianblog.wordpress.com)
-
-## Big Picture Views
+## The Big Picture
 
 When diving deep into a topic, we often find ourselves too close to the action.
 It is important to start with and keep the bigger picture in mind. I recommend
@@ -46,10 +41,10 @@ brings to the table.
 Many people, including seasonsed researchers, have the wrong idea of what it
 means to be Bayesian. Putting prior assumptions _does not_ make one a Bayesian.
 In that sense, everyone is a Bayesian because they build algorithms starting
-with some implicit priors (not statistical biases). I die a little
-when people compare Bayesian methods to simply regularlizing with the prior.
-That is an effect often misconstrued. For instance, take a look at this fun post
-by Dan Simpson, "[The king must die](https://statmodeling.stat.columbia.edu/2017/11/02/king-must-die/)"
+with priors, whether they know it or not. I die a little when people compare
+Bayesian methods to simply regularlizing with the prior. That is an effect often
+misconstrued. For instance, take a look at this fun post by Dan Simpson, 
+"[The king must die](https://statmodeling.stat.columbia.edu/2017/11/02/king-must-die/)"
 on why simply assuming a Laplace prior does not imply sparse solutions unlike
 its popular _maximum a-posteriori_ variant known as the Lasso.
 
@@ -68,6 +63,16 @@ allows for _soft model selection_. Andrew G. Wilson
 clarifies the value it adds in a technical report titled [The Case for Bayesian Deep Learning](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
 model combination. Minka \cite{minka2000bayesian} dispells any misunderstandings
 in this regard.
+
+The _Frequentist-vs-Bayesian_ debate has unfortunately occupied more minds than
+it should have. Any new entrant to the field will undoubtably still come across
+this debate and be forced to take a stand (make sure you don't fall for the trap).
+I highly recommend this talk by a dominant figure in the field, _Michael Jordan_,
+titled _Bayesian or Frequentist, Which Are You?_ ([Part I](https://www.youtube.com/watch?v=HUAE26lNDuE), [Part II](https://www.youtube.com/watch?v=7sNgO7wQgaQ)).
+
+I would refrain from labelling anyone or any algorithm as an exclusive Bayesian.
+In one is still hell-bent on being labeled, remember keeping an open mind is
+the hallmark of a true Bayesian.
 
 ## Topics
 
@@ -120,8 +125,24 @@ Bishop Chapter 10 \cite{bishop2006pattern} shows the zero-forcing behavior of th
 in variational inference, as a result underestimating the uncertainty when
 unimodal approximations are used for multimodal true distributions. This,
 however, should not be considered a law of the universe, but only a thumb
-rule as clarified by Richard Turner et. al. investigate [Counterexamples to variational free energy compactness folk theorems](http://www.gatsby.ucl.ac.uk/~turner/Notes/Compactness/CompactnessFolkTheorem.pdf).
-Tom Rainforth et. al show that [tighter variational bounds are not necessarily better](http://proceedings.mlr.press/v80/rainforth18b.html).
+rule as clarified by Turner et. al. [Counterexamples to variational free energy compactness folk theorems](http://www.gatsby.ucl.ac.uk/~turner/Notes/Compactness/CompactnessFolkTheorem.pdf).
+Rainforth et. al show that [tighter variational bounds are not necessarily better](http://proceedings.mlr.press/v80/rainforth18b.html).
+
+## Research Venues
+
+Cutting-edge research is a good way to sense where the field is headed. Here are
+a few venues that I occassionally sift through.
+
+- [Bayesian Analysis](https://projecteuclid.org/info/euclid.ba): An electronic journal by the [ISBA](https://bayesian.org).
+- [Bayesian Deep Learning](http://bayesiandeeplearning.org): A regular NeurIPS workshop.
+- [Symposium on
+Advances in Approximate Bayesian Inference](http://approximateinference.org): A regular NeurIPS workshop grown into an independent symposium.
+
+## Blogs
+
+- [Andrew Gelman](https://statmodeling.stat.columbia.edu)
+- [Christian Robert](https://xianblog.wordpress.com)
+- [Michael Betancourt](https://betanalpha.github.io)
 
 ## Acknowledgements
 
