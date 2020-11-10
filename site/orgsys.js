@@ -24,6 +24,7 @@ module.exports = {
         cv: { label: "Computer vision" },
         rl: { label: "Reinforcement learning" },
         la: { label: "Linear Algebra" },
+        uncat: { label: "Uncategorized" },
       },
     },
     meta: {

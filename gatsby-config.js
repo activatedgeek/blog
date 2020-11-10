@@ -149,8 +149,8 @@ const gatsbyPlugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Sanyam Kapoor`,
-      short_name: `Sanyam Kapoor`,
+      name: siteMetadata.name,
+      short_name: siteMetadata.name,
       start_url: `/`,
       background_color: `white`,
       theme_color: `#426bb3`,
@@ -205,7 +205,7 @@ if (process.env.NODE_ENV === "production") {
         feeds: [
           {
             output: "/rss.xml",
-            title: "Sanyam Kapoor's RSS Feed",
+            title: `${siteMetadata.name}'s RSS Feed`,
             query: allQuery,
             serialize: ({
               query: {

@@ -2,7 +2,7 @@
 title: Textbooks on Various Subjects
 description: Textbooks to learn various topics in literature.
 date: Jun 6 2020, 20:00 -0700
-updated: Jul 4 2020, 18:58 -0700
+updated: Nov 9 2020, 18:58 -0700
 area: ref
 cat: books
 ---
