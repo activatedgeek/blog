@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Nov 6 2020, 18:39 +0530
+updated: Nov 13 2020, 13:42 +0530
 area: math
 cat: ml
 ---
@@ -16,8 +16,9 @@ meaningful. Therefore, this post remains a living document.
 I will post commentary, when I can, in terms of what to expect when reading the
 material. Often, however, I will only put materials in list to be considered
 as the recommended reading order. A recommendation for the overall sequence
-in which topics should be considered is harder to be prescribed. I do,
-however, suggest that this not be your first excursion into machine learning.
+in which topics should be considered is harder to be prescribed. ~~I do,
+however, suggest that this not be your first excursion into machine learning.~~
+I now encourage that this perspective be your first foray into machine learning.
 
 ## The Big Picture
 
@@ -29,8 +30,8 @@ It is not a silver bullet but a set of common-sense principles to abide by.
 - In my introductory article, [_The Beauty of Bayesian Learning_](/kb/the-beauty-of-bayesian-learning), I describe the essence of Bayesian learning using a simple pattern guessing demo.
 - PRML Chapter 1 \cite{bishop2006pattern} is the place to start for a succinct
 treatment on the topic.
-- The ideas can be further reinforced through DJCM's PhD Thesis, Chapter 2 \cite{MacKay92bayesianmethods}.
-- AGW's PhD Thesis Chapter 1 \cite{wilson2014thesis} provides a broader background on the big picture.
+- The ideas can be further reinforced through DJCM's [PhD Thesis](http://www.inference.org.uk/mackay/PhD.html), Chapter 2.
+- AGW's [PhD Thesis](http://www.cs.cmu.edu/%7Eandrewgw/andrewgwthesis.pdf) Chapter 1 provides a broader background on the big picture.
 
 Less so now, but often arguments around the subjectivity of the prior is brought
 into question. This is unfortunately a misdirected argument because without
@@ -56,23 +57,34 @@ this "principle of parsimony".
 
 - ITILA Chapter 28 \cite{mackay2003information} describes how Bayesian inference handles "automatic Occam's razor" quantitatively.
 - Seeing the ever increasing complexity of neural network models, one may doubt the
-  validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani \cite{rasmussen2001occam} resolve this through a simple experiment. Maddox & Benton et. al. \cite{maddox2020parameter} provide an excellent realization of this principle for large models.
+  validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani, in their paper titled [_Occam's razor_](https://papers.nips.cc/paper/2000/file/0950ca92a4dcf426067cfd2246bb5ff3-Paper.pdf), resolve this through a simple experiment. Maddox & Benton et. al. provide an excellent realization of this principle for large models in [_Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited_]((https://arxiv.org/abs/2003.02139)).
 
 _Bayesian model averaging_ (BMA) is another perk enjoyed by Bayesians, which
 allows for _soft model selection_. Andrew G. Wilson
-clarifies the value it adds in a technical report titled [The Case for Bayesian Deep Learning](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
-model combination. Minka \cite{minka2000bayesian} dispells any misunderstandings
-in this regard.
+clarifies the value it adds in a technical report titled [_The Case for Bayesian Deep Learning_](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
+model combination. Minka dispells any misunderstandings
+in this regard, in his technical note [_Bayesian model averaging is not model combination_](https://tminka.github.io/papers/minka-bma-isnt-mc.pdf).
 
 The _Frequentist-vs-Bayesian_ debate has unfortunately occupied more minds than
 it should have. Any new entrant to the field will undoubtably still come across
 this debate and be forced to take a stand (make sure you don't fall for the trap).
-I highly recommend this talk by a dominant figure in the field, _Michael Jordan_,
-titled _Bayesian or Frequentist, Which Are You?_ ([Part I](https://www.youtube.com/watch?v=HUAE26lNDuE), [Part II](https://www.youtube.com/watch?v=7sNgO7wQgaQ)).
+Christian Robert's answer [on Cross Validated](https://stats.stackexchange.com/a/256224/57053) is the best technical introduction to start with. Then, I highly recommend this
+talk by a dominant figure in the field, _Michael Jordan_, titled _Bayesian or Frequentist, Which Are You?_ ([Part I](https://www.youtube.com/watch?v=HUAE26lNDuE), [Part II](https://www.youtube.com/watch?v=7sNgO7wQgaQ)).
 
-I would refrain from labelling anyone or any algorithm as an exclusive Bayesian.
-In one is still hell-bent on being labeled, remember keeping an open mind is
-the hallmark of a true Bayesian.
+Gelman and Yao describe [_Holes in Bayesian Statistics_](http://www.stat.columbia.edu/~gelman/research/unpublished/bayes_holes_2.pdf) which may be a worthwhile reader
+at a later stage.
+
+On a concluding note, I would refrain from labelling anyone or any algorithm
+as an exclusive Bayesian. In one is still hell-bent on being labeled, remember
+keeping an open mind is the hallmark of a true Bayesian.
+
+### Utility References
+
+References so that one doesn't have to always remember those tricky identities
+but come up commonly.
+
+- Sam Roweis provides [Gaussian Identities](https://cs.nyu.edu/~roweis/notes/gaussid.pdf), a handy reference. See also PRML Chapter 2.3 \cite{bishop2006pattern}.
+- [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) by Kaare Brandt Petersen, Michael Syskind Pedersen
 
 ## Topics
 
@@ -100,7 +112,7 @@ Process model and hence deserve a separate section altogether.
 
 - GPML Chapter 4 \cite{williams2006gaussian} provides a broad discussion around where covariance functions
 come from.
-- DD's PhD Thesis Chapter 2 \cite{duvenaud2014automatic} contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
+- DD's [PhD Thesis](https://www.cs.toronto.edu/~duvenaud/thesis.pdf), Chapter 2 contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
 
 ### Monte Carlo algorithms
 
@@ -114,7 +126,8 @@ closed-form inference is not possible.
 The simple Monte Carlo algorithms rely on _independent_ samples from a target distribution to be useful. Relaxing the independence assumption leads to
 correlated samples via Markov Chain Monte Carlo (MCMC) family of algorithms.
 
-- IM's PhD Thesis, Chapter 1,2 \cite{murray2007advances} is arguably the best introduction to the topic.
+- IM's [PhD Thesis](http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf), Chapter 1,2 is arguably the best introduction to the topic of MCMC.
+- Betancourt's [_A Conceptual Introduction to Hamiltonian Monte Carlo_](https://arxiv.org/abs/1701.02434) is the best introduction to HMC.
 - PRML Chapter 11.2 \cite{bishop2006pattern}
 
 ### Variational Inference
@@ -125,7 +138,7 @@ Bishop Chapter 10 \cite{bishop2006pattern} shows the zero-forcing behavior of th
 in variational inference, as a result underestimating the uncertainty when
 unimodal approximations are used for multimodal true distributions. This,
 however, should not be considered a law of the universe, but only a thumb
-rule as clarified by Turner et. al. [Counterexamples to variational free energy compactness folk theorems](http://www.gatsby.ucl.ac.uk/~turner/Notes/Compactness/CompactnessFolkTheorem.pdf).
+rule as clarified by Turner et. al. [_Counterexamples to variational free energy compactness folk theorems_](http://www.gatsby.ucl.ac.uk/~turner/Notes/Compactness/CompactnessFolkTheorem.pdf).
 Rainforth et. al show that [tighter variational bounds are not necessarily better](http://proceedings.mlr.press/v80/rainforth18b.html).
 
 ## Research Venues
@@ -135,8 +148,7 @@ a few venues that I occassionally sift through.
 
 - [Bayesian Analysis](https://projecteuclid.org/info/euclid.ba): An electronic journal by the [ISBA](https://bayesian.org).
 - [Bayesian Deep Learning](http://bayesiandeeplearning.org): A regular NeurIPS workshop.
-- [Symposium on
-Advances in Approximate Bayesian Inference](http://approximateinference.org): A regular NeurIPS workshop grown into an independent symposium.
+- [Symposium on Advances in Approximate Bayesian Inference](http://approximateinference.org): A regular NeurIPS workshop grown into an independent symposium.
 
 ## Blogs
 
@@ -155,19 +167,6 @@ Many of the interesting references also come from discussions with my advisor,
 ## References
 
 ```bib
-@phdthesis{MacKay92bayesianmethods,
-    author = {MacKay, David J. C.},
-    title = {Bayesian Methods for Adaptive Models},
-    year = {1992},
-    url = {http://www.inference.org.uk/mackay/PhD.html}
-}
-@phdthesis{wilson2014thesis,
-  title={Covariance kernels for fast automatic pattern discovery and extrapolation with Gaussian processes},
-  author={Wilson, Andrew Gordon},
-  year={2014},
-  school={University of Cambridge},
-  url={http://www.cs.cmu.edu/%7Eandrewgw/andrewgwthesis.pdf}
-}
 @book{bishop2006pattern,
   title={Pattern recognition and machine learning},
   author={Bishop, Christopher M},
@@ -193,44 +192,11 @@ Many of the interesting references also come from discussions with my advisor,
   publisher={MIT press Cambridge, MA},
   url={http://www.gaussianprocess.org/gpml/}
 }
-@phdthesis{duvenaud2014automatic,
-  title={Automatic model construction with Gaussian processes},
-  author={Duvenaud, David},
-  year={2014},
-  school={University of Cambridge},
-  url={https://www.cs.toronto.edu/~duvenaud/thesis.pdf}
-}
 @book{mackay2003information,
   title={Information theory, inference and learning algorithms},
   author={MacKay, David JC and Mac Kay, David JC},
   year={2003},
   publisher={Cambridge university press}
-}
-@inproceedings{rasmussen2001occam,
-  title={Occam's razor},
-  author={Rasmussen, Carl Edward and Ghahramani, Zoubin},
-  booktitle={Advances in neural information processing systems},
-  pages={294--300},
-  year={2001}
-}
-@article{maddox2020parameter,
-  title={Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited},
-  author={Maddox, Wesley J and Benton, Gregory and Wilson, Andrew Gordon},
-  journal={arXiv preprint arXiv:2003.02139},
-  year={2020}
-}
-@article{minka2000bayesian,
-  title={Bayesian model averaging is not model combination},
-  author={Minka, Thomas P},
-  journal={https://tminka.github.io/papers/minka-bma-isnt-mc.pdf},
-  year={2002}
-}
-@phdthesis{murray2007advances,
-  title={Advances in Markov chain Monte Carlo methods},
-  author={Murray, Iain Andrew},
-  year={2007},
-  school={University of London},
-  url={http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf}
 }
 @book{scholkopf2018learning,
   title={Learning with kernels: support vector machines, regularization, optimization, and beyond},
