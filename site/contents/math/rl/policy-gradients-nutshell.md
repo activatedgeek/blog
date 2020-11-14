@@ -6,6 +6,7 @@ area: math
 cat: rl
 redirectsFrom:
   - /blog/ml/policy-gradients-nutshell
+  - /machine-learning/policy-gradients-nutshell
 ---
 
 _This article aims to provide a concise yet comprehensive introduction to one of the most important

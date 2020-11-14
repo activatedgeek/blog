@@ -6,6 +6,7 @@ area: math
 cat: ml
 redirectsFrom:
   - /blog/ml/stein-gradient
+  - /machine-learning/stein-gradient
 ---
 
 Machine Learning is all about dealing with uncertainty of outcomes and Bayesian inference provides us a principled way to reason about the same. We combine the observed data with priors to build (potentially complex) posteriors over the variables of interest and use those for answering subsequent questions. The ability to model a probability distribution called the posterior allows us to quantify the uncertainty claims for any downstream tasks.
