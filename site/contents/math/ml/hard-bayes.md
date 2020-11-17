@@ -1,0 +1,9 @@
+---
+title: Why is Bayesian inference hard?
+description: An XKCD comic explains it.
+date: Nov 17 2020, 22:32 +0530
+area: math
+cat: ml
+---
+
+[![Differentiation and Integration, XKCD.](https://imgs.xkcd.com/comics/differentiation_and_integration.png)](https://xkcd.com/2117/)
