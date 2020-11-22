@@ -2,7 +2,7 @@
 title: Adages, Quotes
 description: What have people said over the years?
 date: Jul 4 2020, 19:40 -0700
-updated: Sep 8 2020, 14:03 +0530
+updated: Nov 22 2020, 23:10 +0530
 area: people
 cat: th
 ---
@@ -25,3 +25,4 @@ cat: th
 - _Truth emerges more readily from error than from confusion_ - Francis Bacon
 - _What we need are notions, not notations._ - Gauss
 - _If I want the door to turn, the hinges must stay put._ - Ludwig Wittgenstein
+- _We don't know who discovered water, but we are certain it wasn't a fish._ - John Culkin
