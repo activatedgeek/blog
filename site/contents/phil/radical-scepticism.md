@@ -2,6 +2,7 @@
 title: Radical Scepticism
 description: The paradox of knowledge.
 date: Sep 08 2020, 16:36 +0530
+updated: Nov 24 2020, 22:45 +0530
 area: phil
 cat: uncat
 ---
@@ -42,3 +43,14 @@ it reminds me of [Euclid's postulates](https://en.wikipedia.org/wiki/Euclidean_g
 [Peano postulates](https://en.wikipedia.org/wiki/Peano_axioms). I am certain
 every field of scientific inquiry relies on such unquestionable "hinges" that
 form the basis of rational thought and progress.
+
+## More content
+
+Isaac Asimov's [The Relativity of Wrong](https://chem.tufts.edu/answersinscience/relativityofwrong.htm) presents a well-reasoned piece, which is closely related
+to this idea of absolutism in truth. To sum up in Asimov's words
+
+> The basic trouble, you see, is that people think that "right" and "wrong" are absolute; that everything that isn't perfectly and completely right is totally and equally wrong.
+
+In the context of scientific progress, this quote sums it up.
+
+> Naturally, the theories we now have might be considered wrong in the simplistic sense ..., but in a much truer and subtler sense, they need only be considered incomplete.
