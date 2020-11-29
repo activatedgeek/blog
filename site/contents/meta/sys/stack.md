@@ -2,7 +2,7 @@
 title: The Stack
 description: Tools powering this website.
 date: Jun 19 2020, 14:32 -0700
-updated: Aug 23 2020, 22:41 +0530
+updated: Nov 29 2020, 11:26 +0530
 area: meta
 cat: sys
 ---
@@ -31,6 +31,8 @@ hosted on [Imgur](https://imgur.com).
 
 The website is deployed on [Netlify](https://www.netlify.com) and the domain
 registrar is [GoDaddy](https://godaddy.com). Simple and private analytics are
-powered by [GoatCounter](https://www.goatcounter.com).
+powered by [GoatCounter](https://www.goatcounter.com). Uptime is monitored via
+[UptimeRobot](https://uptimerobot.com). [short.io](https://short.io) is used
+for occasionally URL aliases.
 
 The complete source is available on [Github](https://github.com/activatedgeek/www).

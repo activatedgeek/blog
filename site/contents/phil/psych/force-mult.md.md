@@ -2,6 +2,7 @@
 title: Force Multipliers
 # description:
 date: Aug 09 2020, 12:21 -0700
+updated: Nov 29 2020, 11:30 +0530
 area: phil
 cat: psych
 ---
@@ -30,3 +31,8 @@ Arguably, working in unregulated niches allows the best breathing room for ideas
 Think why Silicon Valley is what it is. Or think why software is eating the
 world. By regulation, I mean any central system in place to keep you in check.
 Crudely, call it _bureaucracy_ and run away as much as possible.
+
+### Asymmetric upsides
+
+I've realized that the most productive-looking people have found a knack for
+doing work that has low downside and disproportionately high upside.
