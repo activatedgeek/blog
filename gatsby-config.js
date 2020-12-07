@@ -62,6 +62,12 @@ const gatsbyRemarkPlugins = [
     resolve: `gatsby-remark-autolink-headers`,
     options: { icon: false },
   },
+  {
+    resolve: `gatsby-remark-katex`,
+    options: {
+      strict: `ignore`,
+    },
+  },
 ]
 
 const gatsbyPlugins = [
@@ -158,17 +164,6 @@ const gatsbyPlugins = [
 ]
 
 if (process.env.NODE_ENV === "production") {
-  const prodGatsbyRemarkPlugins = [
-    {
-      resolve: `gatsby-remark-katex`,
-      options: {
-        strict: `ignore`,
-      },
-    },
-  ]
-
-  gatsbyRemarkPlugins.push(...prodGatsbyRemarkPlugins)
-
   const prodPlugins = [
     {
       resolve: `gatsby-plugin-goatcounter`,
