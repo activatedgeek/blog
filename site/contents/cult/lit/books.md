@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Jul 28 2020, 23:44 -0700
+updated: Dec 7 2020, 12:56 +0530
 area: cult
 cat: lit
 ---
@@ -19,7 +19,9 @@ books with more technical treatment._
 
 ## Books
 
-Here is the complete list of books reverse sorted by year [^a].
+Here is the complete list of books reverse sorted by year. Often some titles
+may have an older publication date. The year noted below is the one I happened
+to mark on my Goodreads account.
 
 <GoodreadsBooks />
 
@@ -34,5 +36,3 @@ maintains a popular collection of book reviews as well
 place for short and light reads of usually less than 200 pages. It covers a
 broad array of topics. I only use this resource to get a sense of fields that
 are alien to me.
-
-[^a]: These are fetched automatically via the [Goodreads API](https://www.goodreads.com/api).

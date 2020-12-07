@@ -10,7 +10,6 @@ Main website is hosted at [im.perhapsbay.es](https://im.perhapsbay.es). See deta
 
 List of environment variables needed for build.
 
-- `GOODREADS_API_KEY`
 - `TMDB_API_KEY`
 - `TMDB_SESSION_ID`
 - `GOATCOUNTER_CODE`

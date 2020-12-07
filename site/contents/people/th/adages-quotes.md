@@ -7,7 +7,6 @@ area: people
 cat: th
 ---
 
-
 ## Uncategorized
 
 > _Science progresses one funeral at a time._ - Max Planck

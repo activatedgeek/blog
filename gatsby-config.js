@@ -66,13 +66,6 @@ const gatsbyRemarkPlugins = [
 
 const gatsbyPlugins = [
   {
-    resolve: `@jamesdanylik/gatsby-source-goodreads`,
-    options: {
-      key: process.env.GOODREADS_API_KEY,
-      id: "25941036",
-    },
-  },
-  {
     resolve: `gatsby-source-tmdb`,
     options: {
       apiKey: process.env.TMDB_API_KEY,
@@ -93,10 +86,11 @@ const gatsbyPlugins = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
-      path: `${__dirname}/site/contents`,
-      name: `contents`,
+      path: `${__dirname}/site`,
+      name: `site`,
     },
   },
+  `gatsby-transformer-csv`,
   {
     resolve: `gatsby-plugin-mdx`,
     options: {
@@ -160,7 +154,7 @@ const gatsbyPlugins = [
   },
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-theme-ui`,
-  `gatsby-plugin-offline`
+  `gatsby-plugin-offline`,
 ]
 
 if (process.env.NODE_ENV === "production") {

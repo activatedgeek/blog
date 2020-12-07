@@ -14,7 +14,7 @@ for seemingly trivial computations.
 [![A binary tree, Credits: Derrick Coetzee](https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_tree.svg)](https://en.wikipedia.org/wiki/Binary_tree)
 
 I think, [Dragon blood tree](https://en.wikipedia.org/wiki/Dracaena_cinnabari)
-is the closest thing in nature to binary trees from computer science. 
+is the closest thing in nature to binary trees from computer science.
 
 [![(c) Alexandre Baron, some rights reserved (CC BY-NC-SA)](https://static.inaturalist.org/photos/85780/large.jpg?1545368063)](https://www.inaturalist.org/photos/85780)
 

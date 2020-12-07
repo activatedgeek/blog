@@ -8,7 +8,7 @@ cat: la
 
 Taylor series is a familiar tool in analysis and often provides effective
 polynomial approximations to complicated differentiable functions. The need
-arises because polynomials are easier objects to manipulate. We say that the 
+arises because polynomials are easier objects to manipulate. We say that the
 Taylor series of an infinitely differentiable function $f(x)$ around $x_0$ can
 be represented as an infinite sum of polynomials as
 
@@ -18,7 +18,7 @@ $$
 
 In this notation, the number of ticks on $f$ represent the derivative. This means
 $f^{\prime}$ represents the first derivative, $f^{\prime\prime}$ the second and
-so on. When used in practice, we resort to a truncated sum where we ignore the 
+so on. When used in practice, we resort to a truncated sum where we ignore the
 higher order derivatives. Vector inputs can also be handled. The derivation
 of this result is most easily seen for scalar inputs.
 
@@ -64,7 +64,7 @@ The key result that we'll use from linear algebra is _Orthogonal Projections_.
   P_{U}x = \langle x, e_1 \rangle e_1 + \dots + \langle x, e_m \rangle e_m
   $$
   which invokes the idea of projecting the vector onto each basis vector where
-  the coefficients defined by the inner products are unique. Since, these basis 
+  the coefficients defined by the inner products are unique. Since, these basis
   vectors are normal, the norm is unity - $\lVert e_k \rVert = 1~\forall~k \in \{1, \dots, m \}$.
 
 ### Orthogonal projections
@@ -103,7 +103,7 @@ to $x$ that goes through $p$.
 The key message of post is this - Taylor series can be viewed as an orthogonal
 projection from the space of continuous functions to the subspace of polynomials [^c].
 
-We'll do this by example. Let $\mathcal{C}_{[-\pi, \pi]}$ be the space of continuous 
+We'll do this by example. Let $\mathcal{C}_{[-\pi, \pi]}$ be the space of continuous
 functions in the range $[-\pi, \pi]$ and $\mathcal{P}_5$ be the space of
 polynomials of degree at most 5. We would like to find the best polynomial
 approximation to the function $f(x) = sin(x)$, which does belong to
@@ -133,9 +133,9 @@ P_{\mathcal{P}_5}x = \langle x, e_1 \rangle e_1 + \dots + \langle x, e_m \rangle
 $$
 
 Note that I've preemptively chosen fixed the number 6 in the sequence above because
-the dimension (number of basis vectors) of $\mathcal{P}_5$ is 6. As one can verify, 
-$1, x, x^2, x^3, x^4, x^5$ form a basis of $\mathcal{P}_5$. These, however, are not 
-orthonormal. Nevertheless, we can form an orthonormal basis from a known one using 
+the dimension (number of basis vectors) of $\mathcal{P}_5$ is 6. As one can verify,
+$1, x, x^2, x^3, x^4, x^5$ form a basis of $\mathcal{P}_5$. These, however, are not
+orthonormal. Nevertheless, we can form an orthonormal basis from a known one using
 the [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram–Schmidt_process).
 Be warned, there are ugly numbers ahead.
 
@@ -248,20 +248,7 @@ curves stay very close and are virtually indistinguishable.
 This was a fun way to discover polynomial approximations to functions and that
 too quite accuracte. Of course, I promise to never use this in real life.
 
-
-[^a]: It is enough think of fields as just real or complex numbers for now. You
-      could also think of apples if you don't like abstract concepts (although
-      you are probably going to have trouble thinking of irrational apples).
-[^b]: The property that says that all linear maps behave as
-      $\phi(\lambda v) = \lambda \phi(v)$ for $\lambda in \mathbf{F}$. For
-      inner products, the property is defined for the first slot (the first
-      argument) as $\langle \lambda v, u \rangle = \lambda \langle v, u \rangle$.
-[^c]: Applying the definitions may help us see why set of all continuous
-      functions is a vector space. To start with, sum of two continuous functions
-      is continuous and multiplication with a scalar also keeps the function
-      continuous. Further, polynomials are just a subset of continuous
-      functions and also satisfy these two closure properties. Trust me that
-      all other necessary properties are also satisfied.
-[^d]: Formally, we say $v - P_{U}v$ belongs to the orthogonal complement $U^{\perp}$
-      of $U$. $U^{\perp}$ is the set of all vectors that are orthogonal to all 
-      vectors in $U$.
+[^a]: It is enough think of fields as just real or complex numbers for now. You could also think of apples if you don't like abstract concepts (although you are probably going to have trouble thinking of irrational apples).
+[^b]: The property that says that all linear maps behave as $\phi(\lambda v) = \lambda \phi(v)$ for $\lambda in \mathbf{F}$. For inner products, the property is defined for the first slot (the first argument) as $\langle \lambda v, u \rangle = \lambda \langle v, u \rangle$.
+[^c]: Applying the definitions may help us see why set of all continuous functions is a vector space. To start with, sum of two continuous functions is continuous and multiplication with a scalar also keeps the function continuous. Further, polynomials are just a subset of continuous functions and also satisfy these two closure properties. Trust me that all other necessary properties are also satisfied.
+[^d]: Formally, we say $v - P_{U}v$ belongs to the orthogonal complement $U^{\perp}$ of $U$. $U^{\perp}$ is the set of all vectors that are orthogonal to all vectors in $U$.

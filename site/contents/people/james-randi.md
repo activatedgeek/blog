@@ -17,7 +17,7 @@ activity head on, debunked many pseudoscientific beliefs many a time. Although, 
 
 > I’m an investigator. I only expect to show that something is not likely.
 
-Alongside another beloved mythbuster, Carl Sagan, he started the 
+Alongside another beloved mythbuster, Carl Sagan, he started the
 [Committee for Skeptical Inquiry](https://en.wikipedia.org/wiki/Committee_for_Skeptical_Inquiry).
 While I haven't watched it yet, [An Honest Liar](https://www.themoviedb.org/movie/262481-an-honest-liar)
 is purported to be an excellent documentary on his life's work.

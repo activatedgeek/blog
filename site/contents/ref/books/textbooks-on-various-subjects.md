@@ -9,12 +9,12 @@ cat: books
 
 Well-written textbooks (or even theses) are the fastest way to learn _technical_ topics that have achieved **critical mass**. Inspired by a [similarly titled post](https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject) on LessWrong, I have my own evolving list.
 
-For obvious reasons, I have not read most books cover to cover. I 
+For obvious reasons, I have not read most books cover to cover. I
 have, however, read a few chapters of each to be convinced that
-the rest of the book would be worth reading. Often, multiple books 
-cater to overlapping topics, and provide complementary strengths 
-to aid understanding. When multiple books are specified within 
-each (sub-)section, it is safe to assume that as a "soft" 
+the rest of the book would be worth reading. Often, multiple books
+cater to overlapping topics, and provide complementary strengths
+to aid understanding. When multiple books are specified within
+each (sub-)section, it is safe to assume that as a "soft"
 recommendation order.
 
 ## General Mathematics
@@ -27,7 +27,6 @@ recommendation order.
 
 - [Introduction to Linear Algebra](https://math.mit.edu/~gs/linearalgebra/) by Gilbert Strang (1993; 2016)
 
-
 ### Numerical Methods
 
 - [Numerical Linear Algebra](http://people.maths.ox.ac.uk/~trefethen/text.html) by Lloyd N. Trefethen and David Bau, III (1997)
@@ -37,7 +36,6 @@ recommendation order.
 - [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) by Stephen Boyd and Lieven Vandenberghe (2004)
 
 - [Numerical Optimization](http://users.iems.northwestern.edu/~nocedal/book/num-opt.html) by Jorge Nocedal, Stephen J. Wright (2000; 2006)
-
 
 ## Differential Equations
 

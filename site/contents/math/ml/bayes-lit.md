@@ -29,7 +29,7 @@ It is not a silver bullet but a set of common-sense principles to abide by.
 
 - In my introductory article, [_The Beauty of Bayesian Learning_](/kb/the-beauty-of-bayesian-learning), I describe the essence of Bayesian learning using a simple pattern guessing demo.
 - PRML Chapter 1 \cite{bishop2006pattern} is the place to start for a succinct
-treatment on the topic.
+  treatment on the topic.
 - The ideas can be further reinforced through DJCM's [PhD Thesis](http://www.inference.org.uk/mackay/PhD.html), Chapter 2.
 - AGW's [PhD Thesis](http://www.cs.cmu.edu/%7Eandrewgw/andrewgwthesis.pdf) Chapter 1 provides a broader background on the big picture.
 
@@ -44,20 +44,20 @@ means to be Bayesian. Putting prior assumptions _does not_ make one a Bayesian.
 In that sense, everyone is a Bayesian because they build algorithms starting
 with priors, whether they know it or not. I die a little when people compare
 Bayesian methods to simply regularlizing with the prior. That is an effect often
-misconstrued. For instance, take a look at this fun post by Dan Simpson, 
+misconstrued. For instance, take a look at this fun post by Dan Simpson,
 "[The king must die](https://statmodeling.stat.columbia.edu/2017/11/02/king-must-die/)"
 on why simply assuming a Laplace prior does not imply sparse solutions unlike
 its popular _maximum a-posteriori_ variant known as the Lasso.
 
 When explaining the data using a model, we usually have many competing
 hypothesis available, naturally leading to the _model selection_ problem.
-_Occam's razor_ principle advocates that we must choose the simplest possible 
+_Occam's razor_ principle advocates that we must choose the simplest possible
 explanation. Bayesian inference shines here as well by automatically embodying
 this "principle of parsimony".
 
 - ITILA Chapter 28 \cite{mackay2003information} describes how Bayesian inference handles "automatic Occam's razor" quantitatively.
 - Seeing the ever increasing complexity of neural network models, one may doubt the
-  validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani, in their paper titled [_Occam's razor_](https://papers.nips.cc/paper/2000/file/0950ca92a4dcf426067cfd2246bb5ff3-Paper.pdf), resolve this through a simple experiment. Maddox & Benton et. al. provide an excellent realization of this principle for large models in [_Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited_]((https://arxiv.org/abs/2003.02139)).
+  validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani, in their paper titled [_Occam's razor_](https://papers.nips.cc/paper/2000/file/0950ca92a4dcf426067cfd2246bb5ff3-Paper.pdf), resolve this through a simple experiment. Maddox & Benton et. al. provide an excellent realization of this principle for large models in [_Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited_](https://arxiv.org/abs/2003.02139).
 
 _Bayesian model averaging_ (BMA) is another perk enjoyed by Bayesians, which
 allows for _soft model selection_. Andrew G. Wilson
@@ -97,7 +97,7 @@ popularity and early success of neural networks.
 - GPML Chapter 1, 2, 3 \cite{williams2006gaussian} for a detailed treatment on the usual regression and classification problems.
 - LWK Chapter 1 \cite{scholkopf2018learning} is worth a read for a big picture view of kernel machines. It does not, however, present a Bayesian perspective, but an optimization perspective. Nevertheless, it is a useful perspective.
 - GPML Chapter 5 \cite{williams2006gaussian} to understand how model selection
-behaves with GPs, and key caveats to look out for, especially regarding Bayesian Model Averaging. It also has a nice example of a non-trivial composite kernel.
+  behaves with GPs, and key caveats to look out for, especially regarding Bayesian Model Averaging. It also has a nice example of a non-trivial composite kernel.
 
 #### Sparse Gaussian Processes
 
@@ -111,7 +111,7 @@ Covariance functions are the way we describe our inductive biases in a Gaussian
 Process model and hence deserve a separate section altogether.
 
 - GPML Chapter 4 \cite{williams2006gaussian} provides a broad discussion around where covariance functions
-come from.
+  come from.
 - DD's [PhD Thesis](https://www.cs.toronto.edu/~duvenaud/thesis.pdf), Chapter 2 contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
 
 ### Monte Carlo algorithms
@@ -158,8 +158,8 @@ a few venues that I occassionally sift through.
 
 ## Acknowledgements
 
-I'm inspired by 
-[Yingzhen Li](http://yingzhenli.net/home/en/)'s resourceful 
+I'm inspired by
+[Yingzhen Li](http://yingzhenli.net/home/en/)'s resourceful
 document on [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/topics_approx_infer.pdf) (2017).
 Many of the interesting references also come from discussions with my advisor,
 [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).

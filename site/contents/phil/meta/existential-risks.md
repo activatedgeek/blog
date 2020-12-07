@@ -24,17 +24,21 @@ to find opportunities to reduce entropy introduced by these events.
 - [Coronal Mass Ejection](https://en.wikipedia.org/wiki/Coronal_mass_ejection) (CME), [The Carrington Event](https://en.wikipedia.org/wiki/September_1859_geomagnetic_storm)
 
 - Pandemics
+
   - Disease X
 
 - Supervolcanic Eruptions
+
   - Ash clouds
 
 - Hypernova Explosions
+
   - Gamma-ray bursts
 
 - Asteroids & Comets
 
 - Nuclear Winter
+
   - Dust accumulated in the stratosphere
 
 - Climate change
@@ -53,10 +57,11 @@ perspective. These are perhaps more dystopian sci-fi risks, _so far_.
 
 ## Books
 
-### [The Precipice](https://theprecipice.com) by _Toby Ord_
+### [The Precipice](https://theprecipice.com)
 
-One of the quotes from the book is quite extraordinary, by _Thomas Macaulay_ in
-1830.
+by _Toby Ord_
+
+One of the quotes from the book is quite extraordinary, by _Thomas Macaulay_ in 1830.
 
 > We cannot absolutely prove that htose are in error who tell us that society has
 > reached a turning point, that we have seen our best days. But so said all before
@@ -76,5 +81,4 @@ appear too unlikely, or will we fund their research to get to the truth? Yet
 again, the only thing that can save humanity is an open mind driven by the
 scientific method.
 
-[^a]: Fortunately, it is less so now as the rich countries have almost had a
-40% drop in fossil fuel demand within a decade
+[^a]: Fortunately, it is less so now as the rich countries have almost had a 40% drop in fossil fuel demand within a decade.

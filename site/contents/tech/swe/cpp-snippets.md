@@ -6,7 +6,7 @@ area: tech
 cat: swe
 ---
 
-## Finding the C++ standard from g++ 
+## Finding the C++ standard from g++
 
 Thanks to [this SO answer](https://stackoverflow.com/a/44735016/2425365),
 one can find the C++ standard version supported by your `g++` binary

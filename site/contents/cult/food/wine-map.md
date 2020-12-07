@@ -30,7 +30,7 @@ Here are a few books that I often refer to for casual academic excursion.
 - [Windows on the World Complete Wine Course](https://kevinzraly.com) by _Kevin Zraly_
 - [Wine Folly: The Essential Guide to Wine](https://winefolly.com/wine-folly-the-essential-guide-to-wine-book/) by _Madeline Puckette_ and _Justin Hammack_
 - [The Wine Bible](https://www.karenmacneil.com/product/the-wine-bible/) by _Karen MacNeil_
-- [Which Winegrape Varieties are grown where?](https://www.adelaide.edu.au/press/titles/winegrapes) by _Kym Anderson_ and _Signe Nelgen_  
+- [Which Winegrape Varieties are grown where?](https://www.adelaide.edu.au/press/titles/winegrapes) by _Kym Anderson_ and _Signe Nelgen_
 
 ## The Indian Wine Scene
 

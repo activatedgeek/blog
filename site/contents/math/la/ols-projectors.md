@@ -18,7 +18,7 @@ interpretation of a least squares solution [^a].
 As usual, linear regression involves a dataset $\mathcal{D}$ of $N$ pairs of
 inputs, in $\mathbb{R}^D$ and outputs in $\mathbb{R}$,
 $\{ \mathbf{x}_i, y_i \}_{i=1}^N$. The objective is to learn the parameters
-$\mathbf{w}$ of a linear function of the form [^b] 
+$\mathbf{w}$ of a linear function of the form [^b]
 
 $$
 y = \mathbf{w}^T\mathbf{\phi}(\mathbf{x}) + \epsilon,
@@ -86,7 +86,7 @@ $S_2 = \text{null}(P) = \text{range}(I-P)$. This is only possible because
 $S_1 \cap S_2 = \{0\}$. To see why this is true, we note that any vector
 in the null space of $P$ and in the null space of $I - P$ can be manipulated as
 $v = v - Pv = (I - P)v = 0$. This implies an important result that any projector
-$P$ splits the space into two distinct subspaces. This is why the projector 
+$P$ splits the space into two distinct subspaces. This is why the projector
 $I-P$ _complements_ the projector $P$.
 
 ### Orthogonal Projectors
@@ -158,7 +158,6 @@ rank.
 
 ## References & Notes
 
-
 ```bib
 @book{axler2015linear,
   title={Linear algebra done right},
@@ -178,4 +177,5 @@ rank.
 ```
 
 [^a]: I really wish I had the tools and time to make nice figures because this post
+
 really needs that. Hopefully, soon.
