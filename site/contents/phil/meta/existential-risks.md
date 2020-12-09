@@ -61,7 +61,8 @@ perspective. These are perhaps more dystopian sci-fi risks, _so far_.
 
 by _Toby Ord_
 
-One of the quotes from the book is quite extraordinary, by _Thomas Macaulay_ in 1830.
+The resources and appendix in this book are extremely rich. One of the quotes
+from the book is quite extraordinary, by _Thomas Macaulay_ in 1830.
 
 > We cannot absolutely prove that htose are in error who tell us that society has
 > reached a turning point, that we have seen our best days. But so said all before
@@ -72,13 +73,12 @@ One of the quotes from the book is quite extraordinary, by _Thomas Macaulay_ in 
 Succinctly said, the burden is on the pessimist to explain why _now_ is the
 point things will fail. Climate change, for instance, is a prominent example in
 recent decades where the pessimists have had a hard time convincing the legislators
-and general populace [^a]. For better or worse, this will remain a concern for
-every new realization of an existential risk.
+and general populace Fortunately, the past decade has seen almost a 40% drop in
+demand. Nevertheless, this will remain a concern for every new realization of an
+existential risk.
 
 The only thing that can change, however, is our receptiveness to such
 realizations with extreme consequences. Will we shun them only because they
 appear too unlikely, or will we fund their research to get to the truth? Yet
 again, the only thing that can save humanity is an open mind driven by the
 scientific method.
-
-[^a]: Fortunately, it is less so now as the rich countries have almost had a 40% drop in fossil fuel demand within a decade.

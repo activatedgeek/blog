@@ -62,12 +62,6 @@ const gatsbyRemarkPlugins = [
     resolve: `gatsby-remark-autolink-headers`,
     options: { icon: false },
   },
-  {
-    resolve: `gatsby-remark-katex`,
-    options: {
-      strict: `ignore`,
-    },
-  },
 ]
 
 const gatsbyPlugins = [
@@ -164,6 +158,17 @@ const gatsbyPlugins = [
 ]
 
 if (process.env.NODE_ENV === "production") {
+  const remarkProdPlugins = [
+    {
+      resolve: `gatsby-remark-katex`,
+      options: {
+        strict: `ignore`,
+      },
+    },
+  ]
+
+  gatsbyRemarkPlugins.push(...remarkProdPlugins)
+
   const prodPlugins = [
     {
       resolve: `gatsby-plugin-goatcounter`,
@@ -241,4 +246,10 @@ if (process.env.NODE_ENV === "production") {
 module.exports = {
   siteMetadata,
   plugins: gatsbyPlugins,
+  flags: {
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    FAST_REFRESH: true,
+    PRESERVE_WEBPACK_CACHE: true,
+  },
 }

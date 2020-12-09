@@ -11,7 +11,7 @@ A geometric perspective also makes rounds as to what the _maximum likelihood_
 solution of a linear regression problem signifies, although the explanations are
 often imprecise and hand-wavy. This post will hopefully be a helpful summary to
 everyone who was searching for a precise argument around the geometric
-interpretation of a least squares solution [^a].
+interpretation of a least squares solution.
 
 ## Setup
 
@@ -175,7 +175,3 @@ rank.
   url={http://people.maths.ox.ac.uk/~trefethen/text.html}
 }
 ```
-
-[^a]: I really wish I had the tools and time to make nice figures because this post
-
-really needs that. Hopefully, soon.

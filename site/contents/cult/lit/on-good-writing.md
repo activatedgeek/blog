@@ -2,7 +2,7 @@
 title: On good writing
 description: Documenting characteristics of good writing.
 date: Aug 11 2020, 17:28 -0700
-updated: Sep 29 2020, 17:49 +0530
+updated: Dec 9 2020, 18:10 +0530
 area: cult
 cat: lit
 ---
@@ -14,6 +14,16 @@ are some resources I often go back to.
 ## General Communication
 
 - [How to write in plain English](http://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
+
+### Chekhov's gun
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Chekhov%27s_gun)
+
+> Chekhov's gun is a dramatic principle that states that every element in a story must be necessary, and irrelevant elements should be removed.
+
+While, I am not sure I would agree with this principle for drama (for which it
+was original emphasized), I think this is _the_ principle for any formal
+communication, including mathematical and other scientific writing [^a].
 
 ### Mathematical Communication
 
@@ -80,3 +90,5 @@ writing for now. This is a summary from the excellent book by _ William Strunk J
   > they are behind many breakthroughs in computer vision._ v/s
   > _Neural networks are behind many breakthroughs in computer vision, but they have
   > hardly advanced our understanding of the human brain_.
+
+[^a]: Of course, we often beat about the bush to fill those 8 pages.

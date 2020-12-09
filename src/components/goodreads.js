@@ -10,6 +10,7 @@ export default () => (
       {
         reviews: allGoodreadsLibraryExportCsv(
           sort: { fields: Year_Published, order: DESC }
+          filter: { Exclusive_Shelf: { eq: "read" } }
         ) {
           nodes {
             author: Author

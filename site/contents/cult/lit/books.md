@@ -17,14 +17,6 @@ perspectives in context.
 _See [Textbooks on Various Subjects](/kb/textbooks-on-various-subjects) for
 books with more technical treatment._
 
-## Books
-
-Here is the complete list of books reverse sorted by year. Often some titles
-may have an older publication date. The year noted below is the one I happened
-to mark on my Goodreads account.
-
-<GoodreadsBooks />
-
 ## Resources
 
 [Goodreads](https://www.goodreads.com) is generally a good resource to find books
@@ -36,3 +28,11 @@ maintains a popular collection of book reviews as well
 place for short and light reads of usually less than 200 pages. It covers a
 broad array of topics. I only use this resource to get a sense of fields that
 are alien to me.
+
+## Books
+
+Here is the complete list of books reverse sorted by year. Often some titles
+may have an older publication date. The year noted below is the one I happened
+to mark on my Goodreads account.
+
+<GoodreadsBooks />

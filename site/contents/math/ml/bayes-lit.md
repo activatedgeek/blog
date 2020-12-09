@@ -113,6 +113,7 @@ Process model and hence deserve a separate section altogether.
 - GPML Chapter 4 \cite{williams2006gaussian} provides a broad discussion around where covariance functions
   come from.
 - DD's [PhD Thesis](https://www.cs.toronto.edu/~duvenaud/thesis.pdf), Chapter 2 contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
+  - A quick skim of Section 2 of [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922) may be helpful.
 
 ### Monte Carlo algorithms
 
