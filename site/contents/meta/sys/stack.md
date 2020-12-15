@@ -2,7 +2,7 @@
 title: The Stack
 description: Tools powering this website.
 date: Jun 19 2020, 14:32 -0700
-updated: Nov 29 2020, 11:26 +0530
+updated: Dec 14 2020, 13:44 +0530
 area: meta
 cat: sys
 ---
@@ -33,6 +33,6 @@ The website is deployed on [Netlify](https://www.netlify.com) and the domain
 registrar is [GoDaddy](https://godaddy.com). Simple and private analytics are
 powered by [GoatCounter](https://www.goatcounter.com). Uptime is monitored via
 [UptimeRobot](https://uptimerobot.com). [short.io](https://short.io) is used
-for occasionally URL aliases.
+for occasionally URL aliases. The nameservers are hosted on [Fastmail](https://www.fastmail.com).
 
 The complete source is available on [Github](https://github.com/activatedgeek/www).

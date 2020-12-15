@@ -6,7 +6,7 @@ area: cult
 cat: lit
 ---
 
-[The Lessons of History](https://www.goodreads.com/book/show/174713.The_Lessons_of_History) by _Will Durant_, _Ariel Durant_ is quite an extraordinary piece of work.
+[The Lessons of History](https://www.librarything.com/work/23856/book/193494927) by _Will Durant_, _Ariel Durant_ is quite an extraordinary piece of work.
 Summarizing their own seminal volume on history of civilizations into just 100
 pages is a momumental feat.
 

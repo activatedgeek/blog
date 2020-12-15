@@ -47,7 +47,7 @@ I was not happy with some of the sentence structures in a paper I wrote recently
 I am deliberately noting these rules here for a quick reference whenever I write
 long-form public texts. My [knowledge base](/kb) will be exempt, to allow faster
 writing for now. This is a summary from the excellent book by _ William Strunk Jr._,
-[The Elements of Style](https://www.goodreads.com/book/show/11886303-the-elements-of-style).
+[The Elements of Style](https://www.librarything.com/work/3407/book/193494864).
 
 - [Rule 1] Always use **'s** (appostrophe s) to form singular possessive nouns. Some ancient
   proper nouns ending in _-es_ or _-is_ are an exception but the sentence can be
