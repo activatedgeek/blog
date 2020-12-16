@@ -8,7 +8,7 @@ cat: lit
 ---
 
 I want to be a good scientist and science is a social endeavour. Crisp communication
-is essential. Learning to write well, live everything else, is a process. Here
+is essential. Learning to write well, like everything else, is a process. Here
 are some resources I often go back to.
 
 ## General Communication
@@ -22,7 +22,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Chekhov%27s_gun)
 > Chekhov's gun is a dramatic principle that states that every element in a story must be necessary, and irrelevant elements should be removed.
 
 While, I am not sure I would agree with this principle for drama (for which it
-was original emphasized), I think this is _the_ principle for any formal
+was originally emphasized), I think this is _the_ principle for any formal
 communication, including mathematical and other scientific writing [^a].
 
 ### Mathematical Communication
