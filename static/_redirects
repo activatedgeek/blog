@@ -1,4 +1,4 @@
 ## Redirect all domain aliases
-https://imperhapsbayes.netlify.app/*  https://im.perhapsbay.es/:splat   301!
+https://perhapsbayes.netlify.app/*  https://im.perhapsbay.es/:splat   301!
 https://sanyamkapoor.com/*            https://im.perhapsbay.es/:splat   301!
 https://www.sanyamkapoor.com/*        https://im.perhapsbay.es/:splat   301!
