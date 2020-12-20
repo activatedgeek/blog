@@ -12,7 +12,7 @@ List of [environment variables](https://www.gatsbyjs.com/docs/how-to/local-devel
 
 - `TMDB_API_KEY`
 - `TMDB_SESSION_ID`
-- `GATSBY_GC_CODE`
+- `GATSBY_GC_CODE` (in [netlify.toml](./netlify.toml))
 
 ## License
 

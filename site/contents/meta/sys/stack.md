@@ -30,7 +30,7 @@ hosted on [Imgur](https://imgur.com).
 
 The website is deployed on [Netlify](https://www.netlify.com) and the domain
 registrar is [GoDaddy](https://godaddy.com). Simple and private analytics are
-powered by [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/). Uptime is monitored via
+powered by [GoatCounter](https://www.goatcounter.com). Uptime is monitored via
 [UptimeRobot](https://uptimerobot.com). [short.io](https://short.io) is used
 occasionally for URL aliases. The nameservers are hosted on [Cloudflare](https://www.cloudflare.com).
 
