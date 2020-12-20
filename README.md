@@ -8,11 +8,11 @@ Main website is hosted at [im.perhapsbay.es](https://im.perhapsbay.es). See deta
 
 ### Environment Variables
 
-List of environment variables needed for build.
+List of [environment variables](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables) needed during build and client side.
 
 - `TMDB_API_KEY`
 - `TMDB_SESSION_ID`
-- `GOATCOUNTER_CODE`
+- `GATSBY_GC_CODE`
 
 ## License
 

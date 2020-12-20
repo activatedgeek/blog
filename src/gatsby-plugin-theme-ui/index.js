@@ -1,5 +1,5 @@
 import merge from "deepmerge"
-import tailwind, { baseColors, baseFonts } from "@theme-ui/preset-tailwind"
+import tailwind, { baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/github.json"
 
 const themeColor = [
@@ -17,9 +17,7 @@ const themeColor = [
 
 const mods = {
   useLocalStorage: false,
-  fonts: {
-    body: `"Open Sans", ${baseFonts.sans}`,
-  },
+  fonts: {},
   colors: {
     primary: themeColor[8],
     primaryHover: themeColor[9],

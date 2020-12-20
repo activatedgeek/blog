@@ -154,7 +154,6 @@ const gatsbyPlugins = [
   },
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-theme-ui`,
-  `gatsby-plugin-offline`,
 ]
 
 if (process.env.NODE_ENV === "production") {
@@ -170,18 +169,6 @@ if (process.env.NODE_ENV === "production") {
   gatsbyRemarkPlugins.push(...remarkProdPlugins)
 
   const prodPlugins = [
-    {
-      resolve: `gatsby-plugin-goatcounter`,
-      options: {
-        code: process.env.GOATCOUNTER_CODE,
-        exclude: [],
-        pageTransitionDelay: 0,
-        head: false,
-        pixel: false,
-        allowLocal: false,
-        localStorageKey: "skipgc",
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -238,6 +225,7 @@ if (process.env.NODE_ENV === "production") {
       },
     },
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-offline`,
   ]
 
   gatsbyPlugins.push(...prodPlugins)
