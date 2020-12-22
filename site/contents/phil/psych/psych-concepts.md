@@ -6,7 +6,7 @@ cat: psych
 ---
 
 This is home for concepts in Cognitive and Experiments psychology which haven't
-found their own home within the knowledge base yet.
+found their own home yet.
 
 - Pavlovian conditioning
 - [Wisdom of the crowd](https://en.wikipedia.org/wiki/Wisdom_of_the_crowd)

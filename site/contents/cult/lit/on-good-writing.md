@@ -45,7 +45,7 @@ Speech is often a medium through which writing is communicated and also essentia
 
 I was not happy with some of the sentence structures in a paper I wrote recently.
 I am deliberately noting these rules here for a quick reference whenever I write
-long-form public texts. My [knowledge base](/kb) will be exempt, to allow faster
+long-form public texts. My [kb](/kb) will be exempt, to allow faster
 writing for now. This is a summary from the excellent book by _ William Strunk Jr._,
 [The Elements of Style](https://www.librarything.com/work/3407/book/193494864).
 

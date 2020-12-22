@@ -5,7 +5,6 @@ area: cult
 cat: lit
 ---
 
-This is a parking space for concepts in literature which don't have their own
-home in the knowledge base yet.
+This is a parking space for concepts in literature which don't have their own home yet.
 
 - [Sprezzatura](https://en.wikipedia.org/wiki/Sprezzatura)

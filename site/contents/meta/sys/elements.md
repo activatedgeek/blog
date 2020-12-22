@@ -26,7 +26,7 @@ the _archive_ boolean variable. They are accompanied with a message on the top.
 
 For categorization, I was inspired by the [Johnny Decimal system](/kb/johnny-decimal).
 The system seems to be rather developed to organizes files and folders. I
-repurpose it for the knowledge base. Every page in the knowledge base is assigned
+repurpose it. Every page in the knowledge base is assigned
 to a primary _area_ and _category_. For instance, this page is filed under area
 "Meta" and category "System". This should be surfaced somewhere on this page
 which is hopefully not too hard to find. All areas and categories are defined in

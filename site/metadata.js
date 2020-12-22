@@ -1,7 +1,7 @@
 module.exports = {
   dateFormat: `MMM D YYYY, H:m ZZ`,
   name: `Perhaps, Bayes`,
-  description: `Website and knowledge base.`,
+  description: `Website and Knowledge Bayes.`,
   author: `Sanyam Kapoor`,
   siteUrl:
     process.env.NODE_ENV === "production"

@@ -5,8 +5,7 @@ area: soc
 cat: econ
 ---
 
-This is a parking space for concepts that haven't found their own home within
-the knowledge base.
+This is a parking space for concepts that haven't found their own home yet.
 
 - Time preference
 - [Ovarian Lottery](https://www.businessinsider.com/warren-buffett-on-the-ovarian-lottery-2013-12)

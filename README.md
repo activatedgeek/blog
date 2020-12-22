@@ -1,4 +1,4 @@
-# Website
+# Knowledge Bayes
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fce83868-4b4f-419a-b6f2-9d29f21062c6/deploy-status)](https://app.netlify.com/sites/perhapsbayes/deploys)
 

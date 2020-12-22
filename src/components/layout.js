@@ -245,7 +245,7 @@ const Footer = ({ name, social }) => {
           <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
         </HeaderMenuItem>
         <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Base
+          <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
         </HeaderMenuItem>
         <HeaderMenuItem url="/db">
           <FontAwesomeIcon icon={faDatabase} fixedWidth /> DB

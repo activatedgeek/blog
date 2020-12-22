@@ -32,7 +32,7 @@ forward now and are [killing it](https://www.forbes.com/profile/storyxpress/?lis
 
 For a formal background, see my [CV](https://u.perhapsbay.es/cv).
 
-I maintain a [knowledge base](/kb). Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
+I maintain a "[knowledge Bayes](/kb)". Read my [knowledge organization philosophy](/kb/knowledge-base-organization-philosophy).
 or check out some of the recently updated pages.
 
 <LatestPages />
