@@ -8,7 +8,7 @@ module.exports = {
       ? `https://im.perhapsbay.es`
       : `http://localhost:8000`,
   social: {
-    scholar: "https://www.semanticscholar.org/author/Sanyam-Kapoor/153936584",
+    scholar: "https://u.perhapsbay.es/pubs",
     github: "https://github.com/activatedgeek",
     yc: "https://news.ycombinator.com/user?id=activatedgeek",
     linkedin: "https://www.linkedin.com/in/sanyamkapoor",
