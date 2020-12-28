@@ -10,15 +10,15 @@ redirectsFrom:
 
 The Cross Entropy method (CEM) is one of the most popular optimization algorithms,
 particularly in optimal control. It was originally proposed for rare event simulation but has since
-been repurposed for a broad spectrum of problems \cite{de2005tutorial}.
+been repurposed for a broad spectrum of problems [^@de2005tutorial].
 
-This post is a short summary of the modeling and inference choices underlying CEM in the context of finite horizon control. It is inspired by the recent surge in interest of the "Reinforcement Learning as Inference" perspective. A recent survey \cite{levine2018reinforcement} might be of interest to readers with some older perspectives attributed to optimal control \cite{toussaint2006probabilistic,toussaint2009robot}.
+This post is a short summary of the modeling and inference choices underlying CEM in the context of finite horizon control. It is inspired by the recent surge in interest of the "Reinforcement Learning as Inference" perspective. A recent survey [^@levine2018reinforcement] might be of interest to readers with some older perspectives attributed to optimal control [^@toussaint2009robot] [^@toussaint2006probabilistic].
 
 A general problem setup goes like this - consider the finite horizon planning problem. Given the ground truth environment dynamics, the planner must optimize the finite horizon trajectory rewards. This is done by proposing multiple action plans, simulating them forward through the environment dynamics and updating the proposal distributions after observing the rewards.
 
 ## Model
 
-The first step is to exactly specify our control problem as an inference problem in a probabilistic graphical model. The model is presented in the figure below \cite{piche2018probabilistic}.
+The first step is to exactly specify our control problem as an inference problem in a probabilistic graphical model. The model is presented in the figure below [^@piche2018probabilistic].
 
 ![Control-as-Inference Model](//i.imgur.com/nuZUnSi.png)
 
@@ -28,7 +28,7 @@ $$
 \mathcal{J}(\tau_{1:H}) = \mathbb{E}\left[ r(\tau_{1:H}) \right]
 $$
 
-We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we _want_ - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$ [^a]. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
+We denote a trajectory of horizon length $H$ as $\tau = \{ s_0,a_0,r_1,s_1,a_1,... r_{H-1},s_{H}\}$, a sequence of state action pairs. In a usual inference problem defined via a data generating process, we condition on observations. However, to model control as inference, we instead condition on what we _want_ - optimality of our state-action pairs. This auxiliary optimality variable is the observed variable and defined as $p(\mathcal{O}_h|s_h,a_h) = \exp{ \{ r(s_h,a_h) \} }$. The normalization constant in this discussion is not important. However, one approach to do that may be normalizing it by the maximum reward possible. Intuitively, this can be seen as the likelihood of a state action pair being optimal and a natural choice is given by the rewards this pair induces. The full joint of the system (as seen in the figure above) is now given by
 
 $$
 p(\tau_{1:H}, \mathcal{O}_{1:H}) = p(s_0)\prod_{h=0}^{H-1} f(s_{h+1} | s_h, a_h) p(a_h) p(\mathcal{O}_h | s_h, a_h)
@@ -38,7 +38,7 @@ $p(a_h)$, the prior over actions, is assumed to be a constant. As a natural cons
 
 ## Inference
 
-We turn to variational inference (VI) \cite{jordan1999introduction} in light of the intractability of
+We turn to variational inference (VI) [^@jordan1999introduction] in light of the intractability of
 the posterior. We now posit a variational distribution over the trajectory by letting the dynamics
 function remain the same as the ground truth but make a change to the _joint_ distribution of actions over the horizon
 
@@ -68,63 +68,11 @@ $$
 
 Further, we also decompose the variational distribution to a Gaussian factored over the horizon. This allows a maximum likelihood estimate to be drawn directly from the samples of individual time step - sample mean and sample variance. The variational distribution acts as our "proposal" and we update the proposal (potentially using multiple rollouts) using the maximum likelihood estimates as described above. Further, the assumption in the variational distribution to assume the true dynamics function allows us to simply re-use the ground truth dynamics using samples from the proposal and simulate trajectories to compute a Monte Carlo estimate of the rewards.
 
-This finishes the foundations of deriving CEM from a probabilistic modeling perspective. However, there is a key detail where this deviates from practice. A typical setup of CEM uses the notion of "elite" samples to update the proposal \cite{de2005tutorial}. In this context of control, this means only using the trajectories above a reward threshold to update the proposal distributions. This only impacts the speed with which the proposal distributions collapse to the mode and all our modeling choices remain the same. This choice can be theoretically justified by augmenting our model with an indicator function to allow trajectories with some reward greater than threshold $\alpha$ as $\mathbb{I}\left[ r(\tau_{1:H}) > \alpha \right]$.
+This finishes the foundations of deriving CEM from a probabilistic modeling perspective. However, there is a key detail where this deviates from practice. A typical setup of CEM uses the notion of "elite" samples to update the proposal [^@de2005tutorial]. In this context of control, this means only using the trajectories above a reward threshold to update the proposal distributions. This only impacts the speed with which the proposal distributions collapse to the mode and all our modeling choices remain the same. This choice can be theoretically justified by augmenting our model with an indicator function to allow trajectories with some reward greater than threshold $\alpha$ as $\mathbb{I}\left[ r(\tau_{1:H}) > \alpha \right]$.
 
-## References
-
-```bib
-@article{de2005tutorial,
-  title={A tutorial on the cross-entropy method},
-  author={De Boer, Pieter-Tjerk and Kroese, Dirk P and Mannor, Shie and Rubinstein, Reuven Y},
-  journal={Annals of operations research},
-  volume={134},
-  number={1},
-  pages={19--67},
-  year={2005},
-  publisher={Springer}
-}
-
-@article{levine2018reinforcement,
-  title={Reinforcement learning and control as probabilistic inference: Tutorial and review},
-  author={Levine, Sergey},
-  journal={arXiv preprint arXiv:1805.00909},
-  year={2018}
-}
-
-@inproceedings{toussaint2006probabilistic,
-  title={Probabilistic inference for solving discrete and continuous state Markov Decision Processes},
-  author={Toussaint, Marc and Storkey, Amos},
-  booktitle={Proceedings of the 23rd international conference on Machine learning},
-  pages={945--952},
-  year={2006}
-}
-
-@inproceedings{toussaint2009robot,
-  title={Robot trajectory optimization using approximate inference},
-  author={Toussaint, Marc},
-  booktitle={Proceedings of the 26th annual international conference on machine learning},
-  pages={1049--1056},
-  year={2009}
-}
-
-@article{piche2018probabilistic,
-  title={Probabilistic planning with sequential monte carlo methods},
-  author={Pich{\'e}, Alexandre and Thomas, Valentin and Ibrahim, Cyril and Bengio, Yoshua and Pal, Chris},
-  year={2018}
-}
-
-@article{jordan1999introduction,
-  title={An introduction to variational methods for graphical models},
-  author={Jordan, Michael I and Ghahramani, Zoubin and Jaakkola, Tommi S and Saul, Lawrence K},
-  journal={Machine learning},
-  volume={37},
-  number={2},
-  pages={183--233},
-  year={1999},
-  publisher={Springer}
-}
-```
-
-### Footnotes
-
-[^a]: The normalization constant in this discussion is not important. However, one approach to do that may be normalizing it by the maximum reward possible.
+[^@jordan1999introduction]: Jordan, M.I., Ghahramani, Z., Jaakkola, T., & Saul, L. (2004). An Introduction to Variational Methods for Graphical Models. Machine Learning, 37, 183-233.
+[^@piche2018probabilistic]: Piché, A., Thomas, V., Ibrahim, C., Bengio, Y., & Pal, C. (2019). Probabilistic Planning with Sequential Monte Carlo methods. ICLR.
+[^@toussaint2009robot]: Toussaint, M. (2009). Robot trajectory optimization using approximate inference. ICML '09.
+[^@toussaint2006probabilistic]: Toussaint, M., & Storkey, A. (2006). Probabilistic inference for solving discrete and continuous state Markov Decision Processes. ICML '06.
+[^@levine2018reinforcement]: Levine, S. (2018). Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review. ArXiv, abs/1805.00909.
+[^@de2005tutorial]: Boer, P.D., Kroese, D.P., Mannor, S., & Rubinstein, R. (2005). A Tutorial on the Cross-Entropy Method. Annals of Operations Research, 134, 19-67.

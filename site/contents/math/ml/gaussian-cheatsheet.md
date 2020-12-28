@@ -58,7 +58,7 @@ $$
 ## As a Maximum Entropy Distribution
 
 Interestingly, the Gaussian distribution also turns out to be the maximum entropy
-distribution on the infinite support for a finite second moment \cite{bishop2006pattern}.
+distribution on the infinite support for a finite second moment [^@bishop2006pattern].
 The differential entropy is defined as the expected information
 $\mathbb{H}[x] = -\int_{-\infty}^{\infty} p(x) \log{p(x)} dx$ of a random variable $x \sim p(x)$.
 
@@ -76,7 +76,7 @@ $$
 
 The constraints correspond to the normalization of probability distributions,
 finite mean (first moment) and finite variance (finite second moment). This
-can be converted into an unconstrained optimization problem using Lagrange multipliers \cite{boyd2004convex}.
+can be converted into an unconstrained optimization problem using Lagrange multipliers [^@boyd2004convex].
 The complete objective becomes
 
 $$
@@ -87,7 +87,7 @@ $$
 \lambda_1 \left( \int_{-\infty}^{\infty} p(x) dx - 1 \right) + \lambda_2 \left( \int_{-\infty}^{\infty} x p(x) dx - \mu \right) + \lambda_3 \left( \int_{-\infty}^{\infty} (x - \mu)^2 p(x) dx - \sigma^2 \right)
 $$
 
-Setting the functional derivative [^a] $\frac{d [f(p(x))] }{d p(x)} = 0$, we get
+Setting the functional derivative (see Appendix D in Bishop [^@bishop2006pattern]) $\frac{d [f(p(x))] }{d p(x)} = 0$, we get
 
 $$
 -\log{p(x)} + 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = 0
@@ -99,7 +99,7 @@ $$
 
 To recover the precise values of the Lagrange multipliers, we substitute them back
 into the constraints. The derivation is involved but straightforward. We first manipulate the exponent by
-completing the squares [^b] which will allow us to re-use results from the [previous section](#normalizing-constant). We also further always make use of the subsitution $x^\prime = x - \frac{\beta}{2\alpha}$.
+completing the squares by noting that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$, which will allow us to re-use results from the [previous section](#normalizing-constant). We also further always make use of the subsitution $x^\prime = x - \frac{\beta}{2\alpha}$.
 
 $$
 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu)^2 = \underbrace{\lambda_3}_{=\alpha} x^2 - \underbrace{(2\mu\lambda_3 - \lambda_2)}_{=\beta} x + \underbrace{(1 + \lambda_1 + \lambda_3 \mu^2)}_{=\gamma}
@@ -169,7 +169,7 @@ $$
 \end{aligned}
 $$
 
-where we utilize the fact that $\Gamma(x + 1) = x\Gamma(x)$ [^c] and $\Gamma(1/2) = \sqrt{\pi}$. Plugging
+where we utilize the fact that $\Gamma(x + 1) = x\Gamma(x)$, where $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function, and $\Gamma(1/2) = \sqrt{\pi}$. Plugging
 everything back and using $\beta = 2\mu\alpha$, we get
 
 $$
@@ -196,7 +196,7 @@ $$
 \end{aligned}
 $$
 
-Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$ [^d].
+Substituting $\lambda_1,\lambda_2,\lambda_3$ back into $p(x)$ gives us the form for $p(x) = \mathcal{N}(\mu, \sigma^2)$. For maximum entropy distributions under other constraints, see examples on [this Wikipedia entry](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples)
 
 ## Gaussian Conditionals
 
@@ -227,7 +227,7 @@ $$
 
 ### The Schur complement
 
-We take a digression and discuss the **Schur complement** \cite{murphy2012machine}.
+We take a digression and discuss the **Schur complement** [^@murphy2012machine].
 Consider a matrix decomposed into blocks
 
 $$
@@ -359,34 +359,6 @@ $$
 Computing the joint, marginals and other conditionals now should be a matter of
 plugging in the right values.
 
-## References
-
-```bib
-@book{bishop2006pattern,
-  title={Pattern recognition and machine learning},
-  author={Bishop, Christopher M},
-  year={2006},
-  publisher={springer}
-}
-
-@book{murphy2012machine,
-  title={Machine learning: a probabilistic perspective},
-  author={Murphy, Kevin P},
-  year={2012},
-  publisher={MIT press}
-}
-
-@book{boyd2004convex,
-  title={Convex optimization},
-  author={Boyd, Stephen and Boyd, Stephen P and Vandenberghe, Lieven},
-  year={2004},
-  publisher={Cambridge university press}
-}
-```
-
-### Footnotes
-
-[^a]: See Appendix D in \cite{bishop2006pattern}.
-[^b]: We note that for any general quadratic $\alpha x^2 - \beta x + \gamma = \alpha \left(x - \frac{\beta}{2\alpha} \right)^2 - \frac{1}{2} \frac{\beta^2 - 4\alpha \gamma}{2\alpha}$.
-[^c]: $\Gamma(x) = \int_{0}^{\infty} u^{x-1} e^{-u}du$ is the Gamma function.
-[^d]: For maximum entropy distributions under other constraints, see examples on [this Wikipedia entry](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Other_examples).
+[^@boyd2004convex]: Boyd, S.P., & Vandenberghe, L. (2006). Convex Optimization. IEEE Transactions on Automatic Control, 51, 1859-1859.
+[^@murphy2012machine]: Murphy, K. (2012). Machine learning - a probabilistic perspective. Adaptive computation and machine learning series.
+[^@bishop2006pattern]: Bishop, C.M. (2006). Pattern Recognition and Machine Learning (Information Science and Statistics).

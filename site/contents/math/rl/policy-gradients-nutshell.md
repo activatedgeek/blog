@@ -18,10 +18,10 @@ be able to attack a vast amount of (if not all) Reinforcement Learning literatur
 ## Introduction
 
 Reinforcement Learning (RL) refers to both the learning problem and the sub-field of machine
-learning which has lately been in the news for great reasons. RL based systems have now beaten
-world champions of Go [^a], helped operate datacenters better [^b] and mastered a wide variety of Atari games [^c]. The research community is seeing many more promising results. With enough motivation, let us now take a look at the Reinforcement Learning problem.
+learning which has lately been in the news for great reasons. RL based systems have now [beaten
+world champions of Go](https://deepmind.com/blog/alphago-zero-learning-scratch/), helped [operate datacenters better](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/) and [mastered Atari games](https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/). The research community is seeing many more promising results. With enough motivation, let us now take a look at the Reinforcement Learning problem.
 
-Reinforcement Learning is the most general description of the learning problem where the aim is to maximize a long-term objective. The system description consists of an _agent_ which interacts with the _environment_ via its actions at discrete timesteps and receives a _reward_. This transitions the agent into a new _state_. A canonical agent-environment feedback loop is depicted by the figure below \cite{sutton2018reinforcement}.
+Reinforcement Learning is the most general description of the learning problem where the aim is to maximize a long-term objective. The system description consists of an _agent_ which interacts with the _environment_ via its actions at discrete timesteps and receives a _reward_. This transitions the agent into a new _state_. A canonical agent-environment feedback loop is depicted by the figure below [^@sutton2018reinforcement].
 
 ![The Canonical Agent-Environment Feedback Loop](//i.imgur.com/K7Zjm95.png)
 
@@ -29,7 +29,7 @@ The Reinforcement Learning flavor of the learning problem is strikingly similar 
 
 ## Background and Definitions
 
-A large amount of theory behind RL lies under the assumption of _The Reward Hypothesis_ \cite{sutton2018reinforcement} which in summary states that all goals and purposes of an agent can be explained by a single scalar called the _reward_. This is still subject to debate but has been fairly hard to disprove yet. More formally, the reward hypothesis is given below
+A large amount of theory behind RL lies under the assumption of _The Reward Hypothesis_ [^@sutton2018reinforcement] which in summary states that all goals and purposes of an agent can be explained by a single scalar called the _reward_. This is still subject to debate but has been fairly hard to disprove yet. More formally, the reward hypothesis is given below
 
 > **The Reward Hypothesis**: That all of what we mean by goals and purposes can be well thought of as the maximization
 > of the expected value of the cumulative sum of a received scalar signal (called reward).
@@ -42,7 +42,7 @@ $$
 S_0, A_0, R_1, S_1, A_1, R_2, \dots
 $$
 
-and the objective is to maximize this set of rewards. More formally, we look at the Markov Decision Process \cite{sutton2018reinforcement,bertsekas1995dynamic} framework
+and the objective is to maximize this set of rewards. More formally, we look at the Markov Decision Process [^@sutton2018reinforcement] [^@bertsekas1995dynamic] framework
 
 > **Markov Decision Process**: A (Discounted) Markov Decision Process (MDP) is a tuple
 > $(\mathcal{S}, \mathcal{A}, \mathcal{R}, p, \gamma)$, such that
@@ -86,7 +86,7 @@ $$
 J(\theta) = \mathbb{E}_\pi\left[ r(\tau) \right]
 $$
 
-All finite MDPs have at least one optimal policy (which can give the maximum reward) and among all the optimal policies at least one is stationary and deterministic \cite{bertsekas1995dynamic}.
+All finite MDPs have at least one optimal policy (which can give the maximum reward) and among all the optimal policies at least one is stationary and deterministic [^@bertsekas1995dynamic].
 
 Like any other Machine Learning problem, if we can find the parameters $\theta^\star$ which maximize $J$, we will have solved the task. A standard approach to solving this maximization problem in Machine Learning Literature is to use Gradient Ascent (or Descent). In gradient ascent, we keep stepping through the parameters using the following update rule
 
@@ -107,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-> **The Policy Gradient Theorem** \cite{sutton2018reinforcement}: The derivative of the expected reward is the expectation of the product of
+> **The Policy Gradient Theorem** [^@sutton2018reinforcement]: The derivative of the expected reward is the expectation of the product of
 > the reward and gradient of the $\log$ of the policy $\pi_\theta$.
 
 $$
@@ -134,7 +134,7 @@ This result is beautiful in its own right because this tells us, that we don't r
 
 The "expectation" (or equivalently an integral term) still lingers around. A simple but effective approach is to sample a large number of trajectories (I really mean LARGE!) and average them out. This is an approximation but an unbiased one, similar to approximating an integral over continuous space with a discrete set of points in the domain. This technique is formally known as Markov Chain Monte-Carlo (MCMC), widely used in Probabilistic Graphical Models and Bayesian Networks to approximate parametric probability distributions.
 
-One term that remains untouched in our treatment above is the reward of the trajectory $r(\tau)$. Even though the gradient of the parametrized policy does not depend on the reward, this term adds a lot of variance in the MCMC sampling. Effectively, there are $T$ sources of variance with each $R_t$ contributing. However, we can instead make use of the returns $G_t$ because from the standpoint of optimizing the RL objective, rewards of the past don't contribute anything. Hence, if we replace $r(\tau)$ by the discounted return $G_t$, we arrive at the classic algorithm Policy Gradient algorithm called _REINFORCE_ \cite{williams1992simple}. This doesn't totally alleviate the problem as we discuss further.
+One term that remains untouched in our treatment above is the reward of the trajectory $r(\tau)$. Even though the gradient of the parametrized policy does not depend on the reward, this term adds a lot of variance in the MCMC sampling. Effectively, there are $T$ sources of variance with each $R_t$ contributing. However, we can instead make use of the returns $G_t$ because from the standpoint of optimizing the RL objective, rewards of the past don't contribute anything. Hence, if we replace $r(\tau)$ by the discounted return $G_t$, we arrive at the classic algorithm Policy Gradient algorithm called _REINFORCE_ [^@williams1992simple]. This doesn't totally alleviate the problem as we discuss further.
 
 ## REINFORCE (and Baseline)
 
@@ -175,7 +175,7 @@ $$
 
 Using a baseline, in both theory and practice reduces the variance while keeping the gradient still unbiased. A good baseline would be to use the state-value current state.
 
-> **State Value** \cite{watkins1992q}: State Value is defined as the expected returns given a state following the policy $\pi_\theta$.
+> **State Value** [^@watkins1992q] is defined as the expected returns given a state following the policy $\pi_\theta$.
 
 $$
 V(s) = \mathbb{E}_{\pi_\theta}[G_t | S_t = s]
@@ -183,7 +183,7 @@ $$
 
 ## Actor-Critic Methods
 
-Finding a good baseline is another challenge in itself and computing it another. Instead, let us make approximate that as well using parameters $\omega$ to make $V^\omega(s)$. All algorithms where we bootstrap the gradient using learnable $V^\omega(s)$ are known as _Actor-Critic_ Algorithms \cite{sutton2000policy,mnih2016asynchronous} because this value function estimate behaves like a "_critic_" (good v/s bad values) to the "_actor_" (agent's policy). However this time, we have to compute gradients of both the actor and the critic.
+Finding a good baseline is another challenge in itself and computing it another. Instead, let us make approximate that as well using parameters $\omega$ to make $V^\omega(s)$. All algorithms where we bootstrap the gradient using learnable $V^\omega(s)$ are known as _Actor-Critic_ Algorithms [^@mnih2016asynchronous] [^@sutton2000policy] because this value function estimate behaves like a "_critic_" (good v/s bad values) to the "_actor_" (agent's policy). However this time, we have to compute gradients of both the actor and the critic.
 
 > **One-Step Bootstrapped Return**: A single step bootstrapped return takes the immediate reward and estimates the return by using a bootstrapped value-estimate of the next state in the trajectory.
 
@@ -224,7 +224,7 @@ $$
 \end{aligned}
 $$
 
-However, for most practical purposes, this maximization operation is computationally infeasible (as there is no other way than to search the entire space for a given action-value function). Instead, what we can aspire to do is, build a function approximator to approximate this $argmax$ and therefore called the _Deterministic Policy Gradient_ (DPG) \cite{silver2014deterministic,LillicrapHPHETS15}.
+However, for most practical purposes, this maximization operation is computationally infeasible (as there is no other way than to search the entire space for a given action-value function). Instead, what we can aspire to do is, build a function approximator to approximate this $argmax$ and therefore called the _Deterministic Policy Gradient_ (DPG) [^@lillicraphphets15] [^@silver2014deterministic].
 
 We sum this up with the following equations.
 
@@ -308,96 +308,11 @@ actor_loss.backward()
 
 Completed Modular implementations of the full pipeline can be viewed at [activatedgeek/torchrl](https://github.com/activatedgeek/torchrl).
 
----
-
-## References
-
-```bib
-@book{sutton2018reinforcement,
-  title={Reinforcement learning: An introduction},
-  author={Sutton, Richard S and Barto, Andrew G},
-  year={2018},
-  publisher={MIT press}
-}
-
-@book{bertsekas1995dynamic,
-  title={Dynamic programming and optimal control},
-  author={Bertsekas, Dimitri P and Bertsekas, Dimitri P and Bertsekas, Dimitri P and Bertsekas, Dimitri P},
-  volume={1},
-  number={2},
-  year={1995},
-  publisher={Athena scientific Belmont, MA}
-}
-
-@article{williams1992simple,
-  title={Simple statistical gradient-following algorithms for connectionist reinforcement learning},
-  author={Williams, Ronald J},
-  journal={Machine learning},
-  volume={8},
-  number={3-4},
-  pages={229--256},
-  year={1992},
-  publisher={Springer}
-}
-
-@inproceedings{sutton2000policy,
-  title={Policy gradient methods for reinforcement learning with function approximation},
-  author={Sutton, Richard S and McAllester, David A and Singh, Satinder P and Mansour, Yishay},
-  booktitle={Advances in neural information processing systems},
-  pages={1057--1063},
-  year={2000}
-}
-
-@inproceedings{silver2014deterministic,
-  title={Deterministic policy gradient algorithms},
-  author={Silver, David and Lever, Guy and Heess, Nicolas and Degris, Thomas and Wierstra, Daan and Riedmiller, Martin},
-  booktitle={ICML},
-  year={2014}
-}
-
-@inproceedings{mnih2016asynchronous,
-  title={Asynchronous methods for deep reinforcement learning},
-  author={Mnih, Volodymyr and Badia, Adria Puigdomenech and Mirza, Mehdi and Graves, Alex and Lillicrap, Timothy and Harley, Tim and Silver, David and Kavukcuoglu, Koray},
-  booktitle={International conference on machine learning},
-  pages={1928--1937},
-  year={2016}
-}
-
-@article{LillicrapHPHETS15,
-  author    = {Timothy P. Lillicrap and
-               Jonathan J. Hunt and
-               Alexander Pritzel and
-               Nicolas Heess and
-               Tom Erez and
-               Yuval Tassa and
-               David Silver and
-               Daan Wierstra},
-  title     = {Continuous control with deep reinforcement learning},
-  journal   = {CoRR},
-  volume    = {abs/1509.02971},
-  year      = {2015},
-  url       = {http://arxiv.org/abs/1509.02971},
-  archivePrefix = {arXiv},
-  eprint    = {1509.02971},
-  timestamp = {Mon, 13 Aug 2018 16:46:11 +0200},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/LillicrapHPHETS15},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@article{watkins1992q,
-  title={Q-learning},
-  author={Watkins, Christopher JCH and Dayan, Peter},
-  journal={Machine learning},
-  volume={8},
-  number={3-4},
-  pages={279--292},
-  year={1992},
-  publisher={Springer}
-}
-```
-
-### Footnotes
-
-[^a]: See [AlphaGo Zero: Starting from scratch](https://deepmind.com/blog/alphago-zero-learning-scratch/)
-[^b]: See [DeepMind AI Reduces Google Data Centre Cooling Bill by 40%](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/)
-[^c]: See [Playing Atari with Deep Reinforcement Learning](https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/)
+[^@watkins1992q]: Watkins, Chris and P. Dayan. “Q-learning.” Machine Learning 8 (2004): 279-292.
+[^@lillicraphphets15]: Lillicrap, T., Hunt, J., Pritzel, A., Heess, N., Erez, T., Tassa, Y., Silver, D., & Wierstra, D. (2016). Continuous control with deep reinforcement learning. CoRR, abs/1509.02971.
+[^@mnih2016asynchronous]: Mnih, V., Badia, A.P., Mirza, M., Graves, A., Lillicrap, T., Harley, T., Silver, D., & Kavukcuoglu, K. (2016). Asynchronous Methods for Deep Reinforcement Learning. ArXiv, abs/1602.01783.
+[^@silver2014deterministic]: Silver, D., Lever, G., Heess, N., Degris, T., Wierstra, D., & Riedmiller, M.A. (2014). Deterministic Policy Gradient Algorithms. ICML.
+[^@sutton2000policy]: Sutton, R., McAllester, D.A., Singh, S., & Mansour, Y. (1999). Policy Gradient Methods for Reinforcement Learning with Function Approximation. NIPS.
+[^@williams1992simple]: Williams, R.J. (2004). Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine Learning, 8, 229-256.
+[^@bertsekas1995dynamic]: Bertsekas, D. (1995). Dynamic Programming and Optimal Control.
+[^@sutton2018reinforcement]: Sutton, R. S., & Barto, A. G. (2018). Reinforcement learning: An introduction. MIT press.

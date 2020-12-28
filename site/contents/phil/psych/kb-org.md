@@ -6,7 +6,7 @@ area: phil
 cat: psych
 ---
 
-Personal knowledge organization [^a] is a very intimate choice. Something
+Personal knowledge organization is a very intimate choice. An alternate (admittedly fancy) expression I came across was _Digital garden_. Something
 that works for one, may not work for another. Instead of providing a system, I'm going
 meta - a system to think about knowledge organization. Outlining the key philosophical
 principles allows clarity of thought. This document should prove helpful to anyone
@@ -141,5 +141,3 @@ management system on top. These cut away a lot of the writing and thinking time.
 However, without doubt there is broader utility of such systems. Wikipedia couldn't
 possibly be run using _text files_. We aren't trying to build _Wikipedia_ though,
 are we?
-
-[^a]: An alternate (admittedly fancy) expression I came across was _Digital garden_.

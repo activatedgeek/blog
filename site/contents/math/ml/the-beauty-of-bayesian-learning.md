@@ -310,30 +310,7 @@ limits of this model and is an interesting line of thought to consider.
 
 ### Acknowledgements
 
-This piece has been inspired heavily by the clear explanations in \cite{murphy2012machine} which in turn have been inspired
-by Tenenbaum's excellent work on Bayesian Learning \cite{tenenbaum1999bayesian}.
+This piece has been inspired heavily by the clear explanations by Kevin Murphy [^@murphy2012machine]. Tenenbaum's clear descriptions on Bayesian Learning [^@tenenbaum1999bayesian] were also helpful.
 
-## References
-
-```bib
-@book{murphy2012machine,
-  title={Machine learning: a probabilistic perspective},
-  author={Murphy, Kevin P},
-  year={2012},
-  publisher={MIT press}
-}
-
-@book{koller2009probabilistic,
-  title={Probabilistic graphical models: principles and techniques},
-  author={Koller, Daphne and Friedman, Nir},
-  year={2009},
-  publisher={MIT press}
-}
-
-@phdthesis{tenenbaum1999bayesian,
-  title={A Bayesian framework for concept learning},
-  author={Tenenbaum, Joshua Brett},
-  year={1999},
-  school={Massachusetts Institute of Technology}
-}
-```
+[^@murphy2012machine]: Murphy, K. (2012). Machine learning - a probabilistic perspective. Adaptive computation and machine learning series.
+[^@tenenbaum1999bayesian]: Tenenbaum, J. (1999). A Bayesian framework for concept learning.

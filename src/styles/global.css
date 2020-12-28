@@ -3,5 +3,10 @@ span.katex-display {
 }
 
 div.footnotes > ol {
-  list-style-type: lower-alpha;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+div.footnotes > ol > li {
+  margin: 0.5em 0;
 }

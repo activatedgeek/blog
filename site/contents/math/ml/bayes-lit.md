@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Nov 13 2020, 13:42 +0530
+updated: Dec 28 2020, 21:25 +0530
 area: math
 cat: ml
 ---
@@ -28,7 +28,7 @@ the following to get a feel for the fundamental thesis around being _Bayesian_.
 It is not a silver bullet but a set of common-sense principles to abide by.
 
 - In my introductory article, [_The Beauty of Bayesian Learning_](/kb/the-beauty-of-bayesian-learning), I describe the essence of Bayesian learning using a simple pattern guessing demo.
-- PRML Chapter 1 \cite{bishop2006pattern} is the place to start for a succinct
+- PRML Chapter 1 [^@bishop2006pattern] is the place to start for a succinct
   treatment on the topic.
 - The ideas can be further reinforced through DJCM's [PhD Thesis](http://www.inference.org.uk/mackay/PhD.html), Chapter 2.
 - AGW's [PhD Thesis](http://www.cs.cmu.edu/%7Eandrewgw/andrewgwthesis.pdf) Chapter 1 provides a broader background on the big picture.
@@ -55,13 +55,13 @@ _Occam's razor_ principle advocates that we must choose the simplest possible
 explanation. Bayesian inference shines here as well by automatically embodying
 this "principle of parsimony".
 
-- ITILA Chapter 28 \cite{mackay2003information} describes how Bayesian inference handles "automatic Occam's razor" quantitatively.
+- ITILA Chapter 28 [^@mackay2004information] describes how Bayesian inference handles "automatic Occam's razor" quantitatively.
 - Seeing the ever increasing complexity of neural network models, one may doubt the
   validity of Occam's razor, perhaps sensing a contradiction. Rasmussen & Ghahramani, in their paper titled [_Occam's razor_](https://papers.nips.cc/paper/2000/file/0950ca92a4dcf426067cfd2246bb5ff3-Paper.pdf), resolve this through a simple experiment. Maddox & Benton et. al. provide an excellent realization of this principle for large models in [_Rethinking Parameter Counting in Deep Models: Effective Dimensionality Revisited_](https://arxiv.org/abs/2003.02139).
 
 _Bayesian model averaging_ (BMA) is another perk enjoyed by Bayesians, which
-allows for _soft model selection_. Andrew G. Wilson
-clarifies the value it adds in a technical report titled [_The Case for Bayesian Deep Learning_](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
+allows for _soft model selection_. See [Bayesian Model Averaging: A Tutorial](https://www.jstor.org/stable/2676803)
+for a classic reference. Andrew G. Wilson clarifies the value it adds in a technical report titled [_The Case for Bayesian Deep Learning_](https://cims.nyu.edu/~andrewgw/caseforbdl/). Unfortunately, BMA is often misconstrued as
 model combination. Minka dispells any misunderstandings
 in this regard, in his technical note [_Bayesian model averaging is not model combination_](https://tminka.github.io/papers/minka-bma-isnt-mc.pdf).
 
@@ -83,7 +83,7 @@ keeping an open mind is the hallmark of a true Bayesian.
 References so that one doesn't have to always remember those tricky identities
 but come up commonly.
 
-- Sam Roweis provides [Gaussian Identities](https://cs.nyu.edu/~roweis/notes/gaussid.pdf), a handy reference. See also PRML Chapter 2.3 \cite{bishop2006pattern}.
+- Sam Roweis provides [Gaussian Identities](https://cs.nyu.edu/~roweis/notes/gaussid.pdf), a handy reference. See also PRML Chapter 2.3 [^@bishop2006pattern].
 - [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) by Kaare Brandt Petersen, Michael Syskind Pedersen
 
 ## Topics
@@ -93,10 +93,10 @@ but come up commonly.
 Gaussian Process (GP) research interestingly started as a consequence of the
 popularity and early success of neural networks.
 
-- DJCM's Introduction, Sections 1-6 \cite{mackay1998introduction} to understand where GPs comes from. A single reading before the next should help calibrate the mindset. I also recommend returning to this once more after the next reading.
-- GPML Chapter 1, 2, 3 \cite{williams2006gaussian} for a detailed treatment on the usual regression and classification problems.
-- LWK Chapter 1 \cite{scholkopf2018learning} is worth a read for a big picture view of kernel machines. It does not, however, present a Bayesian perspective, but an optimization perspective. Nevertheless, it is a useful perspective.
-- GPML Chapter 5 \cite{williams2006gaussian} to understand how model selection
+- DJCM's Introduction, Sections 1-6 [^@mackay1998introduction] to understand where GPs comes from. A single reading before the next should help calibrate the mindset. I also recommend returning to this once more after the next reading.
+- GPML Chapter 1, 2, 3 [^@williams2009gaussian] for a detailed treatment on the usual regression and classification problems.
+- LWK Chapter 1 [^@scholkopf2001learning] is worth a read for a big picture view of kernel machines. It does not, however, present a Bayesian perspective, but an optimization perspective. Nevertheless, it is a useful perspective.
+- GPML Chapter 5 [^@williams2009gaussian] to understand how model selection
   behaves with GPs, and key caveats to look out for, especially regarding Bayesian Model Averaging. It also has a nice example of a non-trivial composite kernel.
 
 #### Sparse Gaussian Processes
@@ -110,7 +110,7 @@ in this regard as well.
 Covariance functions are the way we describe our inductive biases in a Gaussian
 Process model and hence deserve a separate section altogether.
 
-- GPML Chapter 4 \cite{williams2006gaussian} provides a broad discussion around where covariance functions
+- GPML Chapter 4 [^@williams2009gaussian] provides a broad discussion around where covariance functions
   come from.
 - DD's [PhD Thesis](https://www.cs.toronto.edu/~duvenaud/thesis.pdf), Chapter 2 contains some basic advice and intuitions. This is more succinctly available as [The Kernel Cookbok](https://www.cs.toronto.edu/~duvenaud/cookbook/).
   - A quick skim of Section 2 of [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922) may be helpful.
@@ -120,7 +120,7 @@ Process model and hence deserve a separate section altogether.
 Monte Carlo algorithms are used for exact inference in scenarios when
 closed-form inference is not possible.
 
-- PRML Chapter 11.1 \cite{bishop2006pattern}
+- PRML Chapter 11.1 [^@bishop2006pattern]
 
 #### Markov Chain Monte Carlo
 
@@ -129,13 +129,13 @@ correlated samples via Markov Chain Monte Carlo (MCMC) family of algorithms.
 
 - IM's [PhD Thesis](http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf), Chapter 1,2 is arguably the best introduction to the topic of MCMC.
 - Betancourt's [_A Conceptual Introduction to Hamiltonian Monte Carlo_](https://arxiv.org/abs/1701.02434) is the best introduction to HMC.
-- PRML Chapter 11.2 \cite{bishop2006pattern}
+- PRML Chapter 11.2 [^@bishop2006pattern]
 
 ### Variational Inference
 
 #### Pathologies
 
-Bishop Chapter 10 \cite{bishop2006pattern} shows the zero-forcing behavior of the KL term involved
+PRML Chapter 10 [^@bishop2006pattern] shows the zero-forcing behavior of the KL term involved
 in variational inference, as a result underestimating the uncertainty when
 unimodal approximations are used for multimodal true distributions. This,
 however, should not be considered a law of the universe, but only a thumb
@@ -165,44 +165,8 @@ document on [_Topics in Approximate Inference_](http://yingzhenli.net/home/pdf/t
 Many of the interesting references also come from discussions with my advisor,
 [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).
 
-## References
-
-```bib
-@book{bishop2006pattern,
-  title={Pattern recognition and machine learning},
-  author={Bishop, Christopher M},
-  year={2006},
-  publisher={springer}
-}
-@article{mackay1998introduction,
-  title={Introduction to Gaussian processes},
-  author={MacKay, David JC},
-  journal={NATO ASI Series F Computer and Systems Sciences},
-  volume={168},
-  pages={133--166},
-  year={1998},
-  publisher={Citeseer},
-  url={http://www.inference.org.uk/mackay/gpB.pdf}
-}
-@book{williams2006gaussian,
-  title={Gaussian processes for machine learning},
-  author={Williams, Christopher KI and Rasmussen, Carl Edward},
-  volume={2},
-  number={3},
-  year={2006},
-  publisher={MIT press Cambridge, MA},
-  url={http://www.gaussianprocess.org/gpml/}
-}
-@book{mackay2003information,
-  title={Information theory, inference and learning algorithms},
-  author={MacKay, David JC and Mac Kay, David JC},
-  year={2003},
-  publisher={Cambridge university press}
-}
-@book{scholkopf2018learning,
-  title={Learning with kernels: support vector machines, regularization, optimization, and beyond},
-  author={Scholkopf, Bernhard and Smola, Alexander J},
-  year={2018},
-  publisher={Adaptive Computation and Machine Learning series}
-}
-```
+[^@mackay1998introduction]: MacKay, D. (1998). Introduction to Gaussian processes.
+[^@williams2009gaussian]: Rasmussen, C., & Williams, C.K. (2009). Gaussian Processes for Machine Learning. Adaptive computation and machine learning.
+[^@mackay2004information]: MacKay, D. (2004). Information Theory, Inference, and Learning Algorithms. IEEE Transactions on Information Theory, 50, 2544-2545.
+[^@bishop2006pattern]: Bishop, C.M. (2006). Pattern Recognition and Machine Learning (Information Science and Statistics).
+[^@scholkopf2001learning]: Schölkopf, B., & Smola, A. (2001). Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond. Journal of the American Statistical Association, 98, 489-489.

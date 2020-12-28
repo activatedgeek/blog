@@ -47,13 +47,13 @@ const allQuery = `
 
 const gatsbyRemarkPlugins = [
   {
+    resolve: require.resolve(`./plugins/gatsby-remark-local-footnotes`),
+  },
+  {
     resolve: require.resolve(`./plugins/gatsby-remark-local-links`),
   },
   {
     resolve: require.resolve(`./plugins/gatsby-remark-local-image`),
-  },
-  {
-    resolve: require.resolve(`./plugins/gatsby-remark-local-bibtex`),
   },
   {
     resolve: require.resolve(`./plugins/gatsby-remark-local-vega`),

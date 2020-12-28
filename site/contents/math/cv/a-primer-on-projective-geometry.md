@@ -8,7 +8,7 @@ redirectsFrom:
   - /blog/ml/a-primer-on-projective-geometry
 ---
 
-Projective Geometry is a term used to describe properties of projections of a given
+Projective Geometry [^@hartley2003multiple] is a term used to describe properties of projections of a given
 geometric shape. When a shape is projected onto $\mathbb{R}^2$(commonly known as
 the 2D real space), it is called a Planar Projection. This idea can be extended to
 a shape being projected as $H : \mathbb{R}^m \to \mathbb{R}^n$where $H$
@@ -296,13 +296,4 @@ we look for while processing images for geometric scene understanding. A more
 practical approach to the rectification problem above and more complex problems
 like _2D Homography_ and _Stereo Matching_ will be discussed in another post.
 
-## References
-
-```bib
-@book{hartley2003multiple,
-  title={Multiple view geometry in computer vision},
-  author={Hartley, Richard and Zisserman, Andrew},
-  year={2003},
-  publisher={Cambridge university press}
-}
-```
+[^@hartley2003multiple]: Harltey, A., & Zisserman, A. (2003). Multiple view geometry in computer vision (2. ed.).

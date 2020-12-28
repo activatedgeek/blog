@@ -10,7 +10,7 @@ redirectsFrom:
 
 _Stochastic Gradient Descent_ (SGD) has turned out to be a workhorse for most
 gradient-based supervised learning algorithms today. But, why does that work? This post
-presents an understanding from recent \cite{nguyen2018does} theoretical results which gives insights
+presents an understanding from recent [^@nguyen2018does] theoretical results which gives insights
 into the properties of this algorithm.
 
 ## Background
@@ -81,7 +81,7 @@ literature, we derive such "concentration bounds" so as to explain how the empir
 around the true estimate. Quite understandably, we want the RHS of these inequalities to be as small as
 possible for a good generalization behavior.
 
-The main result from the work in \cite{nguyen2018does} for convex objectives is paraphrased below
+The main result from the work in [^@nguyen2018does] for convex objectives is paraphrased below
 
 > Suppose that $f(\mathbf{w}; \xi)$ is L-smooth and convex for every realization of $\xi$.
 > With $\eta_t = \eta < \frac{1}{L}$, for any $\epsilon > 0$ we have
@@ -114,7 +114,7 @@ also see that the initial solution $\mathbf{w}_0$ also affects the viability of 
 
 It should be observed that as $\epsilon$ decreases, $1 - p_\epsilon$ increases. Owing to this
 dynamic, if we hover around the region where $\epsilon \approx 1 - p_\epsilon$, then SGD uniformly converges
-in the neighborhood of $\mathcal{O}(\epsilon)$ which is a tighter bound than previous results \cite{bottou2008tradeoffs,bottou2018optimization}.
+in the neighborhood of $\mathcal{O}(\epsilon)$ which is a tighter bound than previous results [^@bottou2008tradeoffs] [^@bottou2018optimization].
 
 The result shown above shows dependence on the initial solution, $p_\epsilon$ and $M_\epsilon$.
 If we now restrict $1 - p_\epsilon \leq \epsilon$ and $\eta \leq \frac{1}{2L}$
@@ -140,7 +140,7 @@ solution. Increasing the batch size, we can expect $1 - p_\epsilon \leq \epsilon
 to hold for small values of $\epsilon$ making the bounds even better. In the limit of arbitrarily small
 $\epsilon$ we basically recover the gradient.
 
-A similar analysis for non-convex objectives is also presented in \cite{nguyen2018does}. Empirical results reported in the
+A similar analysis for non-convex objectives is also presented in [^@nguyen2018does]. Empirical results reported in the
 work show that SGD tends to be faster than other techniques like SVRG and L-BFGS which is quite
 fascinating. It should also be noted there that the specific form of the objective function doesn't matter
 as long as it satisfies the smoothness property.
@@ -158,32 +158,6 @@ new algorithms. The calculation of the terms in concentration bounds is helpful 
 an overall trend. However, for most situations, searching for exact values is a fruitless endeavor and the bounds
 are only meant to nudge us in the right conceptual direction.
 
-## References
-
-```bib
-@article{nguyen2018does,
-  title={When does stochastic gradient algorithm work well?},
-  author={Nguyen, Lam M and Nguyen, Nam H and Phan, Dzung T and Kalagnanam, Jayant R and Scheinberg, Katya},
-  journal={arXiv preprint arXiv:1801.06159},
-  year={2018}
-}
-
-@inproceedings{bottou2008tradeoffs,
-  title={The tradeoffs of large scale learning},
-  author={Bottou, L{\'e}on and Bousquet, Olivier},
-  booktitle={Advances in neural information processing systems},
-  pages={161--168},
-  year={2008}
-}
-
-@article{bottou2018optimization,
-  title={Optimization methods for large-scale machine learning},
-  author={Bottou, L{\'e}on and Curtis, Frank E and Nocedal, Jorge},
-  journal={Siam Review},
-  volume={60},
-  number={2},
-  pages={223--311},
-  year={2018},
-  publisher={SIAM}
-}
-```
+[^@nguyen2018does]: Nguyen, L.M., Nguyen, N.H., Phan, D., Kalagnanam, J., & Scheinberg, K. (2018). When Does Stochastic Gradient Algorithm Work Well? ArXiv, abs/1801.06159.
+[^@bottou2008tradeoffs]: Bottou, L., & Bousquet, O. (2007). The Tradeoffs of Large Scale Learning. NIPS.
+[^@bottou2018optimization]: Bottou, L., Curtis, F.E., & Nocedal, J. (2018). Optimization Methods for Large-Scale Machine Learning. ArXiv, abs/1606.04838.

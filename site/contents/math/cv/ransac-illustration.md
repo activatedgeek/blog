@@ -240,37 +240,7 @@ whether the sample is an inlier or not will have a significant impact to the acc
 of the final model.
 
 To solve the above problems, a family of RANSAC algorithms have been proposed which
-I'll leave to be explored in further reading below.
+I'll leave to be explored in further reading [^@ransac1981] [^@choi1997performance].
 
-## References
-
-```bib
-@article{10.1145/358669.358692,
-author = {Fischler, Martin A. and Bolles, Robert C.},
-title = {Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography},
-year = {1981},
-issue_date = {June 1981},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {24},
-number = {6},
-issn = {0001-0782},
-url = {https://doi.org/10.1145/358669.358692},
-doi = {10.1145/358669.358692},
-journal = {Commun. ACM},
-month = jun,
-pages = {381–395},
-numpages = {15},
-keywords = {automated cartography, model fitting, camera calibration, location determination, scene analysis, image matching}
-}
-
-@article{choi1997performance,
-  title={Performance evaluation of RANSAC family},
-  author={Choi, Sunglok and Kim, Taemin and Yu, Wonpil},
-  journal={Journal of Computer Vision},
-  volume={24},
-  number={3},
-  pages={271--300},
-  year={1997}
-}
-```
+[^@ransac1981]: Fischler, M., & Bolles, R. (1981). Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography. Commun. ACM, 24, 381-395.
+[^@choi1997performance]: Choi, S., Kim, T., & Yu, W. (2009). Performance Evaluation of RANSAC Family. BMVC.

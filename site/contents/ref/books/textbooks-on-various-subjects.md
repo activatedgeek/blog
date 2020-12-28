@@ -2,7 +2,7 @@
 title: Textbooks on Various Subjects
 description: Textbooks to learn various topics in literature.
 date: Jun 6 2020, 20:00 -0700
-updated: Nov 9 2020, 18:58 -0700
+updated: Dec 24 2020, 19:38 +0530
 area: ref
 cat: books
 ---
@@ -41,7 +41,7 @@ recommendation order.
 
 - [Introduction to Partial Differential Equations](http://www-users.math.umn.edu/~olver/pde.html) by Peter J. Olver (2014; 2016)
 
-- [Partial Differential Equations: An Introduction](https://www.wiley.com/en-in/Partial+Differential+Equations:+An+Introduction,+2nd+Edition-p-9780470054567) by Walter A. Strauss
+- [Partial Differential Equations: An Introduction](https://www.wiley.com/en-in/Partial+Differential+Equations:+An+Introduction,+2nd+Edition-p-9780470054567) by Walter A. Strauss (2008)
 
 ## Machine Learning / Statistics
 

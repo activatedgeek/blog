@@ -2,7 +2,7 @@
 title: The Stack
 description: Tools powering this website.
 date: Jun 19 2020, 14:32 -0700
-updated: Dec 20 2020, 17:44 +0530
+updated: Dec 28 2020, 21:34 +0530
 area: meta
 cat: sys
 ---
@@ -16,10 +16,10 @@ system from [Tailwind](https://theme-ui.com/presets/tailwind).
 
 All content is written in extended markdown via [MDX](https://mdxjs.com) and [Remark](https://remark.js.org).
 
-Math is rendered via [KaTeX](https://github.com/KaTeX/KaTeX) and I've written
-[a custom plugin](https://github.com/activatedgeek/www/tree/master/plugins)
-to render [BibTeX](http://www.bibtex.org) using [Citation.js](https://citation.js.org).
-Images are lazy loaded via React hooks, which is also implemented as a tiny plugin.
+Math is rendered via [KaTeX](https://github.com/KaTeX/KaTeX), and I've written
+[some custom plugins](https://github.com/activatedgeek/www/tree/master/plugins)
+for other tiny utilities. Images are lazy loaded via React hooks, which is also
+implemented as a tiny plugin.
 
 Search is powered by [FlexSearch](https://github.com/nextapps-de/flexsearch). The
 search index contains text extracted by parsing the MDX AST. Eventually, I would

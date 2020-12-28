@@ -15,7 +15,7 @@ $$
 \overbrace{p(\Theta|\mathbf{X})}^{\text{posterior}} = \frac{\overbrace{p(\mathbf{X}|\Theta)}^{\text{likelihood}}\overbrace{p(\Theta)}^{\text{prior}}}{\underbrace{P(\mathbf{X})}_{\text{evidence}}}
 $$
 
-However, the posterior is a tricky term to compute because of the computationally intensive integral term in the denominator (the evidence). Without having access to the true closed form of the posterior, the next best thing to have is a representative set (more formally the _typical set_ \cite{betancourt2017geometric} from the posterior distributions' _high_ density regions. Over the years, researchers have developed a handful of umbrella techniques, all of which converge to the true distribution in the limit of the number of samples - conjugate priors for mathematical convenience \cite{gelman2013bayesian}, Markov Chain Monte Carlo (MCMC) family of algorithms especially the Hamiltonian Monte Carlo (HMC) \cite{brooks2011handbook,neal2012mcmc}, Variational Inference \cite{jordan1999introduction,ranganath2014black} via approximate posteriors, Normalizing Flows \cite{rezende2015variational} for deterministic transforms. All these methods have been immensely successful in modern Bayesian analysis.
+However, the posterior is a tricky term to compute because of the computationally intensive integral term in the denominator (the evidence). Without having access to the true closed form of the posterior, the next best thing to have is a representative set (more formally the _typical set_ [^@betancourt2017geometric] from the posterior distributions' _high_ density regions. Over the years, researchers have developed a handful of umbrella techniques, all of which converge to the true distribution in the limit of the number of samples - conjugate priors for mathematical convenience [^@gelman2013bayesian], Markov Chain Monte Carlo (MCMC) family of algorithms especially the Hamiltonian Monte Carlo (HMC) [^@neal2012mcmc] [^@brooks2011handbook], Variational Inference [^@jordan1999introduction] [^@ranganath2014black] via approximate posteriors, Normalizing Flows [^@rezende2015variational] for deterministic transforms. All these methods have been immensely successful in modern Bayesian analysis.
 
 However, like all feasible methods, these make trade offs - using conjugate priors limits the richness of the posterior densities and restricts us to only mathematically convenient likelihood-prior combinations; the MCMC family requires us to carefully design the transition kernel of the Markov chain and the SDE integrator for numerical stability; Variational Inference can lead to posteriors that under-estimate the support of the true distribution because of the nature of forward KL divergence optimization; Normalizing Flows demand an exact parametric form of the bijectors where the computation of the determinant of the Jacobian needs to be tractable. Today we will look at an approach which does away with all the previous pathologies (not to say it doesn't introduce new ones) called the kernelized Stein Gradient.
 
@@ -25,7 +25,7 @@ We will first summarize the key background topics needed to understand, state th
 
 ### Kernels
 
-Kernels are a very neat idea where the objective is to map our raw input space $\mathcal{X}$ to an abstract vector space $\mathcal{H}$ so that we can define similarity in terms of dot products and get all the geometric niceties of angles, lengths and distances \cite{scholkopf2001learning}. Formally, the most important equations can be summarized as
+Kernels are a very neat idea where the objective is to map our raw input space $\mathcal{X}$ to an abstract vector space $\mathcal{H}$ so that we can define similarity in terms of dot products and get all the geometric niceties of angles, lengths and distances [^@scholkopf2001learning]. Formally, the most important equations can be summarized as
 
 $$
 \begin{aligned}
@@ -69,7 +69,7 @@ $$
 \end{aligned}
 $$
 
-Intuitively, this can be seen as a function weighted by the difference of the score functions of both the distributions. It has been shown \cite{gorham2015measuring} that
+Intuitively, this can be seen as a function weighted by the difference of the score functions of both the distributions. It has been shown [^@gorham2015measuring] that
 
 $$
 \mathbb{E}_q\left[ (\nabla_x \log{p(x)} - \nabla_x \log{q(x)}) \phi(x)^T \right] = \mathbb{E}_q\left[trace(\mathcal{A}_p\phi(x))\right]
@@ -85,7 +85,7 @@ This can be thought of as a maximum possible violation under the family of test 
 
 ### Kernelized Stein Discrepancy
 
-If we choose the family of test functions to be the unit norm RKHS, it turns out we can find out a closed form for the Stein Discrepancy measure \cite{liu2016kernelized}.
+If we choose the family of test functions to be the unit norm RKHS, it turns out we can find out a closed form for the Stein Discrepancy measure [^@liu2016kernelized].
 
 $$
 \begin{aligned}
@@ -99,7 +99,7 @@ This measure is zero if and only if $q = p$. The power of this result is realize
 
 ## Stein Variational Gradient Descent
 
-As it turns out, under a deterministic transform (a one step normalizing flow) $z = \mathbf{T}(x) = x + \epsilon \mathbf{\phi}(x), \text{where } x \sim q(x)$, we have \cite{liu2016stein}.
+As it turns out, under a deterministic transform (a one step normalizing flow) $z = \mathbf{T}(x) = x + \epsilon \mathbf{\phi}(x), \text{where } x \sim q(x)$, we have [^@liu2016stein].
 
 $$
 \nabla_\epsilon KL(q_{[\mathbf{T}]} || p) \bigg|_{\epsilon = 0} = - \mathbb{E}_q\left[trace(\mathcal{A}_p\phi(x))\right]
@@ -138,7 +138,7 @@ The experiments can be run via the Jupyter notebook. Click the badge above. Here
 ![Stein particles on Mixture of Six Gaussians](//i.imgur.com/z2oKUan.png)
 ![MAP behavior with one particle on a Mixture of Six Gaussians (the particle may fall into any of the modes depending on initial position)](//i.imgur.com/ddTxK5p.png)
 
-All these results use the _rbf_ kernel with the median bandwidth heuristic for a total of 1000 gradient steps using Adam (the original work \cite{liu2016stein} uses _Adagrad_ but it should be noted we can use any adaptive gradient descent scheme). See the notebook for more details.
+All these results use the _rbf_ kernel with the median bandwidth heuristic for a total of 1000 gradient steps using Adam (the original work [^@liu2016stein] uses _Adagrad_ but it should be noted we can use any adaptive gradient descent scheme). See the notebook for more details.
 
 ## Conclusion
 
@@ -150,99 +150,14 @@ $$
 
 All the methods mentioned in the introduction make some or the other assumption about the parametric nature to get a tractable posterior. Using the Stein gradient, we are in a position to be non-parametric about the posterior. Additionally, we can work with an unnormalized density because the score function does not depend on the normalized constant during the simulation of the ODE described above - $\nabla_x \log{p(x)} = \nabla_x \log{\tilde{p}(x)} - \nabla_x \log{Z} = \log{\tilde{p}(x)}$. An example of this was seen in the experiments when we used the Mixture of Gaussians which were unnormalized. It should however be noted that we may need to introduce a stochastic gradient if the likelihood term is costly to evaluate just like in the Stochastic Hamiltonian Monte Carlo gradient. Overall, this is great news and an exciting approach to dig into!
 
----
-
-## References
-
-```bib
-@book{brooks2011handbook,
-  title={Handbook of markov chain monte carlo},
-  author={Brooks, Steve and Gelman, Andrew and Jones, Galin and Meng, Xiao-Li},
-  year={2011},
-  publisher={CRC press},
-  url={http://www.mcmchandbook.net/}
-}
-
-@article{betancourt2017geometric,
-  title={The geometric foundations of hamiltonian monte carlo},
-  author={Betancourt, Michael and Byrne, Simon and Livingstone, Sam and Girolami, Mark and others},
-  journal={Bernoulli},
-  volume={23},
-  number={4A},
-  pages={2257--2298},
-  year={2017},
-  publisher={Bernoulli Society for Mathematical Statistics and Probability}
-}
-
-@book{gelman2013bayesian,
-  title={Bayesian data analysis},
-  author={Gelman, Andrew and Stern, Hal S and Carlin, John B and Dunson, David B and Vehtari, Aki and Rubin, Donald B},
-  year={2013},
-  publisher={Chapman and Hall/CRC}
-}
-
-@misc{neal2012mcmc,
-  title={MCMC using Hamiltonian dynamics, ArXiv e-prints},
-  author={Neal, Radford M},
-  journal={arXiv preprint arXiv:1206.1901},
-  year={2012},
-  publisher={June}
-}
-
-@inproceedings{ranganath2014black,
-  title={Black box variational inference},
-  author={Ranganath, Rajesh and Gerrish, Sean and Blei, David},
-  booktitle={Artificial Intelligence and Statistics},
-  pages={814--822},
-  year={2014}
-}
-
-@article{rezende2015variational,
-  title={Variational inference with normalizing flows},
-  author={Rezende, Danilo Jimenez and Mohamed, Shakir},
-  journal={arXiv preprint arXiv:1505.05770},
-  year={2015}
-}
-
-@article{jordan1999introduction,
-  title={An introduction to variational methods for graphical models},
-  author={Jordan, Michael I and Ghahramani, Zoubin and Jaakkola, Tommi S and Saul, Lawrence K},
-  journal={Machine learning},
-  volume={37},
-  number={2},
-  pages={183--233},
-  year={1999},
-  publisher={Springer}
-}
-
-@book{scholkopf2001learning,
-  title={Learning with kernels: support vector machines, regularization, optimization, and beyond},
-  author={Scholkopf, Bernhard and Smola, Alexander J},
-  year={2001},
-  publisher={MIT press}
-}
-
-@inproceedings{gorham2015measuring,
-  title={Measuring sample quality with Stein's method},
-  author={Gorham, Jackson and Mackey, Lester},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={226--234},
-  year={2015}
-}
-
-@inproceedings{liu2016kernelized,
-  title={A kernelized Stein discrepancy for goodness-of-fit tests},
-  author={Liu, Qiang and Lee, Jason and Jordan, Michael},
-  booktitle={International Conference on Machine Learning},
-  pages={276--284},
-  year={2016}
-}
-
-@inproceedings{liu2016stein,
-  title={Stein variational gradient descent: A general purpose bayesian inference algorithm},
-  author={Liu, Qiang and Wang, Dilin},
-  booktitle={Advances In Neural Information Processing Systems},
-  pages={2378--2386},
-  year={2016}
-}
-```
+[^@brooks2011handbook]: Brooks, S., Gelman, A., Jones, G., & Meng, X. (2011). Handbook of Markov Chain Monte Carlo.
+[^@betancourt2017geometric]: Betancourt, M., Byrne, S., Livingstone, S., & Girolami, M. (2014). The Geometric Foundations of Hamiltonian Monte Carlo. arXiv: Methodology.
+[^@gelman2013bayesian]: Gelman, A., Carlin, J., Stern, H., Dunson, D., Vehtari, A., & Rubin, D. (1995). Bayesian Data Analysis.
+[^@neal2012mcmc]: Neal, R. (2011). MCMC Using Hamiltonian Dynamics. arXiv: Computation, 139-188.
+[^@ranganath2014black]: Ranganath, R., Gerrish, S., & Blei, D. (2014). Black Box Variational Inference. AISTATS.
+[^@rezende2015variational]: Rezende, D.J., & Mohamed, S. (2015). Variational Inference with Normalizing Flows. ICML.
+[^@jordan1999introduction]: Jordan, M.I., Ghahramani, Z., Jaakkola, T., & Saul, L. (2004). An Introduction to Variational Methods for Graphical Models. Machine Learning, 37, 183-233.
+[^@scholkopf2001learning]: Schölkopf, B., & Smola, A. (2001). Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond. Journal of the American Statistical Association, 98, 489-489.
+[^@gorham2015measuring]: Gorham, J., & Mackey, L. (2015). Measuring Sample Quality with Stein's Method. ArXiv, abs/1506.03039.
+[^@liu2016kernelized]: Liu, Q., Lee, J., & Jordan, M.I. (2016). A Kernelized Stein Discrepancy for Goodness-of-fit Tests. ICML.
+[^@liu2016stein]: Liu, Q., & Wang, D. (2016). Stein Variational Gradient Descent: A General Purpose Bayesian Inference Algorithm. NIPS.

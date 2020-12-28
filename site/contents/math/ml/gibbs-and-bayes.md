@@ -2,6 +2,7 @@
 title: The Gibbs distribution and general Bayes
 description: A visual inspection into my IMDb ratings using Altair
 date: Jun 11 2020, 16:00 -0700
+updated: Dec 28 2020, 21:31 +0530
 area: math
 cat: ml
 redirectsFrom:
@@ -44,14 +45,14 @@ $$
 \end{aligned}
 $$
 
-Converting this to an unconstrained optimization problem via the _method of Lagrange multipliers_ \cite{boyd2004convex},
+Converting this to an unconstrained optimization problem via the _method of Lagrange multipliers_ [^@boyd2004convex],
 for a multiplier $\lambda \in \mathbb{R}$, we have
 
 $$
 \mathcal{J}(q(\theta); \ell, \mathcal{D}, p(\theta)) + \lambda \left(\int q(\theta) d\theta - 1 \right)
 $$
 
-We take the functional derivatives [^a] w.r.t $q(\theta)$ and the fact that this should
+We take the functional derivatives (see PRML Appendix D [^@bishop2006pattern]) w.r.t $q(\theta)$ and the fact that this should
 be equal to zero for a minimum.
 
 $$
@@ -109,10 +110,10 @@ and we arrive at the optimal Gibbs distribution $q(\theta)$.
 ## Connections
 
 Bayesian inference can be seen as an infinite dimensional generalization of the
-optimization problem described above \cite{csiszar1975divergence,donsker1976asymptotic,zellner1988optimal}.
+optimization problem described above [^@donsker1976asymptotic] [^@zellner1988optimal] [^@csiszar1975divergence].
 This result can also be extended to build all sorts of new schemes based on generalized
-divergences like the $\beta$-divergence \cite{futami2017variational}. Generalized
-variational inference \cite{knoblauch2019generalized} encompasses a large family
+divergences like the $\beta$-divergence [^@futami2017variational]. Generalized
+variational inference [^@knoblauch2019generalized] encompasses a large family
 of inference schemes, for instance power likelihoods when we use a tempered divergence
 $\frac{1}{\beta}$ $\mathcal{KL}$.
 
@@ -139,7 +140,7 @@ covariance Gaussians, we recover Mean-Field variational inference (MFVI).
 ### Entropy-Regularized RL
 
 The Gibbs distribution also comes up in the formulation of Soft Q-Learning.
-We define an entropy-augmented return \cite{schulman2017equivalence} as $\sum_{t=0}^{\infty} \gamma^t (r_t - \tau \mathcal{KL}_t)$
+We define an entropy-augmented return [^@schulman2017equivalence] as $\sum_{t=0}^{\infty} \gamma^t (r_t - \tau \mathcal{KL}_t)$
 for a discount factor $\gamma \in [0, 1]$, instantaneuous
 reward $r_t$, a scalar coefficient $\tau$ effectively balancing the explore/exploit dichotomy
 and the instantaneous distance $\mathcal{KL}_t = \mathcal{KL}(\pi(\dot | s_t) ~||~ \pi_0(\dot | s_t) )$
@@ -200,86 +201,15 @@ we want to describe $\ell$ as merely an instrument which guides us towards a bet
 predictive algorithm. $q(\theta)$ doesn't really remain a posterior in the
 faithful _Bayesian_ sense but is oft referred to as a _pseudo-posterior_. This
 approach certainly sounds promising, although still in early stages of
-development \cite{knoblauch2019generalized,guedj2019primer} for the modern machine
+development [^@guedj2019primer] [^@knoblauch2019generalized] for the modern machine
 learning world.
 
-## References
-
-```bib
-@book{bishop2006pattern,
-  title={Pattern recognition and machine learning},
-  author={Bishop, Christopher M},
-  year={2006},
-  publisher={springer}
-}
-
-@book{boyd2004convex,
-  title={Convex optimization},
-  author={Boyd, Stephen and Boyd, Stephen P and Vandenberghe, Lieven},
-  year={2004},
-  publisher={Cambridge university press}
-}
-
-@article{csiszar1975divergence,
-  title={I-divergence geometry of probability distributions and minimization problems},
-  author={Csisz{\'a}r, Imre},
-  journal={The annals of probability},
-  pages={146--158},
-  year={1975},
-  publisher={JSTOR}
-}
-
-@article{zellner1988optimal,
-  title={Optimal information processing and Bayes's theorem},
-  author={Zellner, Arnold},
-  journal={The American Statistician},
-  volume={42},
-  number={4},
-  pages={278--280},
-  year={1988},
-  publisher={Taylor \& Francis}
-}
-
-@article{donsker1976asymptotic,
-  title={Asymptotic evaluation of certain Markov process expectations for large time—III},
-  author={Donsker, Monroe D and Varadhan, SR Srinivasa},
-  journal={Communications on pure and applied Mathematics},
-  volume={29},
-  number={4},
-  pages={389--461},
-  year={1976},
-  publisher={Wiley Online Library}
-}
-
-@article{futami2017variational,
-  title={Variational inference based on robust divergences},
-  author={Futami, Futoshi and Sato, Issei and Sugiyama, Masashi},
-  journal={arXiv preprint arXiv:1710.06595},
-  year={2017}
-}
-
-@article{knoblauch2019generalized,
-  title={Generalized variational inference},
-  author={Knoblauch, Jeremias and Jewson, Jack and Damoulas, Theodoros},
-  journal={arXiv preprint arXiv:1904.02063},
-  year={2019}
-}
-
-@article{schulman2017equivalence,
-  title={Equivalence between policy gradients and soft q-learning},
-  author={Schulman, John and Chen, Xi and Abbeel, Pieter},
-  journal={arXiv preprint arXiv:1704.06440},
-  year={2017}
-}
-
-@article{guedj2019primer,
-  title={A primer on PAC-Bayesian learning},
-  author={Guedj, Benjamin},
-  journal={arXiv preprint arXiv:1901.05353},
-  year={2019}
-}
-```
-
-### Footnotes
-
-[^a]: See Appendix D in Bishop \cite{bishop2006pattern}.
+[^@bishop2006pattern]: Bishop, C.M. (2006). Pattern Recognition and Machine Learning (Information Science and Statistics).
+[^@boyd2004convex]: Boyd, S.P., & Vandenberghe, L. (2006). Convex Optimization. IEEE Transactions on Automatic Control, 51, 1859-1859.
+[^@csiszar1975divergence]: Csiszár, I. (1975). $I$-Divergence Geometry of Probability Distributions and Minimization Problems. Annals of Probability, 3, 146-158.
+[^@zellner1988optimal]: Zellner, A. (1988). Optimal Information Processing and Bayes's Theorem. The American Statistician, 42, 278-280.
+[^@donsker1976asymptotic]: Donsker, M., & Varadhan, S. (1975). Asymptotic evaluation of certain Markov process expectations for large time.
+[^@futami2017variational]: Futami, F., Sato, I., & Sugiyama, M. (2018). Variational Inference based on Robust Divergences. AISTATS.
+[^@knoblauch2019generalized]: Knoblauch, J., Jewson, J., & Damoulas, T. (2019). Generalized Variational Inference. ArXiv, abs/1904.02063.
+[^@schulman2017equivalence]: Schulman, J., Abbeel, P., & Chen, X. (2017). Equivalence Between Policy Gradients and Soft Q-Learning. ArXiv, abs/1704.06440.
+[^@guedj2019primer]: Guedj, B. (2019). A Primer on PAC-Bayesian Learning. ArXiv, abs/1901.05353.

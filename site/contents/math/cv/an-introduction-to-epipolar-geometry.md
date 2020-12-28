@@ -13,7 +13,7 @@ In this post we will take a look at how Camera Projections work. A demo at the
 end will illustrate the important segments of the theory. Prerequisites to
 understand the material are available in the _Readings & References_ section below.
 
-Epipolar Geometry is the intrinsic projective geometry [^a] between two views. This
+Epipolar Geometry [^@hartley2003multiple] is the intrinsic projective geometry between two views. See [A Primer on Projective Geometry](/kb/a-primer-on-projective-geometry) for a concise introduction. This
 knowledge becomes an interesting piece in the puzzle of estimating the 3D geometry
 of a given image projection and the estimated 3D model can then be applied to a
 myriad of meaningful real-world problems.
@@ -238,7 +238,7 @@ detect keypoints in both images, match them via _FLANN_ and apply _Lowe's ratio 
 filter out matches that are too far away and might be false positives. If all above
 sounds alien, consider it as a black box as it is out of scope for this discussion.
 
-Then we estimate the **Fundamental Matrix** via _RANSAC_ [^b]. One we get that we draw the
+Then we estimate the **Fundamental Matrix** via _RANSAC_. RANSAC was covered in a [previous post](/kb/introduction-to-ransac). Once we get that we draw the
 _epilines_ on both images via $l = F^T x^\prime$ for the left _image plane_ and
 $l^\prime = Fx$ for the right _image plane_. These line equations are a direct
 consequence of the result $x^{\prime T}Fx = 0$.
@@ -304,18 +304,4 @@ It goes without saying that the epilines constructed are only as good as the $x 
 point correspondences. The robustness of the point correspondences is dependent on how well
 our keypoint detection algorithm works.
 
-## References
-
-```bib
-@book{hartley2003multiple,
-  title={Multiple view geometry in computer vision},
-  author={Hartley, Richard and Zisserman, Andrew},
-  year={2003},
-  publisher={Cambridge university press}
-}
-```
-
-### Footnotes
-
-[^a]: See [A Primer on Projective Geometry](/kb/a-primer-on-projective-geometry).
-[^b]: RANSAC was covered in a [previous post](/kb/introduction-to-ransac)
+[^@hartley2003multiple]: Harltey, A., & Zisserman, A. (2003). Multiple view geometry in computer vision (2. ed.).

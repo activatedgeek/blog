@@ -61,7 +61,7 @@ Familiarity with basic linear algebra is assumed.
 With the lack of visuals for now, imagine everything in two or three dimensions.
 Everything can be generalized to finite higher-dimensional spaces.
 
-A _projector_ is a square matrix $P$ that satisfies $P^2 = P$ \cite{trefethen1997numerical}.
+A _projector_ [^@trefethen1997numerical] is a square matrix $P$ that satisfies $P^2 = P$.
 In plain words, this means that for any vector $v$, $Pv$ is the projection of $v$ it into a
 column-space of $P$. Further, re-applying the projection to this new vector
 $P(Pv)$ keeps the new vector intact. This is also known as an _idempotent_ matrix.
@@ -80,7 +80,7 @@ $P$ as $P(I - P)v = 0$. This means that the space spanned by $I - P$ can at most
 be as large as the null space of $P$. Combined, we get exactly the null space of
 $P$.
 
-Complementary projectors allow us to write any vector $v$ as a direct sum \cite{axler2015linear} of
+Complementary projectors allow us to write any vector $v$ as a direct sum [^@axler2015linear] of
 two subspaces $S_1 = \text{range}(P) = \text{null}(I-P)$ and
 $S_2 = \text{null}(P) = \text{range}(I-P)$. This is only possible because
 $S_1 \cap S_2 = \{0\}$. To see why this is true, we note that any vector
@@ -156,22 +156,5 @@ completeness, I note that such issues can be addressed by (reduced)
 _singular value decomposition_ or just _regularization_ which guarantees full
 rank.
 
-## References & Notes
-
-```bib
-@book{axler2015linear,
-  title={Linear algebra done right},
-  author={Axler, Sheldon},
-  year={2015},
-  publisher={Springer},
-  url={http://linear.axler.net}
-}
-@book{trefethen1997numerical,
-  title={Numerical linear algebra},
-  author={Trefethen, Lloyd N and Bau III, David},
-  volume={50},
-  year={1997},
-  publisher={Siam},
-  url={http://people.maths.ox.ac.uk/~trefethen/text.html}
-}
-```
+[^@axler2015linear]: Axler, S. (1995). Linear Algebra Done Right.
+[^@trefethen1997numerical]: Trefethen, L., & Bau, D. (1997). Numerical Linear Algebra.

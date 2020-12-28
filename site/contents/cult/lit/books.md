@@ -31,6 +31,8 @@ place for short and light reads of usually less than 200 pages. It covers a
 broad array of topics. I only use this resource to get a sense of fields that
 are alien to me.
 
+I am also curious about Alex Kasman's reading list on [Mathematical Fiction](http://kasmana.people.cofc.edu/MATHFICT/readinglists.php). The recommendations are grouped by age/expertise; some titles look fascinating!
+
 ## Books
 
 Here is the complete list of books reverse sorted by year. Often some titles

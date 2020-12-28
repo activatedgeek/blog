@@ -27,7 +27,7 @@ restricted to integer ratings. Conveniently, it also collects them into a
 
 I wrote a tiny web spider using [Playwright](https://playwright.dev) which
 collects some basic information - title, release year, genres, ratings (including
-mine) and total number of votes, into a CSV file [^a]. It is a pretty
+mine) and total number of votes, into a CSV file. The code and data is available at [activatedgeek/imdb-ratings](https://github.com/activatedgeek/imdb-ratings). It is a pretty
 straightforward set of CSS path selectors. I do some further organization in
 a [Jupyter notebook](https://github.com/activatedgeek/imdb-ratings/blob/master/notebooks/IMDb%20Analysis.ipynb)
 using [Pandas](https://pandas.pydata.org) `DataFrames` to make charting easier.
@@ -35,7 +35,7 @@ using [Pandas](https://pandas.pydata.org) `DataFrames` to make charting easier.
 My rule of thumb to store or organize data is to do it in a format I would design
 for a typical relational database. All downstream analysis can then be pretty much
 summarized via operations in relational algebra - Cartesian product, projection,
-selection, union and difference [^b].
+selection, union and difference. More SQL-esque notions would be the operations of table merge and join.
 
 ## Questions
 
@@ -91,6 +91,3 @@ specUrl: /vega/ratings_year.alt.json
 ```vega
 specUrl: /vega/ratings_genre.alt.json
 ```
-
-[^a]: The code and data is available at [activatedgeek/imdb-ratings](https://github.com/activatedgeek/imdb-ratings).
-[^b]: More SQL-esque notions would be the operations of table merge and join.
