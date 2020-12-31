@@ -84,13 +84,19 @@ const gatsbyPlugins = [
     },
   },
   {
+    resolve: `gatsby-source-librarything`,
+    options: {
+      userid: process.env.LIBRARYTHING_USERID,
+      max: 100,
+    },
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${__dirname}/site`,
       name: `site`,
     },
   },
-  `gatsby-transformer-csv`,
   {
     resolve: `gatsby-plugin-mdx`,
     options: {

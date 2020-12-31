@@ -1,9 +1,20 @@
 ---
 title: PyTorch code snippets
 date: Jul 05 2020, 15:25 -0700
+updated: Dec 31 2020, 17:55 +0500
 area: tech
 cat: swe
 ---
+
+### CUDA Specific Builds
+
+To install specific CUDA version builds for PyTorch, use
+
+```shell
+$ pip install torch -f https://download.pytorch.org/whl/cu101/torch_stable.html
+```
+
+`cu101` corresponds to CUDA 10.1, and needs to be changed appropriately.
 
 ### Vectorized Pairwise Distances
 

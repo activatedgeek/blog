@@ -2,12 +2,12 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Dec 15 2020, 14:13 +0530
+updated: Dec 31 2020, 19:24 +0530
 area: cult
 cat: lit
 ---
 
-import GoodreadsBooks from "../../../../src/components/goodreads"
+import LibraryThingBooks from "../../../../src/components/librarything"
 
 In recent times, I've warmed up to a variety of themes from history, philosophy,
 economics and technology. Here's a list books that have shaped me. These are
@@ -35,9 +35,7 @@ I am also curious about Alex Kasman's reading list on [Mathematical Fiction](htt
 
 ## Books
 
-Here is the complete list of books reverse sorted by year. Often some titles
-may have an older publication date [^a].
+Here is the complete list of books reverse sorted by year, fetched from [LibraryThing](https://wiki.librarything.com/index.php/LibraryThing_JSON_Books_API). Often some titles
+may have an older publication date.
 
-<GoodreadsBooks />
-
-[^a]: I will soon be replacing the Goodreads links.
+<LibraryThingBooks />

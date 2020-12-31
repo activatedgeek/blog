@@ -19,12 +19,12 @@ module.exports = _ref => {
       refs[node.identifier] = refs[node.identifier] || ref_id
 
       labelEntry = {
-        type: "strong",
+        type: "emphasis",
         children: [{ type: "text", value: `[R${refs[node.identifier]}] ` }],
       }
     } else {
       labelEntry = {
-        type: "strong",
+        type: "emphasis",
         children: [{ type: "text", value: `[${node.identifier}] ` }],
       }
     }
