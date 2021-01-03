@@ -1,6 +1,7 @@
 ---
 title: Cognitive and Experimental psychology
 date: Jul 05 2020, 16:19 -0700
+updated: Jan 3 2021, 17:56 +0530
 area: phil
 cat: psych
 ---
@@ -14,3 +15,4 @@ found their own home yet.
 - [Troxler's fading](https://en.wikipedia.org/wiki/Troxler's_fading)
 - The Zettelkasten method
 - [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law)
+- [Apophenia](https://en.wikipedia.org/wiki/Apophenia) - somebody tell those people in AI?

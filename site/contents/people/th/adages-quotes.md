@@ -37,6 +37,10 @@ cat: th
 
 > _Good mathematicians see analogies between theorems; great mathematicians see analogies between analogies._ - Stefan Banach
 
+> _As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain they do not refer to reality._ - Albert Einstein
+
+> _Laws, like sausages, cease to inspire respect in proportion as we know how they are made._ - John Godfrey Saxe
+
 ### Unattributed
 
 - _The best time to plant a tree was twenty years ago. The second best time is now._
