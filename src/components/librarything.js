@@ -10,7 +10,10 @@ export default () => (
   <StaticQuery
     query={graphql`
       {
-        books: allLibraryThing(sort: { fields: publicationdate, order: DESC }) {
+        books: allLibraryThing(
+          sort: { fields: publicationdate, order: DESC }
+          filter: { collections: { _1: { eq: "Your library" } } }
+        ) {
           nodes {
             isbn: ISBN_cleaned
             author: author_fl

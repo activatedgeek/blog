@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Dec 31 2020, 19:24 +0530
+updated: Jan 4 2021, 12:19 +0530
 area: cult
 cat: lit
 ---
@@ -35,7 +35,7 @@ I am also curious about Alex Kasman's reading list on [Mathematical Fiction](htt
 
 ## Books
 
-Here is the complete list of books reverse sorted by year, fetched from [LibraryThing](https://wiki.librarything.com/index.php/LibraryThing_JSON_Books_API). Often some titles
-may have an older publication date.
+Here is the complete list of books reverse sorted by year, fetched from my account at [LibraryThing](https://wiki.librarything.com/index.php/LibraryThing_JSON_Books_API). Often some titles
+may have an older publication date. I've provided my rating alongside each work.
 
 <LibraryThingBooks />

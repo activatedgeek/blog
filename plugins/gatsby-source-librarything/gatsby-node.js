@@ -7,7 +7,7 @@ exports.sourceNodes = async (
   console.log("Fetching LibraryThing")
 
   const url = `https://www.librarything.com/api_getdata.php?userid=${userid}&max=${max ||
-    100}&showTags=1&showReviews=1&responseType=json`
+    100}&showTags=1&showReviews=1&showCollections=1&responseType=json`
   const lt = await fetch(url).then(res => res.json())
 
   for (const [book_id, book] of Object.entries(lt.books)) {
