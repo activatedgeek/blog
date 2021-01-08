@@ -21,3 +21,4 @@ These are some of the subscriptions & services I use, and recommend.
 - Authenticator: [Authy](https://authy.com)
 - Storage: [iCloud Drive](https://www.apple.com/icloud/) / [Backblaze](https://www.backblaze.com/cloud-backup.html)
 - Notes: [Notion](https://www.notion.so)
+- Private Web Analytics: [GoatCounter](https://www.goatcounter.com)
