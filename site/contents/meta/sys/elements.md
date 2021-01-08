@@ -48,6 +48,6 @@ characteristics of the file system - the file name or organization under a folde
 Pretty simple. The specific software to implement this is summarized in [the stack](/kb/the-stack).
 Go visit my [knowledge base](/kb).
 
-[^a]: See the raw text [here](https://github.com/activatedgeek/www/blob/master/site/contents/meta/sys/navigation.md).
-[^b]: See the [_orgsys file_](https://github.com/activatedgeek/www/blob/master/site/orgsys.js).
+[^a]: See the raw text [here](https://github.com/activatedgeek/www/blob/main/site/contents/meta/sys/elements.md).
+[^b]: See the [_orgsys file_](https://github.com/activatedgeek/www/blob/main/site/orgsys.js).
 [^c]: However, it seems redundant at this point given that the url system is flexible enough to make sure any renames are taken care of.

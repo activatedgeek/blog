@@ -4,6 +4,7 @@ description: A reference Travis YAML for automated Docker builds
 date: Apr 7 2016, 3:40 +0530
 area: tech
 cat: swe
+archive: true
 redirectsFrom:
   - /blog/docker-on-travis
 ---

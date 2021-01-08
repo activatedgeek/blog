@@ -2,12 +2,12 @@
 title: Adages, Quotes
 description: What have people said over the years?
 date: Jul 4 2020, 19:40 -0700
-updated: Nov 22 2020, 23:10 +0530
+updated: Jan 6 2021, 17:59 +0530
 area: people
 cat: th
 ---
 
-## Uncategorized
+## Quotes
 
 > _Science progresses one funeral at a time._ - Max Planck
 
@@ -41,7 +41,8 @@ cat: th
 
 > _Laws, like sausages, cease to inspire respect in proportion as we know how they are made._ - John Godfrey Saxe
 
-### Unattributed
+> _The only function of economic forecasting is to make astrology look respectable._ - John Kenneth Galbraith
+## Adages
 
 - _The best time to plant a tree was twenty years ago. The second best time is now._
 - _No battle plan survives contact with the enemy._

@@ -6,7 +6,7 @@ area: phil
 cat: psych
 ---
 
-This is a collection of mental models I've read about. Makes for a good master reference for the times I'm always stuck in _Déjà vu_, thinking "what's the term?". I will grow, evolve and categorize this list largely trying to understand / answer "what can I do to minimize negative externalities?", a meta-mental model for decision making in life.
+This is a collection of mental models I've read about. Makes for a good reference for the times I'm always stuck in _Déjà vu_, thinking "what's the term?". I will grow, evolve and categorize this list largely trying to understand / answer "what can I do to minimize negative externalities?", a meta-mental model for decision making in life.
 
 This is a fat list and the purpose is not to memorize these. Instead, consciously aiming to learn them, utilize them as much as possible to fit things happening around into a model. This is reductive and simplifying, but that is precisely what models are for - to allow us focus on things that matter without the unnecessary details.
 

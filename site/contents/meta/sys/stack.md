@@ -17,7 +17,7 @@ system from [Tailwind](https://theme-ui.com/presets/tailwind).
 All content is written in extended markdown via [MDX](https://mdxjs.com) and [Remark](https://remark.js.org).
 
 Math is rendered via [KaTeX](https://github.com/KaTeX/KaTeX), and I've written
-[some custom plugins](https://github.com/activatedgeek/www/tree/master/plugins)
+[some custom plugins](https://github.com/activatedgeek/www/tree/main/plugins)
 for other tiny utilities. Images are lazy loaded via React hooks, which is also
 implemented as a tiny plugin.
 
