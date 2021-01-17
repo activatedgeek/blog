@@ -50,10 +50,14 @@ const mods = {
       },
     },
     blockquote: {
+      display: "inline-block",
       pl: 2,
       borderLeftWidth: "4",
       borderLeftStyle: "solid",
       borderLeftColor: "secondary",
+      "> p": {
+        my: 1,
+      },
     },
     td: {
       p: 2,

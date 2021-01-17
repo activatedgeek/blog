@@ -2,13 +2,15 @@
 title: Force Multipliers
 # description:
 date: Aug 09 2020, 12:21 -0700
-updated: Nov 29 2020, 11:30 +0530
+updated: Jan 17 2020, 11:37 +0530
 area: phil
 cat: psych
 ---
 
 Force multipliers can be extraordinary engines of leverage and growth. Here's
 some abstract concepts that I aspire to develop in my life.
+
+## Multipliers
 
 ### Flywheel effect
 
@@ -36,3 +38,7 @@ Crudely, call it _bureaucracy_ and run away as much as possible.
 
 I've realized that the most productive-looking people have found a knack for
 doing work that has low downside and disproportionately high upside.
+
+## Other Public Lists
+
+[15 of the most useful razors](https://twitter.com/george__mack/status/1350513143387189248) by George Mack on Twitter, is a fun read.

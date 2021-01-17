@@ -88,6 +88,7 @@ const HeaderMenuItem = ({ url, children, external }) => (
       ":visited,:hover,:active": {
         textDecoration: "none",
       },
+      my: 1,
     }}
   >
     <span
@@ -111,23 +112,26 @@ const Header = () => {
   return (
     <Flex
       sx={{
-        // position: ["inherit", "inherit", "fixed", "fixed"],
-        position: "absolute",
-        top: 0,
-        right: 0,
-        opacity: 0.8,
-        ":hover": {
-          opacity: 1,
-        },
+        width: "screenWidth",
+        position: ["inherit", "inherit", "fixed", "fixed"],
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 50,
       }}
     >
       <Flex
         sx={{
-          bg: "primary",
-          p: 3,
-          alignItems: "center",
+          position: "relative",
           justifyContent: "center",
-          boxShadow: "default",
+          width: ["100%", "100%", "3xl", "3xl"],
+          height: ["auto", "auto", "4em", "4em"],
+          top: 0,
+          left: 0,
+          background: "white",
+          borderBottomWidth: "px",
+          borderBottomStyle: "solid",
+          borderBottomColor: "muted",
+          p: 2,
         }}
       >
         <Styled.a
@@ -140,8 +144,43 @@ const Header = () => {
             color: "light",
           }}
         >
-          <Styled.h3>SK</Styled.h3>
+          <Box
+            sx={{
+              position: "absolute",
+              display: ["none", "none", "inherit", "inherit"],
+              left: "-5%",
+              top: 0,
+              backgroundImage: "url(/images/sk.svg)",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              p: 3,
+              alignItems: "center",
+              justifyContent: "center",
+              height: "5em",
+              width: "5em",
+            }}
+          />
         </Styled.a>
+        <Flex
+          sx={{
+            justifyContent: "center",
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
+        >
+          <HeaderMenuItem url="/">
+            <FontAwesomeIcon icon={faHome} fixedWidth /> Home
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/kb">
+            <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/search">
+            <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
+          </HeaderMenuItem>
+          <HeaderMenuItem url="/rss.xml" external>
+            <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
+          </HeaderMenuItem>
+        </Flex>
       </Flex>
     </Flex>
   )
@@ -235,17 +274,20 @@ const Footer = ({ name, social }) => {
         flexDirection: "column",
         justifyContent: "center",
         py: 3,
+        borderTopWidth: "px",
+        borderTopStyle: "solid",
+        borderTopColor: "muted",
       }}
     >
       <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
         <HeaderMenuItem url="/">
           <FontAwesomeIcon icon={faHome} fixedWidth /> Home
         </HeaderMenuItem>
-        <HeaderMenuItem url="/search">
-          <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
-        </HeaderMenuItem>
         <HeaderMenuItem url="/kb">
           <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/search">
+          <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
         </HeaderMenuItem>
         <HeaderMenuItem url="/db">
           <FontAwesomeIcon icon={faDatabase} fixedWidth /> DB
@@ -334,16 +376,15 @@ const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
       }
     `}
     render={({ site: { siteMetadata } }) => {
-      const { name, social } = siteMetadata
+      const { author, social } = siteMetadata
 
       return (
         <>
           <Head siteMetadata={siteMetadata} frontmatter={frontmatter} />
           <Flex sx={{ flexDirection: "column", minHeight: "screenHeight" }}>
             {showHeader ? <Header siteMetadata={siteMetadata} /> : null}
-            {children}
-            <Styled.hr sx={{ m: 0 }} />
-            {showFooter ? <Footer name={name} social={social} /> : null}
+            <Box sx={{ mt: [0, 0, "4em", "4em"] }}>{children}</Box>
+            {showFooter ? <Footer name={author} social={social} /> : null}
           </Flex>
         </>
       )
