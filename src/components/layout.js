@@ -77,7 +77,7 @@ const Head = ({ siteMetadata, frontmatter }) => {
   )
 }
 
-const HeaderMenuItem = ({ url, children, external }) => (
+const HeaderMenuItem = ({ url, color, children, external }) => (
   <Styled.a
     as={external ? null : Link}
     target={external ? "_blank" : null}
@@ -93,13 +93,14 @@ const HeaderMenuItem = ({ url, children, external }) => (
   >
     <span
       sx={{
-        p: 2,
+        py: 1,
+        px: 3,
         color: "textMuted",
         borderRadius: "lg",
         ":hover": {
-          bg: "primary",
-          color: "light",
-          boxShadow: "xl",
+          // bg: "primary",
+          color,
+          // boxShadow: "md",
         },
       }}
     >
@@ -168,16 +169,16 @@ const Header = () => {
             alignItems: "center",
           }}
         >
-          <HeaderMenuItem url="/">
+          <HeaderMenuItem url="/" color="primary">
             <FontAwesomeIcon icon={faHome} fixedWidth /> Home
           </HeaderMenuItem>
-          <HeaderMenuItem url="/kb">
+          <HeaderMenuItem url="/kb" color="pink.4">
             <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
           </HeaderMenuItem>
-          <HeaderMenuItem url="/search">
+          <HeaderMenuItem url="/search" color="green.5">
             <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
           </HeaderMenuItem>
-          <HeaderMenuItem url="/rss.xml" external>
+          <HeaderMenuItem url="/rss.xml" color="orange.5" external>
             <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
           </HeaderMenuItem>
         </Flex>
@@ -231,7 +232,7 @@ export const SearchBar = ({ inputSx }) => {
   )
 }
 
-const IconLink = ({ url, external, children, icon }) => (
+const IconLink = ({ url, external, children, icon, color }) => (
   <Box>
     <Styled.a
       as={external ? null : Link}
@@ -254,7 +255,7 @@ const IconLink = ({ url, external, children, icon }) => (
           fontSize: 2,
           color: "textMuted",
           ":hover": {
-            color: "primary",
+            color,
           },
         }}
         fixedWidth
@@ -280,23 +281,23 @@ const Footer = ({ name, social }) => {
       }}
     >
       <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
-        <HeaderMenuItem url="/">
+        <HeaderMenuItem url="/" color="primary">
           <FontAwesomeIcon icon={faHome} fixedWidth /> Home
         </HeaderMenuItem>
-        <HeaderMenuItem url="/kb">
-          <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
+        <HeaderMenuItem url="/kb" color="pink.4">
+          <FontAwesomeIcon icon={faBrain} fixedWidth /> kB
         </HeaderMenuItem>
-        <HeaderMenuItem url="/search">
+        <HeaderMenuItem url="/search" color="green.5">
           <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
         </HeaderMenuItem>
-        <HeaderMenuItem url="/db">
-          <FontAwesomeIcon icon={faDatabase} fixedWidth /> DB
-        </HeaderMenuItem>
-        <HeaderMenuItem url={`${social.github}/www`} external>
-          <FontAwesomeIcon icon={faCode} fixedWidth /> Source
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/rss.xml" external>
+        <HeaderMenuItem url="/rss.xml" color="orange.5" external>
           <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/db" color="teal.4">
+          <FontAwesomeIcon icon={faDatabase} fixedWidth /> dB
+        </HeaderMenuItem>
+        <HeaderMenuItem url={`${social.github}/www`} color="indigo.4" external>
+          <FontAwesomeIcon icon={faCode} fixedWidth /> Source
         </HeaderMenuItem>
         {/* <FontAwesomeIcon
           icon={colorMode === "default" ? faMoon : faSun}
@@ -316,12 +317,42 @@ const Footer = ({ name, social }) => {
       </Flex>
 
       <Flex sx={{ justifyContent: "center", mt: 3 }}>
-        <IconLink url={social.scholar} icon={faUserGraduate} external />
-        <IconLink url={social.github} icon={faGithub} external />
-        <IconLink url={social.yc} icon={faYCombinator} external />
-        <IconLink url={social.linkedin} icon={faLinkedin} external />
-        <IconLink url={social.stackoverflow} icon={faStackOverflow} external />
-        <IconLink url={social.twitter} icon={faTwitter} external />
+        <IconLink
+          url={social.scholar}
+          icon={faUserGraduate}
+          color="rgb(239,202,77)"
+          external
+        />
+        <IconLink
+          url={social.github}
+          icon={faGithub}
+          color="rgb(27,31,35)"
+          external
+        />
+        <IconLink
+          url={social.yc}
+          icon={faYCombinator}
+          color="rgb(251,78,9)"
+          external
+        />
+        <IconLink
+          url={social.linkedin}
+          icon={faLinkedin}
+          color="rgb(14,79,180)"
+          external
+        />
+        <IconLink
+          url={social.stackoverflow}
+          icon={faStackOverflow}
+          color="rgb(239,107,29)"
+          external
+        />
+        <IconLink
+          url={social.twitter}
+          icon={faTwitter}
+          color="rgb(29,142,238)"
+          external
+        />
       </Flex>
       <Styled.p
         sx={{

@@ -99,7 +99,7 @@ should come in handy for this.
 
 ### Society
 
-> **[Visit Overview Page](/kb/society-overview)**
+> [Visit Overview Page](/kb/society-overview)
 
 Everything that humans do collectively as a "society" goes in here. This involves
 topics in economics, journalism, business etc. It also includes my general
