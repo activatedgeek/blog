@@ -2,7 +2,7 @@
 title: Topics in Bayesian Machine Learning
 description: A resourceful document for entrypoints into Bayesian inference.
 date: Sep 17 2020, 09:40 +0530
-updated: Dec 28 2020, 21:25 +0530
+updated: Jan 18 2020, 19:19 +0530
 area: math
 cat: ml
 ---
@@ -25,9 +25,10 @@ I now encourage that this perspective be your first foray into machine learning.
 When diving deep into a topic, we often find ourselves too close to the action.
 It is important to start with and keep the bigger picture in mind. I recommend
 the following to get a feel for the fundamental thesis around being _Bayesian_.
-It is not a silver bullet but a set of common-sense principles to abide by.
+It is not a silver bullet, but a set of common-sense principles to abide by.
 
 - In my introductory article, [_The Beauty of Bayesian Learning_](/kb/the-beauty-of-bayesian-learning), I describe the essence of Bayesian learning using a simple pattern guessing demo.
+  - [Second opinion needed: communicating uncertainty in medical machine learning](https://www.nature.com/articles/s41746-020-00367-3) provides a broad survey grounded in real-world applications of the need to quantify uncertainty.
 - PRML Chapter 1 [^@bishop2006pattern] is the place to start for a succinct
   treatment on the topic.
 - The ideas can be further reinforced through DJCM's [PhD Thesis](http://www.inference.org.uk/mackay/PhD.html), Chapter 2.
@@ -69,7 +70,8 @@ The _Frequentist-vs-Bayesian_ debate has unfortunately occupied more minds than
 it should have. Any new entrant to the field will undoubtably still come across
 this debate and be forced to take a stand (make sure you don't fall for the trap).
 Christian Robert's answer [on Cross Validated](https://stats.stackexchange.com/a/256224/57053) is the best technical introduction to start with. Then, I highly recommend this
-talk by a dominant figure in the field, _Michael Jordan_, titled _Bayesian or Frequentist, Which Are You?_ ([Part I](https://www.youtube.com/watch?v=HUAE26lNDuE), [Part II](https://www.youtube.com/watch?v=7sNgO7wQgaQ)).
+talk by a dominant figure in the field, _Michael Jordan_, titled _Bayesian or Frequentist, Which Are You?_ ([Part I](https://www.youtube.com/watch?v=HUAE26lNDuE), [Part II](https://www.youtube.com/watch?v=7sNgO7wQgaQ)). Having read and listened to all this,
+one should keep this excellent exposition by Robert E. Kass [Statistical Inference: The Big Picture](https://projecteuclid.org/euclid.ss/1307626554) on their reading list always. Everytime someone starts this debate again, ask them to read this first.
 
 Gelman and Yao describe [_Holes in Bayesian Statistics_](http://www.stat.columbia.edu/~gelman/research/unpublished/bayes_holes_2.pdf) which may be a worthwhile reader
 at a later stage.

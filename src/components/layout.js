@@ -94,7 +94,7 @@ const HeaderMenuItem = ({ url, color, children, external }) => (
     <span
       sx={{
         py: 1,
-        px: 3,
+        px: 2,
         color: "textMuted",
         borderRadius: "lg",
         ":hover": {
@@ -113,26 +113,44 @@ const Header = () => {
   return (
     <Flex
       sx={{
-        width: "screenWidth",
         position: ["inherit", "inherit", "fixed", "fixed"],
+        width: "screenWidth",
+        left: [null, null, "50%", "50%"],
+        transform: [null, null, "translate(-50%, 0)", "translate(-50%, 0)"],
+        maxWidth: "6xl",
         justifyContent: "center",
         alignItems: "center",
         zIndex: 50,
+        height: ["auto", "auto", "4em", "4em"],
+        background: "white",
+        borderBottomWidth: "px",
+        borderBottomStyle: "solid",
+        borderBottomColor: "muted",
+        p: 2,
+        textAlign: "center",
       }}
     >
       <Flex
         sx={{
-          position: "relative",
+          justifyContent: "flex-start",
+          flexWrap: "wrap",
+          alignItems: "center",
+          width: "33%",
+        }}
+      >
+        <HeaderMenuItem url="/" color="primary">
+          <FontAwesomeIcon icon={faHome} fixedWidth /> Home
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/kb" color="pink.4">
+          <FontAwesomeIcon icon={faBrain} fixedWidth /> kBayes
+        </HeaderMenuItem>
+      </Flex>
+      <Flex
+        sx={{
+          width: "33%",
           justifyContent: "center",
-          width: ["100%", "100%", "3xl", "3xl"],
-          height: ["auto", "auto", "4em", "4em"],
-          top: 0,
-          left: 0,
-          background: "white",
-          borderBottomWidth: "px",
-          borderBottomStyle: "solid",
-          borderBottomColor: "muted",
-          p: 2,
+          flexWrap: "wrap",
+          alignItems: "center",
         }}
       >
         <Styled.a
@@ -147,10 +165,6 @@ const Header = () => {
         >
           <Box
             sx={{
-              position: "absolute",
-              display: ["none", "none", "inherit", "inherit"],
-              left: "-5%",
-              top: 0,
               backgroundImage: "url(/images/sk.svg)",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -162,26 +176,21 @@ const Header = () => {
             }}
           />
         </Styled.a>
-        <Flex
-          sx={{
-            justifyContent: "center",
-            flexWrap: "wrap",
-            alignItems: "center",
-          }}
-        >
-          <HeaderMenuItem url="/" color="primary">
-            <FontAwesomeIcon icon={faHome} fixedWidth /> Home
-          </HeaderMenuItem>
-          <HeaderMenuItem url="/kb" color="pink.4">
-            <FontAwesomeIcon icon={faBrain} fixedWidth /> Knowledge Bayes
-          </HeaderMenuItem>
-          <HeaderMenuItem url="/search" color="green.5">
-            <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
-          </HeaderMenuItem>
-          <HeaderMenuItem url="/rss.xml" color="orange.5" external>
-            <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
-          </HeaderMenuItem>
-        </Flex>
+      </Flex>
+      <Flex
+        sx={{
+          width: "33%",
+          justifyContent: "flex-end",
+          flexWrap: "wrap",
+          alignItems: "center",
+        }}
+      >
+        <HeaderMenuItem url="/search" color="green.5">
+          <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
+        </HeaderMenuItem>
+        <HeaderMenuItem url="/rss.xml" color="orange.5" external>
+          <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
+        </HeaderMenuItem>
       </Flex>
     </Flex>
   )
@@ -272,6 +281,8 @@ const Footer = ({ name, social }) => {
       id="footer"
       sx={{
         width: "screenWidth",
+        maxWidth: "6xl",
+        mx: "auto",
         flexDirection: "column",
         justifyContent: "center",
         py: 3,
@@ -285,7 +296,7 @@ const Footer = ({ name, social }) => {
           <FontAwesomeIcon icon={faHome} fixedWidth /> Home
         </HeaderMenuItem>
         <HeaderMenuItem url="/kb" color="pink.4">
-          <FontAwesomeIcon icon={faBrain} fixedWidth /> kB
+          <FontAwesomeIcon icon={faBrain} fixedWidth /> kBayes
         </HeaderMenuItem>
         <HeaderMenuItem url="/search" color="green.5">
           <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
@@ -294,7 +305,7 @@ const Footer = ({ name, social }) => {
           <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
         </HeaderMenuItem>
         <HeaderMenuItem url="/db" color="teal.4">
-          <FontAwesomeIcon icon={faDatabase} fixedWidth /> dB
+          <FontAwesomeIcon icon={faDatabase} fixedWidth /> dBase
         </HeaderMenuItem>
         <HeaderMenuItem url={`${social.github}/www`} color="indigo.4" external>
           <FontAwesomeIcon icon={faCode} fixedWidth /> Source
