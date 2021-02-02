@@ -133,6 +133,11 @@ correlated samples via Markov Chain Monte Carlo (MCMC) family of algorithms.
 - Betancourt's [_A Conceptual Introduction to Hamiltonian Monte Carlo_](https://arxiv.org/abs/1701.02434) is the best introduction to HMC.
 - PRML Chapter 11.2 [^@bishop2006pattern]
 
+The following readings are only worth after one has played more closely with
+MCMC algorithms.
+
+- Charles Geyer's [Burn-In is Unnecessary](http://users.stat.umn.edu/~geyer/mcmc/burn.html)
+
 ### Variational Inference
 
 #### Pathologies

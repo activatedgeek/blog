@@ -2,7 +2,7 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Dec 6 2020, 22:14 +0530
+updated: Jan 28 2020, 16:47 +0530
 area: ref
 cat: hb
 ---
@@ -60,6 +60,7 @@ All values are approximate and meant to facilitate back-of-the-envelope calculat
 - First electric elevator - 1889 CE, Otis
 - Color Presses - c. 1890 CE
 - First mass car ownership - 1908 CE, Ford Model-T
+- Solution of the DNA structure - 1953
 
 ### Healthcare
 

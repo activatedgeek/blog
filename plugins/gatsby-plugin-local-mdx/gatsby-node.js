@@ -24,7 +24,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.onCreateNode = (
   { node, reporter, actions, getNode },
-  { orgsys: { areas } }
+  { orgsys: { areas }, categoryTemplateMap }
 ) => {
   if (node.internal.type !== "Mdx") {
     return
@@ -93,17 +93,10 @@ exports.onCreateNode = (
     ),
   })
 
-  if (cat === "ov") {
-    template = "overview"
-    // reporter.info(
-    //   `INFO: ${fileNode.relativePath} - Using template "overview".`
-    // )
-  }
-
   createNodeField({
     node,
     name: "template",
-    value: template || "default",
+    value: template || categoryTemplateMap[cat] || "default",
   })
 
   delete node.frontmatter._options
@@ -119,17 +112,15 @@ exports.createPages = async (
     const result = await graphql(`
       {
         allMdx {
-          edges {
-            node {
-              id
-              frontmatter {
-                area
-                slug
-                redirectsFrom
-              }
-              fields {
-                template
-              }
+          nodes {
+            id
+            frontmatter {
+              area
+              slug
+              redirectsFrom
+            }
+            fields {
+              template
             }
           }
         }
@@ -140,13 +131,11 @@ exports.createPages = async (
       reporter.panicOnBuild('🚨  ERROR: Loading "createAllPages" query')
     }
 
-    result.data.allMdx.edges.forEach(
+    result.data.allMdx.nodes.forEach(
       ({
-        node: {
-          id,
-          frontmatter: { area, slug, redirectsFrom },
-          fields: { template },
-        },
+        id,
+        frontmatter: { area, slug, redirectsFrom },
+        fields: { template },
       }) => {
         createPage({
           path: slug,

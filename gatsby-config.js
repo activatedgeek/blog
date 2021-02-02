@@ -112,6 +112,9 @@ const gatsbyPlugins = [
         default: "page",
         overview: "overview",
       },
+      categoryTemplateMap: {
+        ov: "overview",
+      },
       orgsys,
     },
   },
