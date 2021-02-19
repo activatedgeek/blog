@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Jan 4 2021, 12:19 +0530
+updated: Feb 19 2021, 14:31 +0530
 area: cult
 cat: lit
 ---
@@ -30,6 +30,10 @@ I also like the mission of [Open Library](https://openlibrary.org), and ended up
 place for short and light reads of usually less than 200 pages. It covers a
 broad array of topics. I only use this resource to get a sense of fields that
 are alien to me.
+
+[Beginner's Guides](https://oneworld-publications.com/beginners-guides.html)
+is a collection of about 120 books (at the time of this writing) about the biggest
+ideas of our time. I have not sampled any book yet, but seems like a very rich collection!
 
 I am also curious about Alex Kasman's reading list on [Mathematical Fiction](http://kasmana.people.cofc.edu/MATHFICT/readinglists.php). The recommendations are grouped by age/expertise; some titles look fascinating!
 
