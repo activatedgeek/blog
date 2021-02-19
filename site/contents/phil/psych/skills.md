@@ -13,7 +13,7 @@ Archive, [Do We Lose Skills Because of Technology?](https://overcast.fm/+gOxhldr
 which got me thinking about this in terms of _skill_.
 
 Feifer (the podcast host), discusses this from the perspective of two primates
--- chimpanzees and bonobos, both genetically very with each other, and with
+-- chimpanzees and bonobos, both genetically similar to each other, and to
 humans too. Chimpanzees are extremely proficient at using tools for food, e.g.
 using sticks to extract termites/fish, sponges to soak up water, and so on.
 Bonobos, on the other hand, mystically do not use such tools for eating at all,
@@ -23,7 +23,7 @@ bonobos are perfectly capable of using tools for eating, but just do not. An
 explanation is that historically, bonobos have lived in an environment of food
 abundance. They simply do not require tools.
 
-I'd stretch the imagination a little, and conjecture that humans too have
+Flexing the imagination a little, I conjecture that humans too have
 _dormant_ skills. Individuals, as a consequence of their environment and
 personal goals, just do not end up picking up the same skills. The dormant
 skills should come alive given that the two pre-conditions are satisfied:
@@ -32,9 +32,9 @@ skills should come alive given that the two pre-conditions are satisfied:
 
 (ii) a friendly environment where those skills can be put to test.
 
-Most individuals are adept at (i), but very few are lucky enough to just get
-many variables right for (ii) to happen. I believe, this is a good mental model,
-and a reminder for myself always to think in terms of both (i) and (ii). Whenever
-I feel overwhelmed, I want to make sure that I do not fall into this
-uni-dimensional evaluation pitfall by only considering (i). The productivity and
-success of my contemporaries is at least a two-dimensional quantity.
+Most individuals are adept at (i), and is obvious. Very few, however, are lucky
+enough to just get many variables right for (ii) to happen. The keyword there is
+_friendly_. This is a reminder for myself always to think in terms of both (i)
+and (ii). Whenever I feel overwhelmed, I want to avoid the pitfall of only
+considering (i). The productivity and success of my contemporaries is at least a
+two-dimensional quantity.
