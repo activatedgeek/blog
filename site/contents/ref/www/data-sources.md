@@ -2,7 +2,7 @@
 title: Data Sources
 description: Useful sources of data.
 date: Jun 6 2020, 19:59 -0700
-updated: Jul 4 2020, 19:03 -0700
+updated: Feb 18 2020, 12:36 +0530
 area: ref
 cat: www
 ---
@@ -20,6 +20,8 @@ I've always wondered about stupid questions like "how many of those toilet paper
 **NOTE**: I suspect Numbeo has some data bias \(most likely upwards\) but in my limited experience has reasonable ballpark estimates.
 
 [Unicorn Nest](https://unicorn-nest.com/dataset/) - Dataset on fundraising. Unclear how clean and helpful this is to answer questions about network effects in fundraising etc.
+
+[OpenCellid](https://www.opencellid.org/): The world's largest Open Database of Cell Towers.
 
 ## Visualization
 
