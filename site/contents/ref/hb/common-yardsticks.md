@@ -2,7 +2,7 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Jan 28 2020, 16:47 +0530
+updated: Feb 20 2021, 17:33 +0530
 area: ref
 cat: hb
 ---
@@ -13,6 +13,8 @@ world. Assigning tangible quantities is immensely effective towards understandin
 the metaphorical "gravity of the situation".
 
 All values are approximate and meant to facilitate back-of-the-envelope calculations.
+I highly recommend [Measurement: A Very Short Introduction](https://www.librarything.com/work/19217884/book/196759822) for a short history of measurements, and a crash-course
+in how different fields have evolved in assigning numbers to phenomenon.
 
 ## Length
 
