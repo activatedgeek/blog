@@ -2,7 +2,7 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Feb 20 2021, 17:33 +0530
+updated: Feb 21 2021, 18:58 +0530
 area: ref
 cat: hb
 ---
@@ -56,6 +56,7 @@ in how different fields have evolved in assigning numbers to phenomenon.
 - Printing Press - 1440 CE
 - Founding of Manila - 1571 CE, marks substantial, direct and continuous trade between Asia and Americas
 - Great Fire of London - 1666 CE, pretty much forced the rebuilding that led to modern London
+- Unified System of Physical Measurements - 1670 CE, by Gabriel Mouton in France
 - Modernization of Paris - 1852-70 CE, directed by Eugene Haussmann
 - World's first encyclopedia - c. 1751-1777, edited by Denis Diderot and Jean le Rond D'Alembert
 - First modern record of a "birthday" - 1772 CE
@@ -63,6 +64,7 @@ in how different fields have evolved in assigning numbers to phenomenon.
 - Color Presses - c. 1890 CE
 - First mass car ownership - 1908 CE, Ford Model-T
 - Solution of the DNA structure - 1953
+- SI units - 1960, at the 11th General Conference for Weights and Measures
 
 ### Healthcare
 
