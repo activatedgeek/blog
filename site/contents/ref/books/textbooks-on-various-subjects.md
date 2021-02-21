@@ -2,7 +2,7 @@
 title: Textbooks on Various Subjects
 description: Textbooks to learn various topics in literature.
 date: Jun 6 2020, 20:00 -0700
-updated: Dec 24 2020, 19:38 +0530
+updated: Feb 21 2021, 13:27 +0530
 area: ref
 cat: books
 ---
@@ -31,6 +31,10 @@ recommendation order.
 
 - [Numerical Linear Algebra](http://people.maths.ox.ac.uk/~trefethen/text.html) by Lloyd N. Trefethen and David Bau, III (1997)
 
+- [Fundamentals of Matrix Computations](https://www.wiley.com/en-us/Fundamentals+of+Matrix+Computations%2C+3rd+Edition-p-9780470528334) by David S. Watkins (2010)
+
+- [Matrix Computations](https://www.cs.cornell.edu/cv/GVL4/golubandvanloan.htm) by G.H. Golub and C.F. Van Loan (2013)
+
 ## Optimization
 
 - [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) by Stephen Boyd and Lieven Vandenberghe (2004)
@@ -45,17 +49,19 @@ recommendation order.
 
 ## Machine Learning / Statistics
 
-- [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) by Christopher Bishop (2006; 2011)
+- [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) by Christopher Bishop (2006)
+
+- [Patterns, Predictions, and Actions: A Story about Machine Learning](https://mlstory.org) by Moritz Hardt and Benjamin Recht (2021)
 
 ### Bayesian Inference
 
 - [Information Theory, Inference and Learning Algorithms](http://www.inference.org.uk/mackay/itila/) by David J. C. MacKay (2003)
 
-- [Machine Learning: a Probabilistic Perspective](https://www.cs.ubc.ca/~murphyk/MLbook/) by Kevin Patrick Murphy (2012)
+- [Probabilistic Machine Learning](https://probml.github.io/pml-book/) by Kevin Murphy (book series 2012, 2021, 2022)
 
 - [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage) by David Barber (2012)
 
-- [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) by Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin (1995; 2013)
+- [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) by Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin (2020)
 
 ### Gaussian Processes
 
