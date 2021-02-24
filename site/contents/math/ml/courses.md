@@ -16,6 +16,7 @@ cat: ml
 - [Slotine Lectures on Nonlinear Systems](http://web.mit.edu/nsl/www/videos/lectures.html) by Jean-Jacques Slotine
 - [Statistical Reinforcement Learning](http://nanjiang.cs.illinois.edu/cs598/) by Nan Jiang
 - [OCW Matrix Methods in Data Analysis, Signal Processing, and Machine Learning](https://ocw.mit.edu/18-065S18) by Gilbert Strang
+- [100 Lectures on Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/LecturesOnML/) by Mark Schmidt [^a]
 
 ### Notes
 

@@ -3,7 +3,7 @@ title: The Honduran Bridge
 description: An apt metaphor for disruption.
 date: Aug 11 2020, 16:27 -0700
 area: tech
-cat: uncat
+cat: ideas
 ---
 
 An article from 2018 titled [Why A Honduran Bridge Is A Perfect Metaphor For Disruption](https://medium.com/road-less-ventured/why-an-honduran-bridge-is-a-perfect-metaphor-for-disruption-2a2d7c910535)

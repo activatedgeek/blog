@@ -106,6 +106,7 @@ module.exports = {
       color: "orange.6",
       categories: {
         ov: { label: "Overview" },
+        ideas: { label: "Ideas" },
         prod: { label: "Products" },
         swe: { label: "Software Eng." },
         uncat: { label: "Uncategorized" },

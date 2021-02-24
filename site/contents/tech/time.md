@@ -6,7 +6,7 @@ area: tech
 cat: uncat
 ---
 
-Assigning numbers to any element of interest in our daily lives has become 
+Assigning numbers to any element of interest in our daily lives has become
 imperative today. Any scientific study is deemed useless without a reasonable
 quantitative base. [Measurement: A Very Short Introduction](https://www.librarything.com/work/19217884/book/196759822) provides a great history here for fields ranging from
 physical sciences & engineering to behavioural sciences to social sciences &
@@ -20,7 +20,7 @@ time have their origins in the planetary astronomical phenomena
 One of the bigger drivers of the need of accurate measurement of time was driven
 by the need for navigation. Measure the longitude requires working out the
 time difference between noon at the Greenwich meridian and noon at our own
-location, revealing the angle between two locations, and subsequently the 
+location, revealing the angle between two locations, and subsequently the
 distance. This requires an accurate measurement of time; a clock which can keep
 time over long periods involved in sea voyages. This problem was of such
 importance, that prizes were offered by the state for cracking the problem,

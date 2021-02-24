@@ -4,7 +4,7 @@ description: Ideas seem to be becoming harder to find. Has progress slowed down?
 date: Jul 4 2020, 19:29 -0700
 updated: Jan 2 2021, 10:11 +0530
 area: tech
-cat: uncat
+cat: ideas
 ---
 
 I don't know if there's a way to answer this question definitively.
