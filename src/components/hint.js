@@ -20,8 +20,8 @@ const Info = ({ children, icon, color }) => (
     <Box sx={{ px: 3, color: color || "info", fontSize: 2 }}>
       <FontAwesomeIcon icon={icon || faInfoCircle} />
     </Box>
-    <Box sx={{ pr: 3, fontSize: 0, flex: 1 }}>
-      <Styled.p sx={{ m: 0 }}>{children}</Styled.p>
+    <Box sx={{ pr: 3, flex: 1 }}>
+      <Styled.p sx={{ m: 0, fontSize: 1 }}>{children}</Styled.p>
     </Box>
   </Flex>
 )

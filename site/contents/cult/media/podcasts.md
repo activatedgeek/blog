@@ -2,7 +2,7 @@
 title: Podcasts
 description: List of podcasts I recommend.
 date: Jun 6 2020, 20:03 -0700
-updated: Sep 24 2020, 11:10 +0530
+updated: Feb 26 2020, 20:05 +0530
 area: cult
 cat: media
 ---
@@ -22,8 +22,6 @@ I think podcasts are great for passive content consumption. Here's a few I'm lis
 [More or less: Behind the stats](https://www.bbc.co.uk/programmes/p02nrss1) - **Tim Hartford** explains
 the story behind the numbers that popular media just throws around and the average population
 just gobbles up for the sake of watercooler conversations. It only discusses UK but highly recommended!
-
-[Sample Size](https://overcast.fm/itunes1526837923/sample-size) - Hosted by **Samantha Spiers** is often a nice dive into the science behind the latest news.
 
 [a16z Podcast](https://a16z.com/podcasts/) - Tech trends by people from Andreessen Horowitz as "_software eats the world_".
 
@@ -49,3 +47,5 @@ by **Roman Mars**.
 [The Knowledge Project](https://fs.blog/knowledge-project/) - Insights into mental models of people in various walks of life, interviewed by **Shane Parrish**. Some interviewees have had interesting backgrounds, yesteryear careers and been successful in their new lives with some common sense principles \(and luck of course\).
 
 [The 80000 Hours Podcast](https://80000hours.org/podcast/) - Largely revolving around the idea of "effective altruism" led by **Robert Wiblin**. Focuses on how one can build careers aimed at maximal social impact.
+
+[Extremities](https://anchor.fm/extremities) - Why and how people live in earth's most isolated and extreme settlements.

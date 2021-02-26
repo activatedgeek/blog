@@ -2,7 +2,7 @@
 title: About
 description: Perhaps Bayes(ian).
 date: Jun 6 2020, 20:02 -0700
-updated: Aug 29 2020, 8:00 +0530
+updated: Feb 26 2020, 20:00 +0530
 area: meta
 cat: info
 slug: /
@@ -37,5 +37,4 @@ or check out some of the recently updated pages.
 
 <LatestPages />
 
-I also have an [RSS Feed](/rss.xml) that you can subscribe to. [The Database
-of Everything](/db) is otherwise the exhaustive list.
+I also have an [RSS Feed](/rss.xml) that you can subscribe to.

@@ -23,6 +23,8 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [OpenCellid](https://www.opencellid.org/): The world's largest Open Database of Cell Towers.
 
+[ESO National Grid Electricity System](https://data.nationalgrideso.com/data-groups/demand): forecast and historic data for: electricity demand, interconnectors, pump storage pumping, wind generation and solar generation.
+
 ## Visualization
 
 A list of tools that I find super useful for data visualization.

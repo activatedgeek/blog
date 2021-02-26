@@ -9,7 +9,7 @@ import { faArchive, faEdit } from "@fortawesome/free-solid-svg-icons"
 import { areas } from "../../site/orgsys"
 
 export const AreaButton = ({ area, cat }) => (
-  <span sx={{ color: "textMuted", fontSize: 0 }}>
+  <span sx={{ color: "textMuted", fontSize: 1 }}>
     <Styled.i>{areas[area].categories[cat].label} </Styled.i> in{" "}
     <Styled.a
       as={Link}
@@ -80,18 +80,29 @@ const PostIndex = ({ items, showArea, showCat }) => {
           key={i}
           sx={{ flexDirection: ["column", "column", "row", "row"], mb: 3 }}
         >
-          <Box sx={{ width: "20" }}>
-            <Styled.h5>{year === "0" ? "Undated" : year}</Styled.h5>
+          <Box
+            sx={{
+              display: "inline-flex",
+              width: "20",
+              alignItems: "flex-start",
+              pt: 1,
+              fontSize: 1,
+              fontWeight: "bold",
+            }}
+          >
+            {year === "0" ? "Undated" : year}
           </Box>
           <Box sx={{ flex: 1 }}>
             {yearIndex[year].map(({ day, ...props }, j) => (
               <Flex key={j}>
                 <Box
                   sx={{
-                    display: "inline",
+                    display: "inline-flex",
                     width: "24",
                     mx: [0, 0, 2, 2],
                     color: "textMuted",
+                    fontSize: 1,
+                    alignItems: "center",
                   }}
                 >
                   {day}

@@ -2,7 +2,7 @@
 title: On good writing
 description: Documenting characteristics of good writing.
 date: Aug 11 2020, 17:28 -0700
-updated: Dec 9 2020, 18:10 +0530
+updated: Feb 26 2020, 2:42 +0530
 area: cult
 cat: lit
 ---
@@ -14,6 +14,8 @@ are some resources I often go back to.
 ## General Communication
 
 - [How to write in plain English](http://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
+
+- [The Writing Well Handbook](https://www.julian.com/guide/write/) by Julian Shapiro
 
 ### Chekhov's gun
 

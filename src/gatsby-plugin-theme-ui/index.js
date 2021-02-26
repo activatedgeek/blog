@@ -42,6 +42,14 @@ const mods = {
       borderWidth: "px",
       borderColor: "muted",
     },
+    p: {
+      fontSize: 2,
+      fontWeight: "light",
+    },
+    li: {
+      fontSize: 2,
+      fontWeight: "light",
+    },
     a: {
       color: "link",
       textDecoration: "none",
@@ -52,6 +60,7 @@ const mods = {
     blockquote: {
       display: "inline-block",
       pl: 2,
+      fontSize: 1,
       borderLeftWidth: "4",
       borderLeftStyle: "solid",
       borderLeftColor: "secondary",

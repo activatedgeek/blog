@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faListAlt } from "@fortawesome/free-solid-svg-icons"
 
 const NestedList = ({ toc, depth }) => (
-  <Styled.ul sx={{ fontSize: 0 }}>
+  <Styled.ul>
     {toc.map(({ url, title, items }, i) => (
-      <Styled.li key={i}>
+      <Styled.li key={i} sx={{ fontSize: 1 }}>
         <Styled.a as={Link} to={url}>
           {title}
         </Styled.a>

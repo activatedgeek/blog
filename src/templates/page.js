@@ -21,7 +21,7 @@ const PostInfo = ({ area, cat, day, year, updatedDay, updatedYear }) => (
       color: "textMuted",
       flexWrap: "wrap",
       alignItems: "center",
-      fontSize: 0,
+      fontSize: 1,
     }}
   >
     <span>
