@@ -2,7 +2,7 @@
 title: Adages, Quotes
 description: What have people said over the years?
 date: Jul 4 2020, 19:40 -0700
-updated: Feb 21 2021, 18:59 +0530
+updated: Feb 27 2021, 19:41 +0530
 area: people
 cat: th
 ---
@@ -44,6 +44,8 @@ cat: th
 > _The only function of economic forecasting is to make astrology look respectable._ - John Kenneth Galbraith
 
 > _Measures are more than a creation of society, they create society_ - Ken Adler
+
+> _If people cannot write well, they cannot think well. And if they cannot think well, others will do their thinking for them._ - George Orwell
 
 ## Adages
 

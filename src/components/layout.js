@@ -11,7 +11,7 @@ import {
   faBrain,
   faSearch,
   faCode,
-  faDatabase,
+  // faDatabase,
   faRss,
 } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -291,26 +291,7 @@ const Footer = ({ name, social }) => {
         borderTopColor: "muted",
       }}
     >
-      <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
-        <HeaderMenuItem url="/" color="primary">
-          <FontAwesomeIcon icon={faHome} fixedWidth /> Home
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/kb" color="pink.4">
-          <FontAwesomeIcon icon={faBrain} fixedWidth /> kBayes
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/search" color="green.5">
-          <FontAwesomeIcon icon={faSearch} fixedWidth /> Search
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/rss.xml" color="orange.5" external>
-          <FontAwesomeIcon icon={faRss} fixedWidth /> RSS
-        </HeaderMenuItem>
-        <HeaderMenuItem url="/db" color="teal.4">
-          <FontAwesomeIcon icon={faDatabase} fixedWidth /> dBase
-        </HeaderMenuItem>
-        <HeaderMenuItem url={`${social.github}/www`} color="indigo.4" external>
-          <FontAwesomeIcon icon={faCode} fixedWidth /> Source
-        </HeaderMenuItem>
-        {/* <FontAwesomeIcon
+      {/* <FontAwesomeIcon
           icon={colorMode === "default" ? faMoon : faSun}
           title="Toggle Dark Mode"
           sx={{
@@ -325,9 +306,8 @@ const Footer = ({ name, social }) => {
             setColorMode(colorMode === "default" ? "dark" : "default")
           }}
         /> */}
-      </Flex>
 
-      <Flex sx={{ justifyContent: "center", mt: 3 }}>
+      <Flex sx={{ justifyContent: "center", mt: 2 }}>
         <IconLink
           url={social.scholar}
           icon={faUserGraduate}
@@ -364,13 +344,20 @@ const Footer = ({ name, social }) => {
           color="rgb(29,142,238)"
           external
         />
+        <IconLink
+          url={social.code}
+          icon={faCode}
+          color="rgb(27,31,35)"
+          external
+        />
       </Flex>
       <Styled.p
         sx={{
           color: "textMuted",
           fontWeight: "light",
+          fontSize: 1,
           mb: 0,
-          mt: 2,
+          mt: 1,
           textAlign: "center",
         }}
       >
@@ -412,6 +399,7 @@ const Layout = ({ children, frontmatter, showHeader, showFooter }) => (
               linkedin
               stackoverflow
               twitter
+              code
             }
           }
         }

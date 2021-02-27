@@ -14,5 +14,6 @@ module.exports = {
     linkedin: "https://www.linkedin.com/in/sanyamkapoor",
     stackoverflow: "https://stackoverflow.com/users/2425365",
     twitter: "https://twitter.com/snymkpr",
+    code: "https://github.com/activatedgeek/www",
   },
 }

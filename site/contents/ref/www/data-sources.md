@@ -2,7 +2,7 @@
 title: Data Sources
 description: Useful sources of data.
 date: Jun 6 2020, 19:59 -0700
-updated: Feb 18 2020, 12:36 +0530
+updated: Feb 27 2020, 19:55 +0530
 area: ref
 cat: www
 ---
@@ -21,9 +21,11 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [Unicorn Nest](https://unicorn-nest.com/dataset/) - Dataset on fundraising. Unclear how clean and helpful this is to answer questions about network effects in fundraising etc.
 
-[OpenCellid](https://www.opencellid.org/): The world's largest Open Database of Cell Towers.
+[OpenCellid](https://www.opencellid.org/) - The world's largest Open Database of Cell Towers.
 
-[ESO National Grid Electricity System](https://data.nationalgrideso.com/data-groups/demand): forecast and historic data for: electricity demand, interconnectors, pump storage pumping, wind generation and solar generation.
+[ESO National Grid Electricity System](https://data.nationalgrideso.com/data-groups/demand) - forecast and historic data for: electricity demand, interconnectors, pump storage pumping, wind generation and solar generation.
+
+[The Pile](https://pile.eleuther.ai) - The Pile is a 825 GiB diverse, open source language modelling data set that consists of 22 smaller, high-quality datasets combined together.
 
 ## Visualization
 

@@ -12,7 +12,7 @@ This is my _second brain_.
 
 The objective here is to ease the reader (including myself) into the database
 via well-purposed directions instead of a large flat archive. This makes knowledge
-collection more meaningful. If lost, the [footer](#footer) has helpful links.
+collection more meaningful.
 
 A good place to start reading is my [Knowledge Organization Philosophy](/kb/knowledge-base-organization-philosophy).
 To see how I realize this philosophy, read the [Elements of the Knowledge Base](/kb/elements-of-the-knowledge-base). From then on, the overview pages of each area
