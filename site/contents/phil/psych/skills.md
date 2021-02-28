@@ -34,7 +34,12 @@ skills should come alive given that the two pre-conditions are satisfied:
 
 Most individuals are adept at (i), and is obvious. Very few, however, are lucky
 enough to just get many variables right for (ii) to happen. The keyword there is
-_friendly_. This is a reminder for myself always to think in terms of both (i)
+_friendly_. David Epstein talks about "kind" and "wicked" learning environments
+in his book [Range: Why Generalists Triumph in a Specialized World](https://www.librarything.com/work/22766394).
+In wicked domains, the rules are unclear, it is hard to find repetitive patterns,
+and feedback is delayed/inaccurate. We certainly want to avoid such environments.
+
+This is a reminder for myself always to think in terms of both (i)
 and (ii). Whenever I feel overwhelmed, I want to avoid the pitfall of only
 considering (i). The productivity and success of my contemporaries is at least a
 two-dimensional quantity.
