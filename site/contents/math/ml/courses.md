@@ -2,7 +2,7 @@
 title: Machine Learning courses
 description: My course recommendations for machine learning.
 date: Jul 05 2020, 15:43 -0700
-updated: Aug 27 2020, 18:29 +0530
+updated: Mar 2 2020, 16:35 +0530
 area: math
 cat: ml
 ---
@@ -16,11 +16,12 @@ cat: ml
 - [Slotine Lectures on Nonlinear Systems](http://web.mit.edu/nsl/www/videos/lectures.html) by Jean-Jacques Slotine
 - [Statistical Reinforcement Learning](http://nanjiang.cs.illinois.edu/cs598/) by Nan Jiang
 - [OCW Matrix Methods in Data Analysis, Signal Processing, and Machine Learning](https://ocw.mit.edu/18-065S18) by Gilbert Strang
-- [100 Lectures on Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/LecturesOnML/) by Mark Schmidt [^a]
+- [100 Lectures on Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/LecturesOnML/) by Mark Schmidt
 
 ### Notes
 
 - [Introduction to Stochastic Processes - Lecture Notes](https://web.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf) by Gordan Žitković
+- [Measure Theory for Dummies](https://vannevar.ece.uw.edu/techsite/papers/documents/UWEETR-2006-0008.pdf) by Maya R. Gupta
 
 ### Seminars
 

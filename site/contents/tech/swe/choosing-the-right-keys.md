@@ -2,8 +2,8 @@
 title: Choosing the right keys
 description: Learnings to choose better database keys
 date: Apr 3 2017, 1:57 +0530
-area: math
-cat: cs
+area: tech
+cat: swe
 redirectsFrom:
   - /blog/choosing-the-right-keys
 ---

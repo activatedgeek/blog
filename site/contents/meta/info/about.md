@@ -16,11 +16,9 @@ I am **Sanyam Kapoor**, and I do [_normal science_](https://www.uky.edu/~eushe2/
 
 I am interested in scaling up probabilistic inference towards automated
 decision-making. In a previous life, I co-founded [StoryXpress](https://storyxpress.co/) to
-automate video creation for businesses, with some [great friends](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85).
+automate video creation for businesses, with some [great friends](https://www.forbes.com/profile/storyxpress/?list=30under30-asia-media-marketing-advertising#22c9b8ad1f85). For a more formal background, see [my CV](https://u.perhapsbay.es/cv).
 
 This website is my [_knowledge Bayes_](/kb). Check out some of the recently updated
 pages, or subscribe to my [RSS feed](/rss.xml).
 
 <LatestPages />
-
-For a more formal background, see [my CV](https://u.perhapsbay.es/cv).

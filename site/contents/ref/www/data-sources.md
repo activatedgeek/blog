@@ -27,6 +27,8 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [The Pile](https://pile.eleuther.ai) - The Pile is a 825 GiB diverse, open source language modelling data set that consists of 22 smaller, high-quality datasets combined together.
 
+[List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research) - Suprise, surprise! Wikipedia has a list of course.
+
 ## Visualization
 
 A list of tools that I find super useful for data visualization.

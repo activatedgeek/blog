@@ -1,14 +1,15 @@
 ---
 title: Subscriptions and Services
 description: Recommended services list, that I use.
-date: Jan 08 2021, 13:29 +0530
+date: Jan 8 2021, 13:29 +0530
+updated: Mar 3 2021, 11:58 +0530
 area: tech
 cat: prod
 ---
 
 These are some of the subscriptions & services I use, and recommend.
 
-- Domain Registrar: [Cloudflare](https://www.cloudflare.com/products/registrar/) / [GoDaddy](https://godaddy.com)
+- Domain Registrar: [Cloudflare](https://www.cloudflare.com/products/registrar/) / [Gandi.net](https://www.gandi.net/)
 - DNS Nameservers: [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
 - DNS Pi-hole: [NextDNS](https://nextdns.io)
 - Email / Calendar / Contacts: [Fastmail](https://fastmail.com)
@@ -19,6 +20,9 @@ These are some of the subscriptions & services I use, and recommend.
 - News: [The Economist](https://www.economist.com)
 - Password Manager: [Bitwarden](https://bitwarden.com)
 - Authenticator: [Authy](https://authy.com)
-- Storage: [iCloud Drive](https://www.apple.com/icloud/) / [Backblaze](https://www.backblaze.com/cloud-backup.html)
+- Storage: [Mega](https://mega.nz) / [iCloud Drive](https://www.apple.com/icloud/) [^a]
 - Notes: [Notion](https://www.notion.so)
 - Private Web Analytics: [GoatCounter](https://www.goatcounter.com)
+- OTT Media: [Netflix](https://netflix.com/) / [CuriosityStream](https://curiositystream.com/)
+
+[^a]: iCloud Drive is not really end-to-end encrypted, and by the nature of Apple services, any trouble with one service can lead to suspension of the whole account.
