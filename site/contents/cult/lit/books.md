@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Feb 19 2021, 14:31 +0530
+updated: Mar 5 2021, 15:03 +0530
 area: cult
 cat: lit
 ---
@@ -36,6 +36,8 @@ is a collection of about 120 books (at the time of this writing) about the bigge
 ideas of our time. I have not sampled any book yet, but seems like a very rich collection!
 
 I am also curious about Alex Kasman's reading list on [Mathematical Fiction](http://kasmana.people.cofc.edu/MATHFICT/readinglists.php). The recommendations are grouped by age/expertise; some titles look fascinating!
+
+Blas Moros maintains an excellent library on [The Rabbit Hole](https://blas.com/library/)
 
 ## Books
 

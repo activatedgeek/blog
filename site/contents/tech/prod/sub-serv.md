@@ -24,5 +24,6 @@ These are some of the subscriptions & services I use, and recommend.
 - Notes: [Notion](https://www.notion.so)
 - Private Web Analytics: [GoatCounter](https://www.goatcounter.com)
 - OTT Media: [Netflix](https://netflix.com/) / [CuriosityStream](https://curiositystream.com/)
+- Research Papers: [Semantic Scholar](https://www.semanticscholar.org) / [Internet Archive Scholar](https://scholar.archive.org)
 
 [^a]: iCloud Drive is not really end-to-end encrypted, and by the nature of Apple services, any trouble with one service can lead to suspension of the whole account.

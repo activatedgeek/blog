@@ -1,7 +1,7 @@
 ---
 title: PyTorch code snippets
 date: Jul 05 2020, 15:25 -0700
-updated: Dec 31 2020, 17:55 +0500
+updated: Mar 8 2020, 18:15 +0500
 area: tech
 cat: swe
 ---
@@ -11,7 +11,7 @@ cat: swe
 To install specific CUDA version builds for PyTorch, use
 
 ```shell
-$ pip install torch -f https://download.pytorch.org/whl/cu101/torch_stable.html
+$ pip install torch --no-cache-dir -f https://download.pytorch.org/whl/cu101/torch_stable.html
 ```
 
 `cu101` corresponds to CUDA 10.1, and needs to be changed appropriately.

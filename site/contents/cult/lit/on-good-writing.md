@@ -2,7 +2,7 @@
 title: On good writing
 description: Documenting characteristics of good writing.
 date: Aug 11 2020, 17:28 -0700
-updated: Feb 26 2020, 2:42 +0530
+updated: Mar 8 2020, 11:31 +0530
 area: cult
 cat: lit
 ---
@@ -34,6 +34,8 @@ communication, including mathematical and other scientific writing [^a].
 - [How to read a paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by _S. Keshav_
 
 - [Mathematical Writing](https://jmlr.csail.mit.edu/reviewing-papers/knuth_mathematical_writing.pdf) by _Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts_
+
+- [I Want To Be a Mathematician: A Conversation with Paul Halmos](https://www.kanopy.com/product/i-want-be-mathematician)
 
 #### Speech
 
