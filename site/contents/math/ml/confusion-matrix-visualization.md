@@ -6,6 +6,7 @@ area: math
 cat: ml
 redirectsFrom:
   - /blog/ml/confusion-matrix-visualization
+  - /machine-learning/confusion-matrix-visualization
 ---
 
 _Confusion Matrix_ is a matrix built for binary classification problems.
