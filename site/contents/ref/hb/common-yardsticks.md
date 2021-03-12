@@ -2,7 +2,7 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Feb 21 2021, 18:58 +0530
+updated: Mar 10 2021, 19:01 +0530
 area: ref
 cat: hb
 ---
@@ -62,7 +62,8 @@ in how different fields have evolved in assigning numbers to phenomenon.
 - First modern record of a "birthday" - 1772 CE
 - First electric elevator - 1889 CE, Otis
 - Color Presses - c. 1890 CE
-- First mass car ownership - 1908 CE, Ford Model-T
+- First mass car ownership - 1908 CE, Ford Model-T, "assembly-line"
+- Penicillin - 1928 CE, by Alexander Fleming, a breakthrough in antibiotics
 - Solution of the DNA structure - 1953
 - SI units - 1960, at the 11th General Conference for Weights and Measures
 

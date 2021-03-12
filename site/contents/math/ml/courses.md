@@ -17,6 +17,8 @@ cat: ml
 - [Statistical Reinforcement Learning](http://nanjiang.cs.illinois.edu/cs598/) by Nan Jiang
 - [OCW Matrix Methods in Data Analysis, Signal Processing, and Machine Learning](https://ocw.mit.edu/18-065S18) by Gilbert Strang
 - [100 Lectures on Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/LecturesOnML/) by Mark Schmidt
+- [Learning Theory from First Principles](https://www.di.ens.fr/~fbach/learning_theory_class/) by Francis Bach
+- [Deep Learning Theory Lecture Notes](https://mjt.cs.illinois.edu/dlt/) by Matus Telgarsky
 
 ### Notes
 
