@@ -1,10 +1,13 @@
 ---
 title: LaTeX code snippets
 date: Jul 05 2020, 15:26 -0700
-updated: Dec 23 2020, 2:48 +0530
+updated: Mar 18 2020, 11:15 +0530
 area: tech
 cat: swe
 ---
+
+[LearnLaTeX](https://www.learnlatex.org/en/) has some high quality tutorials,
+resources, and more interestingly, a nice online compiler!
 
 ### Localize Settings
 

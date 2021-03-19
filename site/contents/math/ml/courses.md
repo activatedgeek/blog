@@ -2,7 +2,7 @@
 title: Machine Learning courses
 description: My course recommendations for machine learning.
 date: Jul 05 2020, 15:43 -0700
-updated: Mar 2 2020, 16:35 +0530
+updated: Mar 17 2020, 22:25 +0530
 area: math
 cat: ml
 ---
@@ -19,6 +19,7 @@ cat: ml
 - [100 Lectures on Machine Learning](https://www.cs.ubc.ca/~schmidtm/Courses/LecturesOnML/) by Mark Schmidt
 - [Learning Theory from First Principles](https://www.di.ens.fr/~fbach/learning_theory_class/) by Francis Bach
 - [Deep Learning Theory Lecture Notes](https://mjt.cs.illinois.edu/dlt/) by Matus Telgarsky
+- [Discrete Differential Geometry](https://www.youtube.com/playlist?list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS) by Keenan Crane
 
 ### Notes
 

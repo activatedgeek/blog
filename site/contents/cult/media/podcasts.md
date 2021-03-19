@@ -2,7 +2,7 @@
 title: Podcasts
 description: List of podcasts I recommend.
 date: Jun 6 2020, 20:03 -0700
-updated: Feb 26 2020, 20:05 +0530
+updated: Mar 20 2021, 12:29 +0530
 area: cult
 cat: media
 ---
@@ -23,8 +23,6 @@ I think podcasts are great for passive content consumption. Here's a few I'm lis
 the story behind the numbers that popular media just throws around and the average population
 just gobbles up for the sake of watercooler conversations. It only discusses UK but highly recommended!
 
-[a16z Podcast](https://a16z.com/podcasts/) - Tech trends by people from Andreessen Horowitz as "_software eats the world_".
-
 [Exponent](https://exponent.fm) - In-depth discussions on business and strategies by **Ben Thompson** and **James Allworth**. A nice supplement to [Stratechery](http://stratechery.com/).
 
 ## History
@@ -32,7 +30,7 @@ just gobbles up for the sake of watercooler conversations. It only discusses UK 
 [99% Invisible](https://99percentinvisible.org) - about all the thought that goes into the things we don’t think about led
 by **Roman Mars**.
 
-[Pessimists Archive](https://pessimists.co) - **Jason Feifer** takes us through stories of pessimists in history. It is funny to look at things that are the norm now being demonized, downplayed or outright rejected in yesteryears.
+[Build for Tomorrow](https://pessimists.co) (formerly Pessimists Archive) - **Jason Feifer** takes us through stories of pessimists in history. It is funny to look at things that are the norm now being demonized, downplayed or outright rejected in yesteryears.
 
 [Nice Try!](https://www.curbed.com/2019/5/7/18514684/nice-try-podcast-utopian-avery-trufelman) - Narrations by **Avery Trufelman** telling the stories of the world's most fascinating attempts at utopian communities. Highly recommended for insights into behavorial patterns of communities with grandiose visions. As the title suggests, they unfortunately failed.
 

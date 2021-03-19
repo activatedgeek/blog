@@ -2,7 +2,7 @@
 title: Data Sources
 description: Useful sources of data.
 date: Jun 6 2020, 19:59 -0700
-updated: Feb 27 2020, 19:55 +0530
+updated: Mar 19 2020, 14:55 +0530
 area: ref
 cat: www
 ---
@@ -29,10 +29,15 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research) - Suprise, surprise! Wikipedia has a list of course.
 
-## Visualization
+## Data Visualization
 
-A list of tools that I find super useful for data visualization.
+### Tools
 
 [Vega](https://vega.github.io/vega/) - [Vega-Lite](https://vega.github.io/vega-lite/) for JS, [Altair](https://altair-viz.github.io) for Python are excellent declarative abstractions for data visualization.
 
 [kepler.gl](https://kepler.gl) - Geospatial analysis built on top of React. I use this to host [My Wine Map](/kb/my-wine-map).
+
+### Books & Articles
+
+- Adobe Spectrum [Color for data visualization](https://spectrum.adobe.com/page/color-for-data-visualization/) 
+- [Data Visualization Handbook](https://datavizhandbook.info) by Juuso Koponen, Jonatan Hildén
