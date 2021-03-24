@@ -45,7 +45,6 @@ const mods = {
     p: {
       fontSize: 2,
       fontWeight: "light",
-      textAlign: "justify"
     },
     li: {
       fontSize: 2,

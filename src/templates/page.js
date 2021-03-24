@@ -69,8 +69,8 @@ export const Post = ({ mdx }) => {
             position: "relative",
             maxWidth: [null, null, "50%", "50%"],
             display: "inline-block",
-            float: [null, null, "right", "right"],
-            ml: [0, 0, 4, 4],
+            float: [null, null, "left", "left"],
+            mr: [0, 0, 4, 4],
             mb: 4,
           }}
         >

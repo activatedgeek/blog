@@ -59,6 +59,7 @@ module.exports = {
         th: { label: "Thoughts" },
         gkph: { label: "Greek Philosophers" },
         bio: { label: "Biographies" },
+        uncat: { label: "Uncategorized" },
       },
     },
     phil: {
