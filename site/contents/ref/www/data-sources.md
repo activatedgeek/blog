@@ -2,7 +2,7 @@
 title: Data Sources
 description: Useful sources of data.
 date: Jun 6 2020, 19:59 -0700
-updated: Mar 19 2020, 14:55 +0530
+updated: Mar 30 2021, 11:47 +0530
 area: ref
 cat: www
 ---
@@ -27,6 +27,8 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [The Pile](https://pile.eleuther.ai) - The Pile is a 825 GiB diverse, open source language modelling data set that consists of 22 smaller, high-quality datasets combined together.
 
+[Spotify Podcast Dataset](https://podcastsdataset.byspotify.com) - This dataset consists of 100,000 episodes from different podcast shows on Spotify.
+
 [List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research) - Suprise, surprise! Wikipedia has a list of course.
 
 ## Data Visualization
@@ -39,5 +41,5 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 ### Books & Articles
 
-- Adobe Spectrum [Color for data visualization](https://spectrum.adobe.com/page/color-for-data-visualization/) 
+- Adobe Spectrum [Color for data visualization](https://spectrum.adobe.com/page/color-for-data-visualization/)
 - [Data Visualization Handbook](https://datavizhandbook.info) by Juuso Koponen, Jonatan Hildén

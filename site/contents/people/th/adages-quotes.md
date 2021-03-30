@@ -54,3 +54,7 @@ cat: th
 - _If you chase two rabbits, both will escape._
 - _If it can't be measured, it becomes politics._
 - _Everybody's business is nobody's business_.
+
+## TV
+
+- > What do you do with tough cookies? You dip 'em in milk. - Ted Lasso

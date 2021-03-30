@@ -6,5 +6,5 @@
   NODE_VERSION = "15"
   RUBY_VERSION = "2.7.1"
   YARN_VERSION = "1.22.10"
-  GATSBY_GC_CODE = "perhapsbayes"
+  GATSBY_GC_CODE = "imbayes"
   LIBRARYTHING_USERID = "activatedgeek"

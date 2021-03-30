@@ -41,3 +41,7 @@ some stories here.
 - [Sonal Holland](http://www.sonalholland.com), India's only Master of Wine (...so far)
 
 - Namratha Prashanth's [inspiring story](https://www.decanter.com/wine-news/opinion/news-blogs-anson/solicantus-bordeaux-wine-namratha-prashanth-443741/) to her Bordeaux brand, Solicantus.
+
+## Resources
+
+- International Vine and Wine Organization [Statistics](https://www.oiv.int/en/statistiques/)
