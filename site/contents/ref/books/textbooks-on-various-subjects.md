@@ -2,7 +2,7 @@
 title: Textbooks on Various Subjects
 description: Textbooks to learn various topics in literature.
 date: Jun 6 2020, 20:00 -0700
-updated: Feb 21 2021, 13:27 +0530
+updated: Apr 3 2021, 16:12 +0530
 area: ref
 cat: books
 ---
@@ -47,11 +47,17 @@ recommendation order.
 
 - [Partial Differential Equations: An Introduction](https://www.wiley.com/en-in/Partial+Differential+Equations:+An+Introduction,+2nd+Edition-p-9780470054567) by Walter A. Strauss (2008)
 
+
 ## Machine Learning / Statistics
 
 - [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) by Christopher Bishop (2006)
 
 - [Patterns, Predictions, and Actions: A Story about Machine Learning](https://mlstory.org) by Moritz Hardt and Benjamin Recht (2021)
+
+- [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow and Yoshua Bengio and Aaron Courville (2016)
+
+- [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html) by Richard S. Sutton and Andrew G. Barto (1998; 2018)
+
 
 ### Bayesian Inference
 
@@ -61,30 +67,15 @@ recommendation order.
 
 - [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage) by David Barber (2012)
 
-- [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) by Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin (2020)
-
-### Gaussian Processes
-
 - [Gaussian Processes for Machine Learning](http://www.gaussianprocess.org/gpml/) by Carl Edward Rasmussen and Christopher K. I. Williams (2006)
 
-### Deep Learning
+- [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/) by Art Owen (2013)
 
-- [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow and Yoshua Bengio and Aaron Courville (2016)
-
-### Reinforcement Learning
-
-- [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html) by Richard S. Sutton and Andrew G. Barto (1998; 2018)
-- [Reinforcement Learning: Theory and Algorithms](https://rltheorybook.github.io) by Alekh Agarwal, Nan Jiang and Sham M. Kakade (2019)
 
 ### Learning Theory
 
 - [Foundations of Machine Learning](https://cs.nyu.edu/~mohri/mlbook/) by Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar (2012; 2018)
+
 - [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html) by Shai Shalev-Shwartz and Shai Ben-David (2014)
 
-### Monte Carlo Methods
-
-- [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/) by Art Owen (2013)
-
-- [Handbook of Markov Chain Monte Carlo](http://mcmchandbook.net) by various authors; edited by Steve Brooks, Andrew Gelman, Galin L. Jones and Xiao-Li Meng (2011)
-
-- [Handbook of Monte Carlo Methods](https://people.smp.uq.edu.au/DirkKroese/montecarlohandbook/) by D.P. Kroese, T. Taimre, Z.I. Botev (2011)
+- [Reinforcement Learning: Theory and Algorithms](https://rltheorybook.github.io) by Alekh Agarwal, Nan Jiang and Sham M. Kakade (2019)

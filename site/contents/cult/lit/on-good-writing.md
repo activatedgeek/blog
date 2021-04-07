@@ -31,7 +31,7 @@ communication, including mathematical and other scientific writing [^a].
 
 - [How to write a great research paper](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/) by _Simon Peyton Jones_
 
-- [How to read a paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by _S. Keshav_
+- [How to read a paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/wiki/index.php/HTRAP) by _Srinivasan Keshav_
 
 - [Mathematical Writing](https://jmlr.csail.mit.edu/reviewing-papers/knuth_mathematical_writing.pdf) by _Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts_
 

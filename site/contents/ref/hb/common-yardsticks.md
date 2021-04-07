@@ -2,7 +2,7 @@
 title: Common Yardsticks
 description: Common measurements for reference.
 date: Jun 7 2020, 20:44 -0700
-updated: Mar 10 2021, 19:01 +0530
+updated: Apr 2 2021, 15:47 +0530
 area: ref
 cat: hb
 ---
@@ -51,6 +51,7 @@ in how different fields have evolved in assigning numbers to phenomenon.
 - Wool - 6000 BCE, clothes 4000 BCE
 - Glassmaking - 5000 BCE
 - Iron - 1200 BCE, popular usage
+- Modern Paper - 105 CE, by Chinese eunuch named Tsai Lun
 - Intergenerational research project - 65 CE, Seneca the Younger's research on comets
 - Black Death - 1347 CE, the plague wiped out a big chunk of Europe, brought by Mongols.
 - Printing Press - 1440 CE
