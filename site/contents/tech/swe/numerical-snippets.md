@@ -1,7 +1,7 @@
 ---
 title: Numerical code snippets
 date: Jul 5 2020, 15:25 -0700
-updated: Apr 7 2020, 16:06 +0500
+updated: Apr 7 2021, 16:06 +0530
 area: tech
 cat: swe
 redirectsFrom:
