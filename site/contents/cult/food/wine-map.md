@@ -2,7 +2,7 @@
 title: My Wine Map
 description: A collection of ratings and notes on the world map.
 date: Aug 18 2020, 11:52 -0700
-updated: Sep 22 2020, 14:53 +0530
+updated: Apr 9 2021, 11:48 +0530
 area: cult
 cat: food
 ---
@@ -45,3 +45,5 @@ some stories here.
 ## Resources
 
 - International Vine and Wine Organization [Statistics](https://www.oiv.int/en/statistiques/)
+
+- [The Australian Wine Research Institute](https://www.awri.com.au/)
