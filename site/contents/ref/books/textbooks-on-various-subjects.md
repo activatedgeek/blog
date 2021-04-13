@@ -1,8 +1,8 @@
 ---
 title: Textbooks on Various Subjects
-description: Textbooks to learn various topics in literature.
+description: Textbooks to learn various technical topics in literature.
 date: Jun 6 2020, 20:00 -0700
-updated: Apr 3 2021, 16:12 +0530
+updated: Apr 13 2021, 19:00 +0530
 area: ref
 cat: books
 ---
@@ -79,3 +79,13 @@ recommendation order.
 - [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html) by Shai Shalev-Shwartz and Shai Ben-David (2014)
 
 - [Reinforcement Learning: Theory and Algorithms](https://rltheorybook.github.io) by Alekh Agarwal, Nan Jiang and Sham M. Kakade (2019)
+
+## Unread
+
+I have not read these books, but keeping here as good introductory references to complex topics when I need them.
+
+- [Computational Optimal Transport](https://optimaltransport.github.io/book/) by Gabriel Peyré and Marco Cuturi (2018)
+
+- [A First Look at Stochastic Processes](http://probability.ca/jeff/spbook.html) by Jeffrey S. Rosenthal (2019)
+
+- [An Introduction to the Numerical Simulation of Stochastic Differential Equations](https://my.siam.org/Store/Product/viewproduct/?ProductId=32922725) by Desmond Higham and Peter Kloeden (2021)
