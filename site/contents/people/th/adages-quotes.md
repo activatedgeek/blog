@@ -47,6 +47,8 @@ cat: th
 
 > _If people cannot write well, they cannot think well. And if they cannot think well, others will do their thinking for them._ - George Orwell
 
+> _volatility is sonly downside deviation. Upside deviation is called performance_ - Paul Isaac, Arbiter Partners
+
 ## Adages
 
 - _The best time to plant a tree was twenty years ago. The second best time is now._
