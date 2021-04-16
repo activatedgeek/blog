@@ -29,6 +29,8 @@ I've always wondered about stupid questions like "how many of those toilet paper
 
 [Spotify Podcast Dataset](https://podcastsdataset.byspotify.com) - This dataset consists of 100,000 episodes from different podcast shows on Spotify.
 
+[The Big Mac Index](https://www.economist.com/big-mac-index) - A way to compare currencies by Economist.
+
 [List of datasets for machine learning research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research) - Suprise, surprise! Wikipedia has a list of course.
 
 ## Data Visualization

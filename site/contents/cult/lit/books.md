@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Mar 5 2021, 15:03 +0530
+updated: Apr 16 2021, 23:14 +0530
 area: cult
 cat: lit
 ---
@@ -37,7 +37,10 @@ ideas of our time. I have not sampled any book yet, but seems like a very rich c
 
 I am also curious about Alex Kasman's reading list on [Mathematical Fiction](http://kasmana.people.cofc.edu/MATHFICT/readinglists.php). The recommendations are grouped by age/expertise; some titles look fascinating!
 
-Blas Moros maintains an excellent library on [The Rabbit Hole](https://blas.com/library/)
+Blas Moros maintains an excellent library on [The Rabbit Hole](https://blas.com/library/).
+
+[Shepherd](https://shepherd.com/) is an upcoming service that aims to bring the experience
+of browsing a bookstore to the web. It also has curated recommendations from authors.
 
 ## Books
 
