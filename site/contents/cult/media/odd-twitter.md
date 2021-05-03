@@ -18,3 +18,4 @@ cat: media
 - Lego Grad Student ([@legogradstudent](https://twitter.com/legogradstudent))
 - Shit Academics Say ([@AcademicsSay](https://twitter.com/AcademicsSay))
 - ᴺᴼᵀ Jony Ive ([@JonyIveParody](https://twitter.com/JonyIveParody))
+- John W. Rich (Fake Tech Exec) ([@Cokedupoptions](https://twitter.com/Cokedupoptions))

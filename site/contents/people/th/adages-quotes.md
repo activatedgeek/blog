@@ -49,6 +49,8 @@ cat: th
 
 > _volatility is sonly downside deviation. Upside deviation is called performance_ - Paul Isaac, Arbiter Partners
 
+> _The worst scientist is he who is not an artist; the worst artist is he who is no scientist._ - Armand Trousseau
+
 ## Adages
 
 - _The best time to plant a tree was twenty years ago. The second best time is now._

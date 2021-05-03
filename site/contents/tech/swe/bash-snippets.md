@@ -1,7 +1,7 @@
 ---
 title: Bash code snippets
 date: Jul 5 2020, 15:29 -0700
-updated: Sep 8 2020, 14:10 +0530
+updated: May 3 2021, 17:09 +0530
 area: tech
 cat: swe
 ---
@@ -11,6 +11,14 @@ cat: swe
 - [Bash Pitfalls](https://mywiki.wooledge.org/BashPitfalls)
 
 ## Snippets
+
+### Script Directory
+
+To get the absolute path to directory in which the bash script resides
+
+```bash
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+```
 
 ### Multiline strings
 
