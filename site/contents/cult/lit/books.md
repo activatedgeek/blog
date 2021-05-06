@@ -2,7 +2,7 @@
 title: Books
 description: List of books I am reading or have read.
 date: Jun 6 2020, 20:01 -0700
-updated: Apr 28 2021, 1:23 +0530
+updated: May 5 2021, 14:02 +0530
 area: cult
 cat: lit
 ---
@@ -51,8 +51,9 @@ I am also curious about Alex Kasman's reading list on [Mathematical Fiction](htt
 
 I also like the mission of [Open Library](https://openlibrary.org), and ended up donating a tiny amount. I highly recommend checking them out as well, since they allow book loans.
 
-[Shepherd](https://shepherd.com/) is an upcoming service that aims to bring the experience
-of browsing a bookstore to the web. It also has curated recommendations from authors.
+[Shepherd](https://shepherd.com/) is an upcoming service that aims to bring the 
+experience of browsing a bookstore to the web. It also has curated recommendations
+from authors. [Hacker News Books](https://hackernewsbooks.com) newsletter is also often resourceful.
 
 [A Book Like Foo](https://abooklikefoo.com) is an interesting
 search engine for books.

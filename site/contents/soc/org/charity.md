@@ -2,6 +2,7 @@
 title: On charity
 description: My philosophy for charity.
 date: Aug 23 2020, 21:00 +0530
+updated: May 6 2021, 12:56 +0530
 area: soc
 cat: org
 ---
@@ -59,6 +60,9 @@ in the past.
   because of lack of information (or abundance of misinformation) during the
   COVID-19 pandemic.
 
+- [arXiv](https://arxiv.org/about/donate): This is probably one of the best
+  things to happen to open science.
+
 - [Let's Encrypt](https://letsencrypt.org/donate/): Help the world get free
   SSL certificates. Protect your cyber home(s) from intruders. Don't even go
   near websites that don't have HTTPS at the least.
@@ -66,3 +70,8 @@ in the past.
 - [Swadesh Foundations](https://swadesfoundation.org): Help them in their
   mission of rural empowerment by fundamentally reorganizing sources of
   livelihoods in rural areas.
+
+- [ACT Grants](https://actgrants.in): This is sort of an ensemble of members
+  from the Indian startup ecosystem, helping solve India's pressing problems. 
+  Entrepreneurs are more often than not driven by a lot of passion, and build
+  solutions that are sustainable.
