@@ -27,6 +27,7 @@ These are some of the subscriptions & services I use, and recommend.
 - Research Papers: [Semantic Scholar](https://www.semanticscholar.org) / [Internet Archive Scholar](https://scholar.archive.org)
 - PDF Reader: [Documents by Readdle](https://readdle.com/documents) (iOS)
 - Wine Tracker: [Vivino](https://www.vivino.com/)
+- Book Tracker: [LibraryThing](https://www.librarything.com)
 - Color Palettes: [Coolors](https://coolors.co) / [Colormind](http://colormind.io/bootstrap/)
 - Static Site Hosting: [Netlify](https://www.netlify.com)
 - Website Performance Analysis: [GTmetrix](https://gtmetrix.com)
